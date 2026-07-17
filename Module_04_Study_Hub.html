@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 4 Study Hub | Respiratory System</title>
+  <style>
+    :root {
+      --ink: #17212a;
+      --muted: #5c6871;
+      --bg: #f2f6f7;
+      --paper: #fffefd;
+      --line: #d4dde1;
+      --blue: #2f6f9f;
+      --teal: #1c7f7a;
+      --green: #2f7d59;
+      --gold: #b98521;
+      --red: #b84a42;
+      --shadow: 0 10px 25px rgba(20, 35, 42, .08);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
+    header { background: linear-gradient(135deg, #2f6f9f, #1c7f7a); color: white; padding: 42px 0 34px; }
+    .wrap { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 700; opacity: .9; }
+    h1 { margin: 8px 0 10px; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.05; letter-spacing: 0; }
+    h2 { margin: 0 0 18px; font-size: 1.65rem; letter-spacing: 0; }
+    h3 { margin: 20px 0 10px; font-size: 1.05rem; letter-spacing: 0; }
+    p { margin: 0 0 12px; }
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(255, 254, 253, .96); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    nav .wrap { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0; }
+    nav a { color: var(--ink); text-decoration: none; border: 1px solid var(--line); background: white; padding: 8px 11px; border-radius: 8px; white-space: nowrap; font-size: .9rem; font-weight: 700; }
+    nav a:hover { border-color: var(--blue); color: var(--blue); }
+    main { padding: 24px 0 60px; }
+    section { width: min(1160px, calc(100% - 32px)); margin: 0 auto 22px; }
+    .pad { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; box-shadow: var(--shadow); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .card h3 { margin-top: 0; }
+    ul, ol { margin: 8px 0 0 21px; padding: 0; }
+    li { margin: 5px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0; background: white; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: table; }
+    th, td { padding: 10px 11px; border: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { background: #edf5f7; color: #203843; }
+    .callout { border-left: 5px solid var(--blue); background: #eef7fb; padding: 13px 14px; border-radius: 8px; margin: 14px 0; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .callout.gold { border-color: var(--gold); background: #fff6df; }
+    .callout.red { border-color: var(--red); background: #fff0ed; }
+    .map { display: flex; align-items: stretch; gap: 9px; overflow-x: auto; padding: 10px 0; margin: 8px 0 16px; }
+    .node { min-width: 185px; flex: 1; background: white; border: 1px solid var(--line); border-top: 5px solid var(--teal); border-radius: 8px; padding: 11px; }
+    .node b { display: block; margin-bottom: 4px; }
+    .arrow { display: grid; place-items: center; color: var(--muted); font-weight: 800; min-width: 22px; }
+    a { color: var(--blue); }
+    @media (max-width: 900px) { .grid, .grid.three { grid-template-columns: 1fr; } .pad { padding: 17px; } table { display: block; overflow-x: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Pathophysiology Study Hub</p>
+      <h1>Module 4: Respiratory System</h1>
+      <p>Pulmonary manifestations, respiratory infections, cystic fibrosis, COPD and asthma, pulmonary vascular disease, pediatric respiratory infections, lung cancer, and clinical consults.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Module navigation">
+    <div class="wrap">
+      <a href="index.html">Hub</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#readings">Readings</a>
+      <a href="#manifestations">Manifestations</a>
+      <a href="#infections">Infections</a>
+      <a href="#cf">CF</a>
+      <a href="#obstructive">COPD/Asthma</a>
+      <a href="#vascular">Vascular</a>
+      <a href="#children">Children</a>
+      <a href="#cancer">Cancer</a>
+      <a href="#consults">Consults</a>
+      <a href="#clinical">Clinical</a>
+      <a href="#practice">Practice</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="objectives">
+      <div class="pad">
+        <h2>Learning Outcome Coverage</h2>
+        <table>
+          <tr><th>Topic</th><th>Covered outcomes</th><th>Assigned readings</th></tr>
+          <tr><td>Clinical manifestations</td><td>Dyspnea, hypoventilation, hyperventilation, cyanosis, hypercapnia, hypoxemia, acute respiratory failure.</td><td>McCance 9th ed. pp. 1153-1158</td></tr>
+          <tr><td>Respiratory infections</td><td>TB risk factors, TB pathophysiology/manifestations, pneumonia and acute bronchitis causes, mechanisms, manifestations.</td><td>McCance 9th ed. pp. 1176-1179</td></tr>
+          <tr><td>Cystic fibrosis</td><td>Genetic and pathophysiologic changes; respiratory and non-respiratory manifestations.</td><td>McCance 9th ed. pp. 1205-1207, 1383</td></tr>
+          <tr><td>Obstructive lung disease</td><td>COPD risks/pathophysiology/manifestations; compare emphysema and chronic bronchitis; asthma mechanisms and manifestations.</td><td>McCance 9th ed. pp. 1167-1174, 1203-1204</td></tr>
+          <tr><td>Pulmonary vascular disease</td><td>PE, pulmonary artery hypertension, and cor pulmonale pathophysiology.</td><td>McCance 9th ed. pp. 1179-1181</td></tr>
+          <tr><td>Children</td><td>Causative organisms, mechanisms, and manifestations for bronchiolitis, croup, epiglottitis, tonsillitis, and pneumonia.</td><td>McCance 9th ed. pp. 1163, 1191-1194</td></tr>
+          <tr><td>Lung cancers</td><td>Risk factors, pathophysiology, and prognosis for NSCLC, large cell carcinoma, and small cell lung cancer.</td><td>McCance 9th ed. pp. 1182-1185</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="readings">
+      <div class="pad">
+        <h2>Assigned Reading Notes</h2>
+        <div class="callout"><strong>Reading scope</strong>These notes cover all Module 4 assigned reading ranges you provided, plus the student consult material already added for TB and pneumococcal pneumonia.</div>
+
+        <h3>McCance 9th ed. pp. 1153-1158: Clinical Manifestations of Pulmonary Alterations</h3>
+        <ul>
+          <li>Dyspnea is a subjective sense of breathing discomfort caused by mismatch between respiratory drive and the mechanical ability to ventilate.</li>
+          <li>Dyspnea can come from hypoxemia, increased work of breathing, decreased lung compliance, airway obstruction, pneumonia, PE, pulmonary edema, pleural disease, anemia, anxiety, pain, or heart disease.</li>
+          <li>Severe dyspnea may show accessory muscle use, nasal flaring, retractions, inability to speak full sentences, agitation, or fatigue.</li>
+          <li>Hypoventilation means inadequate alveolar ventilation for metabolic demand; PaCO2 rises, causing hypercapnia and respiratory acidosis.</li>
+          <li>Hyperventilation means alveolar ventilation exceeds metabolic demand; PaCO2 falls, causing hypocapnia and respiratory alkalosis.</li>
+          <li>Cyanosis is bluish skin/mucosa from increased deoxygenated hemoglobin; it is an insensitive late sign and can be absent in anemia or carbon monoxide poisoning.</li>
+          <li>Hypoxemia is reduced arterial oxygenation; hypoxia is inadequate tissue oxygenation. Hypoxemia can cause confusion, tachycardia, cyanosis, edema, oliguria, and organ injury.</li>
+          <li>Acute respiratory failure is inadequate gas exchange from hypoxemia, hypercapnia, or both; it may require oxygenation support and ventilatory support.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1176-1179: Respiratory Tract Infections</h3>
+        <ul>
+          <li>Pneumonia is infection and inflammation of terminal airways and alveoli, leading to exudate, consolidation, impaired diffusion, V/Q mismatch, and hypoxemia.</li>
+          <li>Common pneumonia pathogens include Streptococcus pneumoniae, Haemophilus influenzae, Staphylococcus aureus, gram-negative organisms, atypical bacteria such as Mycoplasma, and respiratory viruses.</li>
+          <li>Bacterial pneumonia commonly follows aspiration of colonized oropharyngeal secretions, impaired clearance, viral injury, smoking, chronic lung disease, immunosuppression, or altered consciousness.</li>
+          <li>Clinical manifestations include fever, chills, cough, purulent sputum, pleuritic chest pain, crackles/bronchial breath sounds, dyspnea, tachypnea, hypoxemia, and malaise.</li>
+          <li>Acute bronchitis is acute inflammation of the tracheobronchial tree, usually viral, causing cough with or without sputum, chest discomfort, wheeze, and low-grade systemic symptoms.</li>
+          <li>TB is airborne, macrophage-associated, granulomatous infection that may remain latent or reactivate when immune containment fails.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1205-1207, 1383: Cystic Fibrosis</h3>
+        <ul>
+          <li>CF is autosomal recessive, caused by pathogenic CFTR variants affecting chloride and sodium/water movement across epithelial surfaces.</li>
+          <li>Defective CFTR causes dehydrated, thick secretions in airways, pancreas, hepatobiliary tract, sweat glands, intestine, and reproductive tract.</li>
+          <li>The core triad is obstruction, infection, and inflammation.</li>
+          <li>Respiratory disease includes mucus plugging, impaired mucociliary clearance, chronic bacterial infection, bronchiectasis, air trapping, hypoxemia, and progressive respiratory failure.</li>
+          <li>Non-respiratory manifestations include salty sweat, meconium ileus, pancreatic insufficiency, malabsorption, steatorrhea, poor growth, fat-soluble vitamin deficiency, distal intestinal obstruction syndrome, liver disease, infertility, and CF-related diabetes.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1167-1174, 1203-1204: COPD and Asthma</h3>
+        <ul>
+          <li>COPD is persistent, usually progressive airflow limitation associated with chronic inflammatory response to noxious particles or gases, especially cigarette smoke.</li>
+          <li>Chronic bronchitis is airway-predominant COPD with mucus gland enlargement, goblet-cell hyperplasia, chronic productive cough, airway inflammation, and mucus plugging.</li>
+          <li>Emphysema is alveolar wall destruction with enlarged airspaces, loss of elastic recoil, small airway collapse, air trapping, hyperinflation, and reduced gas exchange surface.</li>
+          <li>COPD manifestations include chronic cough, sputum, exertional dyspnea, wheeze, prolonged expiration, barrel chest, accessory muscle use, fatigue, weight loss, hypoxemia, hypercapnia, pulmonary hypertension, and cor pulmonale.</li>
+          <li>Asthma is chronic airway inflammation with bronchial hyperresponsiveness and usually reversible airflow obstruction.</li>
+          <li>Asthma mechanisms include IgE/mast-cell activation in allergic asthma, eosinophilic inflammation, cytokines, mucus production, airway edema, bronchoconstriction, and airway remodeling in chronic disease.</li>
+          <li>Asthma manifestations include episodic wheeze, cough, chest tightness, dyspnea, prolonged expiration, nocturnal/exercise symptoms, and acute exacerbations with severe airflow obstruction.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1179-1181: Pulmonary Vascular Disease</h3>
+        <ul>
+          <li>Pulmonary embolism is obstruction of pulmonary arterial flow, usually from thromboembolism that originates in deep veins.</li>
+          <li>PE causes high V/Q mismatch or dead space, increased pulmonary vascular resistance, hypoxemia, pleuritic pain, dyspnea, tachycardia, and possible right ventricular strain or shock.</li>
+          <li>Pulmonary artery hypertension is sustained high pressure in pulmonary arteries from vascular remodeling, vasoconstriction, thrombosis, hypoxic pulmonary vasoconstriction, left heart disease, lung disease, or chronic thromboembolic disease.</li>
+          <li>Cor pulmonale is right ventricular hypertrophy/dilation and failure caused by pulmonary hypertension from lung or pulmonary vascular disease.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1163, 1191-1194: Pediatric Respiratory Infections and Obstruction</h3>
+        <ul>
+          <li>Croup is upper airway obstruction from laryngotracheobronchitis, usually viral, causing subglottic edema, barking cough, hoarseness, stridor, and retractions if severe.</li>
+          <li>Acute epiglottitis is a life-threatening supraglottic infection causing rapid airway obstruction, drooling, dysphagia, fever, muffled voice, tripod positioning, and respiratory distress.</li>
+          <li>Tonsillitis may be viral or bacterial, including group A streptococcal infection; inflammation and hypertrophy can narrow the upper airway.</li>
+          <li>Bronchiolitis is usually RSV-related small airway infection in children under 2, causing epithelial necrosis, edema, mucus/debris plugging, air trapping, wheeze, tachypnea, retractions, and feeding difficulty.</li>
+          <li>Pediatric pneumonia can be viral, bacterial, or atypical; children often present with cough, fever, tachypnea, wheeze/crackles, retractions, nasal flaring, dehydration, and vomiting.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1182-1185: Lung Cancer</h3>
+        <ul>
+          <li>Lung cancer develops through accumulated genetic/epigenetic injury from carcinogens, chronic inflammation, impaired repair, and dysregulated cell growth.</li>
+          <li>Major risk factors include cigarette smoking, second-hand smoke, radon, asbestos, occupational exposures, air pollution, prior radiation, family history, and chronic lung disease.</li>
+          <li>Non-small cell lung cancer includes adenocarcinoma, squamous cell carcinoma, and large cell carcinoma; it generally grows/spreads less rapidly than small cell lung cancer.</li>
+          <li>Large cell carcinoma is an undifferentiated NSCLC subtype, often peripheral, aggressive, and associated with worse prognosis than some other NSCLC subtypes.</li>
+          <li>Small cell lung cancer is strongly smoking-associated, neuroendocrine, rapidly growing, early metastatic, often initially chemo/radiation responsive, and has poor overall prognosis.</li>
+          <li>Manifestations may include cough, hemoptysis, dyspnea, chest pain, recurrent pneumonia, weight loss, fatigue, hoarseness, superior vena cava syndrome, bone pain, neurologic symptoms, or paraneoplastic syndromes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="manifestations">
+      <div class="pad">
+        <h2>1. Pulmonary Disease or Injury Manifestations</h2>
+        <table>
+          <tr><th>Manifestation</th><th>Pathophysiology</th><th>What you may see/assess</th></tr>
+          <tr><td>Dyspnea</td><td>Neural drive to breathe exceeds mechanical ventilatory capacity or gas-exchange effectiveness.</td><td>Shortness of breath, anxiety, accessory muscles, tripoding, inability to speak, DOE, orthopnea, PND.</td></tr>
+          <tr><td>Hypoventilation</td><td>Minute ventilation falls; CO2 removal is inadequate.</td><td>Rising PaCO2, respiratory acidosis, somnolence, confusion, shallow breathing, secondary hypoxemia.</td></tr>
+          <tr><td>Hyperventilation</td><td>Ventilation exceeds metabolic CO2 production.</td><td>Low PaCO2, respiratory alkalosis, lightheadedness, paresthesias, anxiety/pain/hypoxemia trigger.</td></tr>
+          <tr><td>Cyanosis</td><td>Increased deoxygenated hemoglobin in blood.</td><td>Blue lips/buccal mucosa for central cyanosis; nail-bed discoloration for peripheral cyanosis.</td></tr>
+          <tr><td>Hypercapnia</td><td>Alveolar hypoventilation or inability to increase ventilation enough.</td><td>Headache, flushed skin, bounding pulse, confusion, somnolence, coma, dysrhythmia risk.</td></tr>
+          <tr><td>Hypoxemia</td><td>Low arterial PaO2 from hypoventilation, V/Q mismatch, diffusion impairment, low inspired oxygen, shunt, or low perfusion.</td><td>Tachycardia, restlessness, confusion, cyanosis late, oliguria, SpO2 drop, organ dysfunction.</td></tr>
+          <tr><td>Acute respiratory failure</td><td>Failure of oxygenation, ventilation, or both.</td><td>Severe distress, hypoxemia, hypercapnia, acidosis, fatigue, altered LOC, need for urgent oxygen/ventilation support.</td></tr>
+        </table>
+        <div class="map">
+          <div class="node"><b>Low V/Q or shunt</b>Asthma, pneumonia, edema, atelectasis.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Hypoxemia</b>Low arterial oxygen.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Compensation</b>Hyperventilation, tachycardia, sympathetic response.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Failure</b>Fatigue, hypercapnia, acidosis, respiratory failure.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="infections">
+      <div class="pad">
+        <h2>2. Respiratory Infections</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Pneumonia</h3>
+            <ul>
+              <li>Alveolar infection and inflammation fill airspaces with exudate.</li>
+              <li>Common causes: S. pneumoniae, H. influenzae, S. aureus, gram-negative rods, atypical bacteria, influenza, RSV, SARS-CoV-2, and other respiratory viruses.</li>
+              <li>Risk factors: age extremes, smoking, COPD, aspiration, impaired cough/swallow, altered consciousness, immunosuppression, viral infection, hospitalization, ventilation.</li>
+              <li>Manifestations: cough, sputum, fever, chills, pleuritic pain, crackles, bronchial breath sounds, dyspnea, tachypnea, hypoxemia, fatigue.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Acute Bronchitis</h3>
+            <ul>
+              <li>Acute inflammation of bronchi, usually viral.</li>
+              <li>Airway epithelial irritation increases cough receptor stimulation and mucus production.</li>
+              <li>Manifestations: cough lasting days to weeks, sputum possible, wheeze, chest soreness, low-grade fever, URI symptoms.</li>
+              <li>Pneumonia becomes a concern with focal findings, hypoxemia, high fever, tachypnea, or systemic toxicity.</li>
+            </ul>
+          </div>
+        </div>
+        <h3>Tuberculosis Core Map</h3>
+        <div class="map">
+          <div class="node"><b>Airborne inhalation</b>M. tuberculosis reaches alveoli.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Macrophage survival</b>Organism resists killing and replicates intracellularly.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Th1 response</b>IFN-gamma/TNF-alpha activate macrophages.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Granuloma</b>Latency if contained; caseous necrosis possible.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Reactivation</b>Cavitation, cough, hemoptysis, fever, night sweats, weight loss, transmission.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cf">
+      <div class="pad">
+        <h2>3. Cystic Fibrosis</h2>
+        <div class="map">
+          <div class="node"><b>CFTR mutation</b>Autosomal recessive chloride channel dysfunction.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Dehydrated secretions</b>Thick mucus in epithelial-lined organs.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Obstruction</b>Airways, pancreatic ducts, intestine, bile ducts, reproductive tract.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Infection/inflammation</b>Chronic airway infection, bronchiectasis, tissue damage.</div>
+        </div>
+        <table>
+          <tr><th>System</th><th>Manifestations</th></tr>
+          <tr><td>Respiratory</td><td>Chronic cough, thick sputum, recurrent infections, wheeze, bronchiectasis, sinus disease, nasal polyps, hypoxemia, respiratory failure.</td></tr>
+          <tr><td>GI/pancreatic</td><td>Pancreatic insufficiency, malabsorption, steatorrhea, poor growth, abdominal distention, fat-soluble vitamin deficiency, meconium ileus, DIOS.</td></tr>
+          <tr><td>Endocrine/metabolic</td><td>CF-related diabetes, salt loss, dehydration risk, metabolic complications.</td></tr>
+          <tr><td>Hepatobiliary/reproductive</td><td>Focal biliary cirrhosis/liver disease, infertility/subfertility, especially congenital bilateral absence of vas deferens in many males.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="obstructive">
+      <div class="pad">
+        <h2>4. Obstructive Lung Disease</h2>
+        <table>
+          <tr><th>Feature</th><th>Emphysema</th><th>Chronic bronchitis</th><th>Asthma</th></tr>
+          <tr><td>Main site/problem</td><td>Alveolar wall destruction and loss of elastic recoil.</td><td>Large/small airway mucus hypersecretion and chronic inflammation.</td><td>Reversible airway narrowing from inflammation and bronchial hyperresponsiveness.</td></tr>
+          <tr><td>Key risk factors</td><td>Smoking, alpha-1 antitrypsin deficiency, pollutants, aging exposure burden.</td><td>Smoking, pollutants, recurrent infections, occupational irritants.</td><td>Atopy/allergens, viral triggers, smoke, pollution, exercise, obesity, occupational sensitizers, genetics.</td></tr>
+          <tr><td>Mechanism</td><td>Protease-antiprotease imbalance and oxidative injury destroy alveoli.</td><td>Goblet-cell and mucus gland enlargement narrows airways and impairs clearance.</td><td>Mast cells/eosinophils/cytokines cause bronchoconstriction, edema, mucus, remodeling.</td></tr>
+          <tr><td>Clinical pattern</td><td>Dyspnea, hyperinflation, decreased breath sounds, prolonged expiration, weight loss.</td><td>Productive cough, frequent infections, wheeze, cyanosis/hypoxemia, edema/cor pulmonale risk.</td><td>Episodes of wheeze, cough, chest tightness, dyspnea; nocturnal/exercise symptoms.</td></tr>
+        </table>
+        <div class="callout red"><strong>COPD consequence</strong>Airflow obstruction increases work of breathing and air trapping. Over time, V/Q mismatch, hypoxemia, hypercapnia, pulmonary hypertension, and right-heart strain can develop.</div>
+      </div>
+    </section>
+
+    <section id="vascular">
+      <div class="pad">
+        <h2>5. Pulmonary Vascular Disease</h2>
+        <div class="grid three">
+          <div class="card">
+            <h3>Pulmonary Embolism</h3>
+            <ul>
+              <li>Usually thrombus from leg/pelvic veins travels to pulmonary artery.</li>
+              <li>Blocks perfusion to ventilated alveoli, increasing dead space.</li>
+              <li>Causes dyspnea, pleuritic chest pain, tachycardia, hypoxemia, hemoptysis, syncope, or shock.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Pulmonary Hypertension</h3>
+            <ul>
+              <li>Increased pulmonary artery pressure from vasoconstriction, remodeling, thrombosis, hypoxia, lung disease, left heart disease, or chronic emboli.</li>
+              <li>Raises right ventricular afterload.</li>
+              <li>Symptoms include exertional dyspnea, fatigue, chest pain, syncope, edema.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Cor Pulmonale</h3>
+            <ul>
+              <li>Right ventricular hypertrophy/dilation/failure caused by pulmonary disease or pulmonary hypertension.</li>
+              <li>Findings: JVD, peripheral edema, hepatomegaly, ascites, loud P2, worsening hypoxemia.</li>
+              <li>COPD and chronic hypoxic lung disease are common drivers.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="children">
+      <div class="pad">
+        <h2>6. Respiratory Infections in Children</h2>
+        <table>
+          <tr><th>Disorder</th><th>Common organisms</th><th>Mechanism</th><th>Clinical manifestations</th></tr>
+          <tr><td>Bronchiolitis</td><td>RSV most common; rhinovirus, influenza, parainfluenza, metapneumovirus.</td><td>Small airway epithelial injury, edema, mucus/debris plugging, bronchospasm, air trapping.</td><td>Rhinorrhea, cough, wheeze, tachypnea, retractions, feeding difficulty, hypoxemia if severe.</td></tr>
+          <tr><td>Croup</td><td>Parainfluenza most common; RSV, influenza, adenovirus, SARS-CoV-2 possible.</td><td>Subglottic inflammation/edema narrows upper airway.</td><td>Barking cough, hoarseness, inspiratory stridor, low-grade fever, retractions if severe.</td></tr>
+          <tr><td>Acute epiglottitis</td><td>Historically Hib; now S. pneumoniae, S. aureus, Moraxella, and others.</td><td>Rapid supraglottic/epiglottic swelling threatens airway.</td><td>High fever, toxic appearance, drooling, dysphagia, muffled voice, tripod, stridor; emergency.</td></tr>
+          <tr><td>Tonsillitis</td><td>Viruses common; group A strep, MRSA possible.</td><td>Tonsillar inflammation, cytokine response, hypertrophy, exudate; severe swelling can obstruct.</td><td>Sore throat, fever, enlarged tonsils, exudate, tender nodes, muffled voice, poor intake.</td></tr>
+          <tr><td>Pneumonia</td><td>Viruses common; S. pneumoniae common bacterial cause; S. aureus, atypicals, neonatal organisms by age.</td><td>Alveolar/terminal airway infection with inflammation, exudate, V/Q mismatch.</td><td>Fever, cough, tachypnea, crackles/wheeze, retractions, nasal flaring, vomiting, dehydration.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="cancer">
+      <div class="pad">
+        <h2>7. Lung Cancers</h2>
+        <table>
+          <tr><th>Cancer</th><th>Risk factors</th><th>Pathophysiology</th><th>Prognosis pattern</th></tr>
+          <tr><td>Non-small cell lung cancer</td><td>Smoking, radon, asbestos, pollution, occupational exposures, radiation, family history, chronic lung disease.</td><td>Genetic driver mutations and carcinogen injury cause uncontrolled epithelial growth; includes adenocarcinoma and squamous cell carcinoma.</td><td>Often better than small cell if found early and surgically resectable; prognosis worsens with nodal/metastatic spread.</td></tr>
+          <tr><td>Large cell carcinoma</td><td>Strong smoking association, similar environmental/occupational risks.</td><td>Undifferentiated NSCLC, often peripheral, aggressive, rapid growth.</td><td>Generally poorer than some other NSCLC subtypes because it is aggressive and often advanced at diagnosis.</td></tr>
+          <tr><td>Small cell lung cancer</td><td>Very strong smoking association.</td><td>Neuroendocrine tumor with rapid doubling time, early metastasis, paraneoplastic syndromes.</td><td>Poor prognosis; often disseminated at diagnosis, initially chemo/radiation responsive but recurrence is common.</td></tr>
+        </table>
+        <div class="callout gold"><strong>Clinical clue</strong>Do not anchor on infection when cough, hemoptysis, recurrent pneumonia in the same area, weight loss, hoarseness, bone pain, neurologic symptoms, or smoking history raise cancer concern.</div>
+      </div>
+    </section>
+
+    <section id="consults">
+      <div class="pad">
+        <h2>Student Clinical Consult Add-Ins</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Tuberculosis in Canada</h3>
+            <ul>
+              <li>M. tuberculosis is slow-growing, acid-fast, aerobic, lipid-rich, and intracellular.</li>
+              <li>Airborne transmission and upper-lobe cavitation make active pulmonary TB a public-health issue.</li>
+              <li>Major risk factors include HIV, TNF-alpha inhibitors, diabetes, overcrowding, homelessness, incarceration, healthcare exposure, and birth/travel in endemic regions.</li>
+              <li>Diagnosis: TST/IGRA show sensitization; suspected active disease needs chest imaging, AFB smear, NAAT/PCR, and culture.</li>
+              <li>Drug-sensitive active TB is treated with multidrug therapy; latent TB treatment prevents reactivation.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Streptococcus pneumoniae</h3>
+            <ul>
+              <li>Gram-positive, lancet-shaped bacterium causing otitis, sinusitis, pneumonia, bacteremia, and meningitis.</li>
+              <li>Capsule prevents opsonization and phagocytosis by neutrophils/macrophages.</li>
+              <li>Alveolar invasion causes macrophage cytokines, neutrophil recruitment, exudate, consolidation, and hypoxemia.</li>
+              <li>Adults may show fever, productive cough, pleuritic chest pain; older adults may show confusion, decreased alertness, or hypothermia.</li>
+              <li>Prevention includes vaccination, smoking cessation, hygiene, and chronic disease optimization. Check current provincial schedule before counselling.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clinical">
+      <div class="pad">
+        <h2>Clinical Practice Quick Cards</h2>
+        <div class="grid three">
+          <div class="card">
+            <h3>Respiratory Assessment</h3>
+            <ul>
+              <li>Vitals, SpO2, work of breathing, speech, accessory muscle use, mental status, hydration, perfusion.</li>
+              <li>Ask onset, cough/sputum, hemoptysis, wheeze, chest pain, fever, exposures, smoking/vaping, travel, immune status.</li>
+              <li>Auscultate for wheeze, crackles, decreased breath sounds, bronchial sounds, stridor, pleural rub.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Urgent Red Flags</h3>
+            <ul>
+              <li>Severe dyspnea, cyanosis, altered LOC, exhaustion, silent chest, stridor, hypotension, SpO2 not responding to oxygen.</li>
+              <li>Hemoptysis, suspected PE, suspected active TB, sepsis signs, severe asthma/COPD exacerbation, pediatric drooling/tripod.</li>
+              <li>ABG/capnography matters when hypoventilation or hypercapnia is suspected.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Treatment Logic</h3>
+            <ul>
+              <li>Hypoxemia needs oxygenation support; hypercapnia from hypoventilation needs ventilation support.</li>
+              <li>Obstruction: bronchodilation, anti-inflammatory therapy, trigger control, airway clearance as appropriate.</li>
+              <li>Infection: identify severity, likely organism, isolation needs, cultures/testing, antimicrobials when bacterial/TB likely.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="pad">
+        <h2>Practice and Active Recall</h2>
+        <details><summary>1. Hypoventilation causes which blood gas pattern?</summary><div>Increased PaCO2, respiratory acidosis, and possible secondary hypoxemia.</div></details>
+        <details><summary>2. What is the most common mechanism of hypoxemia?</summary><div>Ventilation-perfusion mismatch.</div></details>
+        <details><summary>3. Why does pneumonia cause hypoxemia?</summary><div>Inflammatory exudate fills alveoli, causing low V/Q or shunt physiology and impaired diffusion.</div></details>
+        <details><summary>4. What immune response contains TB?</summary><div>Th1-mediated cell-mediated immunity with IFN-gamma/TNF-alpha macrophage activation and granuloma formation.</div></details>
+        <details><summary>5. CF core triad?</summary><div>Obstruction, infection, and inflammation from thick dehydrated secretions.</div></details>
+        <details><summary>6. Emphysema vs chronic bronchitis?</summary><div>Emphysema is alveolar destruction/loss of elastic recoil; chronic bronchitis is mucus hypersecretion and chronic productive cough from airway inflammation.</div></details>
+        <details><summary>7. Asthma pathophysiology in one sentence?</summary><div>Chronic airway inflammation causes bronchial hyperresponsiveness, reversible bronchoconstriction, mucus, edema, and sometimes remodeling.</div></details>
+        <details><summary>8. Why can PE cause sudden dyspnea with clear lungs?</summary><div>Perfusion is blocked while ventilation remains, creating dead space and acute V/Q mismatch.</div></details>
+        <details><summary>9. Why is epiglottitis an emergency?</summary><div>Rapid supraglottic swelling can obstruct the airway; agitation or throat exam can worsen obstruction.</div></details>
+        <details><summary>10. Which lung cancer has the strongest early metastatic tendency?</summary><div>Small cell lung cancer.</div></details>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="pad">
+        <h2>Sources and Add-In Tracker</h2>
+        <table>
+          <tr><th>Source</th><th>Status</th><th>How it is used here</th></tr>
+          <tr><td>McCance 9th ed. textbook PDF</td><td>Mapped by printed pages from LO list</td><td>Pulmonary manifestations pp. 1153-1158; obstructive disease pp. 1167-1174, 1203-1204; infections pp. 1176-1179; vascular disease pp. 1179-1181; lung cancer pp. 1182-1185; pediatric respiratory infections pp. 1163, 1191-1194; CF pp. 1205-1207, 1383.</td></tr>
+          <tr><td>Dodge McLean Amanda - Tuberculosis In Canada Clinical Concept Presentation.pptx</td><td>Extracted</td><td>TB organism traits, Canadian epidemiology framing, immunopathophysiology, latent vs active TB, diagnostics, and treatment framing.</td></tr>
+          <tr><td>Dodge McLean Amanda - Tuberculosis In Canada Clinical Concept Presentation (1).pptx</td><td>Duplicate located</td><td>Duplicate TB file was not added separately to avoid repeated notes.</td></tr>
+          <tr><td>Clinical Consult - Strep Pneumoniae - Sharlyn Durant (Final) (1).pptx</td><td>Extracted</td><td>Pneumococcal pneumonia pathophysiology, age-based clinical manifestations, complications, prevention, and vaccine counselling framing.</td></tr>
+          <tr><td>Module 4 learning outcomes</td><td>Provided by user</td><td>Used to expand this page into full respiratory reading notes and learning objective coverage.</td></tr>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

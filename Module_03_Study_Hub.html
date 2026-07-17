@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 3 Study Hub | Cardiovascular System</title>
+  <style>
+    :root {
+      --ink: #172026; --muted: #5b6770; --line: #d8e0e6; --bg: #f7faf9;
+      --blue: #1d6fb8; --blue-bg: #eaf4ff; --red: #c23b3b; --red-bg: #fff0ee;
+      --green: #15835d; --green-bg: #eaf8f1; --gold: #9f6c00; --gold-bg: #fff7df;
+      --violet: #7450b5; --violet-bg: #f2edff; --teal: #0f7b83; --teal-bg: #e7f7f8;
+      --shadow: 0 10px 28px rgba(20, 33, 40, .09);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--bg); font-family: Arial, Helvetica, sans-serif; line-height: 1.55; }
+    header {
+      background:
+        linear-gradient(120deg, rgba(194, 59, 59, .94), rgba(29, 111, 184, .82)),
+        radial-gradient(circle at 20% 18%, rgba(255,255,255,.25), transparent 30%);
+      color: white; padding: 38px 22px 30px;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 10px; font-size: 14px; font-weight: 700; letter-spacing: 0; }
+    h1 { margin: 0; font-size: 38px; line-height: 1.1; letter-spacing: 0; }
+    header p { max-width: 860px; margin: 14px 0 0; font-size: 17px; }
+    nav { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); box-shadow: 0 4px 16px rgba(20,33,40,.06); }
+    nav .wrap { display: flex; gap: 8px; overflow-x: auto; padding: 10px 16px; }
+    nav a { flex: 0 0 auto; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 14px; padding: 7px 10px; border-radius: 7px; }
+    nav a:hover { background: var(--red-bg); color: var(--red); }
+    main { padding: 26px 16px 60px; }
+    section { margin: 0 auto 22px; max-width: 1180px; background: white; border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; }
+    section > .pad { padding: 22px; }
+    h2 { margin: 0 0 14px; font-size: 25px; letter-spacing: 0; }
+    h3 { margin: 22px 0 8px; font-size: 18px; letter-spacing: 0; }
+    h4 { margin: 16px 0 6px; font-size: 15px; letter-spacing: 0; text-transform: uppercase; color: var(--muted); }
+    p { margin: 8px 0; }
+    ul, ol { margin-top: 8px; padding-left: 22px; }
+    li { margin: 5px 0; }
+    a { color: var(--blue); }
+    .grid { display: grid; gap: 14px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fff; }
+    .card h3:first-child, .card h4:first-child { margin-top: 0; }
+    .tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--ink); padding: 3px 7px; border: 1px solid var(--line); border-radius: 999px; background: #fff; margin: 2px 4px 2px 0; }
+    .callout { border-left: 8px solid var(--blue); background: var(--blue-bg); padding: 11px 13px; border-radius: 6px; margin: 12px 0; }
+    .callout.red { border-color: var(--red); background: var(--red-bg); }
+    .callout.green { border-color: var(--green); background: var(--green-bg); }
+    .callout.gold { border-color: var(--gold); background: var(--gold-bg); }
+    .callout.violet { border-color: var(--violet); background: var(--violet-bg); }
+    .callout.teal { border-color: var(--teal); background: var(--teal-bg); }
+    .callout strong { display: block; margin-bottom: 3px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 4px; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 9px; vertical-align: top; }
+    th { background: #f0f5f7; text-align: left; }
+    .objective { display: grid; grid-template-columns: 28px 1fr auto; gap: 10px; align-items: start; padding: 10px; border: 1px solid var(--line); border-radius: 8px; background: #fbfdfd; margin-bottom: 8px; }
+    .check { width: 22px; height: 22px; border-radius: 50%; background: var(--green); color: white; display: grid; place-items: center; font-size: 14px; font-weight: 700; line-height: 1; }
+    .source { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    .map { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; margin: 14px 0; }
+    .node { flex: 1 1 155px; min-height: 82px; border: 2px solid var(--line); border-radius: 8px; padding: 10px; background: white; }
+    .node b { display: block; color: var(--red); margin-bottom: 4px; }
+    .arrow { align-self: center; font-weight: 700; color: var(--muted); font-size: 20px; }
+    details { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: #fff; margin: 8px 0; }
+    summary { cursor: pointer; font-weight: 700; }
+    .toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+    button { border: 1px solid var(--line); background: white; color: var(--ink); border-radius: 7px; padding: 8px 10px; font-weight: 700; cursor: pointer; }
+    button:hover { border-color: var(--red); color: var(--red); }
+    .answer { display: none; margin-top: 7px; padding-top: 7px; border-top: 1px solid var(--line); color: var(--muted); }
+    .show .answer { display: block; }
+    @media (max-width: 820px) {
+      h1 { font-size: 30px; }
+      .grid.two, .grid.three { grid-template-columns: 1fr; }
+      .objective { grid-template-columns: 28px 1fr; }
+      .source { grid-column: 2; white-space: normal; }
+      .arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Pathophysiology Study Hub</p>
+      <h1>Module 3: Cardiovascular System</h1>
+      <p>Atherosclerosis, coronary artery disease, myocardial ischemia and infarction, hypertension, PAD/DVT, heart failure, and congenital heart disease.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Module navigation">
+    <div class="wrap">
+      <a href="index.html">Hub</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#readings">Readings</a>
+      <a href="#refresher">Refresher</a>
+      <a href="#atherosclerosis">Atherosclerosis</a>
+      <a href="#cad">CAD/ACS/MI</a>
+      <a href="#hypertension">Hypertension</a>
+      <a href="#pad-dvt">PAD/DVT</a>
+      <a href="#hf">Heart Failure</a>
+      <a href="#congenital">Congenital</a>
+      <a href="#consults">Consults</a>
+      <a href="#clinical">Clinical</a>
+      <a href="#practice">Practice</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="objectives">
+      <div class="pad">
+        <h2>Learning Outcome Coverage</h2>
+        <div class="objective"><span class="check">✓</span><div>Describe atherosclerotic plaque development/progression, risk-factor mechanisms, and rupture consequences.</div><span class="source">McCance 9th ed. pp. 174-175, 1070-1073</span></div>
+        <div class="objective"><span class="check">✓</span><div>Explain ischemic/oxidative cellular injury; compare necrosis/apoptosis; discuss CAD risk factors, angina types, MI, thrombus vs embolus.</div><span class="source">McCance 9th ed. pp. 50-53, 85-91, 1069-1084</span></div>
+        <div class="objective"><span class="check">✓</span><div>Identify hypertension risk factors, mechanisms, and primary vs secondary hypertension.</div><span class="source">McCance 9th ed. pp. 1061-1066</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe PAD and DVT pathophysiology and clinical manifestations.</div><span class="source">McCance 9th ed. pp. 978, 1073</span></div>
+        <div class="objective"><span class="check">✓</span><div>Explain left- and right-sided heart failure, plus systolic vs diastolic heart failure.</div><span class="source">McCance 9th ed. pp. 1096-1101</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe tricuspid atresia, tetralogy of Fallot, patent ductus arteriosus, and ventricular septal defect.</div><span class="source">McCance 9th ed. pp. 1109-1119</span></div>
+      </div>
+    </section>
+
+    <section id="readings">
+      <div class="pad">
+        <h2>Assigned Reading Notes</h2>
+        <div class="callout teal"><strong>Reading scope</strong>These notes cover the assigned textbook readings and supporting paper, including background mechanisms that may not be named directly in the learning outcomes.</div>
+
+        <h3>McCance 9th ed. pp. 50-53: Free Radicals and ROS</h3>
+        <ul>
+          <li>Free radicals have unpaired electrons and are highly reactive; reactive oxygen species can damage lipids, proteins, and nucleic acids.</li>
+          <li>Major ROS sources include mitochondria, inflammation, toxins, radiation, ischemia-reperfusion, and oxidative metabolism.</li>
+          <li>Oxidative stress occurs when ROS production exceeds antioxidant defenses.</li>
+          <li>ROS injure cell membranes through lipid peroxidation, alter enzymes/receptors through protein oxidation, and damage DNA.</li>
+          <li>In cardiovascular disease, ROS oxidize LDL, injure endothelium, reduce nitric oxide availability, worsen vasoconstriction, and contribute to reperfusion injury.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 85-91: Cellular Death</h3>
+        <ul>
+          <li>Reversible injury becomes irreversible when ATP depletion, mitochondrial dysfunction, calcium overload, membrane injury, and DNA/protein damage cannot be corrected.</li>
+          <li>Necrosis is uncontrolled injury-related death with membrane rupture and inflammation.</li>
+          <li>Apoptosis is regulated programmed death with cell shrinkage, fragmentation, and minimal inflammation when fragments are cleared.</li>
+          <li>Myocardial infarction is classically associated with necrosis of cardiomyocytes, which releases troponin.</li>
+          <li>Apoptosis can contribute to remodeling and border-zone injury but is not the main acute infarct-core pattern.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 174-175, 1069-1084: Atherosclerosis, Coronary Heart Disease, ACS/MI</h3>
+        <ul>
+          <li>Atherosclerosis is chronic inflammatory plaque disease of medium and large arteries.</li>
+          <li>Endothelial dysfunction allows LDL entry, monocyte adhesion, inflammation, and platelet interaction.</li>
+          <li>Oxidized LDL drives macrophage uptake and foam-cell formation.</li>
+          <li>Fatty streaks can progress to fibrous plaques as smooth muscle migrates/proliferates and deposits extracellular matrix.</li>
+          <li>Stable plaques often cause predictable flow limitation; vulnerable plaques are rupture-prone because of thin caps, large lipid cores, and inflammatory enzymes.</li>
+          <li>Plaque rupture exposes thrombogenic material, causing platelet adhesion, coagulation, thrombus formation, and acute occlusion.</li>
+          <li>CAD occurs when coronary supply cannot meet myocardial oxygen demand.</li>
+          <li>Ischemia first impairs contractility and electrical stability; prolonged ischemia causes infarction.</li>
+          <li>ACS includes unstable angina, NSTEMI, and STEMI; troponin elevation distinguishes MI from unstable angina.</li>
+          <li>MI healing replaces necrotic myocardium with scar, reducing contractile reserve and increasing remodeling/HF risk.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1061-1066: Hypertension</h3>
+        <ul>
+          <li>Blood pressure rises through increased cardiac output, increased systemic vascular resistance, increased blood volume, arterial stiffness, or combinations of these.</li>
+          <li>Primary hypertension is multifactorial and includes genetic susceptibility, SNS activity, RAAS activity, renal sodium handling, endothelial dysfunction, insulin resistance, inflammation, and vascular remodeling.</li>
+          <li>Secondary hypertension has an identifiable driver such as renal disease, renal artery stenosis, endocrine disease, sleep apnea, medications, or vascular disease.</li>
+          <li>Chronic hypertension injures endothelium, accelerates atherosclerosis, increases afterload, and causes arteriolar remodeling.</li>
+          <li>Target organs include heart, brain, kidneys, retina, and peripheral vasculature.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 978, 1073: DVT and PAD</h3>
+        <ul>
+          <li>DVT is venous thrombus formation, usually in deep lower-extremity veins.</li>
+          <li>Virchow triad explains DVT risk: venous stasis, endothelial injury, and hypercoagulability.</li>
+          <li>DVT can obstruct venous return locally and can embolize to the lungs as pulmonary embolism.</li>
+          <li>PAD is usually atherosclerotic narrowing of arteries supplying the extremities.</li>
+          <li>PAD causes exertional muscle ischemia, classically intermittent claudication, and severe disease causes rest pain, ulcers, gangrene, and tissue loss.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1096-1101: Heart Failure and Dysrhythmias</h3>
+        <ul>
+          <li>Heart failure is a clinical syndrome where cardiac output is inadequate, filling pressures are elevated, or both.</li>
+          <li>Left-sided HF causes pulmonary congestion and reduced systemic perfusion.</li>
+          <li>Right-sided HF causes systemic venous congestion and may follow left-sided HF or pulmonary hypertension/lung disease.</li>
+          <li>HFrEF/systolic HF is impaired contraction, often from MI/remodeling/cardiomyopathy.</li>
+          <li>HFpEF/diastolic HF is impaired relaxation/filling with a stiff ventricle, often linked with hypertension, aging, obesity, diabetes, and LV hypertrophy.</li>
+          <li>Compensatory SNS and RAAS activation initially supports perfusion but chronically worsens afterload, preload, remodeling, fibrosis, and fluid retention.</li>
+          <li>Dysrhythmias can worsen HF by reducing filling time, reducing coordinated contraction, or causing sudden loss of output.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1109-1119: Congenital Heart Disease</h3>
+        <ul>
+          <li>Congenital lesions alter pressure, flow, oxygenation, and workload through abnormal valves, vessels, septa, or shunts.</li>
+          <li>Left-to-right shunts increase pulmonary blood flow and can eventually cause pulmonary hypertension and HF.</li>
+          <li>Right-to-left shunts allow deoxygenated blood into systemic circulation, causing cyanosis.</li>
+          <li>Obstructive/right-sided lesions can limit pulmonary blood flow and cause hypoxemia.</li>
+          <li>Clinical manifestations depend on shunt direction, degree of obstruction, pulmonary vascular resistance, and compensatory changes.</li>
+        </ul>
+
+        <h3>CORDIOPREV Trial: Mediterranean Diet vs Low-Fat Diet</h3>
+        <ul>
+          <li>CORDIOPREV was a randomized trial in patients with established coronary heart disease comparing Mediterranean and low-fat dietary interventions over long-term follow-up.</li>
+          <li>The Mediterranean diet was superior to the low-fat diet for secondary prevention of major cardiovascular events, with a reported hazard-ratio decrease of about 26% in the ScienceDirect summary.</li>
+          <li>Mechanism connection: Mediterranean-style eating can support better lipid profiles, endothelial function, insulin sensitivity, inflammatory tone, oxidative stress balance, and cardiometabolic risk.</li>
+          <li>Clinical takeaway: diet is part of secondary prevention after CAD/MI, not just general wellness advice.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="refresher">
+      <div class="pad">
+        <h2>Cardiovascular Refresher</h2>
+        <table>
+          <tr><th>Concept</th><th>Meaning</th><th>Why it matters</th></tr>
+          <tr><td>Cardiac output</td><td>Heart rate x stroke volume.</td><td>HF develops when output cannot meet metabolic demand.</td></tr>
+          <tr><td>Preload</td><td>End-diastolic ventricular volume/pressure.</td><td>Too little reduces stroke volume; too much causes congestion.</td></tr>
+          <tr><td>Afterload</td><td>Resistance the ventricle must overcome to eject.</td><td>Hypertension increases afterload and promotes LVH/HF.</td></tr>
+          <tr><td>SVR/TPR</td><td>Systemic vascular resistance, mainly arteriolar tone.</td><td>Major determinant of blood pressure.</td></tr>
+          <tr><td>Compliance</td><td>Ability of vessels/ventricles to stretch.</td><td>Stiff arteries raise systolic pressure; stiff ventricles cause HFpEF.</td></tr>
+          <tr><td>Coronary perfusion</td><td>Blood flow through coronary arteries to myocardium.</td><td>Reduced flow causes ischemia, angina, ACS, and MI.</td></tr>
+        </table>
+        <div class="callout gold"><strong>Core equation</strong>Blood pressure = cardiac output x systemic vascular resistance. Most hypertension mechanisms increase volume/output, vascular resistance, or arterial stiffness.</div>
+      </div>
+    </section>
+
+    <section id="atherosclerosis">
+      <div class="pad">
+        <h2>1. Atherosclerosis</h2>
+        <div class="callout red"><strong>Core mechanism</strong>Atherosclerosis is not just fat buildup. It is chronic endothelial injury, lipid retention/oxidation, inflammation, foam-cell formation, smooth muscle proliferation, fibrous-cap formation, and possible plaque rupture with thrombosis.</div>
+        <div class="map">
+          <div class="node"><b>Risk/injury</b>HTN, LDL, smoking, diabetes, inflammation, age/genetics.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Endothelial dysfunction</b>More permeability, adhesion molecules, inflammation, less nitric oxide.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>LDL oxidation</b>LDL enters intima and becomes oxidized/pro-inflammatory.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Foam cells</b>Macrophages ingest oxidized LDL and form fatty streak.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Fibrous plaque</b>Smooth muscle and matrix form cap over lipid core.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Rupture/thrombus</b>Exposed collagen/tissue factor triggers platelet plug and clot.</div>
+        </div>
+        <table>
+          <tr><th>Risk factor</th><th>How it contributes to plaque pathophysiology</th></tr>
+          <tr><td>High LDL/dyslipidemia</td><td>More LDL enters intima; oxidized LDL drives foam-cell formation.</td></tr>
+          <tr><td>Low HDL</td><td>Less reverse cholesterol transport and less removal of excess cholesterol.</td></tr>
+          <tr><td>Hypertension</td><td>Mechanical stress injures endothelium and accelerates vascular remodeling.</td></tr>
+          <tr><td>Smoking</td><td>Endothelial toxins, ROS, vasoconstriction, platelet activation, LDL oxidation.</td></tr>
+          <tr><td>Diabetes/insulin resistance</td><td>Glycation, inflammation, oxidative stress, dyslipidemia, endothelial dysfunction.</td></tr>
+          <tr><td>Obesity/metabolic syndrome</td><td>Clusters HTN, high TG, low HDL, insulin resistance, inflammation.</td></tr>
+          <tr><td>Age/family history/FH</td><td>Long exposure time and inherited lipid-handling vulnerability.</td></tr>
+        </table>
+        <div class="callout green"><strong>Plaque rupture consequence</strong>Stable plaque usually causes predictable demand-related ischemia. Ruptured plaque causes acute thrombosis, unstable angina, NSTEMI, STEMI, stroke, acute limb ischemia, or sudden death depending on vessel and occlusion.</div>
+      </div>
+    </section>
+
+    <section id="cad">
+      <div class="pad">
+        <h2>2. CAD, Myocardial Ischemia, and ACS</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Ischemic Cell Injury</h3>
+            <ol>
+              <li>Coronary flow or oxygen content falls below myocardial demand.</li>
+              <li>Mitochondrial oxidative phosphorylation falls; ATP drops.</li>
+              <li>Ion pumps fail; sodium/water enter cells; potassium gradients fail.</li>
+              <li>Anaerobic metabolism increases lactic acid and lowers pH.</li>
+              <li>Calcium overload activates damaging enzymes and worsens mitochondrial injury.</li>
+              <li>ROS and reperfusion injury can damage membranes, proteins, DNA, and microvasculature.</li>
+              <li>Prolonged severe injury causes necrosis and troponin release.</li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>Necrosis vs Apoptosis</h3>
+            <table>
+              <tr><th>Feature</th><th>Necrosis</th><th>Apoptosis</th></tr>
+              <tr><td>Pattern</td><td>Uncontrolled injury-related death.</td><td>Programmed regulated death.</td></tr>
+              <tr><td>Membrane</td><td>Ruptures; contents leak.</td><td>Contents packaged into apoptotic bodies.</td></tr>
+              <tr><td>Inflammation</td><td>Prominent.</td><td>Minimal if cleared.</td></tr>
+              <tr><td>MI relevance</td><td>Classic infarct-core death; troponin release.</td><td>Can occur in remodeling/border zones.</td></tr>
+            </table>
+          </div>
+        </div>
+        <table>
+          <tr><th>Condition</th><th>Main mechanism</th><th>Pattern</th><th>Troponin?</th></tr>
+          <tr><td>Stable angina</td><td>Fixed plaque limits flow reserve.</td><td>Predictable with exertion/stress; relieved by rest/nitro.</td><td>No.</td></tr>
+          <tr><td>Prinzmetal angina</td><td>Transient coronary vasospasm.</td><td>Often at rest/sleep; responds to nitrates/CCBs.</td><td>Usually no if brief.</td></tr>
+          <tr><td>Unstable angina</td><td>Plaque disruption with partial/intermittent thrombus.</td><td>New, worsening, rest, prolonged, not easily relieved.</td><td>No necrosis, so no diagnostic rise.</td></tr>
+          <tr><td>NSTEMI</td><td>ACS with myocardial necrosis, often partial/transient occlusion.</td><td>Acute ischemic symptoms; no ST elevation pattern.</td><td>Yes.</td></tr>
+          <tr><td>STEMI</td><td>Complete/prolonged coronary occlusion causing transmural injury risk.</td><td>Severe persistent symptoms and ST elevation.</td><td>Yes.</td></tr>
+        </table>
+        <div class="grid two">
+          <div class="callout red"><strong>MI manifestations</strong>Chest pressure/heaviness, radiation to arm/jaw/back, dyspnea, diaphoresis, nausea/vomiting, pallor, anxiety, weakness. Older adults, women, and people with diabetes may present with fatigue, dyspnea, epigastric discomfort, nausea, syncope, or minimal pain.</div>
+          <div class="callout gold"><strong>Thrombus vs embolus</strong>A thrombus forms and stays attached where it originated. An embolus travels and lodges elsewhere. A DVT fragment causing PE is a thromboembolus.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hypertension">
+      <div class="pad">
+        <h2>3. Hypertension</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Primary Hypertension</h3>
+            <ul>
+              <li>No single identifiable cause; most cases.</li>
+              <li>Genetics plus environment alter SNS tone, RAAS, renal sodium retention, endothelial function, insulin resistance, inflammation, and vascular remodeling.</li>
+              <li>Final pathways: increased volume/output, increased SVR, and arterial stiffness.</li>
+              <li>Chronic pressure causes endothelial injury, LVH, nephrosclerosis, retinopathy, stroke risk, and accelerated atherosclerosis.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Secondary Hypertension</h3>
+            <ul>
+              <li>Identifiable disease, medication, endocrine problem, renal problem, sleep apnea, or vascular cause.</li>
+              <li>Consider when HTN is abrupt, severe, young onset, resistant, associated with hypokalemia, renal bruit, episodic symptoms, or medication trigger.</li>
+              <li>May improve if the cause is treated before permanent vascular remodeling occurs.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Risk factors</th><th>Mechanistic link</th></tr>
+          <tr><td>Age, family history</td><td>Arterial stiffness and inherited BP-regulation tendencies.</td></tr>
+          <tr><td>High sodium/low potassium pattern</td><td>Volume expansion and altered vascular tone.</td></tr>
+          <tr><td>Obesity/insulin resistance</td><td>RAAS/SNS activation, inflammation, volume expansion.</td></tr>
+          <tr><td>CKD</td><td>Sodium/water retention and RAAS activation.</td></tr>
+          <tr><td>Sleep apnea</td><td>Sympathetic surges and vascular stress.</td></tr>
+          <tr><td>Alcohol, smoking, stress</td><td>Vasoconstriction, oxidative stress, sympathetic activation.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="pad-dvt">
+      <div class="pad">
+        <h2>4. Peripheral Artery Disease and Deep Venous Thrombosis</h2>
+        <table>
+          <tr><th>Feature</th><th>Peripheral artery disease</th><th>Deep venous thrombosis</th></tr>
+          <tr><td>Vessel problem</td><td>Arterial supply obstruction, usually atherosclerosis.</td><td>Venous clot formation, usually lower extremity.</td></tr>
+          <tr><td>Core mechanism</td><td>Plaque narrows artery; exertional demand exceeds flow.</td><td>Virchow triad: stasis, endothelial injury, hypercoagulability.</td></tr>
+          <tr><td>Pain</td><td>Claudication with walking; rest pain if severe.</td><td>Calf/thigh pain or tenderness; may be minimal.</td></tr>
+          <tr><td>Skin/temp</td><td>Cool, pale, shiny, hair loss, delayed healing, ulcers.</td><td>Unilateral swelling, warmth, erythema, venous congestion.</td></tr>
+          <tr><td>Pulses</td><td>Reduced or absent.</td><td>Usually present.</td></tr>
+          <tr><td>Major complications</td><td>Critical limb ischemia, gangrene, amputation, systemic atherosclerosis marker.</td><td>Pulmonary embolism, post-thrombotic syndrome.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="hf">
+      <div class="pad">
+        <h2>5. Heart Failure</h2>
+        <div class="callout red"><strong>Core mechanism</strong>Heart failure is not one disease. It is a syndrome where the heart cannot pump enough blood, cannot fill without high pressures, or both. Congestion is often as important as low output.</div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Left vs Right Heart Failure</h3>
+            <table>
+              <tr><th>Type</th><th>Backward congestion</th><th>Forward effect</th></tr>
+              <tr><td>Left-sided HF</td><td>Pulmonary venous congestion: dyspnea, orthopnea, PND, crackles, pulmonary edema.</td><td>Fatigue, weakness, renal hypoperfusion, poor exercise tolerance.</td></tr>
+              <tr><td>Right-sided HF</td><td>Systemic venous congestion: JVD, peripheral edema, hepatomegaly, ascites, weight gain.</td><td>Reduced pulmonary flow and reduced left filling/output.</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3>HFrEF vs HFpEF</h3>
+            <table>
+              <tr><th>Feature</th><th>HFrEF/systolic</th><th>HFpEF/diastolic</th></tr>
+              <tr><td>Main problem</td><td>Weak squeeze, impaired contractility.</td><td>Stiff ventricle, impaired relaxation/filling.</td></tr>
+              <tr><td>EF</td><td>Reduced, commonly <=40%.</td><td>Preserved/near normal, often >=50%.</td></tr>
+              <tr><td>Common causes</td><td>MI, ischemic cardiomyopathy, dilated cardiomyopathy.</td><td>HTN, LVH, aging, obesity, diabetes.</td></tr>
+              <tr><td>Aggravators</td><td>High afterload, volume overload, ischemia, arrhythmias.</td><td>Tachycardia, hypertension, volume overload, atrial fibrillation.</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="map">
+          <div class="node"><b>Low output</b>Kidney/baroreceptor senses poor perfusion.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>SNS + RAAS</b>Tachycardia, vasoconstriction, sodium/water retention.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Short-term compensation</b>Maintains pressure and perfusion briefly.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Long-term harm</b>More preload/afterload, remodeling, fibrosis, congestion.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="congenital">
+      <div class="pad">
+        <h2>6. Congenital Heart Disease</h2>
+        <table>
+          <tr><th>Defect</th><th>Pathophysiology</th><th>Clinical manifestations</th></tr>
+          <tr><td>Tricuspid atresia</td><td>Tricuspid valve fails to develop; no direct RA to RV flow. Survival requires ASD/PFO for right-to-left atrial flow and usually VSD/PDA for pulmonary blood flow.</td><td>Cyanosis, hypoxemia, tachypnea, poor feeding, single-ventricle physiology signs.</td></tr>
+          <tr><td>Tetralogy of Fallot</td><td>Four features: VSD, pulmonary stenosis/RV outflow obstruction, overriding aorta, RV hypertrophy. Obstruction pushes deoxygenated blood through VSD to systemic circulation.</td><td>Cyanosis, murmur, hypoxic spells, clubbing if chronic; squatting may improve symptoms by increasing SVR.</td></tr>
+          <tr><td>Patent ductus arteriosus</td><td>Ductus arteriosus remains open after birth. Usually left-to-right shunt from aorta to pulmonary artery, increasing pulmonary blood flow.</td><td>Continuous machinery murmur, bounding pulses, widened pulse pressure, pulmonary congestion/HF if large.</td></tr>
+          <tr><td>Ventricular septal defect</td><td>Opening between ventricles. Usually left-to-right shunt because LV pressure exceeds RV pressure.</td><td>Holosystolic murmur, pulmonary overcirculation, poor growth, tachypnea, HF if large; pulmonary hypertension if untreated.</td></tr>
+        </table>
+        <div class="callout gold"><strong>Shunt logic</strong>Left-to-right shunts increase pulmonary blood flow and can eventually cause pulmonary hypertension. Right-to-left shunts cause systemic desaturation and cyanosis.</div>
+      </div>
+    </section>
+
+    <section id="consults">
+      <div class="pad">
+        <h2>Student Clinical Consult Add-Ins</h2>
+        <div class="callout teal"><strong>How to use these</strong>These presentations add clinical framing to the textbook readings. They are summarized here as mechanism-based notes and practice links, not as slide galleries.</div>
+
+        <div class="grid three">
+          <div class="card">
+            <h3>Hypertension and ACE Inhibitors</h3>
+            <ul>
+              <li>Hypertension reflects sustained elevation in pressure from increased cardiac output, increased peripheral vascular resistance, increased blood volume, arterial stiffness, or combined mechanisms.</li>
+              <li>Primary hypertension is usually gradual and multifactorial; secondary hypertension has an identifiable driver and may improve when the cause is treated.</li>
+              <li>Long-term regulation depends heavily on kidneys and RAAS, with sympathetic tone and endothelial function shaping vascular resistance.</li>
+              <li>Target-organ damage: LV hypertrophy/heart failure, stroke/TIA, CKD/proteinuria, retinopathy, endothelial injury, and accelerated atherosclerosis.</li>
+              <li>Risk factors to assess: age, genetics, ethnicity, obesity, high sodium intake, inactivity, alcohol, smoking, chronic stress, diabetes, and CKD.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Familial Hypercholesterolemia</h3>
+            <ul>
+              <li>FH is an inherited LDL-clearing disorder, commonly autosomal dominant, where LDL receptor function is reduced or absent.</li>
+              <li>High circulating LDL from early life increases arterial LDL retention, oxidation, foam-cell formation, plaque burden, and premature coronary disease.</li>
+              <li>Heterozygous FH is much more common than homozygous FH; homozygous disease can cause severe childhood cholesterol elevation and very early MI.</li>
+              <li>Clinical clues: tendon xanthomas, xanthelasma, corneal arcus at a young age, strong family history, and very high LDL.</li>
+              <li>Treatment logic: statins reduce hepatic cholesterol synthesis, ezetimibe reduces intestinal absorption, PCSK9 inhibitors increase LDL receptor recycling, and severe homozygous disease may require LDL apheresis.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Folic Acid and Congenital Heart Disease</h3>
+            <ul>
+              <li>The heart begins developing very early; primitive heart tube formation and beating occur around week 3, often before pregnancy is recognized.</li>
+              <li>Cardiac looping, septation, outflow tract division, valve formation, aortic arch development, and conduction-system development occur during the early embryonic period.</li>
+              <li>Folic acid supports one-carbon metabolism, DNA/RNA synthesis, methylation, amino acid metabolism, and rapid embryonic/placental cell division.</li>
+              <li>Deficiency risk matters most before and during early pregnancy because the critical cardiac-development window is early.</li>
+              <li>Clinical prevention focus: preconception counselling, supplement access, medication review, nutrition assessment, smoking cessation, and high-risk dosing when indicated by prescriber guidance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Concept Flows From the Consults</h3>
+        <div class="map">
+          <div class="node"><b>Low renal perfusion / SNS / low distal Na+</b>Kidney releases renin.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Angiotensin I to II</b>ACE converts angiotensin I into angiotensin II.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Angiotensin II effects</b>Vasoconstriction plus aldosterone and ADH release.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Higher BP</b>Increased SVR, sodium/water retention, and blood volume.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>ACE inhibitor</b>Less angiotensin II and more bradykinin: lower BP, cough/angioedema risk, hyperkalemia risk.</div>
+        </div>
+        <div class="map">
+          <div class="node"><b>LDL receptor mutation</b>Impaired LDL clearance.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Very high LDL exposure</b>More LDL enters arterial intima.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Atherosclerosis acceleration</b>Oxidized LDL, foam cells, plaque growth.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Premature CAD</b>Angina, ACS, MI, sudden death risk if untreated.</div>
+        </div>
+        <div class="map">
+          <div class="node"><b>Early embryonic window</b>Heart tube, looping, septation, outflow tract division.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>High folate demand</b>Rapid cell division, DNA synthesis, methylation.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Deficiency / high-risk meds / barriers</b>Less support for normal development.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Clinical implication</b>Start counselling and supplementation before pregnancy whenever possible.</div>
+        </div>
+
+        <table>
+          <tr><th>Consult</th><th>Assessment focus</th><th>Treatment / practice implications</th></tr>
+          <tr><td>Hypertension and ACE inhibitors</td><td>Repeated BP technique, home readings, target-organ symptoms, renal function, electrolytes, diabetes/CKD, pregnancy status, medication/NSAID use, potassium intake, adherence barriers.</td><td>Monitor potassium and creatinine after ACE inhibitor starts or dose changes; teach dry cough, angioedema, hypotension, NSAID interaction, salt-substitute risk, and pregnancy contraindication.</td></tr>
+          <tr><td>Familial hypercholesterolemia</td><td>LDL level, premature CAD history, family history, xanthomas/xanthelasma/corneal arcus, smoking, diabetes, HTN, diet, physical activity.</td><td>Prompt lipid-lowering therapy, cascade family screening, aggressive CAD risk reduction, referral for very high LDL or suspected homozygous disease.</td></tr>
+          <tr><td>Folic acid and CHD prevention</td><td>Pregnancy intention, gestational age, supplement use, diet/food security, antiseizure medications such as phenytoin, smoking, prior affected pregnancy, diabetes, access to prenatal care.</td><td>Preconception counselling, folic acid supplementation, medication review, nutrition supports, smoking cessation, lab work/specialist referral when high risk.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="clinical">
+      <div class="pad">
+        <h2>Clinical Practice Quick Cards</h2>
+        <div class="grid three">
+          <div class="card">
+            <h3>Chest Pain / ACS</h3>
+            <ul>
+              <li>Assess onset, provocation, quality, radiation, severity, duration, associated dyspnea/diaphoresis/nausea/syncope.</li>
+              <li>ECG and serial troponins distinguish unstable angina/NSTEMI/STEMI with clinical context.</li>
+              <li>Do not rely on "classic" chest pain only; diabetes, older age, and women may present atypically.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Heart Failure</h3>
+            <ul>
+              <li>Ask dyspnea, orthopnea, PND, fatigue, edema, weight gain, nocturia, appetite, cognition.</li>
+              <li>Assess JVP, crackles, edema, hepatomegaly, oxygenation, BP/HR, urine output, weight trend.</li>
+              <li>Link symptoms to left congestion, right congestion, and low output.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>PAD/DVT</h3>
+            <ul>
+              <li>PAD: pulses, cap refill, skin temp, wounds, claudication distance, rest pain.</li>
+              <li>DVT: unilateral swelling, pain, warmth, risk factors, immobility, cancer, surgery, estrogen, prior clot.</li>
+              <li>PE concern: new dyspnea, pleuritic pain, tachycardia, hypoxia, syncope, hemoptysis.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="pad">
+        <h2>Practice and Active Recall</h2>
+        <div class="toolbar">
+          <button type="button" onclick="toggleAnswers(true)">Show answers</button>
+          <button type="button" onclick="toggleAnswers(false)">Hide answers</button>
+        </div>
+        <details class="qa"><summary>1. What starts atherosclerotic plaque formation?</summary><div class="answer">Endothelial injury/dysfunction, which allows LDL entry, inflammation, monocyte adhesion, and oxidized LDL-driven foam-cell formation.</div></details>
+        <details class="qa"><summary>2. Why is plaque rupture dangerous?</summary><div class="answer">It exposes thrombogenic material, causing platelet activation, coagulation, thrombus formation, and acute vessel occlusion.</div></details>
+        <details class="qa"><summary>3. Why does ischemia cause ATP depletion?</summary><div class="answer">Reduced oxygen impairs mitochondrial oxidative phosphorylation, so ATP production falls.</div></details>
+        <details class="qa"><summary>4. Stable angina vs unstable angina?</summary><div class="answer">Stable angina is predictable demand ischemia from fixed narrowing; unstable angina is ACS from plaque disruption/partial thrombus with new/worsening/rest symptoms.</div></details>
+        <details class="qa"><summary>5. Why does troponin rise in MI?</summary><div class="answer">Necrotic myocardial cells lose membrane integrity and release cardiac troponin into blood.</div></details>
+        <details class="qa"><summary>6. Primary vs secondary hypertension?</summary><div class="answer">Primary is multifactorial without a single cause; secondary has an identifiable cause such as renal, endocrine, sleep apnea, vascular, or medication-related disease.</div></details>
+        <details class="qa"><summary>7. PAD vs DVT: what is the vessel problem?</summary><div class="answer">PAD is arterial supply obstruction; DVT is venous clot formation with embolization risk.</div></details>
+        <details class="qa"><summary>8. HFrEF vs HFpEF?</summary><div class="answer">HFrEF is weak contraction/low EF; HFpEF is stiff filling/relaxation problem with preserved EF.</div></details>
+        <details class="qa"><summary>9. Which congenital defects are cyanotic?</summary><div class="answer">Tricuspid atresia and tetralogy of Fallot are classically cyanotic because systemic blood receives deoxygenated blood.</div></details>
+        <details class="qa"><summary>10. Why does PDA often cause bounding pulses?</summary><div class="answer">Runoff from aorta into pulmonary artery lowers diastolic pressure and widens pulse pressure.</div></details>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="pad">
+        <h2>Sources and Add-In Tracker</h2>
+        <table>
+          <tr><th>Source</th><th>Status</th><th>How it is used here</th></tr>
+          <tr><td>Module 3 CV Slides_UPDATED.pptx</td><td>Extracted</td><td>Cardiac refresher, hypertension, lipoproteins, atherosclerosis, CAD/ACS/MI, HF.</td></tr>
+          <tr><td>Cardiovascular_Pathophysiology_Study_Notes.docx</td><td>Extracted</td><td>Module structure and mechanism notes.</td></tr>
+          <tr><td>Cardiovascular_Pathophysiology_Study_Notes_UPDATED_with_Presenter_Slides.docx</td><td>Extracted</td><td>Updated notes with presenter/lecture emphasis.</td></tr>
+          <tr><td>3 Cardiovascular System.pdf</td><td>Located</td><td>Course module PDF; learning outcomes were provided directly.</td></tr>
+          <tr><td>Makayla Campbell - pdf Clinical Consult Presentation updated (1).pdf</td><td>Extracted</td><td>Hypertension pathophysiology, RAAS, ACE inhibitor mechanism, adverse effects, interactions, special populations, and NP assessment points.</td></tr>
+          <tr><td>CCP_Budge_Final (2).pptx</td><td>Extracted</td><td>Familial hypercholesterolemia, cholesterol transport, premature CAD risk, clinical manifestations, and treatment logic.</td></tr>
+          <tr><td>Folic Acid on CHDs (2).pptx</td><td>Extracted</td><td>Early fetal heart development, folic acid physiology, deficiency risk, and clinical prevention counselling.</td></tr>
+          <tr><td><a href="https://vimeo.com/reviews/31d7a55c-9761-4131-8818-ee5a21bd24d4/videos/931459369">Module 3 lecture video</a></td><td>Linked; transcript not available locally</td><td>Can be integrated if you provide a transcript, timestamps, or notes from the video.</td></tr>
+          <tr><td>McCance 9th ed. textbook PDF</td><td>Mapped by printed pages from LO list</td><td>Cell injury pp. 50-53, 85-91; atherosclerosis/CAD pp. 174-175, 1069-1084; HTN pp. 1061-1066; DVT/PAD pp. 978, 1073; HF pp. 1096-1101; congenital pp. 1109-1119.</td></tr>
+          <tr><td><a href="https://pubmed.ncbi.nlm.nih.gov/35525255/">CORDIOPREV trial, PubMed</a></td><td>Reviewed</td><td>Secondary cardiovascular prevention diet evidence.</td></tr>
+          <tr><td><a href="https://www.sciencedirect.com/science/article/pii/S0140673622001222">CORDIOPREV trial, ScienceDirect</a></td><td>Reviewed</td><td>Trial summary and major cardiovascular event comparison.</td></tr>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleAnswers(show) {
+      document.querySelectorAll('.qa').forEach(function (item) {
+        item.open = show;
+        item.classList.toggle('show', show);
+      });
+    }
+    document.querySelectorAll('.qa').forEach(function (item) {
+      item.addEventListener('toggle', function () {
+        item.classList.toggle('show', item.open);
+      });
+    });
+  </script>
+</body>
+</html>

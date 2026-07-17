@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 1 Study Hub | Pathophysiology</title>
+  <style>
+    :root {
+      --ink: #172026;
+      --muted: #5b6770;
+      --line: #d8e0e6;
+      --bg: #f7faf9;
+      --blue: #1d6fb8;
+      --blue-bg: #eaf4ff;
+      --red: #c23b3b;
+      --red-bg: #fff0ee;
+      --green: #15835d;
+      --green-bg: #eaf8f1;
+      --gold: #9f6c00;
+      --gold-bg: #fff7df;
+      --violet: #7450b5;
+      --violet-bg: #f2edff;
+      --teal: #0f7b83;
+      --teal-bg: #e7f7f8;
+      --shadow: 0 10px 28px rgba(20, 33, 40, .09);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    header {
+      background:
+        linear-gradient(120deg, rgba(29, 111, 184, .92), rgba(15, 123, 131, .88)),
+        radial-gradient(circle at 18% 15%, rgba(255, 255, 255, .28), transparent 28%);
+      color: white;
+      padding: 38px 22px 30px;
+    }
+
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 10px; font-size: 14px; font-weight: 700; letter-spacing: 0; }
+    h1 { margin: 0; font-size: 38px; line-height: 1.1; letter-spacing: 0; }
+    header p { max-width: 780px; margin: 14px 0 0; font-size: 17px; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 4px 16px rgba(20, 33, 40, .06);
+    }
+    nav .wrap {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 16px;
+    }
+    nav a {
+      flex: 0 0 auto;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 7px 10px;
+      border-radius: 7px;
+    }
+    nav a:hover { background: var(--blue-bg); color: var(--blue); }
+
+    main { padding: 26px 16px 60px; }
+    section {
+      margin: 0 auto 22px;
+      max-width: 1180px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    section > .pad { padding: 22px; }
+    h2 { margin: 0 0 14px; font-size: 25px; letter-spacing: 0; }
+    h3 { margin: 22px 0 8px; font-size: 18px; letter-spacing: 0; }
+    h4 { margin: 16px 0 6px; font-size: 15px; letter-spacing: 0; text-transform: uppercase; color: var(--muted); }
+    p { margin: 8px 0; }
+    ul, ol { margin-top: 8px; padding-left: 22px; }
+    li { margin: 5px 0; }
+    a { color: var(--blue); }
+
+    .grid { display: grid; gap: 14px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fff;
+    }
+    .card h3:first-child, .card h4:first-child { margin-top: 0; }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+      padding: 3px 7px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      margin: 2px 4px 2px 0;
+    }
+    .callout {
+      border-left: 8px solid var(--blue);
+      background: var(--blue-bg);
+      padding: 11px 13px;
+      border-radius: 6px;
+      margin: 12px 0;
+    }
+    .callout.red { border-color: var(--red); background: var(--red-bg); }
+    .callout.green { border-color: var(--green); background: var(--green-bg); }
+    .callout.gold { border-color: var(--gold); background: var(--gold-bg); }
+    .callout.violet { border-color: var(--violet); background: var(--violet-bg); }
+    .callout.teal { border-color: var(--teal); background: var(--teal-bg); }
+    .callout strong { display: block; margin-bottom: 3px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 4px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 9px;
+      vertical-align: top;
+    }
+    th { background: #f0f5f7; text-align: left; }
+
+    .objective {
+      display: grid;
+      grid-template-columns: 28px 1fr auto;
+      gap: 10px;
+      align-items: start;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfdfd;
+      margin-bottom: 8px;
+    }
+    .check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .source {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: stretch;
+      margin: 14px 0;
+    }
+    .node {
+      flex: 1 1 155px;
+      min-height: 82px;
+      border: 2px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      background: white;
+      position: relative;
+    }
+    .node b { display: block; color: var(--blue); margin-bottom: 4px; }
+    .arrow {
+      align-self: center;
+      font-weight: 700;
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 12px;
+      background: #fff;
+      margin: 8px 0;
+    }
+    summary { cursor: pointer; font-weight: 700; }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 12px 0;
+    }
+    button {
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--ink);
+      border-radius: 7px;
+      padding: 8px 10px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover { border-color: var(--blue); color: var(--blue); }
+    .answer { display: none; margin-top: 7px; padding-top: 7px; border-top: 1px solid var(--line); color: var(--muted); }
+    .show .answer { display: block; }
+    @media (max-width: 820px) {
+      h1 { font-size: 30px; }
+      .grid.two, .grid.three, .grid.four { grid-template-columns: 1fr; }
+      .objective { grid-template-columns: 28px 1fr; }
+      .source { grid-column: 2; white-space: normal; }
+      .arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Pathophysiology Study Hub</p>
+      <h1>Module 1: Epidemiology, Infection, Inflammation, Immunity, and Sickness Behaviour</h1>
+      <p>Built around the course learning outcomes, lecture slides, personal notes, and assigned readings. Use this as the central page for adding slides, textbook notes, videos, practice questions, and clinical application.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Module navigation">
+    <div class="wrap">
+      <a href="index.html">Hub</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#readings">Readings</a>
+      <a href="#epidemiology">Epidemiology</a>
+      <a href="#infection">Infection</a>
+      <a href="#acute">Acute Inflammation</a>
+      <a href="#chronic">Chronic Inflammation</a>
+      <a href="#adaptive">Adaptive Immunity</a>
+      <a href="#hypersensitivity">Hypersensitivity</a>
+      <a href="#immunodeficiency">Immunodeficiency</a>
+      <a href="#sickness">Sickness Behaviour</a>
+      <a href="#consults">Clinical Consults</a>
+      <a href="#practice">Practice</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="objectives">
+      <div class="pad">
+        <h2>Learning Outcome Coverage</h2>
+        <div class="objective"><span class="check">✓</span><div>Define incidence and prevalence.</div><span class="source">Course LO 1.3; Divya notes</span></div>
+        <div class="objective"><span class="check">✓</span><div>Discuss common social determinants of health.</div><span class="source">Canadian Facts, 2020</span></div>
+        <div class="objective"><span class="check">✓</span><div>Explain occupational factors in disease development.</div><span class="source">Canadian Facts, employment/working conditions</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe infection and its clinical course.</div><span class="source">McCance 9th ed. pp. 281-300, 304-307; slides; notes</span></div>
+        <div class="objective"><span class="check">✓</span><div>Explain antibiotics, vaccines, and passive immunization.</div><span class="source">McCance 9th ed. pp. 281-300, 304-307</span></div>
+        <div class="objective"><span class="check">✓</span><div>Discuss causes and consequences of antibiotic resistance.</div><span class="source">Cag et al., 2016; notes</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe acute inflammation using receptors, immune cells, and cytokines.</div><span class="source">McCance 9th ed. pp. 202-218; slides 3-18</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe chronic inflammation, compare it with acute inflammation, and explain granuloma development.</div><span class="source">McCance 9th ed. pp. 218-220; slides 19-25</span></div>
+        <div class="objective"><span class="check">✓</span><div>Explain how APCs and T helper cells initiate humoral and cell-mediated adaptive responses.</div><span class="source">McCance 9th ed. pp. 231-251</span></div>
+        <div class="objective"><span class="check">✓</span><div>Compare humoral and cell-mediated adaptive immunity.</div><span class="source">McCance 9th ed. pp. 231-251</span></div>
+        <div class="objective"><span class="check">✓</span><div>Define sensitization and compare Type I-IV hypersensitivity reactions.</div><span class="source">McCance 9th ed. pp. 255-270; slides 30-40</span></div>
+        <div class="objective"><span class="check">✓</span><div>Discuss primary/secondary immunodeficiency, HIV CD4 targeting, and HIV clinical course.</div><span class="source">McCance 9th ed. pp. 271-275, 291-293; slides 42-51</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe cytokines in fever and explain cachexia causes/consequences.</div><span class="source">McCance 9th ed. pp. 485-487; Aoyagi et al., 2015; slides 52-56</span></div>
+      </div>
+    </section>
+
+    <section id="readings">
+      <div class="pad">
+        <h2>Assigned Reading Notes</h2>
+        <div class="callout teal"><strong>How to use this section</strong>These notes cover the assigned readings, including material that may not be named directly in the learning outcomes. Use the objective sections below for exam alignment, and use this section to make sure the full reading scope is covered.</div>
+
+        <h3>McCance 9th ed. pp. 202-220: Innate Immunity, Acute Inflammation, Chronic Inflammation</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Innate Immunity and Barriers</h4>
+            <ul>
+              <li>Innate immunity is rapid, nonspecific, and present before exposure; it recognizes broad danger patterns rather than one exact antigen.</li>
+              <li>First-line defenses include intact skin, mucous membranes, normal flora/microbiome, low pH, secretions, enzymes, cilia, coughing, sneezing, and flushing actions.</li>
+              <li>The microbiome helps prevent pathogen colonization, supports immune development, and competes for nutrients and attachment sites.</li>
+              <li>Barrier disruption from wounds, burns, invasive devices, poor perfusion, moisture, or inflammation increases infection risk.</li>
+              <li>Second-line defense is inflammation: it activates when barriers fail or tissue injury occurs.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Recognition and Mediators</h4>
+            <ul>
+              <li>Innate immune cells recognize PAMPs from microbes and DAMPs from damaged host cells.</li>
+              <li>Pattern-recognition receptors trigger mediator release, phagocytosis, complement activation, and cytokine signalling.</li>
+              <li>Key resident cells: mast cells, macrophages, dendritic cells, tissue lymphocytes, endothelial cells.</li>
+              <li>Histamine causes vasodilation and increased vascular permeability.</li>
+              <li>Prostaglandins and bradykinin contribute to pain; pyrogenic cytokines contribute to fever.</li>
+              <li>Cytokines such as TNF-alpha, IL-1, and IL-6 amplify inflammation and produce systemic effects.</li>
+              <li>Chemokines recruit leukocytes toward the injured or infected site.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h4>Plasma Protein Systems</h4>
+            <ul>
+              <li>Complement helps destroy pathogens through opsonization, inflammation, chemotaxis, and membrane attack complex formation.</li>
+              <li>Opsonization tags microbes so phagocytes can bind and ingest them more effectively.</li>
+              <li>The clotting system limits spread of infection and starts repair by creating a fibrin framework.</li>
+              <li>The kinin system promotes vasodilation, vascular permeability, and pain through bradykinin.</li>
+              <li>These systems interact; excessive activation can worsen edema, pain, thrombosis, or systemic inflammation.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Cellular Response</h4>
+            <ul>
+              <li>Leukocytes move from blood to tissue through margination, adhesion, transmigration, and chemotaxis.</li>
+              <li>Neutrophils are the major early responders in acute bacterial inflammation.</li>
+              <li>Neutrophils kill through phagocytosis, enzymes, reactive oxygen species, and NETs.</li>
+              <li>Monocytes arrive later and become macrophages; they clean debris, release cytokines, present antigen, and coordinate repair.</li>
+              <li>Dendritic cells link innate and adaptive immunity by presenting antigen to T cells.</li>
+              <li>Exudate contains fluid, proteins, cells, and debris; pus is rich in dead neutrophils and liquefied tissue debris.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h4>Acute Inflammation</h4>
+            <ul>
+              <li>Acute inflammation is protective and usually short-lived.</li>
+              <li>Main purposes: remove the trigger, limit tissue damage, prevent spread, and start repair.</li>
+              <li>Classic local signs: redness, heat, swelling, pain, and loss of function.</li>
+              <li>Redness/heat come from vasodilation; swelling comes from increased permeability; pain comes from edema plus pain mediators.</li>
+              <li>Systemic signs can include fever, leukocytosis, malaise, increased CRP, and increased fibrinogen.</li>
+              <li>Possible outcomes: complete resolution, abscess formation, scarring/fibrosis, or progression to chronic inflammation.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Chronic Inflammation</h4>
+            <ul>
+              <li>Chronic inflammation lasts longer and is less efficient than acute inflammation.</li>
+              <li>Common causes: persistent infection, foreign bodies, chronic irritants, toxic exposures, autoimmune disease, and unresolved acute inflammation.</li>
+              <li>Main cells: macrophages, lymphocytes, plasma cells, and fibroblasts.</li>
+              <li>Consequences: tissue destruction, fibrosis, impaired function, chronic pain, fatigue, and increased malignancy risk in some tissues.</li>
+              <li>Granulomas form when macrophages and lymphocytes wall off material that cannot be eliminated, such as mycobacteria or foreign material.</li>
+              <li>Granulomas can protect by containing the trigger, but they can also distort tissue and impair organ function.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>McCance 9th ed. pp. 231-251: Antigens, Humoral Immunity, Cell-Mediated Immunity</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Antigens and Antigen Presentation</h4>
+            <ul>
+              <li>Antigens are molecules that can be recognized by immune receptors and may trigger adaptive immune responses.</li>
+              <li>Each antigen can contain multiple epitopes; epitopes are the specific parts recognized by antibodies or T-cell receptors.</li>
+              <li>Professional APCs include dendritic cells, macrophages, and B cells.</li>
+              <li>MHC molecules present antigen fragments to T cells; this is how T cells "see" antigen.</li>
+              <li>Costimulation and cytokine context matter; antigen recognition without proper signals can lead to tolerance rather than activation.</li>
+              <li>Clonal selection expands lymphocytes that recognize the antigen.</li>
+              <li>Memory cells allow faster and stronger secondary responses.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Humoral Immunity</h4>
+            <ul>
+              <li>Humoral immunity is B-cell and antibody mediated.</li>
+              <li>Best for extracellular pathogens, toxins, and free viral particles before cell entry.</li>
+              <li>B cells can differentiate into plasma cells that secrete antibodies and memory B cells that persist after the response.</li>
+              <li>Antibodies neutralize toxins/viruses, opsonize microbes, activate complement, and block attachment.</li>
+              <li>IgM appears early in primary responses; IgG is common in blood and tissues and is important for long-term protection.</li>
+              <li>IgA protects mucosal surfaces and appears in secretions; IgE participates in allergy and parasite responses.</li>
+              <li>Vaccines rely heavily on humoral memory but may also stimulate cellular immunity depending on vaccine type.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h4>Cell-Mediated Immunity</h4>
+          <ul>
+            <li>Cell-mediated immunity is T-cell mediated and is central for intracellular pathogens, infected cells, tumor cells, and transplant rejection.</li>
+            <li>CD4+ T helper cells coordinate immune responses through cytokines and help activate B cells, macrophages, and cytotoxic T cells.</li>
+            <li>CD8+ cytotoxic T cells kill infected or abnormal cells through apoptosis-inducing mechanisms.</li>
+            <li>Regulatory T cells help limit immune responses and maintain self-tolerance.</li>
+            <li>Failure of T-cell function increases risk for viral, fungal, mycobacterial, and opportunistic infections.</li>
+            <li>Adaptive immunity is powerful but can cause disease when misdirected, as in allergy, autoimmunity, alloimmunity, and immune complex injury.</li>
+          </ul>
+        </div>
+
+        <h3>McCance 9th ed. pp. 255-275: Hypersensitivity and Deficiencies in Immunity</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Hypersensitivity Overview</h4>
+            <ul>
+              <li>Hypersensitivity is an immune response that damages host tissue.</li>
+              <li>Sensitization means first exposure creates antigen-specific antibodies or memory T cells.</li>
+              <li>Type I: IgE and mast-cell mediated; immediate allergy; can cause anaphylaxis.</li>
+              <li>Type II: IgG or IgM against cell/tissue antigens; complement, phagocytosis, or receptor dysfunction.</li>
+              <li>Type III: immune complexes deposit in tissues and activate complement/neutrophils.</li>
+              <li>Type IV: T-cell mediated delayed reaction; no antibody required.</li>
+              <li>The same immune tools that protect against infection can cause pathology when directed at harmless antigen, self-antigen, or deposited immune complexes.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Immunodeficiency</h4>
+            <ul>
+              <li>Immunodeficiency means immune defenses cannot adequately protect against infection.</li>
+              <li>Primary immunodeficiencies are usually genetic or developmental; secondary immunodeficiencies are acquired and more common.</li>
+              <li>Common secondary causes include HIV, malnutrition, diabetes, malignancy, aging, renal disease, corticosteroids, chemotherapy, biologics, and transplant medications.</li>
+              <li>Clinical clue: recurrent, severe, unusual, prolonged, or opportunistic infections.</li>
+              <li>Different immune pathway defects create different infection patterns: antibody problems often cause recurrent bacterial sinopulmonary infections; T-cell problems predispose to viral/fungal/opportunistic infections.</li>
+              <li>Immunodeficiency can also reduce vaccine response and increase cancer risk.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>McCance 9th ed. pp. 281-307: Microorganisms, Infectious Disease, Resistance, Vaccines</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Microorganisms and Host Relationship</h4>
+            <ul>
+              <li>Microorganisms include bacteria, viruses, fungi, protozoa, and parasites.</li>
+              <li>Normal flora can be protective, neutral, or opportunistic depending on location and host status.</li>
+              <li>Colonization means organisms are present without tissue invasion or symptomatic damage.</li>
+              <li>Infection means organisms cause tissue injury, immune activation, or clinical disease.</li>
+              <li>Pathogenicity depends on virulence factors, inoculum size, route of entry, tissue tropism, immune status, and host barriers.</li>
+              <li>Virulence mechanisms include adhesion, invasion, toxins, immune evasion, intracellular survival, biofilms, and tissue-destructive enzymes.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Clinical Course of Infection</h4>
+            <ul>
+              <li>Exposure does not always lead to infection; host defenses may clear the organism.</li>
+              <li>Incubation: organism replicates before symptoms appear.</li>
+              <li>Prodrome: nonspecific symptoms such as malaise, fatigue, low-grade fever, or aches.</li>
+              <li>Illness/invasion: organism-specific signs and inflammatory manifestations are most evident.</li>
+              <li>Convalescence: immune control and tissue repair occur; fatigue may persist.</li>
+              <li>Latency: some organisms persist silently and can reactivate later.</li>
+              <li>Severe infection can progress to bacteremia/viremia, sepsis, shock, organ dysfunction, or death.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid two">
+          <div class="card">
+            <h4>Antimicrobials and Resistance</h4>
+            <ul>
+              <li>Antibiotics work by targeting bacterial cell walls/membranes, protein synthesis, DNA/RNA synthesis, or metabolic pathways.</li>
+              <li>Antibiotics do not treat viral infection unless there is bacterial coinfection.</li>
+              <li>Resistance can be intrinsic or acquired.</li>
+              <li>Acquired resistance can spread through mutation or horizontal gene transfer.</li>
+              <li>Resistance mechanisms include drug degradation, drug modification, efflux pumps, decreased permeability, altered target sites, and bypass pathways.</li>
+              <li>Clinical consequences include treatment failure, longer illness, broader-spectrum therapy, toxicity, higher cost, and increased mortality.</li>
+              <li>Stewardship reduces unnecessary exposure and selection pressure.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Vaccines and Passive Immunization</h4>
+            <ul>
+              <li>Vaccines expose the immune system to antigen safely enough to create protective memory.</li>
+              <li>Protection can involve antibodies, T-cell responses, or both.</li>
+              <li>Boosters strengthen secondary responses and maintain protective immunity.</li>
+              <li>Live attenuated vaccines can create strong immunity but may be contraindicated in pregnancy or severe immunocompromise.</li>
+              <li>Inactivated/subunit/toxoid/conjugate vaccines cannot replicate but may need boosters or adjuvants.</li>
+              <li>Passive immunization gives preformed antibodies for immediate short-term protection after exposure or when active response is inadequate.</li>
+              <li>Herd immunity reduces transmission when enough people are immune.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>McCance 9th ed. pp. 485-487: Pathogenesis of Fever</h3>
+        <div class="card">
+          <ul>
+            <li>Fever is a regulated rise in body temperature caused by an increased hypothalamic set point.</li>
+            <li>Exogenous pyrogens, such as microbial products, stimulate immune cells.</li>
+            <li>Endogenous pyrogens include cytokines such as IL-1, IL-6, TNF-alpha, and interferons.</li>
+            <li>These mediators increase prostaglandin signalling in the hypothalamus, raising the temperature set point.</li>
+            <li>Chills and shivering occur while the body tries to reach the new set point.</li>
+            <li>Sweating and flushing occur when the set point falls and the body dissipates heat.</li>
+            <li>Moderate fever can support immune function, but high or prolonged fever increases metabolic demand, fluid loss, discomfort, and risk in vulnerable patients.</li>
+            <li>Assess fever in context: age, immune status, source symptoms, hemodynamics, mental status, hydration, and sepsis risk matter more than the number alone.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="epidemiology">
+      <div class="pad">
+        <h2>1. Introduction to Epidemiology</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Incidence vs Prevalence</h3>
+            <table>
+              <tr><th>Term</th><th>Meaning</th><th>Clinical use</th></tr>
+              <tr><td>Incidence</td><td>New cases in a defined population over a defined time.</td><td>Best for risk, causation, outbreaks, prevention planning.</td></tr>
+              <tr><td>Prevalence</td><td>All existing cases in a defined population at a point or period of time.</td><td>Best for disease burden, staffing, screening demand, chronic care planning.</td></tr>
+              <tr><td>Point prevalence</td><td>Existing cases at one moment.</td><td>Example: number of inpatients with C. difficile today.</td></tr>
+              <tr><td>Period prevalence</td><td>Existing cases during a time window.</td><td>Example: number of people treated for asthma this year.</td></tr>
+            </table>
+            <div class="callout gold"><strong>Exam trap</strong>Incidence counts new cases only. Prevalence rises when disease lasts longer, even if new cases are not increasing.</div>
+          </div>
+          <div class="card">
+            <h3>Social Determinants of Health</h3>
+            <p>Social determinants are the living, working, economic, social, and political conditions that shape exposure to risk, access to resources, stress physiology, treatment access, and recovery. The Canadian Facts frames health inequities as systematic, unfair, and avoidable differences rooted in social conditions.</p>
+            <p><span class="tag">income</span><span class="tag">education</span><span class="tag">employment</span><span class="tag">food security</span><span class="tag">housing</span><span class="tag">social exclusion</span><span class="tag">health services</span><span class="tag">geography</span><span class="tag">disability</span><span class="tag">Indigenous ancestry</span><span class="tag">gender</span><span class="tag">immigration</span><span class="tag">race</span></p>
+            <div class="callout green"><strong>Clinical link</strong>Ask what makes the healthy choice realistic: income, housing, transport, medication coverage, food access, safety, language, work schedule, and trust in care systems.</div>
+          </div>
+        </div>
+
+        <h3>Occupational Factors and Disease</h3>
+        <table>
+          <tr><th>Occupational factor</th><th>How it contributes to disease</th><th>What you may assess</th></tr>
+          <tr><td>Chemical exposure</td><td>Irritation, toxicity, carcinogenesis, immune sensitization.</td><td>Respiratory symptoms, skin changes, exposure history, PPE access, workplace controls.</td></tr>
+          <tr><td>Physical hazards</td><td>Noise, heat/cold, vibration, radiation, repetitive strain, injury.</td><td>Pain, neurologic symptoms, hearing changes, burns, musculoskeletal limitations.</td></tr>
+          <tr><td>Biological exposure</td><td>Pathogens from patients, animals, waste, crowded workplaces.</td><td>Vaccination status, fever, respiratory/GI symptoms, outbreak contacts.</td></tr>
+          <tr><td>Psychosocial stress</td><td>Chronic stress activation, sleep disruption, mental health burden, hypertension risk.</td><td>Sleep, mood, workload, control, harassment, fatigue, coping resources.</td></tr>
+          <tr><td>Precarious work</td><td>Delayed care, inability to rest, reduced benefits, unstable housing/food access.</td><td>Medication affordability, missed appointments, ability to isolate when infectious.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="infection">
+      <div class="pad">
+        <h2>2. Infection Concepts</h2>
+        <div class="callout red"><strong>Core mechanism</strong>Infectious disease occurs when a microorganism enters the host, survives host defenses, multiplies or produces toxins, and causes tissue injury directly or through the immune response.</div>
+        <div class="map">
+          <div class="node"><b>Exposure</b>Contact with pathogen, reservoir, vector, contaminated surface, food, water, or body fluid.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Entry</b>Skin break, mucosa, respiratory tract, GI tract, urogenital tract, blood.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Adherence</b>Pathogen attaches, avoids clearance, and colonizes.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Invasion/Toxin</b>Tissue invasion, toxin release, immune activation.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Clinical disease</b>Local symptoms, fever, leukocytosis, organ dysfunction, possible sepsis.</div>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Clinical Course of Infection</h3>
+            <table>
+              <tr><th>Stage</th><th>Meaning</th><th>What you may see</th></tr>
+              <tr><td>Incubation</td><td>Exposure to first symptoms.</td><td>No symptoms, but organism may be multiplying.</td></tr>
+              <tr><td>Prodromal</td><td>Early nonspecific symptoms.</td><td>Malaise, fatigue, mild fever, aches.</td></tr>
+              <tr><td>Invasion/illness</td><td>Pathogen and immune response peak.</td><td>Pathogen-specific symptoms plus inflammation.</td></tr>
+              <tr><td>Convalescence</td><td>Pathogen controlled and tissue repair begins.</td><td>Symptoms decline; fatigue can persist.</td></tr>
+              <tr><td>Latency</td><td>Organism persists without active symptoms.</td><td>Possible later reactivation, such as herpes viruses or TB.</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Treatment Logic</h3>
+            <ul>
+              <li><b>Antibiotics</b> target bacterial structures or pathways: cell wall/membrane function, protein synthesis, DNA replication, or folate metabolism.</li>
+              <li><b>Vaccines</b> prime adaptive immunity before exposure so memory B and T cells respond faster and more strongly.</li>
+              <li><b>Passive immunization</b> gives preformed antibodies for immediate short-term protection, useful when there is no time to build active immunity.</li>
+              <li><b>Supportive care</b> protects perfusion, oxygenation, hydration, nutrition, pain control, and organ function while the immune system and targeted therapy work.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Antibiotic Resistance</h3>
+        <table>
+          <tr><th>Mechanism</th><th>Plain-language meaning</th><th>Consequence</th></tr>
+          <tr><td>Drug-degrading enzymes</td><td>Bacteria produce enzymes that break down the drug.</td><td>Drug reaches target but is inactivated.</td></tr>
+          <tr><td>Drug modification</td><td>Bacterial enzymes chemically alter the antibiotic.</td><td>Drug no longer binds or works properly.</td></tr>
+          <tr><td>Efflux pumps</td><td>Bacteria pump antibiotic out of the cell.</td><td>Intracellular concentration stays too low.</td></tr>
+          <tr><td>Reduced permeability</td><td>Cell wall/membrane changes limit drug entry.</td><td>Drug cannot reach effective concentration.</td></tr>
+          <tr><td>Altered target</td><td>The bacterial target changes shape or structure.</td><td>Drug can no longer bind effectively.</td></tr>
+          <tr><td>Horizontal gene transfer</td><td>Resistance genes spread between bacteria.</td><td>Resistance can move rapidly through bacterial communities.</td></tr>
+        </table>
+        <div class="callout gold"><strong>Stewardship point</strong>Resistance is selected by antibiotic pressure. Clinical prevention includes using antibiotics only when indicated, choosing the narrowest effective agent, correct dosing/duration, infection control, vaccination, and culture-guided therapy when appropriate.</div>
+      </div>
+    </section>
+
+    <section id="acute">
+      <div class="pad">
+        <h2>3. Innate Immunity and Acute Inflammation</h2>
+        <div class="callout"><strong>Big concept</strong>Acute inflammation is a fast, protective innate response that brings plasma proteins and leukocytes to an injured or infected site. It is coordinated by pattern recognition, cytokines, chemokines, vascular changes, and phagocytosis.</div>
+        <div class="map">
+          <div class="node"><b>Trigger</b>PAMPs from microbes or DAMPs from damaged cells.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Recognition</b>Mast cells, macrophages, dendritic cells, and other resident cells detect danger through nonspecific receptors.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Mediators</b>Histamine, prostaglandins, bradykinin, TNF-alpha, IL-1, IL-6, IL-23, chemokines.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Vascular response</b>Vasodilation and permeability increase blood flow and fluid/protein movement.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Cellular response</b>Neutrophils first, then monocytes/macrophages; phagocytosis and repair coordination.</div>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Cells to Know</h3>
+            <table>
+              <tr><th>Cell</th><th>Role</th></tr>
+              <tr><td>Mast cell</td><td>Rapid histamine release; vasodilation and permeability.</td></tr>
+              <tr><td>Macrophage</td><td>Resident detection, cytokines, phagocytosis, cleanup, repair coordination.</td></tr>
+              <tr><td>Dendritic cell</td><td>Antigen capture and presentation to T cells.</td></tr>
+              <tr><td>Neutrophil</td><td>First major recruited leukocyte; phagocytosis, ROS, NETs.</td></tr>
+              <tr><td>Monocyte</td><td>Circulating precursor that enters tissue and becomes macrophage-like.</td></tr>
+              <tr><td>NK cell</td><td>Innate killing of virally infected or abnormal cells.</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Local and Systemic Manifestations</h3>
+            <table>
+              <tr><th>Finding</th><th>Mechanism</th></tr>
+              <tr><td>Heat/redness</td><td>Vasodilation increases local blood flow.</td></tr>
+              <tr><td>Swelling</td><td>Vascular permeability allows fluid/proteins into tissue.</td></tr>
+              <tr><td>Pain</td><td>Edema pressure plus prostaglandins and bradykinin stimulate pain fibers.</td></tr>
+              <tr><td>Fever</td><td>Pyrogens such as LPS, TNF-alpha, and IL-1 reset the hypothalamic set point.</td></tr>
+              <tr><td>Leukocytosis</td><td>Bone marrow releases more leukocytes, sometimes immature forms.</td></tr>
+              <tr><td>Acute-phase proteins</td><td>Liver increases proteins such as CRP and fibrinogen.</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="callout green"><strong>Clinical assessment</strong>Look for site-specific inflammation, vital signs, fever pattern, pain, swelling, drainage, oxygenation, perfusion, mental status, hydration, WBC differential, CRP, cultures if ordered, and sepsis red flags.</div>
+      </div>
+    </section>
+
+    <section id="chronic">
+      <div class="pad">
+        <h2>4. Chronic Inflammation</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Causes and Consequences</h3>
+            <ul>
+              <li>Persistent organisms that evade host defense, such as mycobacteria.</li>
+              <li>Ongoing exposure to toxins, chemicals, particulate matter, or physical irritants.</li>
+              <li>Autoimmune or dysregulated immune responses.</li>
+              <li>Unresolved acute inflammation.</li>
+              <li>Idiopathic inflammation when the cause is unknown.</li>
+            </ul>
+            <p>Consequences include tissue destruction, fibrosis, altered organ function, chronic pain, fatigue, impaired healing, and increased cancer risk through cytokines, ROS, DNA damage, and proliferative repair signals.</p>
+          </div>
+          <div class="card">
+            <h3>Granuloma Development</h3>
+            <div class="map">
+              <div class="node"><b>Persistent trigger</b>Agent resists clearance.</div>
+              <div class="node"><b>Macrophages</b>Accumulate and may fuse into giant cells.</div>
+              <div class="node"><b>Lymphocytes</b>Form a surrounding immune wall.</div>
+              <div class="node"><b>Fibrosis</b>Collagen capsule may isolate the area.</div>
+            </div>
+            <p>A granuloma walls off material the immune system cannot easily remove. It limits spread but can also damage tissue and impair organ function.</p>
+          </div>
+        </div>
+        <table>
+          <tr><th>Feature</th><th>Acute inflammation</th><th>Chronic inflammation</th></tr>
+          <tr><td>Timing</td><td>Seconds to minutes onset; usually days.</td><td>Two weeks or longer.</td></tr>
+          <tr><td>Main cells</td><td>Neutrophils, then macrophages.</td><td>Macrophages, lymphocytes, plasma cells.</td></tr>
+          <tr><td>Purpose</td><td>Neutralize threat and start repair.</td><td>Response to persistent threat or dysregulation.</td></tr>
+          <tr><td>Tissue outcome</td><td>Resolution, regeneration, abscess, or scar.</td><td>Tissue destruction, remodeling, fibrosis, granuloma.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="adaptive">
+      <div class="pad">
+        <h2>5. Adaptive Immunity</h2>
+        <div class="callout violet"><strong>Big picture</strong>Adaptive immunity is slower on first exposure but highly specific. It uses antigen recognition, clonal expansion, effector cells, antibodies, and memory cells.</div>
+        <div class="map">
+          <div class="node"><b>Antigen captured</b>Professional APC takes up foreign material.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Antigen displayed</b>APC presents peptide with MHC to T helper cell.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>T helper activation</b>Costimulation and cytokines direct response.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Effector response</b>B cells/antibodies or cytotoxic T cells clear target.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Memory</b>Faster response after re-exposure.</div>
+        </div>
+        <table>
+          <tr><th>Feature</th><th>Humoral immunity</th><th>Cell-mediated immunity</th></tr>
+          <tr><td>Main cells</td><td>B lymphocytes, plasma cells, T helper cells.</td><td>T helper cells, cytotoxic T cells, macrophages.</td></tr>
+          <tr><td>Best targets</td><td>Extracellular bacteria, toxins, free viruses.</td><td>Intracellular pathogens, virus-infected cells, tumor cells, transplanted tissue.</td></tr>
+          <tr><td>Main mechanism</td><td>Antibodies neutralize, opsonize, activate complement.</td><td>T cells kill infected/abnormal cells or activate macrophages.</td></tr>
+          <tr><td>Memory</td><td>Memory B cells and long-lived antibodies.</td><td>Memory T cells.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="hypersensitivity">
+      <div class="pad">
+        <h2>6. Hypersensitivity Reactions</h2>
+        <div class="callout gold"><strong>Sensitization</strong>Sensitization is the first exposure process that creates antigen-specific antibodies and/or memory T cells. Later exposure triggers an exaggerated immune response that causes tissue damage.</div>
+        <table>
+          <tr><th>Type</th><th>Main immune players</th><th>Mechanism</th><th>Consequences/examples</th></tr>
+          <tr><td>I: Immediate/IgE</td><td>IgE, mast cells, basophils, histamine, leukotrienes, prostaglandins.</td><td>IgE binds mast cells after sensitization; re-exposure causes degranulation.</td><td>Allergic rhinitis, asthma, peanut allergy, anaphylaxis.</td></tr>
+          <tr><td>II: Tissue/cell-specific</td><td>IgG or IgM, complement, phagocytes, cytotoxic cells.</td><td>Antibodies bind antigens on specific cells/tissues and trigger destruction or dysfunction.</td><td>ABO incompatibility, Graves disease, myasthenia gravis.</td></tr>
+          <tr><td>III: Immune complex</td><td>IgG/IgM complexes, complement, neutrophils.</td><td>Antigen-antibody complexes deposit in tissues and drive inflammation.</td><td>SLE, rheumatoid arthritis, glomerulonephritis, vasculitis.</td></tr>
+          <tr><td>IV: Delayed/cell-mediated</td><td>T cells, macrophages, cytokines.</td><td>Memory T cells respond after antigen presentation; inflammation develops over 48-72 hours.</td><td>TB skin test, contact dermatitis, transplant rejection.</td></tr>
+        </table>
+        <div class="callout green"><strong>Clinical link</strong>For suspected hypersensitivity, assess timing after exposure, airway/breathing/circulation, rash pattern, swelling, wheeze, hypotension, medication/food/environment exposures, autoimmune clues, and transplant/transfusion history.</div>
+      </div>
+    </section>
+
+    <section id="immunodeficiency">
+      <div class="pad">
+        <h2>7. Immunodeficiency</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Primary vs Secondary</h3>
+            <table>
+              <tr><th>Type</th><th>Cause</th><th>Clinical clue</th></tr>
+              <tr><td>Primary</td><td>Usually genetic or developmental immune defect.</td><td>Unusual, recurrent, severe infections from early life.</td></tr>
+              <tr><td>Secondary</td><td>Illness, medication, malnutrition, aging, HIV, cancer therapy, diabetes, renal disease.</td><td>More common; risk depends on underlying cause and immune pathway affected.</td></tr>
+            </table>
+            <p>Consequences include opportunistic infection, poor vaccine response, prolonged infection, unusual organisms, reactivation of latent infection, malignancy risk, and poor wound healing.</p>
+          </div>
+          <div class="card">
+            <h3>HIV Mechanism</h3>
+            <ol>
+              <li>HIV gp120 binds CD4 on T helper cells and uses coreceptors for entry.</li>
+              <li>Viral RNA enters the cell.</li>
+              <li>Reverse transcriptase converts RNA into DNA.</li>
+              <li>Integrase inserts viral DNA into the host genome.</li>
+              <li>Virus can remain latent or replicate, destroying CD4 T helper cells directly and indirectly.</li>
+            </ol>
+          </div>
+        </div>
+        <h3>Clinical Course of HIV</h3>
+        <div class="map">
+          <div class="node"><b>Acute infection</b>High viral load, CD4 decline, nonspecific flu-like illness.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Immune response</b>Viral load drops; CD4 count partly recovers.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Clinical latency</b>Virus persists, often years, with gradual immune damage.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>AIDS</b>Severe CD4 depletion, often below 200 cells/uL, with opportunistic infections or cancers.</div>
+        </div>
+        <div class="callout green"><strong>Clinical assessment</strong>Think infection history, oral thrush, weight loss, lymphadenopathy, fever/night sweats, respiratory symptoms, neurologic changes, skin lesions, medication adherence, viral load, CD4 count, STI screening, and psychosocial barriers to treatment.</div>
+      </div>
+    </section>
+
+    <section id="sickness">
+      <div class="pad">
+        <h2>8. Sickness Behaviour: Fever and Cachexia</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Fever</h3>
+            <p>During acute infection, exogenous pyrogens such as bacterial LPS and endogenous cytokines such as TNF-alpha and IL-1 act on the hypothalamus. The thermoregulatory set point rises, producing chills and heat-conserving behaviours until the body reaches the new set point.</p>
+            <div class="callout teal"><strong>Assess</strong>Temperature trend, heart rate, blood pressure, respiratory rate, oxygenation, rigors, mental status, hydration, source symptoms, immune status, cultures/labs as ordered, and response to antipyretics or antimicrobials.</div>
+          </div>
+          <div class="card">
+            <h3>Cachexia</h3>
+            <p>Cachexia is a complex metabolic syndrome with muscle wasting, weakness, fatigue, anorexia, and sometimes fat loss. It is driven by inflammation, altered metabolism, reduced intake, inefficient energy production, increased protein breakdown, impaired regeneration, and hormonal appetite changes.</p>
+            <div class="callout red"><strong>Key distinction</strong>Cachexia is not simple starvation. Nutrition matters, but inflammation and metabolic reprogramming make weight and muscle loss difficult to reverse with calories alone.</div>
+          </div>
+        </div>
+        <table>
+          <tr><th>Cachexia contributor</th><th>Mechanism</th><th>Clinical relevance</th></tr>
+          <tr><td>TNF-alpha, IL-1, other cytokines</td><td>Promote catabolism and appetite changes.</td><td>Weight loss, fatigue, weakness, poor treatment tolerance.</td></tr>
+          <tr><td>Skeletal muscle proteolysis</td><td>Increased myofibril protein degradation and apoptosis.</td><td>Reduced mobility, falls risk, respiratory weakness.</td></tr>
+          <tr><td>Fat metabolism changes</td><td>Increased lipolysis and impaired lipid synthesis.</td><td>Loss of fat stores and energy reserve.</td></tr>
+          <tr><td>Tumor/treatment factors</td><td>Tumor metabolism, chemotherapy effects, nausea, taste changes, inflammation.</td><td>Need symptom control, nutrition support, function-focused care.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="consults">
+      <div class="pad">
+        <h2>Clinical Consults Added to Module 1</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Systemic Lupus Erythematosus</h3>
+            <p>SLE is a chronic autoimmune inflammatory disease with loss of immune tolerance, autoantibody production, immune complex deposition, complement activation, and multi-organ inflammation. It can affect skin, joints, kidneys, nervous system, and hematologic systems.</p>
+            <div class="map">
+              <div class="node"><b>Risk + trigger</b>Genetic susceptibility, estrogen, UV radiation, infection, smoking, chemicals, stress, sleep deprivation.</div>
+              <div class="arrow">→</div>
+              <div class="node"><b>Innate activation</b>Poor apoptotic debris clearance exposes nuclear antigens; TLRs and plasmacytoid dendritic cells drive interferon-alpha.</div>
+              <div class="arrow">→</div>
+              <div class="node"><b>Adaptive loss of tolerance</b>BAFF supports autoreactive B cells; T-cell regulation is impaired.</div>
+              <div class="arrow">→</div>
+              <div class="node"><b>Immune complexes</b>Autoantibodies bind nuclear antigens, deposit in tissue, activate complement.</div>
+              <div class="arrow">→</div>
+              <div class="node"><b>Clinical disease</b>Flares/remissions, rash, arthritis, nephritis, neuropsychiatric disease, cytopenias, organ damage.</div>
+            </div>
+            <table>
+              <tr><th>Clinical focus</th><th>What to connect</th></tr>
+              <tr><td>Assessment</td><td>Flares, photosensitivity, rash, joint pain/swelling, fatigue, renal symptoms, neuro symptoms, CBC, urinalysis, creatinine, complement, autoantibodies.</td></tr>
+              <tr><td>Treatment logic</td><td>Hydroxychloroquine reduces flares; corticosteroids control acute inflammation but add toxicity; immunosuppressants reduce broad immune activation.</td></tr>
+              <tr><td>Targeted therapies</td><td>Belimumab reduces BAFF-driven autoreactive B cells; anifrolumab blocks type I interferon signaling; voclosporin reduces T-cell activation in lupus nephritis.</td></tr>
+            </table>
+          </div>
+
+          <div class="card">
+            <h3>Measles</h3>
+            <p>Measles is a highly infectious airborne systemic viral illness caused by a Paramyxovirus. It begins in the respiratory tract, spreads through lymphoid tissue and blood, then causes respiratory, conjunctival, mucosal, and skin manifestations.</p>
+            <div class="map">
+              <div class="node"><b>Exposure</b>Airborne droplets/aerosols or close contact; contagious before and after rash onset.</div>
+              <div class="arrow">→</div>
+              <div class="node"><b>Entry</b>Virus infects respiratory dendritic cells, alveolar macrophages, and lymphocytes through CD150 receptors.</div>
+              <div class="arrow">→</div>
+              <div class="node"><b>Spread</b>Replication in lung and lymphoid tissues causes viremia and systemic infection.</div>
+              <div class="arrow">→</div>
+              <div class="node"><b>Immune injury</b>Cytokines, chemokines, complement, and T-cell infiltration produce fever, cough, coryza, conjunctivitis, Koplik spots, and rash.</div>
+              <div class="arrow">→</div>
+              <div class="node"><b>Prevention</b>MMR vaccination creates protective antibodies, T cells, and memory without causing disease.</div>
+            </div>
+            <table>
+              <tr><th>Clinical point</th><th>What to know</th></tr>
+              <tr><td>Classic manifestations</td><td>Incubation about 7-21 days; prodrome 2-4 days; fever, cough, coryza, conjunctivitis, Koplik spots, then descending rash.</td></tr>
+              <tr><td>Complications</td><td>Otitis media, pneumonia, diarrhea, encephalitis, vision loss, death; risk is higher in young children, unvaccinated people, pregnancy, and immunocompromise.</td></tr>
+              <tr><td>Diagnosis/treatment</td><td>NP/throat swab, measles IgM, urine testing as directed by public health; treatment is supportive, with vitamin A for hospitalized children per guidance.</td></tr>
+              <tr><td>Prevention</td><td>Airborne precautions, N95, eye protection, gown/gloves, isolation, vaccination, and careful vaccine-hesitancy communication.</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="clinical">
+      <div class="pad">
+        <h2>Clinical Practice Quick Cards</h2>
+        <div class="grid three">
+          <div class="card">
+            <h3>When You See Infection</h3>
+            <ul>
+              <li>Ask onset, exposure, travel, sick contacts, wounds, devices, immunosuppression.</li>
+              <li>Assess vitals, source signs, pain, mental status, hydration, perfusion.</li>
+              <li>Watch for sepsis: fever or hypothermia, tachycardia, tachypnea, hypotension, confusion, low urine output.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>When You See Inflammation</h3>
+            <ul>
+              <li>Local: redness, heat, swelling, pain, loss of function, drainage.</li>
+              <li>Systemic: fever, fatigue, leukocytosis, elevated CRP/fibrinogen.</li>
+              <li>Differentiate protective acute response from persistent chronic damage.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>When You See Immune Dysfunction</h3>
+            <ul>
+              <li>Recurrent, severe, unusual, or opportunistic infections suggest immunodeficiency.</li>
+              <li>Timing after exposure helps classify hypersensitivity.</li>
+              <li>Medication history matters: steroids, chemotherapy, biologics, transplant drugs.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="pad">
+        <h2>Practice and Active Recall</h2>
+        <div class="toolbar">
+          <button type="button" onclick="toggleAnswers(true)">Show answers</button>
+          <button type="button" onclick="toggleAnswers(false)">Hide answers</button>
+        </div>
+        <details class="qa"><summary>1. A disease has many long-lasting cases but few new cases per year. Which measure is high: incidence or prevalence?</summary><div class="answer">Prevalence. Chronic duration increases the number of existing cases even if incidence is low.</div></details>
+        <details class="qa"><summary>2. Why does acute inflammation cause heat and redness?</summary><div class="answer">Vasodilation increases blood flow to the affected tissue.</div></details>
+        <details class="qa"><summary>3. Which cells arrive first during acute inflammation?</summary><div class="answer">Neutrophils are the first major recruited leukocytes, followed by monocytes/macrophages.</div></details>
+        <details class="qa"><summary>4. Why can chronic inflammation promote cancer?</summary><div class="answer">Persistent cytokines, ROS, DNA damage, tissue repair signalling, and chronic infection can increase mutation risk and abnormal proliferation.</div></details>
+        <details class="qa"><summary>5. What does sensitization mean in hypersensitivity?</summary><div class="answer">Initial exposure creates antigen-specific antibodies and/or memory T cells, so later exposure produces an exaggerated damaging response.</div></details>
+        <details class="qa"><summary>6. Compare Type I and Type IV hypersensitivity.</summary><div class="answer">Type I is immediate, IgE/mast-cell mediated, often allergic. Type IV is delayed, T-cell mediated, usually develops over 48-72 hours.</div></details>
+        <details class="qa"><summary>7. How does HIV target CD4 T helper cells?</summary><div class="answer">The viral gp120 protein binds CD4, HIV enters the cell, reverse transcriptase converts RNA to DNA, and integrase inserts viral DNA into the host genome.</div></details>
+        <details class="qa"><summary>8. Why are vaccines different from passive immunization?</summary><div class="answer">Vaccines stimulate the patient to make active adaptive immunity and memory. Passive immunization gives preformed antibodies for immediate but temporary protection.</div></details>
+        <details class="qa"><summary>9. Name three bacterial resistance mechanisms.</summary><div class="answer">Examples: drug-degrading enzymes, drug-modifying enzymes, efflux pumps, altered permeability, altered target sites, horizontal gene transfer.</div></details>
+        <details class="qa"><summary>10. Why is cachexia not the same as simple starvation?</summary><div class="answer">Cachexia includes inflammation-driven metabolic changes, muscle proteolysis, inefficient energy production, impaired regeneration, and appetite/hormonal changes. Calories alone may not reverse it.</div></details>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="pad">
+        <h2>Sources and Add-In Tracker</h2>
+        <table>
+          <tr><th>Source</th><th>Status</th><th>How it is used here</th></tr>
+          <tr><td>Module 1 Lecture Slides.pptx</td><td>Extracted</td><td>Inflammation, hypersensitivity, immunodeficiency, HIV, cachexia, microbiota, epigenetics.</td></tr>
+          <tr><td>SLE Clinical Consult - Alexis Snell (1).pptx</td><td>Extracted</td><td>SLE concept map, immune tolerance loss, interferon pathway, immune complexes, targeted therapies.</td></tr>
+          <tr><td>Michelle Alphonso Clinical Consult - Measles (1).pptx</td><td>Extracted</td><td>Measles concept map, clinical manifestations, complications, diagnosis, vaccine prevention.</td></tr>
+          <tr><td>Divya - PATHO MIDTERM NOTES.docx</td><td>Extracted with shared read</td><td>Definitions, comparison tables, infection stages, resistance mechanisms, antibodies.</td></tr>
+          <tr><td>1_Pre-Patho.docx</td><td>Extracted</td><td>Prerequisite cell physiology/genetics; not the main Module 1 LO set.</td></tr>
+          <tr><td>Patho Notes (2).pdf / Patho Notes (5).pdf</td><td>Pending extraction; exact duplicates</td><td>Will be added when PDF text extraction is available.</td></tr>
+          <tr><td>McCance 9th ed. textbook PDF</td><td>Mapped by printed pages from LO list</td><td>Infection pp. 281-300, 304-307; acute inflammation pp. 202-218; chronic inflammation pp. 218-220; adaptive immunity pp. 231-251; hypersensitivity pp. 255-270; immunodeficiency pp. 271-275, 291-293; fever pp. 485-487.</td></tr>
+          <tr><td><a href="https://www.thecanadianfacts.org/The_Canadian_Facts-2nd_ed.pdf">Social Determinants of Health: The Canadian Facts, 2nd ed.</a></td><td>Reviewed</td><td>Social determinants and occupational factors.</td></tr>
+          <tr><td><a href="https://atm.amegroups.org/article/view/11651/12134">Cag et al. (2016), Resistance mechanisms</a></td><td>Reviewed</td><td>Antibiotic resistance concepts.</td></tr>
+          <tr><td><a href="https://www.wjgnet.com/1948-5204/full/v7/i4/17.htm">Aoyagi et al. (2015), Cancer cachexia</a></td><td>Reviewed</td><td>Cachexia mechanism and treatment logic.</td></tr>
+        </table>
+        <div class="callout teal"><strong>Next add-ins</strong>For each new slide deck, note pack, or video, add its key points into the matching section instead of keeping separate notes. The goal is one consolidated module page per module.</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleAnswers(show) {
+      document.querySelectorAll('.qa').forEach(function (item) {
+        item.open = show;
+        item.classList.toggle('show', show);
+      });
+    }
+
+    document.querySelectorAll('.qa').forEach(function (item) {
+      item.addEventListener('toggle', function () {
+        item.classList.toggle('show', item.open);
+      });
+    });
+  </script>
+</body>
+</html>

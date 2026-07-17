@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 5 Study Hub | Gastrointestinal System</title>
+  <style>
+    :root {
+      --ink: #17211c;
+      --muted: #5c6a62;
+      --bg: #f7f3ea;
+      --paper: #fffdf8;
+      --line: #d9d0bf;
+      --green: #2f7d59;
+      --teal: #1d6f79;
+      --gold: #b98521;
+      --red: #b84a42;
+      --purple: #70549a;
+      --blue: #3867a6;
+      --shadow: 0 10px 25px rgba(31, 35, 28, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    header {
+      background: linear-gradient(135deg, #2f7d59, #1d6f79);
+      color: white;
+      padding: 42px 0 34px;
+    }
+    .wrap { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 700; opacity: .9; }
+    h1 { margin: 8px 0 10px; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.05; letter-spacing: 0; }
+    h2 { margin: 0 0 18px; font-size: 1.65rem; letter-spacing: 0; }
+    h3 { margin: 20px 0 10px; font-size: 1.05rem; letter-spacing: 0; }
+    p { margin: 0 0 12px; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 253, 248, .96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+    nav .wrap { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0; }
+    nav a, .button {
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: white;
+      padding: 8px 11px;
+      border-radius: 8px;
+      white-space: nowrap;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+    nav a:hover, .button:hover { border-color: var(--green); color: var(--green); }
+    main { padding: 24px 0 60px; }
+    section { width: min(1160px, calc(100% - 32px)); margin: 0 auto 22px; }
+    .pad {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .card h3 { margin-top: 0; }
+    ul, ol { margin: 8px 0 0 21px; padding: 0; }
+    li { margin: 5px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      display: table;
+    }
+    th, td { padding: 10px 11px; border: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { background: #eef4ef; color: #20372a; }
+    .objective {
+      display: grid;
+      grid-template-columns: 34px 1fr auto;
+      gap: 10px;
+      align-items: start;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      margin-bottom: 9px;
+    }
+    .check {
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #dff0e6;
+      color: var(--green);
+      font-weight: 800;
+    }
+    .source { color: var(--muted); font-size: .86rem; white-space: nowrap; }
+    .callout {
+      border-left: 5px solid var(--green);
+      background: #eef7f1;
+      padding: 13px 14px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .callout.teal { border-color: var(--teal); background: #edf7f8; }
+    .callout.gold { border-color: var(--gold); background: #fff6df; }
+    .callout.red { border-color: var(--red); background: #fff0ed; }
+    .callout.purple { border-color: var(--purple); background: #f5f0fb; }
+    .map {
+      display: flex;
+      align-items: stretch;
+      gap: 9px;
+      overflow-x: auto;
+      padding: 10px 0;
+      margin: 8px 0 16px;
+    }
+    .node {
+      min-width: 185px;
+      flex: 1;
+      background: white;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--teal);
+      border-radius: 8px;
+      padding: 11px;
+    }
+    .node b { display: block; margin-bottom: 4px; }
+    .arrow { display: grid; place-items: center; color: var(--muted); font-weight: 800; min-width: 22px; }
+    .toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+    button {
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    details {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      margin: 9px 0;
+    }
+    summary { cursor: pointer; font-weight: 700; }
+    .answer { margin-top: 9px; color: #263c30; }
+    a { color: var(--blue); }
+    @media (max-width: 900px) {
+      .grid, .grid.three { grid-template-columns: 1fr; }
+      .objective { grid-template-columns: 34px 1fr; }
+      .source { grid-column: 2; white-space: normal; }
+      .pad { padding: 17px; }
+      table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Pathophysiology Study Hub</p>
+      <h1>Module 5: Gastrointestinal System</h1>
+      <p>GI motility, GERD and hiatal hernia, gastritis and peptic ulcer disease, IBD/diverticular disease/appendicitis, hepatitis, gallbladder and pancreatic disease, and colorectal cancer.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Module navigation">
+    <div class="wrap">
+      <a href="index.html">Hub</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#readings">Readings</a>
+      <a href="#lecture">Lecture</a>
+      <a href="#motility">Motility</a>
+      <a href="#upper">Upper GI</a>
+      <a href="#inflammation">Inflammatory Bowel</a>
+      <a href="#hepatobiliary">Hepatobiliary</a>
+      <a href="#cancers">Cancers</a>
+      <a href="#consults">Consults</a>
+      <a href="#clinical">Clinical</a>
+      <a href="#practice">Practice</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="objectives">
+      <div class="pad">
+        <h2>Learning Outcome Coverage</h2>
+        <div class="objective"><span class="check">✓</span><div>Compare osmotic and secretory diarrhea; describe constipation pathophysiology; explain IBS mechanisms and manifestations.</div><span class="source">McCance 9th ed. pp. 1318-1324, 1340, 1390</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe GERD pathophysiology and clinical manifestations.</div><span class="source">McCance 9th ed. pp. 1324-1325, 1381</span></div>
+        <div class="objective"><span class="check">✓</span><div>Compare causes, mechanisms, and manifestations of gastritis and peptic ulcer disease.</div><span class="source">McCance 9th ed. pp. 1328-1333</span></div>
+        <div class="objective"><span class="check">✓</span><div>Compare Crohn disease and ulcerative colitis; describe diverticulosis/diverticulitis and appendicitis.</div><span class="source">McCance 9th ed. pp. 1336-1341, Table 41.7</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe the clinical course of viral hepatitis and compare HAV, HBV, HCV, and HDV transmission.</div><span class="source">McCance 9th ed. pp. 887-888, 1347-1353, 1392-1393</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe pancreatitis risk factors, mechanisms, and manifestations; explain cholelithiasis and cholecystitis.</div><span class="source">McCance 9th ed. pp. 1353-1357</span></div>
+        <div class="objective"><span class="check">✓</span><div>Compare sliding and paraesophageal hiatal hernias.</div><span class="source">McCance 9th ed. pp. 1325-1326</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe risk factors, mechanisms, and manifestations of GI cancers, focusing on colon and rectum.</div><span class="source">McCance 9th ed. pp. 179, 1357-1362</span></div>
+      </div>
+    </section>
+
+    <section id="readings">
+      <div class="pad">
+        <h2>Assigned Reading Notes</h2>
+        <div class="callout teal"><strong>Reading scope</strong>These notes cover the assigned textbook readings and the IBD paper. They include background concepts that may not be named directly in the learning outcomes but are in the assigned reading sections.</div>
+
+        <h3>McCance 9th ed. pp. 1318-1324, 1340, 1390: Constipation, Diarrhea, IBS</h3>
+        <ul>
+          <li>Constipation is difficult, infrequent, incomplete, or painful stool passage; normal bowel frequency varies widely, so change from baseline matters.</li>
+          <li>Primary constipation includes functional evacuation disorder, slow-transit constipation, and constipation-predominant IBS.</li>
+          <li>Secondary constipation can result from low fiber/fluid intake, immobility, medications, opioids, neurologic disease, endocrine/metabolic disease, pregnancy, pain, obstruction, strictures, fissures, hemorrhoids, or colorectal cancer.</li>
+          <li>Slow transit allows excessive water reabsorption, producing harder stool and more difficult evacuation.</li>
+          <li>Fecal impaction can paradoxically cause low-volume leakage diarrhea as fluid/mucus passes around impacted stool.</li>
+          <li>Diarrhea is acute, persistent, or chronic loose/watery stool; major risks are dehydration, electrolyte loss, metabolic acidosis, weight loss, and shock in vulnerable patients.</li>
+          <li>Large-volume diarrhea usually reflects excess luminal water or secretion; small-volume diarrhea often reflects inflammatory disease, urgency, tenesmus, or distal colon/rectal involvement.</li>
+          <li>IBS is a disorder of gut-brain interaction with abdominal pain plus altered bowel habits, without structural disease explaining symptoms.</li>
+          <li>IBS mechanisms are multifactorial: visceral hypersensitivity, altered motility, brain-gut dysregulation, microbiome changes, postinfectious immune activation, stress response, food triggers, and altered serotonin signalling.</li>
+          <li>IBS manifestations include recurrent abdominal pain, bloating, change in stool frequency/form, mucus, urgency, and subtypes with constipation, diarrhea, mixed, or unclassified patterns.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1324-1326, 1381: GERD and Hiatal Hernia</h3>
+        <ul>
+          <li>GERD occurs when gastric contents reflux into the esophagus often enough to cause symptoms, mucosal injury, or complications.</li>
+          <li>Key mechanisms include transient lower esophageal sphincter relaxation, low LES tone, delayed gastric emptying, impaired esophageal clearance, reduced salivary neutralization, increased intra-abdominal pressure, and hiatal hernia.</li>
+          <li>Acid, pepsin, and sometimes bile irritate squamous epithelium, causing inflammation, erosions, strictures, ulceration, bleeding, or Barrett esophagus.</li>
+          <li>Typical manifestations: heartburn, regurgitation, sour/bitter taste, dysphagia, epigastric/substernal discomfort, cough, hoarseness, wheeze, dental erosion, or sleep disruption.</li>
+          <li>Sliding hiatal hernia occurs when the gastroesophageal junction and part of the stomach slide above the diaphragm; it is common and strongly associated with reflux.</li>
+          <li>Paraesophageal hiatal hernia occurs when part of the stomach herniates beside the esophagus while the gastroesophageal junction may remain in place; reflux may be less prominent, but obstruction, volvulus, ischemia, or strangulation is the major concern.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1328-1333: Gastritis and Peptic Ulcer Disease</h3>
+        <ul>
+          <li>Gastritis is inflammation of the gastric mucosa; it may be acute, chronic, erosive, autoimmune, H. pylori related, or chemical/reactive.</li>
+          <li>Acute gastritis usually reflects mucosal barrier injury from NSAIDs, alcohol, severe physiologic stress, bile reflux, toxins, infection, or uremia.</li>
+          <li>NSAIDs reduce prostaglandin-mediated mucus, bicarbonate, blood flow, and epithelial repair, making acid-pepsin injury more likely.</li>
+          <li>H. pylori uses urease, motility, adhesins, toxins, and inflammatory signalling to survive in the stomach and injure mucosa.</li>
+          <li>Chronic autoimmune fundal gastritis damages parietal cells, reducing acid and intrinsic factor and increasing risk for pernicious anemia and gastric cancer.</li>
+          <li>Peptic ulcer disease is a mucosal break extending through the muscularis mucosa, usually from H. pylori, NSAIDs, or acid hypersecretion.</li>
+          <li>Duodenal ulcers often have increased acid load and pain that occurs 2 to 3 hours after meals or at night and improves with food or antacids.</li>
+          <li>Gastric ulcers often reflect impaired mucosal defense and can worsen with food; malignancy must be considered when evaluating gastric ulcer lesions.</li>
+          <li>Complications include bleeding, perforation, penetration, gastric outlet obstruction, anemia, and peritonitis.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1336-1341 and IBD Paper: IBD, Diverticular Disease, Appendicitis</h3>
+        <ul>
+          <li>IBD is chronic relapsing intestinal inflammation driven by genetic susceptibility, dysregulated mucosal immunity, epithelial barrier dysfunction, microbiome changes, and environmental triggers.</li>
+          <li>Crohn disease can affect any part of the GI tract, commonly terminal ileum and colon, with skip lesions and transmural inflammation.</li>
+          <li>Ulcerative colitis begins in the rectum and extends proximally in a continuous pattern; inflammation is usually limited to mucosa/submucosa.</li>
+          <li>Transmural Crohn inflammation predisposes to strictures, fistulas, abscesses, obstruction, and malabsorption.</li>
+          <li>UC predisposes to bloody diarrhea, urgency, tenesmus, toxic megacolon, and colorectal cancer risk with long-standing extensive disease.</li>
+          <li>Diverticulosis is the presence of mucosal outpouchings through weak points in the colon wall, commonly associated with increased intraluminal pressure and aging.</li>
+          <li>Diverticulitis occurs when diverticula become inflamed or microperforate, causing localized pain, fever, leukocytosis, altered bowel habits, abscess, perforation, fistula, or obstruction.</li>
+          <li>Appendicitis usually begins with luminal obstruction by fecalith, lymphoid hyperplasia, parasite, tumor, or foreign material, followed by bacterial overgrowth, distention, ischemia, inflammation, and possible perforation.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 887-888, 1347-1353, 1392-1393: Hepatitis</h3>
+        <ul>
+          <li>Hepatitis means liver inflammation; viral hepatitis can range from asymptomatic infection to acute liver failure, chronic hepatitis, cirrhosis, and hepatocellular carcinoma.</li>
+          <li>The typical acute clinical course includes incubation, prodromal/preicteric symptoms, icteric phase, and recovery/convalescence.</li>
+          <li>Prodromal symptoms: fatigue, malaise, anorexia, nausea, vomiting, low-grade fever, myalgias, right upper quadrant discomfort, and aversion to smoking or fatty foods.</li>
+          <li>Icteric phase: jaundice, dark urine, pale stools, pruritus, hepatomegaly, and elevated bilirubin/liver enzymes.</li>
+          <li>Fulminant hepatitis can cause acute liver failure, coagulopathy, encephalopathy, hypoglycemia, renal dysfunction, and death.</li>
+          <li>Chronic HBV, HCV, and HBV/HDV infection can persist beyond 6 months and progress to cirrhosis and hepatocellular carcinoma.</li>
+          <li>Autoimmune hepatitis is T-cell mediated liver injury in genetically susceptible individuals and may present with jaundice, fatigue, anorexia, amenorrhea, or acute liver failure.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1353-1357: Gallbladder and Pancreatic Disorders</h3>
+        <ul>
+          <li>Cholelithiasis is gallstone formation from supersaturated bile, impaired cholesterol/bilirubin/bile acid handling, mucin nucleation, and gallbladder hypomotility or stasis.</li>
+          <li>Risk factors include female sex, pregnancy, estrogen exposure, obesity, rapid weight loss, fasting/TPN, genetics, age, ileal disease or resection, Crohn disease, cirrhosis, and hemolysis.</li>
+          <li>Stones may remain silent or obstruct the cystic/common bile duct, causing biliary colic, right upper quadrant or epigastric pain, fatty food intolerance, nausea, vomiting, and jaundice if common duct obstruction occurs.</li>
+          <li>Cholecystitis is gallbladder inflammation, usually after cystic duct obstruction; distention and pressure impair blood flow and can cause ischemia, necrosis, perforation, fever, leukocytosis, guarding, and persistent RUQ pain.</li>
+          <li>Acute pancreatitis is autodigestion and inflammation of the pancreas after premature activation of pancreatic enzymes inside pancreatic tissue.</li>
+          <li>Major causes include gallstones, alcohol use, hypertriglyceridemia, medications, trauma, infection, procedures, and hypercalcemia.</li>
+          <li>Manifestations include severe epigastric pain radiating to the back, nausea/vomiting, fever, tachycardia, ileus, hypovolemia, hypocalcemia, shock, ARDS, renal injury, and pseudocyst/necrosis in severe disease.</li>
+          <li>Chronic pancreatitis is progressive irreversible fibrosis and loss of exocrine/endocrine function, commonly linked to long-term alcohol use, recurrent acute pancreatitis, genetic disease, obstruction, or autoimmune disease.</li>
+          <li>Chronic pancreatitis manifestations include persistent/recurrent pain, malabsorption, steatorrhea, weight loss, fat-soluble vitamin deficiency, and diabetes.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 179, 1357-1362: GI Cancers, Colon and Rectum Focus</h3>
+        <ul>
+          <li>Colorectal cancer usually develops through stepwise genetic and epigenetic changes that convert normal mucosa to adenoma and then carcinoma.</li>
+          <li>Important pathways include chromosomal instability/APC pathway, microsatellite instability from mismatch repair defects, and serrated/CpG methylation pathway.</li>
+          <li>Risk factors include age, adenomatous polyps, family history, Lynch syndrome, familial adenomatous polyposis, long-standing IBD, low-fiber/high processed meat diet patterns, obesity, inactivity, smoking, alcohol, and type 2 diabetes.</li>
+          <li>Right-sided colon cancer may present with occult bleeding, iron-deficiency anemia, fatigue, vague discomfort, or late obstruction.</li>
+          <li>Left-sided/rectal cancer more often causes change in bowel habits, narrowed stool caliber, visible blood, tenesmus, cramping, or obstruction.</li>
+          <li>Staging depends on depth of invasion, lymph node involvement, and metastasis; liver metastasis is common because portal drainage carries tumor cells to the liver.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="lecture">
+      <div class="pad">
+        <h2>Lecture Transcript Pearls</h2>
+        <div class="callout gold"><strong>Module 5 lecture add-in</strong>Use these as instructor-emphasis notes from the cleaned GI disorders transcript. The big clinical thread is pattern recognition plus red-flag screening: GI symptoms overlap with cardiac, renal, liver, medication, cancer, and referred-pain presentations.</div>
+        <div class="grid two">
+          <div class="card">
+            <h3>GI Dysfunction Patterns</h3>
+            <ul>
+              <li>Common manifestations include anorexia, nausea, retching, vomiting, constipation, diarrhea, abdominal pain, and GI bleeding.</li>
+              <li>Anorexia is loss of desire to eat despite physiologic hunger signals; consequences can include weight loss, protein-energy malnutrition, sarcopenia, functional decline, and cachexia.</li>
+              <li>Nausea is subjective; retching is muscular vomiting activity without expulsion; vomiting can quickly produce fluid, electrolyte, and acid-base disturbances.</li>
+              <li>Treat vomiting by assessing the cause and replacing losses, not only suppressing the symptom.</li>
+              <li>Abdominal pain may be difficult to localize and can reflect referred pain or non-GI disease, including cardiac causes of epigastric pain.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Constipation and Medication Triggers</h3>
+            <ul>
+              <li>Primary constipation includes functional defecation disorder, slow-transit constipation, and constipation-predominant IBS.</li>
+              <li>Secondary constipation can come from diet, dehydration, medications, neurologic disease, structural disease, or suppression of the urge to defecate.</li>
+              <li>Medication causes emphasized in lecture: calcium carbonate or aluminum antacids, anticholinergics, iron, bismuth, opioids, and GLP-1 agonists.</li>
+              <li>Opioids slow transit through mu-opioid receptor activation in the gut.</li>
+              <li>Straining can engorge hemorrhoidal veins, causing rectal pain, bleeding, itching, or thrombosis.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Lecture topic</th><th>Instructor emphasis</th><th>Study cue</th></tr>
+          <tr><td>Diarrhea</td><td>Connect stool losses with dehydration, electrolyte loss, acid-base disturbance, and need to identify the underlying cause.</td><td>Ask: volume, duration, blood/mucus, fever, travel/food exposure, meds, dehydration, and red flags.</td></tr>
+          <tr><td>IBS</td><td>IBS is functional/gut-brain dysregulation with chronic abdominal pain and altered bowel pattern, not structural tissue injury.</td><td>Differentiate IBS-C, IBS-D, mixed IBS, and alarm features that do not fit IBS.</td></tr>
+          <tr><td>IBD</td><td>Crohn disease and ulcerative colitis are chronic inflammatory disorders with distinct distribution, depth, and complication patterns.</td><td>Crohn: transmural, skip lesions, fistulas/strictures. UC: continuous colon/rectum, bloody diarrhea, toxic megacolon/cancer risk.</td></tr>
+          <tr><td>NSAID injury</td><td>COX inhibition lowers protective prostaglandins, reducing mucus, bicarbonate, blood flow, epithelial repair, and platelet support.</td><td>High-risk patients: older age, prior ulcer/bleed, H. pylori, anticoagulants/antiplatelets/steroids, high-dose NSAIDs, smoking/alcohol.</td></tr>
+          <tr><td>GERD and H. pylori</td><td>GERD centers on LES barrier failure and reflux exposure; H. pylori is more directly tied to gastritis, dyspepsia, PUD, and gastric cancer risk.</td><td>Do not make H. pylori the simple cause of GERD; test when dyspepsia/PUD context or risk pattern supports it.</td></tr>
+          <tr><td>GI cancers</td><td>Screening matters because colorectal cancer often progresses through premalignant lesions before invasive disease.</td><td>Watch for occult bleeding, iron-deficiency anemia, bowel-habit change, stool-caliber change, tenesmus, weight loss, and obstruction.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="motility">
+      <div class="pad">
+        <h2>1. Diarrhea, Constipation, and IBS</h2>
+        <table>
+          <tr><th>Feature</th><th>Osmotic diarrhea</th><th>Secretory diarrhea</th></tr>
+          <tr><td>Mechanism</td><td>Nonabsorbed solute pulls water into lumen.</td><td>Active secretion of chloride/bicarbonate-rich fluid or inhibited sodium absorption.</td></tr>
+          <tr><td>Typical volume</td><td>Large-volume watery stool.</td><td>Large-volume watery stool.</td></tr>
+          <tr><td>Fasting effect</td><td>Improves or stops when offending intake stops.</td><td>Persists despite fasting.</td></tr>
+          <tr><td>Examples</td><td>Lactose intolerance, magnesium, poorly absorbed sugars, malabsorption, celiac disease, pancreatic/bile salt deficiency.</td><td>Cholera, enterotoxigenic E. coli, some viruses, hormone-secreting tumors, bile acid diarrhea, some laxatives.</td></tr>
+          <tr><td>Clinical concern</td><td>Dehydration, electrolyte loss, weight loss if chronic.</td><td>Rapid dehydration and severe electrolyte loss can occur.</td></tr>
+        </table>
+        <div class="map">
+          <div class="node"><b>Constipation trigger</b>Low intake, immobility, meds, opioids, neuro/endocrine disease, obstruction.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Slow transit or evacuation problem</b>More water absorbed or stool cannot be expelled effectively.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Hard stool and straining</b>Pain, bloating, incomplete evacuation, hemorrhoids/fissures.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Red flags</b>New change, bleeding, anemia, weight loss, severe pain, obstruction signs.</div>
+        </div>
+        <div class="callout purple"><strong>IBS pattern</strong>IBS is diagnosed by symptom pattern after excluding red flags. Think: recurrent abdominal pain plus stool change, driven by gut-brain dysregulation, visceral hypersensitivity, motility change, microbiome/immune effects, and stress-food interactions.</div>
+      </div>
+    </section>
+
+    <section id="upper">
+      <div class="pad">
+        <h2>2-3 and 7. Upper GI Disorders</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>GERD Mechanism</h3>
+            <div class="map">
+              <div class="node"><b>Barrier failure</b>Transient LES relaxation, weak LES, hiatal hernia, delayed emptying.</div>
+              <div class="arrow">-></div>
+              <div class="node"><b>Refluxate exposure</b>Acid, pepsin, bile contact esophageal mucosa.</div>
+              <div class="arrow">-></div>
+              <div class="node"><b>Injury/symptoms</b>Heartburn, regurgitation, esophagitis, cough, hoarseness.</div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Hiatal Hernia Comparison</h3>
+            <table>
+              <tr><th>Type</th><th>Key difference</th><th>Main concern</th></tr>
+              <tr><td>Sliding</td><td>GE junction and stomach slide upward.</td><td>GERD symptoms.</td></tr>
+              <tr><td>Paraesophageal</td><td>Stomach herniates beside esophagus.</td><td>Obstruction, volvulus, ischemia, strangulation.</td></tr>
+            </table>
+          </div>
+        </div>
+        <table>
+          <tr><th>Condition</th><th>Main causes</th><th>Mechanism</th><th>Typical manifestations</th></tr>
+          <tr><td>Acute gastritis</td><td>NSAIDs, alcohol, stress injury, bile reflux, infection, uremia.</td><td>Breakdown of mucus/bicarbonate/prostaglandin barrier.</td><td>Epigastric discomfort, nausea/vomiting, tenderness, bleeding; may be vague.</td></tr>
+          <tr><td>Chronic gastritis</td><td>H. pylori, autoimmune parietal cell injury, chronic irritants, bile reflux.</td><td>Chronic inflammation, atrophy, altered acid/intrinsic factor.</td><td>Anorexia, fullness, nausea, epigastric pain, anemia, bleeding, cancer risk.</td></tr>
+          <tr><td>Peptic ulcer disease</td><td>H. pylori, NSAIDs, acid hypersecretion, smoking, severe illness.</td><td>Destructive factors overcome mucosal defenses, creating true ulcer.</td><td>Epigastric pain, bleeding, melena/hematemesis, perforation, obstruction.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="inflammation">
+      <div class="pad">
+        <h2>4. Diverticulitis, IBD, and Appendicitis</h2>
+        <table>
+          <tr><th>Feature</th><th>Crohn disease</th><th>Ulcerative colitis</th></tr>
+          <tr><td>Distribution</td><td>Mouth to anus; often terminal ileum/colon; skip lesions.</td><td>Colon and rectum; starts in rectum and extends continuously.</td></tr>
+          <tr><td>Depth</td><td>Transmural inflammation.</td><td>Mucosa/submucosa.</td></tr>
+          <tr><td>Damage pattern</td><td>Fissures, cobblestoning, strictures, fistulas, abscesses.</td><td>Friable mucosa, ulcers, pseudopolyps, toxic megacolon risk.</td></tr>
+          <tr><td>Diarrhea</td><td>Often nonbloody, may be fatty if ileal disease/malabsorption.</td><td>Often bloody with mucus, urgency, tenesmus.</td></tr>
+          <tr><td>Complications</td><td>Obstruction, fistulas, abscess, malnutrition, B12/bile salt issues.</td><td>Severe bleeding, toxic megacolon, colorectal cancer risk.</td></tr>
+          <tr><td>Smoking</td><td>Worsens risk and severity.</td><td>Not a typical worsening factor; stopping smoking can unmask/worsen symptoms in some patients.</td></tr>
+        </table>
+        <div class="map">
+          <div class="node"><b>IBD susceptibility</b>Genes, barrier weakness, microbiome, immune dysregulation, environment.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Mucosal immune activation</b>Cytokines, T-cell/macrophage activity, epithelial injury.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Relapsing inflammation</b>Ulceration, bleeding, diarrhea, pain, systemic symptoms.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Chronic consequences</b>Strictures/fistulas in Crohn; cancer/toxic megacolon in UC.</div>
+        </div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Diverticular Disease</h3>
+            <ul>
+              <li>Diverticulosis: pouch-like mucosal herniations through weak colon wall points.</li>
+              <li>Often asymptomatic; may cause bleeding or vague bowel changes.</li>
+              <li>Diverticulitis: inflammation/microperforation with LLQ pain, fever, leukocytosis, nausea, constipation or diarrhea.</li>
+              <li>Complications: abscess, perforation, peritonitis, fistula, obstruction, sepsis.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Appendicitis</h3>
+            <ul>
+              <li>Obstruction increases intraluminal pressure and bacterial overgrowth.</li>
+              <li>Venous congestion and ischemia worsen inflammation.</li>
+              <li>Pain often starts periumbilical and migrates to right lower quadrant as parietal peritoneum becomes involved.</li>
+              <li>Perforation risk increases with delayed diagnosis.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hepatobiliary">
+      <div class="pad">
+        <h2>5-6. Hepatitis, Gallbladder, and Pancreatic Disease</h2>
+        <table>
+          <tr><th>Virus</th><th>Transmission</th><th>Chronic infection?</th><th>High-yield notes</th></tr>
+          <tr><td>HAV</td><td>Fecal-oral; contaminated food/water; close contact.</td><td>No chronic infection.</td><td>Acute self-limited hepatitis; vaccine preventable.</td></tr>
+          <tr><td>HBV</td><td>Blood, sexual contact, perinatal exposure, needles/body fluids.</td><td>Yes.</td><td>Can cause chronic hepatitis, cirrhosis, HCC; vaccine preventable.</td></tr>
+          <tr><td>HCV</td><td>Blood exposure, especially injection drug use; less commonly sexual/perinatal.</td><td>Common.</td><td>Often silent until chronic disease; treated with direct-acting antivirals.</td></tr>
+          <tr><td>HDV</td><td>Requires HBV; blood/body fluid transmission with HBV coinfection or superinfection.</td><td>Yes, with HBV.</td><td>Can make HBV more severe; prevented by HBV vaccination.</td></tr>
+        </table>
+        <div class="map">
+          <div class="node"><b>Incubation</b>Virus replicates; may be asymptomatic.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Prodromal phase</b>Fatigue, anorexia, nausea, malaise, RUQ discomfort.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Icteric phase</b>Jaundice, dark urine, pale stools, pruritus, hepatomegaly.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Recovery or chronicity</b>HAV resolves; HBV/HCV/HDV may become chronic.</div>
+        </div>
+        <table>
+          <tr><th>Condition</th><th>Risk factors / causes</th><th>Mechanism</th><th>Manifestations</th></tr>
+          <tr><td>Cholelithiasis</td><td>Female sex, pregnancy/estrogen, obesity, rapid weight loss, fasting/TPN, ileal disease, cirrhosis, hemolysis.</td><td>Supersaturated bile plus stasis and nucleation form stones.</td><td>Often silent; biliary colic, RUQ/epigastric pain radiating to back/right shoulder, nausea, fatty food intolerance.</td></tr>
+          <tr><td>Cholecystitis</td><td>Usually cystic duct obstruction by stone.</td><td>Distention, inflammation, ischemia, possible necrosis/perforation.</td><td>Persistent RUQ pain, fever, leukocytosis, guarding, nausea/vomiting, possible jaundice.</td></tr>
+          <tr><td>Acute pancreatitis</td><td>Gallstones, alcohol, hypertriglyceridemia, drugs, trauma, ERCP, hypercalcemia.</td><td>Premature enzyme activation causes autodigestion, edema, inflammation, necrosis.</td><td>Severe epigastric pain to back, vomiting, fever, tachycardia, hypovolemia, hypocalcemia, shock if severe.</td></tr>
+          <tr><td>Chronic pancreatitis</td><td>Recurrent acute pancreatitis, alcohol, genetic disease, obstruction, autoimmune causes.</td><td>Progressive fibrosis destroys exocrine/endocrine tissue.</td><td>Chronic pain, steatorrhea, malabsorption, weight loss, fat-soluble vitamin deficiency, diabetes.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="cancers">
+      <div class="pad">
+        <h2>8. Gastrointestinal Cancers</h2>
+        <div class="callout red"><strong>Colon and rectum focus</strong>Think slow accumulation of mutations plus environmental/inflammatory pressure. Screening matters because many cancers pass through a removable adenoma stage.</div>
+        <div class="map">
+          <div class="node"><b>Risk exposure</b>Age, polyps, inherited syndromes, IBD, obesity, diet pattern, smoking, alcohol.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Genetic/epigenetic changes</b>APC, KRAS, p53, mismatch repair, methylation pathways.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Adenoma to carcinoma</b>Dysplasia progresses through mucosa and bowel wall.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Spread</b>Lymph nodes, liver via portal circulation, lung/peritoneum in advanced disease.</div>
+        </div>
+        <table>
+          <tr><th>Clinical clue</th><th>Why it matters</th></tr>
+          <tr><td>Iron-deficiency anemia or occult blood</td><td>Common with right-sided lesions and chronic bleeding.</td></tr>
+          <tr><td>Change in bowel habits or stool caliber</td><td>More common with left-sided/rectal narrowing or obstruction.</td></tr>
+          <tr><td>Tenesmus or rectal bleeding</td><td>Suggests rectal involvement but hemorrhoids should not be assumed without assessment.</td></tr>
+          <tr><td>Weight loss, fatigue, abdominal pain</td><td>Possible advanced disease or chronic blood loss/inflammation.</td></tr>
+          <tr><td>Obstruction symptoms</td><td>Cramping, distention, vomiting, constipation, inability to pass flatus require urgent evaluation.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="consults">
+      <div class="pad">
+        <h2>Student Clinical Consult Add-Ins</h2>
+        <div class="callout teal"><strong>How to use these</strong>These presentations add applied clinical framing to the GERD, gastritis, and peptic ulcer disease readings. Slide visuals were not added.</div>
+        <div class="grid two">
+          <div class="card">
+            <h3>GERD Clinical Consult</h3>
+            <ul>
+              <li>GERD is retrograde movement of gastric contents, including acid, pepsin, and bile salts, into the esophagus, causing symptoms or complications.</li>
+              <li>Core mechanisms: weak or transiently relaxed LES, impaired esophageal clearance, delayed gastric emptying, sliding hiatal hernia, increased intra-abdominal pressure, smoking, obesity, pregnancy, alcohol/diet triggers, and medications.</li>
+              <li>Typical symptoms: heartburn, acid regurgitation, chest discomfort, bloating, belching, and dysphagia if complicated.</li>
+              <li>Atypical symptoms: chronic cough, asthma-like symptoms, hoarseness, throat symptoms, and sleep disruption.</li>
+              <li>Complications: erosive esophagitis, strictures, bleeding, Barrett esophagus, and esophageal adenocarcinoma risk.</li>
+              <li>H. pylori is more directly linked with gastritis, PUD, and gastric adenocarcinoma than with classic GERD; its relationship with GERD is complex and not a simple cause-effect pattern.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Long-Term NSAID Use</h3>
+            <ul>
+              <li>NSAIDs inhibit cyclooxygenase enzymes. COX-2 inhibition reduces inflammation and pain; COX-1 inhibition reduces protective gastric prostaglandins.</li>
+              <li>Reduced prostaglandins lower mucus, bicarbonate, mucosal blood flow, epithelial repair, tight-junction integrity, and platelet support.</li>
+              <li>Loss of mucosal defense allows acid and pepsin to injure the stomach and duodenum, causing gastritis, erosions, ulcers, bleeding, perforation, and peritonitis.</li>
+              <li>NSAID enteropathy can affect the small bowel, causing erosions, ulcers, occult bleeding, iron deficiency, protein-losing enteropathy, and diaphragm-like strictures.</li>
+              <li>High-risk features: age over 65, H. pylori, prior ulcer or GI bleed, high-dose or multiple NSAIDs, steroids, anticoagulants, antiplatelets, alcohol, smoking, chronic illness, and comorbidity burden.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Consult Concept Flows</h3>
+        <div class="map">
+          <div class="node"><b>Barrier failure</b>Weak LES, transient relaxation, hiatal hernia, delayed gastric emptying.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Reflux exposure</b>Acid, pepsin, and bile contact esophageal mucosa.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Mucosal injury</b>Inflammation, erosions, fibrosis, strictures.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Clinical pattern</b>Heartburn, regurgitation, cough/hoarseness, dysphagia, Barrett risk.</div>
+        </div>
+        <div class="map">
+          <div class="node"><b>Long-term NSAID exposure</b>Nonselective NSAIDs inhibit COX-1 and COX-2.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Less prostaglandin protection</b>Less mucus, bicarbonate, blood flow, and repair.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Barrier injury</b>Acid/pepsin penetrate mucosa; erosions and ulcers form.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Complications</b>Hematemesis, coffee-ground emesis, melena, perforation, sepsis.</div>
+        </div>
+
+        <table>
+          <tr><th>Consult</th><th>Assessment focus</th><th>Treatment / practice implications</th></tr>
+          <tr><td>GERD</td><td>Heartburn/regurgitation pattern, dysphagia, weight loss, bleeding, nocturnal symptoms, cough/hoarseness, NSAID use, smoking, alcohol, meal timing, pregnancy/obesity, response to acid suppression.</td><td>Lifestyle counselling, weight loss where relevant, meal timing, head-of-bed elevation, smoking cessation, PPI timing before meals, H2RA for selected nocturnal symptoms, endoscopy if alarm features or complications.</td></tr>
+          <tr><td>H. pylori in dyspepsia/PUD context</td><td>Dyspepsia, ulcer history, gastric cancer risk, alarm features, recent antibiotics, recent PPI use, prior eradication therapy.</td><td>Urea breath test or stool antigen are common noninvasive tests; recent antibiotics and PPIs can cause false negatives. Endoscopy is used when alarm features or cancer risk are present. Confirm eradication when indicated.</td></tr>
+          <tr><td>NSAID GI injury</td><td>Dose, duration, multiple NSAIDs, ASA/anticoagulant/antiplatelet/steroid use, prior ulcer/bleed, H. pylori risk, age, anemia, melena, hematemesis, epigastric pain, occult bleeding.</td><td>Use the lowest effective dose and shortest duration, avoid dual NSAIDs, consider alternatives, test/treat H. pylori when appropriate, use gastroprotection for high-risk patients, and avoid COX-2 inhibitors in patients where cardiovascular risk outweighs GI benefit.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="clinical">
+      <div class="pad">
+        <h2>Clinical Practice Quick Cards</h2>
+        <div class="grid three">
+          <div class="card">
+            <h3>GI History</h3>
+            <ul>
+              <li>Onset, location, radiation, character, timing with meals/stool, triggers, severity, duration.</li>
+              <li>Stool frequency, form, blood/mucus, melena, steatorrhea, nocturnal symptoms, urgency, tenesmus.</li>
+              <li>Meds: NSAIDs, antibiotics, opioids, iron, anticholinergics, PPIs, anticoagulants, supplements.</li>
+              <li>Travel, sick contacts, food exposures, alcohol, cannabis, sexual/blood exposure, pregnancy possibility.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Red Flags</h3>
+            <ul>
+              <li>GI bleeding, black stool, hematemesis, unexplained anemia, jaundice, persistent vomiting.</li>
+              <li>Fever with severe abdominal pain, guarding, rebound, rigid abdomen, syncope, hypotension.</li>
+              <li>Unintentional weight loss, nocturnal diarrhea, new bowel change over age 50, family cancer history.</li>
+              <li>Severe dehydration, oliguria, confusion, immunocompromised state, pregnancy, infant/older adult frailty.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Focused Assessment</h3>
+            <ul>
+              <li>Vitals, hydration, orthostatic symptoms, mental status, pain behaviour.</li>
+              <li>Inspect abdomen, auscultate, palpate gently, assess peritoneal signs, masses, organomegaly.</li>
+              <li>Skin/sclera for jaundice, pallor, bruising, spider angiomas, scratch marks, edema.</li>
+              <li>Consider rectal exam, stool testing, labs, pregnancy test, imaging, endoscopy/colonoscopy depending on presentation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="pad">
+        <h2>Practice and Active Recall</h2>
+        <div class="toolbar">
+          <button type="button" onclick="toggleAnswers(true)">Show answers</button>
+          <button type="button" onclick="toggleAnswers(false)">Hide answers</button>
+        </div>
+        <details class="qa"><summary>1. How can fasting help differentiate osmotic from secretory diarrhea?</summary><div class="answer">Osmotic diarrhea improves or stops when the nonabsorbed solute is removed; secretory diarrhea usually persists despite fasting.</div></details>
+        <details class="qa"><summary>2. Why can fecal impaction cause diarrhea?</summary><div class="answer">Fluid and mucus can leak around impacted stool, producing low-volume overflow diarrhea.</div></details>
+        <details class="qa"><summary>3. What is the core pathophysiology of GERD?</summary><div class="answer">Failure of anti-reflux barriers allows acid/pepsin or bile exposure of esophageal mucosa, producing symptoms and possible mucosal injury.</div></details>
+        <details class="qa"><summary>4. Why do NSAIDs increase gastritis and ulcer risk?</summary><div class="answer">They reduce prostaglandins, weakening mucus, bicarbonate secretion, mucosal blood flow, and repair.</div></details>
+        <details class="qa"><summary>5. Crohn vs UC: what is the fastest comparison?</summary><div class="answer">Crohn is transmural, skip-lesion disease anywhere in the GI tract; UC is continuous mucosal disease starting in the rectum and limited to colon/rectum.</div></details>
+        <details class="qa"><summary>6. What makes appendicitis dangerous if untreated?</summary><div class="answer">Luminal obstruction can progress to ischemia, necrosis, perforation, abscess, peritonitis, and sepsis.</div></details>
+        <details class="qa"><summary>7. Which hepatitis viruses commonly become chronic?</summary><div class="answer">HBV, HCV, and HDV with HBV can become chronic; HAV does not cause chronic infection.</div></details>
+        <details class="qa"><summary>8. How do gallstones cause cholecystitis?</summary><div class="answer">A stone lodges in the cystic duct, causing obstruction, gallbladder distention, inflammation, reduced blood flow, and possible ischemia/perforation.</div></details>
+        <details class="qa"><summary>9. Why does acute pancreatitis cause systemic illness?</summary><div class="answer">Activated pancreatic enzymes and inflammation injure pancreatic and surrounding tissue, causing third spacing, hypovolemia, cytokine release, organ dysfunction, and shock in severe disease.</div></details>
+        <details class="qa"><summary>10. Why does colon cancer often metastasize to the liver?</summary><div class="answer">Venous drainage from much of the colon travels through the portal circulation to the liver.</div></details>
+        <details class="qa"><summary>11. What is the difference between nausea, retching, and vomiting?</summary><div class="answer">Nausea is the subjective unpleasant sensation; retching is the muscular vomiting sequence without expulsion; vomiting is expulsion of gastric contents and can cause fluid, electrolyte, and acid-base disturbances.</div></details>
+        <details class="qa"><summary>12. Why should epigastric pain not automatically be treated as stomach pain?</summary><div class="answer">Epigastric pain can overlap with referred pain or non-GI disease, including cardiac causes, so history, red flags, and diagnostic context matter.</div></details>
+        <details class="qa"><summary>13. Which medication classes were emphasized as constipation triggers in lecture?</summary><div class="answer">Calcium carbonate or aluminum antacids, anticholinergics, iron, bismuth, opioids, and GLP-1 agonists were highlighted.</div></details>
+        <details class="qa"><summary>14. Why do opioids commonly cause constipation?</summary><div class="answer">They activate mu-opioid receptors in the gut, slowing intestinal transit and promoting harder stool.</div></details>
+        <details class="qa"><summary>15. Why is anorexia clinically important beyond reduced appetite?</summary><div class="answer">It can contribute to weight loss, protein-energy malnutrition, sarcopenia, functional decline, and cachexia, especially in chronic disease or cancer.</div></details>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="pad">
+        <h2>Sources and Add-In Tracker</h2>
+        <table>
+          <tr><th>Source</th><th>Status</th><th>How it is used here</th></tr>
+          <tr><td>McCance 9th ed. textbook PDF</td><td>Mapped by printed pages from LO list</td><td>GI tract disorders, IBS, diarrhea, GERD, hiatal hernia, gastritis, PUD, IBD, diverticular disease, hepatitis, gallbladder, pancreas, and colorectal cancer readings.</td></tr>
+          <tr><td><a href="https://www.dovepress.com/inflammatory-bowel-disease-clinical-aspects-and-treatments-peer-reviewed-fulltext-article-JIR">Fakhoury et al. (2014), Journal of Inflammation Research</a></td><td>Reviewed</td><td>IBD pathogenesis, clinical aspects, immune/microbiome concepts, and treatment framing.</td></tr>
+          <tr><td>Clinical Consultation GERD - Dexter Endozo.pptx</td><td>Extracted</td><td>GERD pathophysiology, PPI/H2RA treatment logic, H. pylori testing/eradication framing, and clinical assessment points.</td></tr>
+          <tr><td>Clinical Consult_NSAIDS_MEdwar.pptx</td><td>Extracted</td><td>NSAID-induced gastritis, peptic ulcer disease, enteropathy, risk factors, complications, and mitigation strategies.</td></tr>
+          <tr><td>cleaned_GI_disorders_transcript (1).docx</td><td>Extracted from Downloads</td><td>Instructor-emphasis notes on GI manifestations, constipation triggers, vomiting consequences, GERD/H. pylori framing, NSAID injury, IBD, and GI cancer screening.</td></tr>
+          <tr><td>Module 5 learning outcomes</td><td>Provided by user</td><td>Used to structure sections, comparison tables, concept flows, and practice questions.</td></tr>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleAnswers(show) {
+      document.querySelectorAll('.qa').forEach(function (item) {
+        item.open = show;
+      });
+    }
+  </script>
+</body>
+</html>

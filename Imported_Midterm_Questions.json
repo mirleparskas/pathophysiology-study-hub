@@ -1,0 +1,2009 @@
+﻿[
+    {
+        "module":  "Module 1",
+        "q":  "What is epidemiology primarily focused on?",
+        "o":  [
+                  "The treatment of diseases",
+                  "The study of occurrence of disease",
+                  "The prevention of diseases only",
+                  "The management of hospital systems"
+              ],
+        "a":  1,
+        "r":  "Course-source key: The study of occurrence of disease. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Which of the following best describes incidence?",
+        "o":  [
+                  "Total number of existing cases",
+                  "Development of new cases",
+                  "Mortality rate of a disease",
+                  "Recovery rate from disease"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Development of new cases. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "In Type I hypersensitivity reactions, what is the primary mediator?",
+        "o":  [
+                  "IgG antibodies",
+                  "IgE antibodies",
+                  "T lymphocytes",
+                  "Immune complexes"
+              ],
+        "a":  1,
+        "r":  "Course-source key: IgE antibodies. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Type I",
+        "o":  [
+                  "Type II",
+                  "Type III",
+                  "Type IV"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Type III. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What cells are primarily involved in Type IV hypersensitivity reactions?",
+        "o":  [
+                  "B cells",
+                  "Mast cells",
+                  "T lymphocytes",
+                  "Neutrophils"
+              ],
+        "a":  2,
+        "r":  "Course-source key: T lymphocytes. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What is the clinical hallmark of immunodeficiency?",
+        "o":  [
+                  "Chronic pain",
+                  "Unusual or recurrent severe infections",
+                  "Weight gain",
+                  "High blood pressure"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Unusual or recurrent severe infections. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Which treatment is commonly used for B-cell deficiencies?",
+        "o":  [
+                  "IVIG",
+                  "Chemotherapy",
+                  "Radiation therapy",
+                  "Antibiotics"
+              ],
+        "a":  0,
+        "r":  "Course-source key: IVIG. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What is a characteristic of primary immune deficiency?",
+        "o":  [
+                  "Always inherited",
+                  "Caused by environmental factors",
+                  "Result of single gene defects",
+                  "Only occurs in adults"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Result of single gene defects. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Which is NOT a cause of secondary immune deficiency?",
+        "o":  [
+                  "Pregnancy",
+                  "Genetic mutations",
+                  "Physical trauma",
+                  "Aging"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Genetic mutations. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What type of virus is HIV?",
+        "o":  [
+                  "DNA virus",
+                  "Retrovirus",
+                  "Poxvirus",
+                  "Coronavirus"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Retrovirus. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What cells does HIV primarily target?",
+        "o":  [
+                  "B cells",
+                  "CD4+ T helper cells",
+                  "Neutrophils",
+                  "Red blood cells"
+              ],
+        "a":  1,
+        "r":  "Course-source key: CD4+ T helper cells. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Which protein on HIV\u0027s surface contains the binding site for CD4?",
+        "o":  [
+                  "TM protein",
+                  "Surface protein (SU)",
+                  "Capsid protein",
+                  "Matrix protein"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Surface protein (SU). Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What is the primary site of initial HIV infection?",
+        "o":  [
+                  "Blood",
+                  "Lymphoid areas of mucosal surfaces",
+                  "Bone marrow",
+                  "Liver"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Lymphoid areas of mucosal surfaces. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Which symptoms are NOT typically associated with acute HIV syndrome?",
+        "o":  [
+                  "Fever",
+                  "Fatigue",
+                  "Seizures",
+                  "Skin rash"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Seizures. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What mediators are responsible for initiating fever?",
+        "o":  [
+                  "Antihistamines",
+                  "Pyrogenic cytokines",
+                  "Antibodies",
+                  "Complement proteins"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Pyrogenic cytokines. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What is cachexia?",
+        "o":  [
+                  "Weight gain syndrome",
+                  "Complex metabolic syndrome with systemic inflammation",
+                  "Bacterial infection",
+                  "Autoimmune condition"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Complex metabolic syndrome with systemic inflammation. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Which condition is NOT typically associated with cachexia?",
+        "o":  [
+                  "Cancer",
+                  "AIDS",
+                  "Hypertension",
+                  "COPD"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Hypertension. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What is a primary characteristic of Type II hypersensitivity?",
+        "o":  [
+                  "IgE-mediated",
+                  "Antibody-dependent cytotoxicity",
+                  "T-cell mediated",
+                  "Immune complex deposition"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Antibody-dependent cytotoxicity. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What is the role of prostaglandin E2 in fever?",
+        "o":  [
+                  "Reduces body temperature",
+                  "Acts on hypothalamic neurons",
+                  "Prevents cytokine production",
+                  "Increases blood pressure"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Acts on hypothalamic neurons. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Which is a correct statement about GVHD risk in immunodeficient individuals?",
+        "o":  [
+                  "They are immune to GVHD",
+                  "They are at increased risk",
+                  "GVHD only affects elderly patients",
+                  "GVHD is easily treated in these patients"
+              ],
+        "a":  1,
+        "r":  "Course-source key: They are at increased risk. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What is the primary purpose of irradiating blood products?",
+        "o":  [
+                  "To kill viruses",
+                  "To kill WBCs",
+                  "To extend shelf life",
+                  "To increase nutrient content"
+              ],
+        "a":  1,
+        "r":  "Course-source key: To kill WBCs. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Which statement about primary immunodeficiencies is correct?",
+        "o":  [
+                  "They are always inherited",
+                  "They are easy to diagnose",
+                  "Most are rare",
+                  "They only affect adults"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Most are rare. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What is a key marker used to monitor HIV progression?",
+        "o":  [
+                  "Red blood cell count",
+                  "CD4+ T-cell count",
+                  "Platelet count",
+                  "Blood pressure"
+              ],
+        "a":  1,
+        "r":  "Course-source key: CD4+ T-cell count. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Which process is involved in cancer cachexia?",
+        "o":  [
+                  "Increased protein synthesis",
+                  "Decreased inflammation",
+                  "Increased pro-inflammatory cytokine activity",
+                  "Weight gain"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Increased pro-inflammatory cytokine activity. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "CRP decreases inflammation",
+        "o":  [
+                  "CRP measures pro-inflammatory cytokine activity",
+                  "CRP has no relationship to cachexia",
+                  "CRP prevents muscle wasting"
+              ],
+        "a":  0,
+        "r":  "Course-source key: CRP measures pro-inflammatory cytokine activity. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "Which immune system component is involved in opsonization?",
+        "o":  [
+                  "Neutrophils",
+                  "Antibodies",
+                  "T helper cells",
+                  "Histamine"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Antibodies. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 1",
+        "q":  "What is the main mechanism of action of antibiotics that inhibit protein synthesis?",
+        "o":  [
+                  "They block the bacterial cell wall",
+                  "They prevent bacterial DNA replication",
+                  "They interfere with folic acid metabolism",
+                  "They prevent the bacterial ribosome from synthesizing proteins"
+              ],
+        "a":  3,
+        "r":  "Course-source key: They prevent the bacterial ribosome from synthesizing proteins. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What are the three layers of skin in order from superficial to deep?",
+        "o":  [
+                  "Dermis, epidermis, hypodermis",
+                  "Epidermis, dermis, hypodermis",
+                  "Hypodermis, dermis, epidermis",
+                  "Epidermis, hypodermis, dermis"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Epidermis, dermis, hypodermis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which of the following is a characteristic of a macule?",
+        "o":  [
+                  "Elevated and firm",
+                  "Fluid-filled",
+                  "Flat and circumscribed",
+                  "Crusty and scaling"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Flat and circumscribed. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What is the most common cancer in the world?",
+        "o":  [
+                  "Squamous cell carcinoma",
+                  "Basal cell carcinoma",
+                  "Melanoma",
+                  "Actinic keratosis"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Basal cell carcinoma. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which gene mutation is commonly associated with basal cell carcinoma?",
+        "o":  [
+                  "CDK4",
+                  "BRCA1",
+                  "TP53",
+                  "BRAF"
+              ],
+        "a":  2,
+        "r":  "Course-source key: TP53. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What does the \u0027A\u0027 in the ABCDE rule for melanoma stand for?",
+        "o":  [
+                  "Appearance",
+                  "Asymmetry",
+                  "Area",
+                  "Abnormal"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Asymmetry. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which stage of cancer indicates spread to distant sites?",
+        "o":  [
+                  "Stage 1",
+                  "Stage 2",
+                  "Stage 3",
+                  "Stage 4"
+              ],
+        "a":  3,
+        "r":  "Course-source key: Stage 4. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What is a precursor lesion to squamous cell carcinoma?",
+        "o":  [
+                  "Actinic keratosis",
+                  "Melanocytic nevus",
+                  "Petechiae",
+                  "Macule"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Actinic keratosis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What type of skin cancer is most likely to cause death?",
+        "o":  [
+                  "Basal cell carcinoma",
+                  "Squamous cell carcinoma",
+                  "Melanoma",
+                  "Actinic keratosis"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Melanoma. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which of the following is NOT a risk factor for skin cancer?",
+        "o":  [
+                  "Fair skin",
+                  "Chronic UV exposure",
+                  "Regular use of sunscreen",
+                  "Immunosuppression"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Regular use of sunscreen. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What does TNM staging refer to?",
+        "o":  [
+                  "Time, Node, Metastasis",
+                  "Tumor, Nodes, Metastasis",
+                  "Type, Number, Mass",
+                  "Treatment, Nodes, Management"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Tumor, Nodes, Metastasis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which skin cancer type grows more rapidly than basal cell carcinoma?",
+        "o":  [
+                  "Melanoma",
+                  "Squamous cell carcinoma",
+                  "Actinic keratosis",
+                  "Bowen\u0027s disease"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Squamous cell carcinoma. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What is the primary cause of most skin cancers?",
+        "o":  [
+                  "Genetic inheritance",
+                  "Chronic UV radiation",
+                  "Viral infections",
+                  "Chemical exposure"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Chronic UV radiation. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which of the following is a characteristic of basal cell carcinoma?",
+        "o":  [
+                  "Rapid growth",
+                  "High metastatic potential",
+                  "Pearly appearance with telangiectasias",
+                  "Dark pigmentation"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Pearly appearance with telangiectasias. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What is Bowen\u0027s disease?",
+        "o":  [
+                  "A type of melanoma",
+                  "A form of basal cell carcinoma",
+                  "Squamous cell carcinoma in situ",
+                  "A benign skin lesion"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Squamous cell carcinoma in situ. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Why do people of color typically have better protection against UV radiation?",
+        "o":  [
+                  "Thicker skin",
+                  "More melanin production",
+                  "Fewer melanocytes",
+                  "Less sun exposure"
+              ],
+        "a":  1,
+        "r":  "Course-source key: More melanin production. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which is NOT a use of tumor markers?",
+        "o":  [
+                  "Screening high-risk individuals",
+                  "Diagnosing specific tumor types",
+                  "Following clinical course",
+                  "Treating cancer directly"
+              ],
+        "a":  3,
+        "r":  "Course-source key: Treating cancer directly. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What is a characteristic of melanoma that differentiates it from other skin cancers?",
+        "o":  [
+                  "Only grows horizontally",
+                  "Never metastasizes",
+                  "Grows vertically and can enter bloodstream",
+                  "Only affects elderly patients"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Grows vertically and can enter bloodstream. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which gene is associated with familial melanomas?",
+        "o":  [
+                  "TP53",
+                  "CDK4",
+                  "BRCA1",
+                  "HER2"
+              ],
+        "a":  1,
+        "r":  "Course-source key: CDK4. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What is the minimum diameter size that raises concern in the ABCDE rule?",
+        "o":  [
+                  "3mm",
+                  "4mm",
+                  "5mm",
+                  "6mm"
+              ],
+        "a":  3,
+        "r":  "Course-source key: 6mm. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which of the following is true about skin cancer in people of color?",
+        "o":  [
+                  "It never occurs",
+                  "It presents at earlier stages",
+                  "It often has worse prognosis when it occurs",
+                  "It\u0027s easier to diagnose"
+              ],
+        "a":  2,
+        "r":  "Course-source key: It often has worse prognosis when it occurs. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What type of analysis is now commonly used alongside microscopic appearance for cancer classification?",
+        "o":  [
+                  "X-ray analysis",
+                  "Immunohistochemical analysis",
+                  "MRI scanning",
+                  "Ultrasound imaging"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Immunohistochemical analysis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which of the following is a characteristic of squamous cell carcinoma of the lip?",
+        "o":  [
+                  "Occurs mainly on the upper lip",
+                  "Most common in young women",
+                  "Develops along the vermilion border",
+                  "Never spreads to surrounding tissue"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Develops along the vermilion border. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "What is the role of the PTCH gene in basal cell carcinoma?",
+        "o":  [
+                  "It promotes cell growth",
+                  "Its inhibition leads to overexpression of Sonic Hedgehog pathway",
+                  "It causes melanin production",
+                  "It prevents UV damage"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Its inhibition leads to overexpression of Sonic Hedgehog pathway. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Which of the following is true about DNA damage from UV radiation?",
+        "o":  [
+                  "It\u0027s most severe in dark skin",
+                  "It\u0027s most severe in light skin",
+                  "It\u0027s equal in all skin types",
+                  "It only affects melanocytes"
+              ],
+        "a":  1,
+        "r":  "Course-source key: It\u0027s most severe in light skin. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 2",
+        "q":  "Lack of melanin",
+        "o":  [
+                  "Difficulty in identifying color variations due to dark pigmentation",
+                  "Absence of melanocytes",
+                  "Resistance to UV damage"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Difficulty in identifying color variations due to dark pigmentation. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "Which process characterizes atherosclerosis?",
+        "o":  [
+                  "Dilation of coronary arteries",
+                  "Formation of lipid-laden lesions in arteries",
+                  "Increased elasticity of vessel walls",
+                  "Decreased blood pressure"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Formation of lipid-laden lesions in arteries. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What is a direct consequence of sustained afterload on cardiac tissue?",
+        "o":  [
+                  "Decreased oxygen demand",
+                  "Improved cardiac energetics",
+                  "Pathologic hypertrophy",
+                  "Enhanced contractility"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Pathologic hypertrophy. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "Which hormone is produced by the hypothalamus in response to decreased perfusion?",
+        "o":  [
+                  "Epinephrine",
+                  "ADH (Antidiuretic Hormone)",
+                  "Insulin",
+                  "Thyroxine"
+              ],
+        "a":  1,
+        "r":  "Course-source key: ADH (Antidiuretic Hormone). Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What effect does Angiotensin II have on the ventricular wall?",
+        "o":  [
+                  "Increases elasticity",
+                  "Promotes remodeling",
+                  "Reduces thickness",
+                  "Improves contractility"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Promotes remodeling. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What is a characteristic of diastolic heart failure (HFpEF)?",
+        "o":  [
+                  "Decreased stroke volume",
+                  "Pulmonary congestion with normal stroke volume",
+                  "Increased cardiac output",
+                  "Absence of pulmonary symptoms"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Pulmonary congestion with normal stroke volume. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "Which condition leads to right-to-left shunting in congenital heart defects?",
+        "o":  [
+                  "RV outflow tract obstruction",
+                  "Patent ductus arteriosus",
+                  "Ventricular septal defect",
+                  "Left ventricular hypertrophy"
+              ],
+        "a":  0,
+        "r":  "Course-source key: RV outflow tract obstruction. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "In tetralogy of Fallot, what is the cause of cyanosis?",
+        "o":  [
+                  "Closure of the ductus arteriosus",
+                  "Opening of the foramen ovale",
+                  "Increased pulmonary blood flow",
+                  "Decreased systemic resistance"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Closure of the ductus arteriosus. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What is the primary pathophysiological change in tricuspid atresia?",
+        "o":  [
+                  "Enlarged right ventricle",
+                  "No communication between RA and RV",
+                  "Increased pulmonary blood flow",
+                  "Patent foramen ovale"
+              ],
+        "a":  1,
+        "r":  "Course-source key: No communication between RA and RV. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "In patent ductus arteriosus, which direction does blood typically shunt after PVR falls?",
+        "o":  [
+                  "Right to left",
+                  "Left to right",
+                  "Bidirectional",
+                  "No shunting occurs"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Left to right. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What is a common manifestation of heart failure?",
+        "o":  [
+                  "Increased urine output",
+                  "Decreased peripheral edema",
+                  "Orthopnea",
+                  "Improved exercise tolerance"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Orthopnea. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "Which inflammatory cytokine contributes to myocardial hypertrophy?",
+        "o":  [
+                  "Interleukin-2",
+                  "TNF-α",
+                  "Interferon-gamma",
+                  "Interleukin-4"
+              ],
+        "a":  1,
+        "r":  "Course-source key: TNF-α. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What causes decreased ventricular compliance in diastolic heart failure?",
+        "o":  [
+                  "Changes in myocardial structure",
+                  "Increased blood volume",
+                  "Decreased afterload",
+                  "Enhanced calcium transport"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Changes in myocardial structure. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What is a characteristic finding in ventricular septal defect?",
+        "o":  [
+                  "Right-to-left shunting",
+                  "Decreased pulmonary blood flow",
+                  "Left-to-right shunting",
+                  "Normal ventricular pressures"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Left-to-right shunting. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "Which condition is associated with hypercyanotic spells?",
+        "o":  [
+                  "Patent ductus arteriosus",
+                  "Tetralogy of Fallot",
+                  "Ventricular septal defect",
+                  "Atrial septal defect"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Tetralogy of Fallot. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What contributes to insulin resistance in heart failure?",
+        "o":  [
+                  "Decreased blood glucose",
+                  "SNS and RAAS activation",
+                  "Reduced inflammatory response",
+                  "Improved calcium transport"
+              ],
+        "a":  1,
+        "r":  "Course-source key: SNS and RAAS activation. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "Which finding is characteristic of patent ductus arteriosus?",
+        "o":  [
+                  "Decreased pulmonary blood flow",
+                  "Right-to-left shunting",
+                  "Bounding pulses",
+                  "Decreased left heart workload"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Bounding pulses. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What causes abnormal lusitropy in diastolic heart failure?",
+        "o":  [
+                  "Changes in calcium transport",
+                  "Decreased blood volume",
+                  "Reduced afterload",
+                  "Improved contractility"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Changes in calcium transport. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "Which is a component of tetralogy of Fallot?",
+        "o":  [
+                  "Patent foramen ovale",
+                  "Overriding aorta",
+                  "Enlarged right atrium",
+                  "Mitral valve stenosis"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Overriding aorta. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What is the effect of aldosterone in heart failure?",
+        "o":  [
+                  "Decreased fluid retention",
+                  "Reduced blood pressure",
+                  "Salt and water retention",
+                  "Improved contractility"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Salt and water retention. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "Which finding indicates severe VSD in infants?",
+        "o":  [
+                  "Asymptomatic presentation",
+                  "Heart failure and poor weight gain",
+                  "Improved exercise tolerance",
+                  "Normal pulmonary pressure"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Heart failure and poor weight gain. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What is a characteristic of diastolic heart failure?",
+        "o":  [
+                  "Always occurs alone",
+                  "Decreased stroke volume",
+                  "Normal cardiac output",
+                  "Increased ventricular compliance"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Normal cardiac output. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "Which condition results from chronic hypoxemia in tetralogy of Fallot?",
+        "o":  [
+                  "Improved exercise tolerance",
+                  "Clubbing of fingers and toes",
+                  "Decreased cyanosis",
+                  "Enhanced pulmonary blood flow"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Clubbing of fingers and toes. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What characterizes the blood flow in tricuspid atresia?",
+        "o":  [
+                  "Normal right ventricular filling",
+                  "Increased pulmonary blood flow",
+                  "Blood flowing through ASD to LA",
+                  "Decreased systemic circulation"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Blood flowing through ASD to LA. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "Which is a consequence of sustained afterload?",
+        "o":  [
+                  "Decreased oxygen demand",
+                  "Improved cardiac energetics",
+                  "Increased energy demand",
+                  "Enhanced ATP production"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Increased energy demand. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 3",
+        "q":  "What occurs in the pathophysiology of acute heart failure?",
+        "o":  [
+                  "Improved endothelial function",
+                  "Decreased venous congestion",
+                  "Enhanced renal function",
+                  "Ventricular remodeling"
+              ],
+        "a":  3,
+        "r":  "Course-source key: Ventricular remodeling. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A 45-year-old patient presents with large-volume diarrhea that resolves when fasting. This type of diarrhea is most likely:",
+        "o":  [
+                  "Secretory",
+                  "Osmotic",
+                  "Inflammatory",
+                  "Infectious"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Osmotic. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A 52-year-old male with chronic pancreatitis is most likely to have which risk factor?",
+        "o":  [
+                  "Autoimmune disease",
+                  "Alcohol abuse and smoking",
+                  "Gallstones",
+                  "Viral infection"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Alcohol abuse and smoking. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "Which patient has the highest risk for developing gallstones?",
+        "o":  [
+                  "25-year-old male athlete",
+                  "45-year-old obese Native American female",
+                  "30-year-old Asian male",
+                  "60-year-old lean male"
+              ],
+        "a":  1,
+        "r":  "Course-source key: 45-year-old obese Native American female. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A patient with a sliding hiatal hernia is most likely to experience:",
+        "o":  [
+                  "Mechanical strangulation",
+                  "GERD symptoms",
+                  "Gastric ulceration",
+                  "Normal LES pressure"
+              ],
+        "a":  1,
+        "r":  "Course-source key: GERD symptoms. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "Which finding is more characteristic of a paraesophageal hernia compared to a sliding hernia?",
+        "o":  [
+                  "GERD symptoms",
+                  "Movement of stomach with position changes",
+                  "Risk of mechanical strangulation",
+                  "Decreased LES pressure"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Risk of mechanical strangulation. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A 55-year-old patient presents with colorectal cancer. Which preventive measure might have reduced their risk?",
+        "o":  [
+                  "Calcium supplementation",
+                  "Regular use of aspirin",
+                  "Vitamin D supplementation",
+                  "Probiotics"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Regular use of aspirin. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A patient with right-sided colon cancer is most likely to present with:",
+        "o":  [
+                  "Bowel obstruction",
+                  "Chronic anemia",
+                  "Narrow stools",
+                  "Acute abdominal pain"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Chronic anemia. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "The most concerning feature of a colonic polyp is:",
+        "o":  [
+                  "Size \u003e 2cm",
+                  "Smooth surface",
+                  "Single occurrence",
+                  "Sessile appearance"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Size \u003e 2cm. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A 60-year-old patient presents with left-sided colon cancer. Which symptom would you expect?",
+        "o":  [
+                  "Silent progression",
+                  "Bowel obstruction",
+                  "Painless bleeding",
+                  "Right-sided mass"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Bowel obstruction. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "Which factor is most strongly associated with anal carcinoma?",
+        "o":  [
+                  "Smoking",
+                  "HPV infection",
+                  "Alcohol use",
+                  "Family history"
+              ],
+        "a":  1,
+        "r":  "Course-source key: HPV infection. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "The progression from polyp to colorectal cancer typically occurs over:",
+        "o":  [
+                  "1-2 years",
+                  "5-7 years",
+                  "10-15 years",
+                  "20-25 years"
+              ],
+        "a":  2,
+        "r":  "Course-source key: 10-15 years. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A patient with chronic pancreatitis is most likely to experience:",
+        "o":  [
+                  "Acute severe pain that resolves quickly",
+                  "Continuous intermittent abdominal pain",
+                  "No pain",
+                  "Pain only after eating"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Continuous intermittent abdominal pain. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "Which condition is most likely to cause cholecystitis?",
+        "o":  [
+                  "Viral infection",
+                  "Autoimmune response",
+                  "Gallstone obstruction",
+                  "Bacterial infection"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Gallstone obstruction. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A patient with esophageal cancer most likely has a history of:",
+        "o":  [
+                  "Chronic GERD",
+                  "Smoking only",
+                  "Alcohol use only",
+                  "Recent viral infection"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Chronic GERD. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "The earliest warning sign of colorectal cancer is usually:",
+        "o":  [
+                  "Change in bowel habits",
+                  "Abdominal pain",
+                  "No symptoms",
+                  "Rectal bleeding"
+              ],
+        "a":  2,
+        "r":  "Course-source key: No symptoms. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A patient with cholecystitis would most likely present with:",
+        "o":  [
+                  "Chronic diarrhea",
+                  "Fever and rebound tenderness",
+                  "Weight loss only",
+                  "Asymptomatic"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Fever and rebound tenderness. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "The most common site for metastasis in colorectal cancer is:",
+        "o":  [
+                  "Brain",
+                  "Lungs",
+                  "Liver",
+                  "Bone"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Liver. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A patient with stomach cancer typically presents initially with:",
+        "o":  [
+                  "Early obvious symptoms",
+                  "Late-stage disease",
+                  "Acute severe pain",
+                  "Massive bleeding"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Late-stage disease. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "Which factor is NOT a risk factor for gallstone formation?",
+        "o":  [
+                  "Regular exercise",
+                  "Obesity",
+                  "Female gender",
+                  "Oral contraceptive use"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Regular exercise. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "The time between eating fatty foods and experiencing pain in symptomatic cholelithiasis is typically:",
+        "o":  [
+                  "Immediate",
+                  "After eating",
+                  "24 hours later",
+                  "Random"
+              ],
+        "a":  1,
+        "r":  "Course-source key: After eating. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A patient with paraesophageal hernia is at risk for:",
+        "o":  [
+                  "GERD",
+                  "Gastritis",
+                  "Diarrhea",
+                  "Constipation"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Gastritis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "Which genetic change is NOT typically associated with colorectal cancer development?",
+        "o":  [
+                  "Loss of tumor-suppressor genes",
+                  "Activation of proto-oncogenes",
+                  "DNA mismatch repair abnormalities",
+                  "Increased telomerase activity"
+              ],
+        "a":  3,
+        "r":  "Course-source key: Increased telomerase activity. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "A 55-year-old male presents with bright red blood in stool and changes in bowel habits. This most likely indicates:",
+        "o":  [
+                  "Right-sided colon cancer",
+                  "Left-sided colon cancer",
+                  "Small intestine cancer",
+                  "Gastric cancer"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Left-sided colon cancer. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "The primary difference between right and left-sided colon tumors is:",
+        "o":  [
+                  "Age of onset",
+                  "Growth pattern",
+                  "Genetic mutations",
+                  "Treatment approach"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Growth pattern. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  "Which finding would be most concerning for advanced colorectal cancer?",
+        "o":  [
+                  "Occasional constipation",
+                  "Hemorrhoids",
+                  "Unexplained anemia",
+                  "Occasional diarrhea"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Unexplained anemia. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "A 65-year-old male presents with difficulty urinating and increased nighttime urination. His prostate exam reveals enlargement. What is the most likely diagnosis?",
+        "o":  [
+                  "Prostate cancer",
+                  "Urinary tract infection",
+                  "Benign prostatic hyperplasia",
+                  "Neurogenic bladder"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Benign prostatic hyperplasia. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "A patient presents with sudden onset of decreased urine output, elevated creatinine, and recent use of radiocontrast media. Which type of acute kidney injury is most likely?",
+        "o":  [
+                  "Prerenal",
+                  "Intrarenal/nephrotoxic",
+                  "Postrenal",
+                  "Glomerular"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Intrarenal/nephrotoxic. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "A patient with lupus nephritis presents with brown-tinged urine and RBC casts. This presentation is most consistent with:",
+        "o":  [
+                  "Nephrotic syndrome",
+                  "Nephritic syndrome",
+                  "Chronic kidney disease",
+                  "Acute tubular necrosis"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Nephritic syndrome. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "Which of the following is the most significant risk factor for developing chronic kidney disease?",
+        "o":  [
+                  "Hypertension",
+                  "Diabetes mellitus",
+                  "Systemic lupus erythematosus",
+                  "Glomerulonephritis"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Diabetes mellitus. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "During the early phase of prerenal AKI, GFR is maintained through:",
+        "o":  [
+                  "Decreased angiotensin II production",
+                  "Efferent arteriolar dilation",
+                  "Afferent arteriolar constriction",
+                  "Afferent arteriolar dilation and efferent arteriolar constriction"
+              ],
+        "a":  3,
+        "r":  "Course-source key: Afferent arteriolar dilation and efferent arteriolar constriction. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "A patient presents with proteinuria \u003e3.5g/day, hypoalbuminemia, and edema. This presentation is most consistent with:",
+        "o":  [
+                  "Nephritic syndrome",
+                  "Nephrotic syndrome",
+                  "Acute kidney injury",
+                  "Chronic glomerulonephritis"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Nephrotic syndrome. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "In chronic kidney disease, the \"intact nephron hypothesis\" refers to:",
+        "o":  [
+                  "Complete preservation of all nephrons",
+                  "Surviving nephrons increasing function to compensate for lost nephrons",
+                  "Normal kidney function despite disease",
+                  "Prevention of further nephron damage"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Surviving nephrons increasing function to compensate for lost nephrons. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "A patient with AKI enters the maintenance/oliguric phase. Which finding would you expect?",
+        "o":  [
+                  "Increased urine output",
+                  "Normal potassium levels",
+                  "Elevated serum creatinine",
+                  "Improved GFR"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Elevated serum creatinine. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "Which mechanism is NOT involved in causing oliguria in AKI?",
+        "o":  [
+                  "Alterations in renal blood flow",
+                  "Tubular obstruction",
+                  "Tubular backleak",
+                  "Increased aldosterone secretion"
+              ],
+        "a":  3,
+        "r":  "Course-source key: Increased aldosterone secretion. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "A patient presents with uremia. Which symptom would you NOT expect to find?",
+        "o":  [
+                  "Anorexia",
+                  "Pruritus",
+                  "Polyuria",
+                  "Nausea"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Polyuria. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "In postrenal AKI, what is the typical progression of symptoms?",
+        "o":  [
+                  "Gradual onset of oliguria",
+                  "Constant polyuria",
+                  "Anuria with flank pain followed by polyuria",
+                  "Persistent anuria"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Anuria with flank pain followed by polyuria. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "Which factor contributes most to the progression of CKD through glomerular damage?",
+        "o":  [
+                  "Decreased blood pressure",
+                  "Reduced angiotensin II activity",
+                  "Proteinuria",
+                  "Reduced glomerular filtration"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Proteinuria. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "A patient in the recovery phase of AKI is most likely to experience:",
+        "o":  [
+                  "Oliguria",
+                  "Polyuria with electrolyte losses",
+                  "Normal urine concentration",
+                  "Decreased creatinine clearance"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Polyuria with electrolyte losses. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "Which condition is most likely to cause minimal change disease?",
+        "o":  [
+                  "Primary nephrotic syndrome",
+                  "Diabetic nephropathy",
+                  "Lupus nephritis",
+                  "Acute glomerulonephritis"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Primary nephrotic syndrome. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "In CKD, elevated angiotensin II activity leads to all of the following EXCEPT:",
+        "o":  [
+                  "Glomerular hypertension",
+                  "Decreased inflammatory cell activity",
+                  "Systemic hypertension",
+                  "Increased glomerular capillary permeability"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Decreased inflammatory cell activity. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "A patient presents with acute kidney injury following severe sepsis. Which type of AKI is most likely?",
+        "o":  [
+                  "Prerenal",
+                  "Intrarenal",
+                  "Postrenal",
+                  "Vascular"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Intrarenal. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "Which finding is most specific for nephritic syndrome?",
+        "o":  [
+                  "Proteinuria \u003e3g/day",
+                  "RBC casts in urine",
+                  "Edema",
+                  "Hypertension"
+              ],
+        "a":  1,
+        "r":  "Course-source key: RBC casts in urine. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "What is the primary mechanism of kidney damage in diabetic nephropathy?",
+        "o":  [
+                  "Acute tubular necrosis",
+                  "Glomerular hyperfiltration",
+                  "Tubular obstruction",
+                  "Inflammatory cell infiltration"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Glomerular hyperfiltration. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "During which phase of AKI would you expect to see the highest serum potassium levels?",
+        "o":  [
+                  "Initiation phase",
+                  "Extension phase",
+                  "Maintenance phase",
+                  "Recovery phase"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Maintenance phase. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "A patient with CKD presents with primarily tubular interstitial disease. Which symptom would you expect?",
+        "o":  [
+                  "Massive proteinuria",
+                  "Renal tubular acidosis",
+                  "Normal urine concentration",
+                  "Preserved sodium handling"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Renal tubular acidosis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "Which factor does NOT contribute to the progression from AKI to ATN?",
+        "o":  [
+                  "Hypotension",
+                  "Hyperperfusion",
+                  "Hypoxemia",
+                  "Reduced ATP levels"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Hyperperfusion. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "What is the primary difference between nephrotic and nephritic syndrome regarding protein excretion?",
+        "o":  [
+                  "Nephrotic has no proteinuria",
+                  "Nephritic has more severe proteinuria",
+                  "Nephrotic has more severe proteinuria",
+                  "Both have equal proteinuria"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Nephrotic has more severe proteinuria. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "Which finding would suggest progression from CKD to end-stage renal disease?",
+        "o":  [
+                  "Improved GFR",
+                  "Decreased proteinuria",
+                  "Progressive glomerulosclerosis",
+                  "Reduced angiotensin II levels"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Progressive glomerulosclerosis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "A patient with AKI shows signs of tubular damage primarily in the proximal tubules. This is most likely caused by:",
+        "o":  [
+                  "Dehydration alone",
+                  "Nephrotoxic medications",
+                  "Urinary obstruction",
+                  "Glomerular disease"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Nephrotoxic medications. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "In CKD, what is the primary effect of angiotensin II on the efferent arteriole?",
+        "o":  [
+                  "Vasodilation",
+                  "Vasoconstriction",
+                  "No effect",
+                  "Variable response"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Vasoconstriction. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which of the following is the correct sequence of the layers of the gastrointestinal tract?",
+        "o":  [
+                  "Mucosa → Submucosa → Muscularis → Serosa",
+                  "Serosa → Mucosa → Muscularis → Submucosa",
+                  "Mucosa → Muscularis → Submucosa → Serosa",
+                  "Submucosa → Muscularis → Serosa → Mucosa"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Mucosa → Submucosa → Muscularis → Serosa. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " A nurse practitioner is assessing a patient with pancreatitis. Which of the following functions is most likely impaired in this condition?",
+        "o":  [
+                  "Insulin secretion",
+                  "Digestive enzyme production",
+                  "Bicarbonate secretion",
+                  "Both B and C"
+              ],
+        "a":  3,
+        "r":  "Course-source key: Both B and C. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " What is the primary function of the dendritic cells in the healthy GI system?",
+        "o":  [
+                  "Secrete IgA",
+                  "Present materials to T cells for immune regulation",
+                  "Transport contents to the submucosa",
+                  "Produce digestive enzymes"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Present materials to T cells for immune regulation. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which type of bilirubin is water-soluble and excreted in bile?",
+        "o":  [
+                  "Unconjugated bilirubin",
+                  "Direct bilirubin",
+                  "Indirect bilirubin",
+                  "Conjugated bilirubin"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Direct bilirubin. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " What is the hallmark feature of osmotic diarrhea?",
+        "o":  [
+                  "High fluid loss greater than 1L/day",
+                  "Caused by disruption of epithelial electrolyte transport",
+                  "Improves with fasting",
+                  "Electrolyte loss is minimal"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Improves with fasting. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which of the following is a characteristic of irritable bowel syndrome (IBS)?",
+        "o":  [
+                  "Presence of ulcers and adhesions",
+                  "Chronic inflammation and fibrosis",
+                  "Abnormal brain-gut interaction with altered motility",
+                  "Permanent damage to the bowel mucosa"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Abnormal brain-gut interaction with altered motility. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which condition is most commonly associated with increased risk of developing esophageal adenocarcinoma?",
+        "o":  [
+                  "Peptic ulcer disease",
+                  "Barrett’s esophagus",
+                  "Diverticulitis",
+                  "Gastritis"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Barrett’s esophagus. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " What is a common cause of peptic ulcer disease?",
+        "o":  [
+                  "NSAIDs and H. pylori infection",
+                  "High-fat diet",
+                  "Stress and alcohol consumption",
+                  "Vitamin C deficiency"
+              ],
+        "a":  0,
+        "r":  "Course-source key: NSAIDs and H. pylori infection. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which of the following is a characteristic of Crohn’s disease compared to ulcerative colitis?",
+        "o":  [
+                  "Affects only the mucosa",
+                  "Continuous lesions in the colon",
+                  "Skip lesions and transmural involvement",
+                  "Limited to the rectum and large intestine"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Skip lesions and transmural involvement. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " A patient presents with lower abdominal pain, fever, and nausea. A CT scan reveals an inflamed appendix. What is the likely diagnosis?",
+        "o":  [
+                  "Crohn’s disease",
+                  "Appendicitis",
+                  "Diverticulitis",
+                  "Ulcerative colitis"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Appendicitis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which type of hepatitis is most commonly associated with contaminated food or water?",
+        "o":  [
+                  "Hepatitis A",
+                  "Hepatitis B",
+                  "Hepatitis C",
+                  "Hepatitis D"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Hepatitis A. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which enzyme is responsible for converting trypsinogen to its active form in the pancreas?",
+        "o":  [
+                  "Amylase",
+                  "Enteropeptidase",
+                  "Lipase",
+                  "Pepsin"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Enteropeptidase. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which of the following is true about GERD?",
+        "o":  [
+                  "It is primarily caused by inflammation of the stomach lining",
+                  "The main risk factor is infection with H. pylori",
+                  "It is characterized by reflux of chyme from the stomach into the esophagus",
+                  "It is unrelated to obesity or pregnancy"
+              ],
+        "a":  2,
+        "r":  "Course-source key: It is characterized by reflux of chyme from the stomach into the esophagus. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " A patient with chronic liver disease is being assessed for signs of cirrhosis. Which of the following would most likely indicate the progression of liver damage?",
+        "o":  [
+                  "Decreased albumin and elevated bilirubin",
+                  "Normal liver transaminases",
+                  "Increased INR without other symptoms",
+                  "Reduced risk of variceal bleeding"
+              ],
+        "a":  0,
+        "r":  "Course-source key: Decreased albumin and elevated bilirubin. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which of the following causes of pancreatitis is most commonly associated with increased serum amylase and lipase levels?",
+        "o":  [
+                  "Obesity",
+                  "Cholelithiasis",
+                  "Peptic ulcer disease",
+                  "Alcohol consumption"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Cholelithiasis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " What is the most common cause of acute cholecystitis?",
+        "o":  [
+                  "Infection",
+                  "Gallstones obstructing the bile ducts",
+                  "Liver disease",
+                  "Fatty liver disease"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Gallstones obstructing the bile ducts. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which of the following is a potential complication of a perforated peptic ulcer?",
+        "o":  [
+                  "Gastric hemorrhage",
+                  "Peritonitis",
+                  "Esophageal stricture",
+                  "Hepatomegaly"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Peritonitis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " In the pathogenesis of IBD, which type of immune cell predominates in Crohn’s disease?",
+        "o":  [
+                  "Th2 cells",
+                  "Th1 cells",
+                  "B cells",
+                  "T regulatory cells"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Th1 cells. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " What is the primary clinical manifestation of gallstones obstructing the common bile duct?",
+        "o":  [
+                  "Hematemesis",
+                  "Jaundice",
+                  "Acute epigastric pain",
+                  "Rebound tenderness"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Jaundice. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " A patient with a history of excessive alcohol consumption presents with severe epigastric pain radiating to the back. Which of the following conditions is most likely?",
+        "o":  [
+                  "Peptic ulcer disease",
+                  "Chronic pancreatitis",
+                  "Acute pancreatitis",
+                  "Gallstones"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Acute pancreatitis. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which of the following findings is characteristic of chronic pancreatitis?",
+        "o":  [
+                  "Sudden onset of intense epigastric pain",
+                  "Steady weight gain with no digestive symptoms",
+                  "Progressive abdominal pain and malabsorption",
+                  "Severe, acute, sharp pain relieved by fasting"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Progressive abdominal pain and malabsorption. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which of the following is the most common risk factor for developing colorectal cancer?",
+        "o":  [
+                  "Inflammatory bowel disease (IBD)",
+                  "High-fiber diet",
+                  "Physical inactivity",
+                  "Family history of cancer"
+              ],
+        "a":  3,
+        "r":  "Course-source key: Family history of cancer. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which statement is true about the pathophysiology of diverticulitis?",
+        "o":  [
+                  "It is most common in the small intestine",
+                  "It results from obstruction of diverticula leading to inflammation",
+                  "It involves the entire thickness of the bowel wall",
+                  "It causes symptoms in all individuals with diverticulosis"
+              ],
+        "a":  1,
+        "r":  "Course-source key: It results from obstruction of diverticula leading to inflammation. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " Which of the following is a characteristic of a sliding hiatal hernia?",
+        "o":  [
+                  "It is associated with reflux disease",
+                  "It causes obstruction of the esophagus",
+                  "It is always surgically repaired",
+                  "It protrudes through a secondary opening in the diaphragm"
+              ],
+        "a":  0,
+        "r":  "Course-source key: It is associated with reflux disease. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 5",
+        "q":  " A nurse practitioner suspects a patient has developed colorectal cancer. Which of the following symptoms would most likely be present in right-sided colon cancer?",
+        "o":  [
+                  "Bloody stools with a \"pencil-thin\" appearance",
+                  "Left lower quadrant pain and obstruction",
+                  "Iron-deficiency anemia and fatigue",
+                  "Diarrhea and frequent bowel movements"
+              ],
+        "a":  2,
+        "r":  "Course-source key: Iron-deficiency anemia and fatigue. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "2. What happens when there is increased pressure in Bowman’s capsule due to a urinary tract obstruction?",
+        "o":  [
+                  "Increased glomerular filtration rate (GFR)",
+                  "Decreased glomerular filtration rate (GFR)",
+                  "Increased urine outputD. Decreased protein in the filtrate"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Decreased glomerular filtration rate (GFR). Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "19. Which of the following is a hallmark of chronic kidney disease?",
+        "o":  [
+                  "Decreased glomerular filtration rate (GFR)",
+                  "Hematuria and proteinuriaC. Hyperkalemia and acidosisD. All of the above"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Hematuria and proteinuriaC. Hyperkalemia and acidosisD. All of the above. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    },
+    {
+        "module":  "Module 6",
+        "q":  "24. Which of the following findings is most consistent with a diagnosis of acute kidney injury?",
+        "o":  [
+                  "Increased glomerular filtration rate (GFR)",
+                  "Increased BUN and serum creatinineC. Decreased urine output and hyperkalemiaD. Both B and C"
+              ],
+        "a":  1,
+        "r":  "Course-source key: Increased BUN and serum creatinineC. Decreased urine output and hyperkalemiaD. Both B and C. Highlighted corrections override the earlier red key where both appeared.",
+        "source":  "Midterm Practice Questions - Answers.docx"
+    }
+]

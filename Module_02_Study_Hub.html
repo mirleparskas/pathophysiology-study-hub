@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 2 Study Hub | Integumentary System</title>
+  <style>
+    :root {
+      --ink: #172026; --muted: #5b6770; --line: #d8e0e6; --bg: #f7faf9;
+      --blue: #1d6fb8; --blue-bg: #eaf4ff; --red: #c23b3b; --red-bg: #fff0ee;
+      --green: #15835d; --green-bg: #eaf8f1; --gold: #9f6c00; --gold-bg: #fff7df;
+      --violet: #7450b5; --violet-bg: #f2edff; --teal: #0f7b83; --teal-bg: #e7f7f8;
+      --shadow: 0 10px 28px rgba(20, 33, 40, .09);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--bg); font-family: Arial, Helvetica, sans-serif; line-height: 1.55; }
+    header {
+      background:
+        linear-gradient(120deg, rgba(21, 131, 93, .94), rgba(29, 111, 184, .86)),
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.26), transparent 30%);
+      color: white; padding: 38px 22px 30px;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 10px; font-size: 14px; font-weight: 700; letter-spacing: 0; }
+    h1 { margin: 0; font-size: 38px; line-height: 1.1; letter-spacing: 0; }
+    header p { max-width: 820px; margin: 14px 0 0; font-size: 17px; }
+    nav { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); box-shadow: 0 4px 16px rgba(20,33,40,.06); }
+    nav .wrap { display: flex; gap: 8px; overflow-x: auto; padding: 10px 16px; }
+    nav a { flex: 0 0 auto; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 14px; padding: 7px 10px; border-radius: 7px; }
+    nav a:hover { background: var(--green-bg); color: var(--green); }
+    main { padding: 26px 16px 60px; }
+    section { margin: 0 auto 22px; max-width: 1180px; background: white; border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; }
+    section > .pad { padding: 22px; }
+    h2 { margin: 0 0 14px; font-size: 25px; letter-spacing: 0; }
+    h3 { margin: 22px 0 8px; font-size: 18px; letter-spacing: 0; }
+    h4 { margin: 16px 0 6px; font-size: 15px; letter-spacing: 0; text-transform: uppercase; color: var(--muted); }
+    p { margin: 8px 0; }
+    ul, ol { margin-top: 8px; padding-left: 22px; }
+    li { margin: 5px 0; }
+    a { color: var(--blue); }
+    .grid { display: grid; gap: 14px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fff; }
+    .card h3:first-child, .card h4:first-child { margin-top: 0; }
+    .tag { display: inline-block; font-size: 12px; font-weight: 700; color: var(--ink); padding: 3px 7px; border: 1px solid var(--line); border-radius: 999px; background: #fff; margin: 2px 4px 2px 0; }
+    .callout { border-left: 8px solid var(--blue); background: var(--blue-bg); padding: 11px 13px; border-radius: 6px; margin: 12px 0; }
+    .callout.red { border-color: var(--red); background: var(--red-bg); }
+    .callout.green { border-color: var(--green); background: var(--green-bg); }
+    .callout.gold { border-color: var(--gold); background: var(--gold-bg); }
+    .callout.violet { border-color: var(--violet); background: var(--violet-bg); }
+    .callout.teal { border-color: var(--teal); background: var(--teal-bg); }
+    .callout strong { display: block; margin-bottom: 3px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 4px; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 9px; vertical-align: top; }
+    th { background: #f0f5f7; text-align: left; }
+    .objective { display: grid; grid-template-columns: 28px 1fr auto; gap: 10px; align-items: start; padding: 10px; border: 1px solid var(--line); border-radius: 8px; background: #fbfdfd; margin-bottom: 8px; }
+    .check { width: 22px; height: 22px; border-radius: 50%; background: var(--green); color: white; display: grid; place-items: center; font-size: 14px; font-weight: 700; line-height: 1; }
+    .source { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    .map { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; margin: 14px 0; }
+    .node { flex: 1 1 155px; min-height: 82px; border: 2px solid var(--line); border-radius: 8px; padding: 10px; background: white; }
+    .node b { display: block; color: var(--green); margin-bottom: 4px; }
+    .arrow { align-self: center; font-weight: 700; color: var(--muted); font-size: 20px; }
+    details { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: #fff; margin: 8px 0; }
+    summary { cursor: pointer; font-weight: 700; }
+    .toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+    button { border: 1px solid var(--line); background: white; color: var(--ink); border-radius: 7px; padding: 8px 10px; font-weight: 700; cursor: pointer; }
+    button:hover { border-color: var(--green); color: var(--green); }
+    .answer { display: none; margin-top: 7px; padding-top: 7px; border-top: 1px solid var(--line); color: var(--muted); }
+    .show .answer { display: block; }
+    @media (max-width: 820px) {
+      h1 { font-size: 30px; }
+      .grid.two, .grid.three, .grid.four { grid-template-columns: 1fr; }
+      .objective { grid-template-columns: 28px 1fr; }
+      .source { grid-column: 2; white-space: normal; }
+      .arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Pathophysiology Study Hub</p>
+      <h1>Module 2: Integumentary System</h1>
+      <p>Skin lesion terminology, inflammatory and papulosquamous disorders, bacterial/viral/fungal infections, benign tumors, skin cancer, UV damage, and clinical assessment patterns.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Module navigation">
+    <div class="wrap">
+      <a href="index.html">Hub</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#readings">Readings</a>
+      <a href="#lecture">Lecture</a>
+      <a href="#skin">Skin Basics</a>
+      <a href="#lesions">Lesions</a>
+      <a href="#inflammatory">Inflammatory</a>
+      <a href="#papulosquamous">Papulosquamous</a>
+      <a href="#bacterial">Bacterial</a>
+      <a href="#consults">Clinical Consults</a>
+      <a href="#viral">Viral</a>
+      <a href="#fungal">Fungal</a>
+      <a href="#cancer">Cancer</a>
+      <a href="#clinical">Clinical</a>
+      <a href="#practice">Practice</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="objectives">
+      <div class="pad">
+        <h2>Learning Outcome Coverage</h2>
+        <div class="objective"><span class="check">✓</span><div>Describe common primary and secondary skin lesions using appropriate terminology.</div><span class="source">McCance 9th ed. pp. 1504-1512; Divya notes</span></div>
+        <div class="objective"><span class="check">✓</span><div>Explain contact dermatitis and atopic dermatitis mechanisms; compare clinical manifestations.</div><span class="source">McCance 9th ed. pp. 1513-1516; slides 4-7</span></div>
+        <div class="objective"><span class="check">✓</span><div>Explain papulosquamous disorders: psoriasis, acne rosacea, acne vulgaris, and lichen planus.</div><span class="source">McCance 9th ed. pp. 1516-1519; slides 8-9</span></div>
+        <div class="objective"><span class="check">✓</span><div>Identify causative microorganisms and clinical manifestations of folliculitis, cellulitis, and impetigo.</div><span class="source">McCance 9th ed. pp. 1521-1522, 1544; infection notes</span></div>
+        <div class="objective"><span class="check">✓</span><div>Explain pathophysiology and manifestations of varicella-zoster virus, herpes simplex virus, and HPV infections.</div><span class="source">McCance 9th ed. pp. 1523-1524, 1546-1549</span></div>
+        <div class="objective"><span class="check">✓</span><div>Explain tinea and candidiasis pathophysiology and clinical manifestations.</div><span class="source">McCance 9th ed. pp. 1524-1525, 1545-1546; infection notes</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe benign tumors and skin cancers; compare BCC, SCC, melanoma; discuss ultraviolet radiation.</div><span class="source">McCance 9th ed. pp. 371-373, 1529-1533; Agbai et al.</span></div>
+      </div>
+    </section>
+
+    <section id="readings">
+      <div class="pad">
+        <h2>Assigned Reading Notes</h2>
+        <div class="callout teal"><strong>Reading scope</strong>These notes cover the assigned textbook readings for Module 2, including background details that may not appear word-for-word in the learning outcomes but are still fair to know.</div>
+
+        <h3>McCance 9th ed. pp. 1504-1512: Structure and Function of the Skin</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Skin Layers and Barrier Function</h4>
+            <ul>
+              <li>The skin is the largest organ and protects against trauma, pathogens, chemicals, UV radiation, and fluid loss.</li>
+              <li>The epidermis is avascular and depends on diffusion from the dermis.</li>
+              <li>The stratum corneum is the outer barrier; keratinized cells and lipids limit water loss and microbial entry.</li>
+              <li>Keratinocytes are the dominant epidermal cells and produce keratin for structural protection.</li>
+              <li>The dermis contains collagen, elastin, blood vessels, lymphatics, nerves, hair follicles, glands, and immune cells.</li>
+              <li>The subcutaneous layer provides insulation, cushioning, energy storage, and a route for vessels/nerves.</li>
+              <li>Barrier breakdown from dryness, maceration, trauma, inflammation, or poor perfusion increases infection risk.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Skin Cells and Functions</h4>
+            <ul>
+              <li>Melanocytes produce melanin, which absorbs UV radiation and contributes to pigmentation.</li>
+              <li>Langerhans cells are dendritic antigen-presenting cells; they connect skin exposure to adaptive immunity.</li>
+              <li>Merkel cells contribute to light-touch sensation.</li>
+              <li>Fibroblasts produce dermal extracellular matrix, including collagen and elastin.</li>
+              <li>Sebaceous glands produce sebum; excess sebum and follicular plugging contribute to acne.</li>
+              <li>Sweat glands support thermoregulation and excretion.</li>
+              <li>Skin participates in vitamin D synthesis after UV exposure.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h4>Clinical Assessment Foundation</h4>
+          <ul>
+            <li>Describe lesions by type, size, colour, shape, arrangement, distribution, border, elevation, fluid, scale, crust, ulceration, warmth, pain, and itch.</li>
+            <li>Primary lesions are the first visible change; secondary lesions develop from scratching, infection, healing, chronicity, or treatment.</li>
+            <li>Distribution matters: dermatomal, exposed-area, flexural, extensor, intertriginous, follicular, mucosal, acral, and generalized patterns suggest different causes.</li>
+            <li>Skin colour changes may be subtle in darker skin; assess warmth, edema, texture, tenderness, and patient-reported changes.</li>
+          </ul>
+        </div>
+
+        <h3>McCance 9th ed. pp. 1513-1516: Inflammatory Disorders of the Skin</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Dermatitis/Eczema Pattern</h4>
+            <ul>
+              <li>Dermatitis involves inflammation of skin with pruritus, erythema, vesicles, scaling, crusting, or lichenification depending on stage.</li>
+              <li>Pruritus drives scratching, which worsens barrier injury and can cause excoriation, infection, and thickened skin.</li>
+              <li>Inflammation can be acute with edema/vesicles or chronic with scale and lichenification.</li>
+              <li>Barrier dysfunction increases allergen entry and microbial colonization.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Atopic vs Contact Dermatitis</h4>
+            <ul>
+              <li>Atopic dermatitis is chronic/relapsing and linked with barrier impairment, allergy tendency, asthma, family history, and IgE elevation.</li>
+              <li>Atopic dermatitis often presents with intense itch, dry skin, erythema, scaling, excoriations, and lichenification.</li>
+              <li>Allergic contact dermatitis is a type IV delayed T-cell reaction to a contact antigen/hapten.</li>
+              <li>Contact dermatitis usually follows the exposure pattern and may produce erythema, edema, vesicles, oozing, crusting, and itch.</li>
+              <li>Irritant contact dermatitis is direct barrier injury and does not require immune sensitization.</li>
+              <li>Clinical workup depends on timeline, distribution, exposures, occupation, products, metals, plants, topical medications, and recurrence.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>McCance 9th ed. pp. 1516-1519: Papulosquamous Disorders</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Psoriasis</h4>
+            <ul>
+              <li>Psoriasis is immune-mediated and involves excessive keratinocyte proliferation with abnormal differentiation.</li>
+              <li>Th1/Th17 pathways, dendritic cells, cytokines, and genetic susceptibility contribute.</li>
+              <li>Lesions are usually well-demarcated erythematous plaques with silvery scale.</li>
+              <li>Common sites include scalp, elbows, knees, trunk, and other extensor surfaces.</li>
+              <li>Nails and joints can be involved; ask about nail pitting, joint pain, stiffness, and swelling.</li>
+              <li>Triggers can include trauma, infection, stress, medications, alcohol, smoking, and systemic inflammation.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Rosacea, Acne, Lichen Planus</h4>
+            <ul>
+              <li>Acne rosacea is a chronic inflammatory facial disorder with flushing, central facial erythema, telangiectasia, papules/pustules, and possible ocular involvement.</li>
+              <li>Rosacea is not comedonal; blackheads/whiteheads point more toward acne vulgaris.</li>
+              <li>Acne vulgaris involves follicular hyperkeratinization, sebum, Cutibacterium acnes, androgen effects, and inflammation.</li>
+              <li>Closed comedones can rupture and trigger inflammatory papules, pustules, nodules, or cysts.</li>
+              <li>Lichen planus is immune-mediated and often presents with pruritic, purple, polygonal, flat-topped papules; mucosal involvement can occur.</li>
+              <li>For all papulosquamous disorders, note distribution, scale, itch/pain, triggers, mucosal/nail/joint involvement, and psychosocial impact.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>McCance 9th ed. pp. 1521-1522, 1544: Bacterial Infections and Impetigo</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Folliculitis and Cellulitis</h4>
+            <ul>
+              <li>Skin normally resists infection through barrier integrity, microbiome competition, immune surveillance, pH, dryness, and shedding.</li>
+              <li>Folliculitis is infection/inflammation of hair follicles, commonly caused by S. aureus.</li>
+              <li>Folliculitis appears as follicle-centered papules or pustules with erythema; risk rises with shaving, occlusion, moisture, friction, and trauma.</li>
+              <li>Cellulitis is acute infection of dermis/subcutaneous tissue, commonly caused by streptococci and S. aureus.</li>
+              <li>Cellulitis presents with warmth, erythema, edema, pain, tenderness, and spreading poorly demarcated borders; fever or lymphangitis may occur.</li>
+              <li>Risk factors include skin breaks, tinea pedis, ulcers, edema, venous disease, lymphedema, diabetes, immunosuppression, and prior cellulitis.</li>
+              <li>Rapid progression, severe pain, bullae, necrosis, hypotension, or altered mental status are urgent warning signs.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Impetigo</h4>
+            <ul>
+              <li>Impetigo is a superficial, contagious bacterial infection common in children and close-contact settings.</li>
+              <li>Common organisms: S. aureus, S. pyogenes, or both.</li>
+              <li>Non-bullous impetigo often begins as vesicles/pustules that rupture and form honey-coloured crusts.</li>
+              <li>Bullous impetigo is usually toxin-producing S. aureus; toxins disrupt epidermal adhesion and create flaccid bullae.</li>
+              <li>Ecthyma is a deeper ulcerative form that extends into the dermis and can scar.</li>
+              <li>Transmission prevention: hand hygiene, cover lesions, avoid sharing towels/clothing, clean surfaces, treat close contacts/outbreaks as directed.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>McCance 9th ed. pp. 1523-1524, 1546-1549: Viral Infections</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Varicella-Zoster and Herpes Simplex</h4>
+            <ul>
+              <li>Varicella-zoster virus causes chickenpox as primary infection and shingles after reactivation from latency.</li>
+              <li>Chickenpox presents with pruritic vesicles in different stages, often beginning on trunk/face/scalp.</li>
+              <li>Shingles follows a unilateral dermatomal pattern with pain/tingling before grouped vesicles appear.</li>
+              <li>Postherpetic neuralgia can follow shingles, especially in older adults.</li>
+              <li>Herpes simplex virus causes recurrent grouped painful vesicles, commonly oral or genital.</li>
+              <li>HSV establishes latency in sensory ganglia and reactivates with stress, illness, UV exposure, trauma, or immune suppression.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Human Papilloma Virus</h4>
+            <ul>
+              <li>HPV infects epithelial cells and can cause warts, papillomas, dysplasia, or cancer depending on strain and site.</li>
+              <li>Low-risk types commonly cause benign warts; high-risk types are associated with cervical, anogenital, and oropharyngeal cancers.</li>
+              <li>Transmission occurs through skin-to-skin or sexual contact depending on type/site.</li>
+              <li>Persistence of high-risk HPV is more concerning than transient infection.</li>
+              <li>Vaccination prevents infection with major cancer-associated and wart-associated HPV types.</li>
+              <li>Screening and follow-up remain important because vaccination does not treat existing infection.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>McCance 9th ed. pp. 1524-1525, 1545-1546: Fungal Infections</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Tinea / Dermatophytes</h4>
+            <ul>
+              <li>Dermatophytes digest keratin and infect skin, hair, and nails.</li>
+              <li>Tinea infections are named by location: capitis, corporis, cruris, pedis, and unguium.</li>
+              <li>Warmth, moisture, occlusion, shared surfaces, close contact, and minor skin trauma increase risk.</li>
+              <li>Tinea corporis often forms annular scaly plaques with central clearing.</li>
+              <li>Tinea pedis may cause interdigital scaling, maceration, fissures, itch, and secondary bacterial entry.</li>
+              <li>Onychomycosis causes thickened, discoloured, dystrophic nails and can mimic psoriatic nail disease.</li>
+              <li>Diagnosis can be clinical but scraping/culture helps confirm uncertain or persistent cases.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Candidiasis</h4>
+            <ul>
+              <li>Candida albicans is a yeast that can be normal flora but becomes pathogenic when host defenses or local conditions change.</li>
+              <li>Risk factors include antibiotics, diabetes, pregnancy, immunosuppression, steroids, moisture, occlusion, and mucosal disruption.</li>
+              <li>Cutaneous candidiasis often affects skin folds with moist erythema, maceration, soreness, and satellite lesions.</li>
+              <li>Oral candidiasis produces white plaques that may scrape off and leave erythematous mucosa.</li>
+              <li>Vaginal candidiasis causes pruritus, irritation, erythema, and thick discharge.</li>
+              <li>Invasive candidiasis is a serious systemic infection risk in severely immunocompromised or critically ill patients.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>McCance 9th ed. pp. 371-373, 1529-1533: Cancer Diagnosis/Staging and Skin Cancer</h3>
+        <div class="grid two">
+          <div class="card">
+            <h4>Cancer Concepts</h4>
+            <ul>
+              <li>Cancer diagnosis depends on identifying abnormal growth, invasion, cellular atypia, and tissue origin.</li>
+              <li>Grading describes how abnormal/aggressive the tumor cells appear.</li>
+              <li>Staging describes extent of disease and is more directly tied to prognosis and treatment planning.</li>
+              <li>TNM logic: tumor size/local invasion, nodal involvement, and metastasis.</li>
+              <li>Benign tumors are localized and noninvasive; malignant tumors invade and can metastasize.</li>
+              <li>Early detection matters because local disease is usually easier to treat than metastatic disease.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>UV Damage and Benign/Premalignant Lesions</h4>
+            <ul>
+              <li>UV radiation damages DNA and contributes to mutations in oncogenes, tumor suppressor genes, and DNA repair pathways.</li>
+              <li>UVB directly damages DNA; UVA contributes to oxidative injury and deeper skin damage.</li>
+              <li>Actinic keratosis is a premalignant UV-related keratinocyte lesion that can progress to squamous cell carcinoma.</li>
+              <li>Nevi are benign melanocyte proliferations, but changing nevi require melanoma assessment.</li>
+              <li>Use ABCDE for pigmented lesions: asymmetry, border irregularity, colour variation, diameter, evolving.</li>
+              <li>Assess skin cancer risk in all skin tones; darker skin reduces UV-related risk but does not eliminate risk and can delay recognition.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h4>BCC vs SCC vs Melanoma</h4>
+          <ul>
+            <li>Basal cell carcinoma arises from basal/stem cells, is the most common, grows slowly, rarely metastasizes, but can invade locally.</li>
+            <li>BCC often appears pearly/translucent with rolled borders, telangiectasia, central depression, crusting, or ulceration.</li>
+            <li>Squamous cell carcinoma arises from keratinocytes and has greater metastatic potential than BCC.</li>
+            <li>SCC may appear as a firm, scaly, crusted, ulcerated, or bleeding lesion, often on sun-exposed skin or chronic wounds.</li>
+            <li>Melanoma arises from melanocytes and has the highest metastatic risk; it can arise from a nevus or de novo.</li>
+            <li>Melanoma may be asymmetric, irregularly bordered, variably coloured, enlarging, bleeding, itchy, painful, or simply evolving.</li>
+            <li>In people of colour, acral/nail/mucosal sites and chronically injured or scarred skin deserve careful inspection.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="lecture">
+      <div class="pad">
+        <h2>Lecture and Presentation Transcript Pearls</h2>
+        <div class="callout gold"><strong>Module 2 transcript add-in</strong>These notes come from the professor lecture transcript and embedded clinical presentation discussion. Use them for instructor emphasis, especially where the lecture clarified immune mechanisms, visual patterns, and practical treatment framing.</div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Dermatitis and Hypersensitivity</h3>
+            <ul>
+              <li>Atopic dermatitis is chronic, relapsing/remitting skin inflammation strongly associated with IgE and the atopic triad: asthma, allergic rhinitis, and food allergy.</li>
+              <li>Atopic dermatitis is common in infants and children; in darker skin, erythema may appear violet and papules may be more prominent.</li>
+              <li>Allergic contact dermatitis is a delayed type IV, T-cell mediated reaction; first exposure sensitizes T cells, and re-exposure can take 1 to 2 days to produce symptoms.</li>
+              <li>Irritant/contact triggers emphasized: frequent handwashing, sanitizers, disinfectant wipes, detergents, solvents, acids, alkalis, fiberglass, latex, drugs, and occupational exposures.</li>
+              <li>Clinical clue: lesion distribution can point to the source of the antigen or irritant, and removal of the trigger is required for resolution.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Papulosquamous and Acne Patterns</h3>
+            <ul>
+              <li>Papulosquamous disorders are characterized by papules, scales, plaques, and erythema.</li>
+              <li>Psoriasis lecture emphasis: immune-mediated keratinocyte hyperproliferation with plaques that often involve scalp, elbows, knees, trunk, and extensor surfaces.</li>
+              <li>Plaque psoriasis is the most common pattern; inverse psoriasis affects moist skin folds; guttate psoriasis presents as many small papules; pustular psoriasis has noninfectious pustules.</li>
+              <li>Psoriatic arthritis is a key association and psoriasis also carries systemic comorbidity risk beyond the skin.</li>
+              <li>Acne vulgaris was framed as an inflammatory follicular disorder involving sebum, follicular plugging, bacteria, and inflammation.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Lecture topic</th><th>Professor / presentation emphasis</th><th>Study cue</th></tr>
+          <tr><td>Professor's quiz cue</td><td>The end-of-lecture questionnaire was described as very helpful for the quiz.</td><td>Prioritize: allergic contact dermatitis is delayed, atopic dermatitis is IgE-associated, impetigo creates honey-coloured crusts, pressure injury interrupts blood flow, and basal cell carcinoma is common.</td></tr>
+          <tr><td>Cellulitis</td><td>Local skin barrier disruption, edema, chronic skin disease, diabetes, and vascular/lymphatic issues can increase risk.</td><td>Separate purulent from non-purulent cellulitis because treatment thinking changes.</td></tr>
+          <tr><td>Impetigo presentation</td><td>Highly contagious superficial bacterial infection; inadequate hygiene and close contact can drive transmission.</td><td>Know non-bullous, bullous, and ecthyma patterns; watch for spread to cellulitis and post-streptococcal glomerulonephritis risk.</td></tr>
+          <tr><td>Fungal infections</td><td>Dermatophyte infections are called tinea and are classified by body location.</td><td>Use the location names: tinea capitis, corporis, cruris, pedis, unguium, and related patterns.</td></tr>
+          <tr><td>Candidiasis</td><td>Candida is yeast-like and commonly affects mucous membranes and moist skin surfaces.</td><td>Think moisture, skin folds, immunosuppression, diabetes, antibiotics, and mucosal involvement.</td></tr>
+          <tr><td>Quiz review cues</td><td>The transcript reinforced Langerhans cells/T-cell activation in allergic contact dermatitis and IgE elevation in atopic disease.</td><td>Contact dermatitis: delayed T-cell response. Atopic dermatitis: IgE/atopic history.</td></tr>
+        </table>
+        <div class="grid two">
+          <div class="card">
+            <h3>Measles Presentation Pearls</h3>
+            <ul>
+              <li>Measles is also called rubeola and is caused by measles virus, not rubella.</li>
+              <li>Transmission is highly contagious through respiratory droplets and airborne spread; infection-control and public health reporting matter.</li>
+              <li>Classic pattern: prodrome followed by Koplik spots and a descending maculopapular rash.</li>
+              <li>Complications emphasized: pneumonia is common; encephalitis, blindness, and severe dehydration are less common but serious.</li>
+              <li>High-risk groups include young children, pregnant patients, immunocompromised people, unvaccinated individuals, health-care workers, and people in low-vaccination or outbreak settings.</li>
+              <li>Treatment is mainly supportive; vitamin A matters because measles can deplete vitamin A and worsen ocular/immune complications.</li>
+              <li>Vaccines do not cause measles and do not transmit measles infection; vaccine conversations should use empathy, open-ended questions, and trusted information.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>SLE Presentation Pearls</h3>
+            <ul>
+              <li>SLE was framed as a heterogeneous autoimmune disease with genetic, hormonal, environmental, infectious, and immune-complex drivers.</li>
+              <li>Common manifestations include fatigue, photosensitivity, rash/skin findings, joint symptoms, systemic flares, and possible renal involvement.</li>
+              <li>UV exposure, viral infections such as Epstein-Barr virus, stress, sleep disruption, and environmental exposures can contribute to flares or risk.</li>
+              <li>Autoantibodies and complement levels can help monitor disease activity; impaired immune-complex clearance contributes to tissue injury.</li>
+              <li>Traditional treatments include hydroxychloroquine and corticosteroids; newer agents discussed included belimumab, anifrolumab, and voclosporin.</li>
+              <li>Anifrolumab was linked with increased herpes zoster risk, so patient selection and infection risk matter.</li>
+              <li>Organ-specific therapy aims to improve outcomes while limiting broad immunosuppression toxicity.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skin">
+      <div class="pad">
+        <h2>Skin Basics</h2>
+        <div class="callout"><strong>Big concept</strong>The skin is a barrier, immune organ, sensory organ, thermoregulatory surface, and vitamin D synthesis site. Most skin pathology can be read by asking: which layer is affected, what immune pathway is active, and whether the process is inflammatory, infectious, neoplastic, or traumatic.</div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Key Epidermal Cells</h3>
+            <table>
+              <tr><th>Cell</th><th>Role</th><th>Why it matters</th></tr>
+              <tr><td>Keratinocyte</td><td>Produces keratin; major barrier cell.</td><td>Hyperproliferation drives plaques/scales; barrier breaks allow infection.</td></tr>
+              <tr><td>Melanocyte</td><td>Produces melanin from tyrosine.</td><td>Malignant degeneration causes melanoma; pigment changes may be subtle in darker skin.</td></tr>
+              <tr><td>Langerhans cell</td><td>Dendritic antigen-presenting cell.</td><td>Presents antigens to T helper cells; important in allergic contact dermatitis.</td></tr>
+              <tr><td>Merkel cell</td><td>Touch/sensory function.</td><td>Relevant to sensory assessment and rare tumors.</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Dermis and Support</h3>
+            <p>The dermis contains collagen, elastin, reticulin, blood vessels, nerves, immune cells, glands, and hair follicles. Fibroblasts produce connective tissue matrix, which is why they matter in wound repair and scarring.</p>
+            <p><span class="tag">barrier</span><span class="tag">immune surveillance</span><span class="tag">sensation</span><span class="tag">thermoregulation</span><span class="tag">vitamin D</span></p>
+            <div class="callout green"><strong>Clinical link</strong>When assessing skin, use location, distribution, colour, borders, elevation, fluid, scale, pain, itch, warmth, drainage, and systemic symptoms. In darker skin, erythema may look violaceous, grey, brown, or darker than surrounding tissue.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lesions">
+      <div class="pad">
+        <h2>1. Primary and Secondary Skin Lesions</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Primary Lesions</h3>
+            <table>
+              <tr><th>Term</th><th>Description</th><th>Examples</th></tr>
+              <tr><td>Macule</td><td>Flat colour change, usually less than 1 cm.</td><td>Freckle, flat mole, petechiae.</td></tr>
+              <tr><td>Patch</td><td>Flat, nonpalpable colour change greater than 1 cm.</td><td>Vitiligo, port-wine stain, cafe-au-lait spot.</td></tr>
+              <tr><td>Papule</td><td>Elevated, firm, circumscribed lesion less than 1 cm.</td><td>Wart, insect bite, elevated mole.</td></tr>
+              <tr><td>Plaque</td><td>Elevated, firm, rough, flat-topped lesion greater than 1 cm.</td><td>Psoriasis, seborrheic keratosis.</td></tr>
+              <tr><td>Wheal</td><td>Transient irregular area of cutaneous edema.</td><td>Urticaria, insect bite, allergic reaction.</td></tr>
+              <tr><td>Nodule</td><td>Elevated firm lesion deeper than a papule, 1-2 cm.</td><td>Lipoma, erythema nodosum.</td></tr>
+              <tr><td>Tumor</td><td>Solid elevated lesion, often greater than 2 cm.</td><td>Neoplasm, hemangioma, neurofibroma.</td></tr>
+              <tr><td>Vesicle</td><td>Small superficial fluid-filled blister less than 1 cm.</td><td>Chickenpox, shingles, herpes simplex.</td></tr>
+              <tr><td>Bulla</td><td>Fluid-filled blister greater than 1 cm.</td><td>Burn blister, pemphigus, bullous impetigo.</td></tr>
+              <tr><td>Pustule</td><td>Superficial lesion filled with purulent fluid.</td><td>Acne, impetigo, folliculitis.</td></tr>
+              <tr><td>Cyst</td><td>Encapsulated dermal/subcutaneous lesion with liquid or semisolid material.</td><td>Sebaceous cyst, cystic acne.</td></tr>
+              <tr><td>Telangiectasia</td><td>Fine red lines from capillary dilation.</td><td>Rosacea, venous hypertension, systemic sclerosis.</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Secondary Lesions</h3>
+            <table>
+              <tr><th>Term</th><th>Description</th><th>Examples</th></tr>
+              <tr><td>Scale</td><td>Heaped keratinized cells; flaky surface.</td><td>Psoriasis, seborrheic dermatitis, dry skin.</td></tr>
+              <tr><td>Lichenification</td><td>Thickened rough skin from chronic rubbing/scratching.</td><td>Chronic dermatitis.</td></tr>
+              <tr><td>Keloid</td><td>Raised scar growing beyond wound boundaries.</td><td>Excess collagen after trauma/surgery.</td></tr>
+              <tr><td>Scar</td><td>Fibrous tissue replacing normal skin after dermal injury.</td><td>Healed wound or incision.</td></tr>
+              <tr><td>Excoriation</td><td>Linear loss of epidermis from scratching/abrasion.</td><td>Scabies, pruritic rash.</td></tr>
+              <tr><td>Fissure</td><td>Linear crack extending into dermis.</td><td>Athlete's foot, angular cheilitis, dermatitis.</td></tr>
+              <tr><td>Erosion</td><td>Partial epidermal loss; moist/glossy depression.</td><td>Ruptured vesicle or bulla.</td></tr>
+              <tr><td>Ulcer</td><td>Loss of epidermis and dermis; concave lesion.</td><td>Pressure injury, venous stasis ulcer.</td></tr>
+              <tr><td>Atrophy</td><td>Thinning of skin surface and markings.</td><td>Aged skin, striae, chronic steroid effect.</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="callout gold"><strong>Exam trap</strong>Primary lesions are the original morphology. Secondary lesions are changes caused by scratching, infection, healing, chronicity, or treatment.</div>
+      </div>
+    </section>
+
+    <section id="inflammatory">
+      <div class="pad">
+        <h2>2. Inflammatory Disorders of the Skin</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Atopic Dermatitis</h3>
+            <p>Atopic dermatitis is a chronic, relapsing inflammatory skin disorder linked with barrier dysfunction, type I allergic tendency, IgE elevation, family history, asthma, and allergies. The slide shorthand is AAA: atopic dermatitis, allergies, asthma.</p>
+            <ul>
+              <li>Mechanism: impaired barrier plus immune activation promotes pruritus and inflammation.</li>
+              <li>Manifestations: erythema, pruritus, scaling, dry skin, excoriations, and lichenification with chronic scratching.</li>
+              <li>Pattern: common in infancy/childhood; flexural involvement is common in older children/adults.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Allergic Contact Dermatitis</h3>
+            <p>Allergic contact dermatitis is a type IV delayed, T-cell-mediated hypersensitivity reaction. A small chemical or hapten binds host proteins, Langerhans cells present antigen to T cells, and re-exposure triggers inflammation.</p>
+            <ul>
+              <li>Mechanism: delayed cell-mediated reaction, usually 48-72 hours after exposure.</li>
+              <li>Manifestations: localized erythema, swelling, pruritus, vesicles, oozing or crusting in the contact pattern.</li>
+              <li>Common triggers: poison ivy, nickel, fragrances, latex, cosmetics, detergents, fabric softener, occupational chemicals.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Feature</th><th>Atopic dermatitis</th><th>Allergic contact dermatitis</th></tr>
+          <tr><td>Immune pattern</td><td>Atopic/type I tendency; IgE often elevated.</td><td>Type IV delayed cell-mediated hypersensitivity.</td></tr>
+          <tr><td>Distribution</td><td>Often chronic/recurrent; flexural or age-dependent pattern.</td><td>Localized to exposure pattern; may be sharply demarcated.</td></tr>
+          <tr><td>Symptoms</td><td>Intense itch, dry skin, chronic lichenification.</td><td>Itch, erythema, edema, vesicles, oozing after exposure.</td></tr>
+          <tr><td>Clinical clue</td><td>Personal/family history of allergies/asthma.</td><td>New product, plant, metal, topical medication, workplace exposure.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="papulosquamous">
+      <div class="pad">
+        <h2>3. Papulosquamous Skin Disorders</h2>
+        <div class="callout violet"><strong>Big concept</strong>Papulosquamous disorders produce papules/plaques with scale because inflammation changes epidermal turnover, follicular function, or immune attack on skin structures.</div>
+        <table>
+          <tr><th>Disorder</th><th>Pathophysiology</th><th>Clinical manifestations</th><th>Assessment/treatment logic</th></tr>
+          <tr><td>Psoriasis</td><td>Immune-mediated keratinocyte hyperproliferation. Dendritic cells produce IL-12/IL-23, activating Th1/Th17 pathways; epidermal turnover shortens.</td><td>Well-demarcated erythematous plaques with thick silvery scale; often elbows, knees, scalp, trunk; may have nail changes.</td><td>Ask joint pain, triggers, plaques, nail pitting. Treatments target inflammation and keratinocyte turnover.</td></tr>
+          <tr><td>Acne rosacea</td><td>Chronic inflammatory facial disorder with vascular reactivity; not caused by comedones.</td><td>Central facial erythema, flushing, telangiectasia, papules/pustules; usually adults over 30.</td><td>Assess triggers, ocular symptoms, central face pattern; no blackheads/whiteheads.</td></tr>
+          <tr><td>Acne vulgaris</td><td>Follicular plugging, hyperkeratinization, excess sebum, androgen influence, Cutibacterium acnes, inflammation; closed comedones can rupture.</td><td>Open comedones, closed comedones, papules, pustules, nodules/cysts depending severity.</td><td>Assess severity, scarring, psychosocial impact; treatment targets keratin, sebum, bacteria, inflammation.</td></tr>
+          <tr><td>Lichen planus</td><td>Immune-mediated inflammatory attack on skin/mucosa.</td><td>Pruritic, purple, flat-topped papules often wrists, ankles, lower legs, genitalia; may affect oral mucosa.</td><td>Assess itch, mucosal lesions, medication triggers, hepatitis C risk if relevant.</td></tr>
+        </table>
+        <div class="map">
+          <div class="node"><b>Psoriasis trigger</b>Genetic susceptibility plus immune/environmental trigger.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Dendritic cells</b>IL-12 and IL-23 activate Th1/Th17 cells.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Keratinocytes</b>Rapid proliferation and incomplete maturation.</div>
+          <div class="arrow">→</div>
+          <div class="node"><b>Lesion</b>Thick, scaly, well-demarcated plaque.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bacterial">
+      <div class="pad">
+        <h2>4. Bacterial Skin Infections</h2>
+        <table>
+          <tr><th>Infection</th><th>Common organisms</th><th>Pathophysiology</th><th>Clinical manifestations</th></tr>
+          <tr><td>Folliculitis</td><td>Staphylococcus aureus most common; consider MRSA if recurrent or resistant.</td><td>Bacteria invade/proliferate in hair follicle, release factors that trigger local inflammation.</td><td>Papules or pustules around follicles, erythema, tenderness/itch; any hair-bearing area.</td></tr>
+          <tr><td>Cellulitis</td><td>Group A beta-hemolytic Streptococcus/Streptococcus pyogenes; Staphylococcus aureus; consider MRSA in purulent or nonresponsive cases.</td><td>Organism enters through compromised skin and spreads into dermis/subcutaneous tissue; local defenses are overwhelmed.</td><td>Warmth, erythema, edema, pain/tenderness, poorly demarcated spreading borders; fever/lymphangitis possible.</td></tr>
+          <tr><td>Impetigo</td><td>Staphylococcus aureus and/or Streptococcus pyogenes; bullous impetigo often toxin-producing S. aureus.</td><td>Superficial infection; toxins can disrupt skin adhesion and cause blistering.</td><td>Face/hands common; lesions rupture and form thin honey-coloured crust; contagious, common in children/daycare.</td></tr>
+        </table>
+        <div class="grid two">
+          <div class="callout red"><strong>Clinical priority</strong>Cellulitis in diabetes, neuropathy, lymphedema, venous insufficiency, or immunosuppression can progress quickly. Mark borders, assess systemic signs, pain, perfusion, wounds, and response within 24-48 hours.</div>
+          <div class="callout green"><strong>Treatment logic</strong>Clean mild folliculitis; use topical or systemic antibiotics based on severity. Cellulitis needs antibiotics that match purulent/nonpurulent risk and local MRSA context. Impetigo needs hygiene, contact precautions, and topical/systemic antibiotics depending extent.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="consults">
+      <div class="pad">
+        <h2>Clinical Consult Added to Module 2</h2>
+        <div class="card">
+          <h3>Impetigo at a Daycare</h3>
+          <p>Impetigo is a highly contagious superficial bacterial skin infection, most common in preschool and school-aged children. It spreads through direct contact, contaminated hands, shared objects, scratching, and crowded settings such as daycare.</p>
+          <div class="map">
+            <div class="node"><b>Risk setting</b>Young child, hot/humid weather, daycare crowding, eczema/contact dermatitis, insect bites, skin trauma.</div>
+            <div class="arrow">→</div>
+            <div class="node"><b>Barrier break</b>Scratching or irritated skin allows S. aureus and/or S. pyogenes to colonize and invade superficial epidermis.</div>
+            <div class="arrow">→</div>
+            <div class="node"><b>Local infection</b>Bacteria multiply; toxin-producing S. aureus can disrupt desmoglein-1 and epidermal adhesion.</div>
+            <div class="arrow">→</div>
+            <div class="node"><b>Lesions</b>Vesicles/pustules, honey-coloured crusts, flaccid bullae, or deeper ulcers depending subtype.</div>
+            <div class="arrow">→</div>
+            <div class="node"><b>Transmission</b>Autoinoculation and spread to contacts unless hygiene, covering lesions, and treatment interrupt the cycle.</div>
+          </div>
+          <table>
+            <tr><th>Feature</th><th>Non-bullous impetigo</th><th>Bullous impetigo</th><th>Ecthyma</th></tr>
+            <tr><td>Cause</td><td>S. aureus, S. pyogenes, or both.</td><td>Toxin-producing S. aureus.</td><td>Usually S. pyogenes.</td></tr>
+            <tr><td>Depth</td><td>Superficial epidermis.</td><td>Superficial epidermis.</td><td>Extends into dermis.</td></tr>
+            <tr><td>Lesion</td><td>Vesicles to pustules to honey-coloured crusted erosions.</td><td>Flaccid fluid-filled bullae that rupture easily and leave thin brown crust.</td><td>Ulcerative lesion with thick crust and surrounding erythema.</td></tr>
+            <tr><td>Common sites</td><td>Face, especially around nose/mouth; extremities.</td><td>Trunk and diaper area.</td><td>Lower legs and feet.</td></tr>
+            <tr><td>Symptoms/outcome</td><td>Mild itch, minimal pain, usually no scar.</td><td>Usually painless; mild fever possible; usually no scar.</td><td>Painful; lymphadenopathy possible; may scar.</td></tr>
+          </table>
+          <div class="grid two">
+            <div class="callout green"><strong>Diagnosis and treatment logic</strong>Diagnosis is usually clinical. Culture is more useful with recurrence, severe disease, outbreak concern, or suspected resistance. Treatment may be topical for limited disease or oral antibiotics for widespread disease, ecthyma, systemic features, or outbreak management.</div>
+            <div class="callout gold"><strong>NP-led daycare prevention</strong>Teach hand hygiene, short nails, no sharing towels/clothing, cover draining lesions, clean high-touch surfaces, wash linens, avoid scratching, complete treatment, and follow local return-to-daycare/public health guidance.</div>
+          </div>
+          <div class="callout red"><strong>Escalation clues</strong>Fever, spreading erythema, pain, lymphadenopathy, deeper ulceration, recurrent cases, immunocompromise, or failure to improve should prompt reassessment for cellulitis, MRSA, ecthyma, abscess, or another diagnosis.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="viral">
+      <div class="pad">
+        <h2>5. Viral Skin Infections</h2>
+        <table>
+          <tr><th>Virus/disorder</th><th>Pathophysiology</th><th>Manifestations</th><th>Clinical notes</th></tr>
+          <tr><td>Varicella-zoster: chickenpox</td><td>Primary VZV infection spreads through airborne droplets or contact, then produces diffuse vesicular eruption.</td><td>Itchy blistering rash on trunk/scalp/face; lesions can be at different stages; contagious before lesions until crusted.</td><td>Assess vaccination, pregnancy/immunocompromise risk, secondary bacterial infection.</td></tr>
+          <tr><td>Varicella-zoster: shingles</td><td>Reactivation of latent VZV in dorsal root or trigeminal ganglia.</td><td>Unilateral dermatomal pain, tingling, burning, then grouped vesicles that crust.</td><td>Consider if unilateral tingling/pain appears before rash; monitor eye involvement and postherpetic neuralgia.</td></tr>
+          <tr><td>Herpes simplex virus</td><td>HSV infects epithelial cells, travels to dorsal root ganglia, becomes latent, and reactivates at original site.</td><td>Painful grouped vesicles that rupture and crust; oral or genital common.</td><td>Assess recurrence triggers, pregnancy risk, immunosuppression, transmission counselling.</td></tr>
+          <tr><td>Human papilloma virus</td><td>HPV infects epithelial cells and can cause benign papillomas/warts; oncogenic types can drive dysplasia and cancer.</td><td>Warts/verrucae, genital warts, cervical/anogenital/oropharyngeal cancer risk depending strain.</td><td>Prevention includes vaccination and screening programs when relevant.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="fungal">
+      <div class="pad">
+        <h2>6. Fungal Skin Infections</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Tinea / Dermatophytes</h3>
+            <p>Dermatophytes are fungi that thrive on keratin in skin, hair, and nails. Tinea infections spread through direct contact or fomites, especially warm moist environments.</p>
+            <table>
+              <tr><th>Name</th><th>Location</th><th>Clinical pattern</th></tr>
+              <tr><td>Tinea capitis</td><td>Scalp</td><td>Scaling, hair loss, inflamed patches.</td></tr>
+              <tr><td>Tinea pedis</td><td>Feet</td><td>Itch, scale, fissures; athlete's foot.</td></tr>
+              <tr><td>Tinea corporis</td><td>Body/trunk</td><td>Ring-shaped lesion with raised scaly border; ringworm.</td></tr>
+              <tr><td>Tinea cruris</td><td>Groin</td><td>Itchy scaly rash; jock itch.</td></tr>
+              <tr><td>Tinea unguium</td><td>Nails</td><td>Onychomycosis: thickened, discoloured, dystrophic nail.</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Candidiasis</h3>
+            <p>Candida albicans is normally present on skin, GI tract, and reproductive mucosa, but can become pathogenic with immunosuppression, antibiotics, moisture, occlusion, diabetes, or barrier breakdown.</p>
+            <ul>
+              <li>Skin folds: moist, macerated erythematous rash, often with satellite lesions.</li>
+              <li>Oral thrush: whitish-yellow curd-like plaques.</li>
+              <li>Vaginal candidiasis: pruritus, irritation, thick discharge.</li>
+              <li>Severe immunocompromise can allow invasive candidiasis involving blood or organs.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout gold"><strong>Compare</strong>Tinea often has scale and ring-like borders. Candida in folds tends to look moist/macerated. Inverse psoriasis is usually drier and well-demarcated.</div>
+      </div>
+    </section>
+
+    <section id="cancer">
+      <div class="pad">
+        <h2>7. Benign Tumours and Skin Cancer</h2>
+        <div class="callout red"><strong>UV mechanism</strong>UVB directly damages DNA, while UVA contributes through oxidative stress and DNA injury. Repeated damage plus impaired repair can activate oncogenes, inactivate tumor suppressors such as p53, and allow malignant transformation.</div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Benign and Premalignant Lesions</h3>
+            <table>
+              <tr><th>Lesion</th><th>Relationship to cancer</th><th>Clinical clue</th></tr>
+              <tr><td>Nevi/moles</td><td>Localized melanocyte overgrowth; most benign, but changing nevi require assessment for melanoma.</td><td>Use ABCDE: asymmetry, border, colour, diameter, evolving.</td></tr>
+              <tr><td>Actinic keratosis</td><td>Premalignant UV-related keratinocyte lesion; can progress to SCC.</td><td>Rough, scaly, poorly defined papule/plaque on sun-exposed skin.</td></tr>
+              <tr><td>Seborrheic keratosis</td><td>Usually benign, not the same as actinic keratosis.</td><td>Waxy stuck-on plaque; assess if changing or atypical.</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Skin Cancer in People of Colour</h3>
+            <p>Skin cancer is less common in people with darker skin, but delayed recognition contributes to later-stage diagnosis and worse outcomes. Lesions may occur in less sun-exposed sites, including palms, soles, nail units, mucosa, and chronically injured or inflamed skin.</p>
+            <div class="callout green"><strong>Clinical link</strong>Photoprotection and screening advice should not assume low risk means no risk. Assess new, changing, bleeding, nonhealing, pigmented, nail, acral, or scar-associated lesions on all skin tones.</div>
+          </div>
+        </div>
+        <table>
+          <tr><th>Feature</th><th>Basal cell carcinoma</th><th>Squamous cell carcinoma</th><th>Melanoma</th></tr>
+          <tr><td>Cell origin</td><td>Basal/stem cells in epidermis.</td><td>Keratinocytes, often from sun-damaged epidermis or actinic keratosis.</td><td>Melanocytes.</td></tr>
+          <tr><td>Mechanism</td><td>UV-related DNA damage, tumor suppressor pathway disruption; grows slowly.</td><td>UV damage and p53 mutations; chronic wounds/inflammation and immunosuppression increase risk.</td><td>Mutations activate oncogenes/inactivate suppressors/impair DNA repair; can arise from nevi or de novo.</td></tr>
+          <tr><td>Appearance</td><td>Pearly or translucent nodule, rolled border, telangiectasia, central depression/ulcer/crust.</td><td>Firm elevated scaly or crusted lesion, may ulcerate/bleed; often sun-exposed.</td><td>ABCDE changes, irregular pigment/border, evolving lesion; acral/nail/mucosal forms important in darker skin.</td></tr>
+          <tr><td>Spread risk</td><td>Rare metastasis; local invasion can be destructive.</td><td>Greater metastatic potential than BCC.</td><td>Highest metastatic risk; early detection is critical.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="clinical">
+      <div class="pad">
+        <h2>Clinical Practice Quick Cards</h2>
+        <div class="grid three">
+          <div class="card">
+            <h3>Skin Assessment</h3>
+            <ul>
+              <li>Inspect full distribution, not just one lesion.</li>
+              <li>Describe lesion type, colour, size, border, elevation, fluid, scale, crust, ulceration, warmth, pain, and itch.</li>
+              <li>Ask onset, exposure, travel, contacts, new products, work hazards, medications, allergies, immune status.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Infection Red Flags</h3>
+            <ul>
+              <li>Fever, tachycardia, hypotension, confusion, rapidly spreading erythema, severe pain, necrosis, bullae.</li>
+              <li>Diabetes, neuropathy, immunosuppression, lymphedema, venous disease, wounds, bites, devices.</li>
+              <li>Poor response after 24-48 hours may mean resistant organism, abscess, wrong diagnosis, or deeper infection.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Cancer Screening</h3>
+            <ul>
+              <li>Use ABCDE and also ask whether the lesion is new, changing, bleeding, painful, itchy, or nonhealing.</li>
+              <li>Check sun-exposed and non-sun-exposed sites, including palms, soles, nails, mucosa, and scars.</li>
+              <li>Document size and appearance; refer suspicious lesions promptly.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="practice">
+      <div class="pad">
+        <h2>Practice and Active Recall</h2>
+        <div class="toolbar">
+          <button type="button" onclick="toggleAnswers(true)">Show answers</button>
+          <button type="button" onclick="toggleAnswers(false)">Hide answers</button>
+        </div>
+        <details class="qa"><summary>1. What is the difference between a macule and a papule?</summary><div class="answer">A macule is flat; a papule is elevated and palpable.</div></details>
+        <details class="qa"><summary>2. What cell presents antigens to T lymphocytes in allergic contact dermatitis?</summary><div class="answer">Langerhans cells, which are dendritic antigen-presenting cells in the epidermis.</div></details>
+        <details class="qa"><summary>3. What type of hypersensitivity is allergic contact dermatitis?</summary><div class="answer">Type IV delayed, cell-mediated hypersensitivity.</div></details>
+        <details class="qa"><summary>4. Which immunoglobulin is commonly elevated in atopic dermatitis?</summary><div class="answer">IgE.</div></details>
+        <details class="qa"><summary>5. What causes bullous impetigo?</summary><div class="answer">A toxin-producing strain of Staphylococcus aureus that disrupts cellular adhesion.</div></details>
+        <details class="qa"><summary>6. What type of infection is tinea corporis?</summary><div class="answer">A dermatophyte fungal infection of the body/trunk, commonly called ringworm.</div></details>
+        <details class="qa"><summary>7. What skin disorder is linked to colonization by Cutibacterium acnes?</summary><div class="answer">Acne vulgaris.</div></details>
+        <details class="qa"><summary>8. What causes chickenpox?</summary><div class="answer">Primary infection with varicella-zoster virus.</div></details>
+        <details class="qa"><summary>9. Which skin cancer has the highest metastatic risk?</summary><div class="answer">Melanoma.</div></details>
+        <details class="qa"><summary>10. Why can skin cancer be diagnosed later in people of colour?</summary><div class="answer">Lower perceived risk, atypical or less sun-exposed locations, subtler visual cues, and lower screening suspicion can delay recognition.</div></details>
+        <details class="qa"><summary>11. What does the atopic triad mean in the dermatitis lecture?</summary><div class="answer">Atopic dermatitis often clusters with asthma, allergic rhinitis, and food allergy.</div></details>
+        <details class="qa"><summary>12. Why can allergic contact dermatitis be delayed after re-exposure?</summary><div class="answer">It is a type IV T-cell mediated response; memory T cells are reactivated and the visible inflammatory response may take 1 to 2 days.</div></details>
+        <details class="qa"><summary>13. What psoriasis types did the lecture emphasize?</summary><div class="answer">Plaque, inverse, guttate, pustular, and psoriatic arthritis-associated disease patterns.</div></details>
+        <details class="qa"><summary>14. Why does impetigo prevention focus heavily on hygiene and contact control?</summary><div class="answer">Impetigo is highly contagious and spreads through close contact, contaminated hands, shared items, and disrupted skin barriers.</div></details>
+        <details class="qa"><summary>15. What measles name should not be confused with rubella?</summary><div class="answer">Rubeola is measles. Rubella is a different virus.</div></details>
+        <details class="qa"><summary>16. What are the classic measles skin/mucosal clues?</summary><div class="answer">Koplik spots followed by a descending maculopapular rash after the prodrome.</div></details>
+        <details class="qa"><summary>17. Why did the SLE presentation emphasize complement and autoantibody monitoring?</summary><div class="answer">They can help monitor immune activity and flares because immune-complex formation and impaired clearance contribute to tissue injury.</div></details>
+        <details class="qa"><summary>18. Which newer SLE therapy was linked with increased herpes zoster risk?</summary><div class="answer">Anifrolumab.</div></details>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="pad">
+        <h2>Sources and Add-In Tracker</h2>
+        <table>
+          <tr><th>Source</th><th>Status</th><th>How it is used here</th></tr>
+          <tr><td>Module 2 Discussion Slides (student) 2025-26.pptx</td><td>Extracted</td><td>Immune cells, atopic/contact dermatitis, psoriasis, VZV case, practice questions.</td></tr>
+          <tr><td>Module 2 Discussion Slides (student) 2025-26 (1).pptx</td><td>Duplicate</td><td>Exact duplicate of the Module 2 discussion slides already used.</td></tr>
+          <tr><td>Clinical Consult Presentation - Impetigo (1).pptx</td><td>Extracted</td><td>Impetigo concept map, non-bullous/bullous/ecthyma comparison, daycare transmission and prevention.</td></tr>
+          <tr><td>Bacterial_and_Fungal_Skin_Infections_Notes.docx</td><td>Extracted</td><td>Folliculitis, cellulitis, tinea, candidiasis, clinical pearls.</td></tr>
+          <tr><td>Divya - PATHO MIDTERM NOTES.docx</td><td>Previously extracted</td><td>Lesion terminology, inflammatory disorders, bacterial/viral/fungal infections, skin cancer notes.</td></tr>
+          <tr><td>2 INTEGUMENTARY SYSTEM.pdf</td><td>Located</td><td>Course module PDF; not separately extracted yet because learning outcomes were provided directly.</td></tr>
+          <tr><td>McCance 9th ed. textbook PDF</td><td>Mapped by printed pages from LO list</td><td>Structure/function pp. 1504-1512; inflammatory pp. 1513-1516; papulosquamous pp. 1516-1519; bacterial pp. 1521-1522, 1544; viral pp. 1523-1524, 1546-1549; fungal pp. 1524-1525, 1545-1546; cancer pp. 371-373, 1529-1533.</td></tr>
+          <tr><td><a href="https://www.sciencedirect.com/science/article/pii/S0190962213012966">Agbai et al., Skin cancer and photoprotection in people of color</a></td><td>Referenced</td><td>Clinical caution about risk perception, photoprotection, and delayed recognition in people of colour.</td></tr>
+          <tr><td><a href="https://vimeo.com/reviews/3659807d-8ab2-4929-a705-df0d671c86f9/videos/933297144">Module 2 lecture video</a></td><td>Linked</td><td>Associated local lecture transcript is integrated in the lecture notes section.</td></tr>
+          <tr><td>lecture 2.txt</td><td>Extracted from Documents</td><td>Professor lecture and presentation transcript integrated into dermatitis, psoriasis/acne, cellulitis, impetigo, fungal infection, and practice-review notes.</td></tr>
+          <tr><td>Module 2 - PHC -1 (1).pptx</td><td>Located but not used</td><td>Primary health care topic; kept separate from integumentary pathophysiology unless requested.</td></tr>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleAnswers(show) {
+      document.querySelectorAll('.qa').forEach(function (item) {
+        item.open = show;
+        item.classList.toggle('show', show);
+      });
+    }
+    document.querySelectorAll('.qa').forEach(function (item) {
+      item.addEventListener('toggle', function () {
+        item.classList.toggle('show', item.open);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pathophysiology Study Hub</title>
+  <style>
+    :root {
+      --ink: #172026;
+      --muted: #5b6770;
+      --line: #d8e0e6;
+      --bg: #f7faf9;
+      --blue: #1d6fb8;
+      --green: #15835d;
+      --gold: #9f6c00;
+      --red: #c23b3b;
+      --violet: #7450b5;
+      --teal: #0f7b83;
+      --shadow: 0 10px 28px rgba(20, 33, 40, .09);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    header {
+      min-height: 48vh;
+      display: flex;
+      align-items: end;
+      color: white;
+      padding: 42px 20px;
+      background:
+        linear-gradient(120deg, rgba(23, 32, 38, .82), rgba(15, 123, 131, .72)),
+        url("https://images.unsplash.com/photo-1579154341098-e4e158cc7f55?auto=format&fit=crop&w=1800&q=80") center/cover;
+    }
+
+    .wrap { max-width: 1180px; margin: 0 auto; width: 100%; }
+    .eyebrow { margin: 0 0 10px; font-size: 14px; font-weight: 700; letter-spacing: 0; }
+    h1 { margin: 0; font-size: 44px; line-height: 1.08; letter-spacing: 0; }
+    header p { max-width: 760px; margin: 14px 0 0; font-size: 18px; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 4px 16px rgba(20, 33, 40, .06);
+    }
+    nav .wrap {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 16px;
+    }
+    nav a {
+      flex: 0 0 auto;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 7px 10px;
+      border-radius: 7px;
+    }
+    nav a:hover { background: #eaf4ff; color: var(--blue); }
+
+    main { padding: 26px 16px 60px; }
+    section {
+      max-width: 1180px;
+      margin: 0 auto 22px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .pad { padding: 22px; }
+    h2 { margin: 0 0 14px; font-size: 25px; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: 0; }
+    p { margin: 8px 0; }
+
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .module {
+      display: flex;
+      flex-direction: column;
+      min-height: 190px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 15px;
+      text-decoration: none;
+      color: var(--ink);
+      transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+    }
+    .module:hover {
+      transform: translateY(-2px);
+      border-color: var(--blue);
+      box-shadow: 0 8px 22px rgba(20,33,40,.12);
+    }
+    .module.disabled {
+      pointer-events: none;
+      background: #f5f7f8;
+      color: var(--muted);
+    }
+    .meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .num {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      color: white;
+      background: var(--blue);
+      font-weight: 800;
+    }
+    .status {
+      font-size: 12px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 8px;
+      background: white;
+    }
+    .built { color: var(--green); }
+    .planned { color: var(--gold); }
+    .module p { color: var(--muted); margin-top: auto; }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .button {
+      display: inline-block;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--ink);
+      border-radius: 7px;
+      padding: 8px 10px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .button:hover { border-color: var(--blue); color: var(--blue); }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 9px; vertical-align: top; }
+    th { background: #f0f5f7; text-align: left; }
+
+    .callout {
+      border-left: 8px solid var(--teal);
+      background: #e7f7f8;
+      padding: 11px 13px;
+      border-radius: 6px;
+      margin: 12px 0;
+    }
+    .callout strong { display: block; margin-bottom: 3px; }
+
+    .study-toolbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: end;
+      margin: 14px 0;
+    }
+    .field label {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+      padding: 8px 10px;
+    }
+    .study-stats {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 8px 0 14px;
+    }
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 8px 10px;
+      background: #f7faf9;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .flashcard {
+      min-height: 255px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 18px;
+      display: grid;
+      align-content: space-between;
+      gap: 18px;
+    }
+    .flashcard-meta {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .flashcard h3 {
+      font-size: 22px;
+      line-height: 1.25;
+      margin: 0;
+    }
+    .answer {
+      display: none;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      color: var(--ink);
+    }
+    .answer.visible { display: block; }
+    .answer ul { margin: 8px 0 0; padding-left: 20px; }
+    .rating-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+    button.button {
+      cursor: pointer;
+      font: inherit;
+    }
+    .rating-row .again { border-color: #e0a6a6; color: var(--red); }
+    .rating-row .hard { border-color: #d6bc73; color: var(--gold); }
+    .rating-row .good { border-color: #8fc9b3; color: var(--green); }
+    .rating-row .easy { border-color: #94bce0; color: var(--blue); }
+    .empty-card {
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      color: var(--muted);
+      background: #f7faf9;
+    }
+
+    @media (max-width: 920px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .study-toolbar { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      h1 { font-size: 32px; }
+      header { min-height: 42vh; }
+      .grid { grid-template-columns: 1fr; }
+      .rating-row { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Pathophysiology Study Hub</p>
+      <h1>One Home for All 12 Modules</h1>
+      <p>Open this page first. Each module page will hold learning objectives, consolidated reading notes, concept maps, selective textbook visuals, clinical application, source tracking, and active recall.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Hub navigation">
+    <div class="wrap">
+      <a href="#modules">Modules</a>
+      <a href="#anki-study">Anki-Style Study</a>
+      <a href="Midterm_Review_Modules_01_to_06.html">Midterm Review</a>
+      <a href="Exam_Notes_and_Practice_Bank.html">Exam Practice Bank</a>
+      <a href="Anki_Review_Modules_07_to_10.html">Anki Review</a>
+      <a href="#consults">Clinical Presentations</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="modules">
+      <div class="pad">
+        <h2>Modules</h2>
+        <div class="callout">
+          <strong>Midterm Review</strong>
+          Practice 100 four-option multiple choice questions for Modules 1-6 with hidden answers and rationales.
+          <div class="actions">
+            <a class="button" href="Midterm_Review_Modules_01_to_06.html">Open Midterm Review</a>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Master Exam Notes & Practice Bank</strong>
+          Review 313 questions across Modules 1–12, including 84 very difficult clinical-reasoning questions, final-exam weighted sessions, instant scoring, corrected keys, and answer explanations.
+          <div class="actions">
+            <a class="button" href="Exam_Notes_and_Practice_Bank.html">Open Exam Practice Bank</a>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Imported Anki Review: Modules 7–10</strong>
+          Practice 759 Basic and Cloze cards from the four supplied Anki decks. Filter by module or card type, search concepts, shuffle the deck, reveal answers, and self-rate each card.
+          <div class="actions">
+            <a class="button" href="Anki_Review_Modules_07_to_10.html">Open Anki Review</a>
+          </div>
+        </div>
+        <div class="grid">
+          <a class="module" href="Module_01_Study_Hub.html">
+            <div class="meta"><span class="num">1</span><span class="status built">Built</span></div>
+            <h3>Epidemiology, Infection, Inflammation, Immunity</h3>
+            <p>Incidence/prevalence, social determinants, infection course, acute/chronic inflammation, adaptive immunity, hypersensitivity, HIV, fever, cachexia.</p>
+          </a>
+
+          <a class="module" href="Module_02_Study_Hub.html">
+            <div class="meta"><span class="num">2</span><span class="status built">Built</span></div>
+            <h3>Integumentary System</h3>
+            <p>Skin lesions, dermatitis, papulosquamous disorders, bacterial/viral/fungal infections, benign tumours, BCC, SCC, melanoma, UV damage.</p>
+          </a>
+
+          <a class="module" href="Module_03_Study_Hub.html">
+            <div class="meta"><span class="num">3</span><span class="status built">Built</span></div>
+            <h3>Cardiovascular System</h3>
+            <p>Atherosclerosis, CAD/ACS/MI, hypertension, PAD/DVT, heart failure, congenital heart disease, reading notes, clinical logic, and active recall.</p>
+          </a>
+
+          <a class="module" href="Module_04_Study_Hub.html">
+            <div class="meta"><span class="num">4</span><span class="status built">Built</span></div>
+            <h3>Respiratory System</h3>
+            <p>Pulmonary manifestations, respiratory infections, TB, pneumonia, cystic fibrosis, COPD, asthma, pulmonary vascular disease, pediatric infections, and lung cancers.</p>
+          </a>
+
+          <a class="module" href="Module_05_Study_Hub.html">
+            <div class="meta"><span class="num">5</span><span class="status built">Built</span></div>
+            <h3>Gastrointestinal System</h3>
+            <p>Diarrhea, constipation, IBS, GERD, hiatal hernia, gastritis, PUD, IBD, diverticular disease, hepatitis, gallbladder, pancreatitis, and colorectal cancer.</p>
+          </a>
+
+          <a class="module" href="Module_06_Study_Hub.html">
+            <div class="meta"><span class="num">6</span><span class="status built">Built</span></div>
+            <h3>Renal System</h3>
+            <p>Urinary obstruction, incontinence, cystitis, pyelonephritis, glomerular disorders, nephritic/nephrotic syndromes, AKI, CKD, and ESRD.</p>
+          </a>
+
+          <a class="module" href="Module_07_Study_Hub.html">
+            <div class="meta"><span class="num">7</span><span class="status built">Built</span></div>
+            <h3>Endocrine System</h3>
+            <p>Pituitary adenoma, acromegaly, DI/SIADH, thyroid and parathyroid disorders, diabetes, diabetic complications, Cushing disease/syndrome, and Addison disease.</p>
+          </a>
+
+          <a class="module" href="Module_08_Study_Hub.html">
+            <div class="meta"><span class="num">8</span><span class="status built">Built</span></div>
+            <h3>Mental Health</h3>
+            <p>Stress response, schizophrenia spectrum, depression and bipolar disorder, substance use, eating disorders, anxiety, PTSD, and OCD.</p>
+          </a>
+
+          <a class="module" href="Module_09_Study_Hub.html">
+            <div class="meta"><span class="num">9</span><span class="status built">Built</span></div>
+            <h3>Neurologic System</h3>
+            <p>TBI, TIA and stroke, meningitis and encephalitis, MS, ALS, Parkinson disease, myasthenia gravis, delirium, Alzheimer disease, and primary headache syndromes.</p>
+          </a>
+
+          <a class="module" href="Module_10_Study_Hub.html">
+            <div class="meta"><span class="num">10</span><span class="status built">Built</span></div>
+            <h3>Musculoskeletal System</h3>
+            <p>Injuries, nociception and sensitization, lower-back pain, metabolic bone disease, osteomyelitis, bone tumours, OA, RA, and gout.</p>
+          </a>
+
+          <a class="module" href="Module_11_Study_Hub.html">
+            <div class="meta"><span class="num">11</span><span class="status built">Built</span></div>
+            <h3>Hematologic System</h3>
+            <p>Macrocytic, microcytic, and normocytic anemia; HIT, ITP, TTP, coagulation failure, lymphomas, and acute/chronic leukemias.</p>
+          </a>
+
+          <a class="module" href="Module_12_Study_Hub.html">
+            <div class="meta"><span class="num">12</span><span class="status built">LOs Added</span></div>
+            <h3>Reproductive System</h3>
+            <p>Menstrual and testicular disorders, prostate disease, benign gynecologic growths, reproductive cancers, STIs, and breast disorders.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="anki-study">
+      <div class="pad">
+        <h2>Anki-Style Study</h2>
+        <div class="callout">
+          <strong>Active recall queue</strong>
+          Review one card at a time, reveal the answer, then rate your recall. Your due cards and progress are saved in this browser.
+        </div>
+        <div class="study-toolbar">
+          <div class="field">
+            <label for="studyModule">Module filter</label>
+            <select id="studyModule">
+              <option value="all">All built modules</option>
+              <option value="1">Module 1: Epidemiology, Infection, Inflammation, Immunity</option>
+              <option value="2">Module 2: Integumentary System</option>
+              <option value="3">Module 3: Cardiovascular System</option>
+              <option value="4">Module 4: Respiratory System</option>
+              <option value="5">Module 5: Gastrointestinal System</option>
+              <option value="6">Module 6: Renal System</option>
+              <option value="7">Module 7: Endocrine System</option>
+              <option value="8">Module 8: Mental Health</option>
+              <option value="9">Module 9: Neurologic System</option>
+              <option value="10">Module 10: Musculoskeletal System</option>
+              <option value="11">Module 11: Hematologic System</option>
+              <option value="12">Module 12: Reproductive System</option>
+            </select>
+          </div>
+          <div class="actions">
+            <button class="button" id="resetStudy" type="button">Reset Progress</button>
+          </div>
+        </div>
+        <div class="study-stats" aria-live="polite">
+          <span class="stat" id="dueCount">Due: 0</span>
+          <span class="stat" id="newCount">New: 0</span>
+          <span class="stat" id="reviewedCount">Reviewed: 0</span>
+        </div>
+        <div id="flashcardMount" class="flashcard" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="consults">
+      <div class="pad">
+        <h2>Clinical Presentations</h2>
+        <table>
+          <tr><th>Presentation</th><th>Best module home</th><th>What was added</th></tr>
+          <tr><td>SLE Clinical Consult - Alexis Snell (1).pptx</td><td><a href="Module_01_Study_Hub.html#consults">Module 1: Immunity</a></td><td>SLE mechanism map, immune tolerance loss, interferon signalling, immune complexes, organ involvement, targeted therapy logic.</td></tr>
+          <tr><td>Michelle Alphonso Clinical Consult - Measles (1).pptx</td><td><a href="Module_01_Study_Hub.html#consults">Module 1: Infection and Vaccines</a></td><td>Measles pathophysiology map, clinical manifestations, complications, diagnosis, supportive treatment, vaccination and isolation points.</td></tr>
+          <tr><td>Clinical Consult Presentation - Impetigo (1).pptx</td><td><a href="Module_02_Study_Hub.html#consults">Module 2: Integumentary</a></td><td>Impetigo daycare concept map, non-bullous/bullous/ecthyma comparison, diagnosis, treatment logic, prevention education.</td></tr>
+          <tr><td>Makayla Campbell - pdf Clinical Consult Presentation updated (1).pdf</td><td><a href="Module_03_Study_Hub.html#consults">Module 3: Hypertension</a></td><td>Hypertension mechanism, RAAS flow, ACE inhibitor effects, side effects, interactions, special populations, and assessment priorities.</td></tr>
+          <tr><td>CCP_Budge_Final (2).pptx</td><td><a href="Module_03_Study_Hub.html#consults">Module 3: Atherosclerosis/CAD</a></td><td>Familial hypercholesterolemia, LDL receptor dysfunction, premature CAD risk, clinical clues, and treatment logic.</td></tr>
+          <tr><td>Folic Acid on CHDs (2).pptx</td><td><a href="Module_03_Study_Hub.html#consults">Module 3: Congenital Heart Disease</a></td><td>Early fetal heart development, folic acid role, deficiency risk, and NP counselling/prevention points.</td></tr>
+          <tr><td>Dodge McLean Amanda - Tuberculosis In Canada Clinical Concept Presentation.pptx</td><td><a href="Module_04_Study_Hub.html#tb">Module 4: Respiratory</a></td><td>TB organism traits, transmission, Canadian risk framing, granuloma immunopathophysiology, latent vs active TB, diagnosis, and treatment logic.</td></tr>
+          <tr><td>Clinical Consult - Strep Pneumoniae - Sharlyn Durant (Final) (1).pptx</td><td><a href="Module_04_Study_Hub.html#pneumonia">Module 4: Respiratory</a></td><td>Pneumococcal pneumonia pathophysiology, age-based clinical manifestations, complications, prevention, and vaccine counselling framing.</td></tr>
+          <tr><td>Clinical Consultation GERD - Dexter Endozo.pptx</td><td><a href="Module_05_Study_Hub.html#consults">Module 5: GERD</a></td><td>GERD mechanism, PPI/H2RA treatment logic, H. pylori testing/eradication framing, complications, and assessment points.</td></tr>
+          <tr><td>Clinical Consult_NSAIDS_MEdwar.pptx</td><td><a href="Module_05_Study_Hub.html#consults">Module 5: Gastritis/PUD</a></td><td>NSAID COX/prostaglandin mechanism, gastritis, ulcers, enteropathy, risk factors, complications, and mitigation strategies.</td></tr>
+          <tr><td>Lao Brenda Clinical Consult Presentation copy.pptx</td><td><a href="Module_08_Study_Hub.html#clinical">Module 8: Mental Health</a></td><td>Eating disorder subtypes, risk factors, prevalence framing, LGBTQ+ minority stress risk, clinical clues, treatment options, and discussion questions.</td></tr>
+          <tr><td>Wiseman Stephanie - Clinical Consult Presentation - PTSD.pptx</td><td><a href="Module_08_Study_Hub.html#clinical">Module 8: Mental Health</a></td><td>PTSD risk factors, DSM-5 specifiers, HPA-axis dysregulation, corticolimbic dysfunction, inflammation, neurotransmitters, care planning, and treatment options.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="workflow">
+      <div class="pad">
+        <h2>Build Workflow</h2>
+        <div class="callout">
+          <strong>How we keep it consolidated</strong>
+          Each module gets one page. New PowerPoints, notes, PDFs, video points, and textbook readings are added into the matching section rather than kept as separate scattered notes.
+        </div>
+        <table>
+          <tr><th>Step</th><th>What you send</th><th>What gets added</th></tr>
+          <tr><td>1</td><td>Module learning objectives</td><td>Objective checklist and module outline.</td></tr>
+          <tr><td>2</td><td>Slides, notes, PDFs, videos, links</td><td>Consolidated reading notes, concept maps, tables, clinical practice links, and selective textbook visuals only when useful.</td></tr>
+          <tr><td>3</td><td>Practice questions or exam hints</td><td>Active recall and compare/contrast questions.</td></tr>
+          <tr><td>4</td><td>Confusing topics</td><td>Extra explanations, mechanisms, and clinical examples.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="pad">
+        <h2>Current Files</h2>
+        <div class="actions">
+          <a class="button" href="Module_01_Study_Hub.html">Open Module 1</a>
+          <a class="button" href="Module_02_Study_Hub.html">Open Module 2</a>
+          <a class="button" href="Module_03_Study_Hub.html">Open Module 3</a>
+          <a class="button" href="Module_07_Study_Hub.html">Open Module 7</a>
+          <a class="button" href="Module_08_Study_Hub.html">Open Module 8</a>
+          <a class="button" href="Module_09_Study_Hub.html">Open Module 9</a>
+          <a class="button" href="Module_10_Study_Hub.html">Open Module 10</a>
+          <a class="button" href="Module_11_Study_Hub.html">Open Module 11</a>
+          <a class="button" href="Module_12_Study_Hub.html">Open Module 12</a>
+          <a class="button" href="00_Ultimate_Pathophysiology_Study_Guide_Blueprint.md">Blueprint</a>
+          <a class="button" href="01_Source_Map_and_Build_Plan.md">Source Map</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const studyCards = [
+      {
+        id: "m1-incidence-prevalence",
+        module: "1",
+        topic: "Epidemiology",
+        front: "How do incidence and prevalence differ clinically?",
+        back: ["Incidence tracks new cases over a time period, so it helps estimate risk.", "Prevalence counts existing cases at a point or period, so it reflects disease burden.", "A chronic disease can have high prevalence even when incidence is modest."]
+      },
+      {
+        id: "m1-inflammation-purpose",
+        module: "1",
+        topic: "Inflammation",
+        front: "What are the core goals of acute inflammation?",
+        back: ["Deliver leukocytes and plasma proteins to injured or infected tissue.", "Contain and eliminate the trigger.", "Clear damaged cells and start repair."]
+      },
+      {
+        id: "m1-hypersensitivity",
+        module: "1",
+        topic: "Immunity",
+        front: "What makes a hypersensitivity reaction pathologic?",
+        back: ["The immune response injures host tissue instead of only protecting the host.", "Mechanisms include IgE-mediated allergy, antibody-mediated injury, immune complex deposition, and T-cell mediated injury.", "Clinical pattern depends on the immune mechanism and target tissue."]
+      },
+      {
+        id: "m2-lesion-description",
+        module: "2",
+        topic: "Skin Lesions",
+        front: "What should you describe when documenting a skin lesion?",
+        back: ["Primary morphology such as macule, papule, plaque, vesicle, pustule, or nodule.", "Distribution, colour, size, border, pattern, drainage, and associated symptoms.", "Whether changes suggest infection, inflammation, malignancy, or trauma."]
+      },
+      {
+        id: "m2-melanoma-warning",
+        module: "2",
+        topic: "Skin Cancer",
+        front: "What does the ABCDE framework screen for in possible melanoma?",
+        back: ["Asymmetry, Border irregularity, Colour variation, Diameter or dark lesion, and Evolution.", "Evolution is especially important because change over time raises concern.", "Suspicious lesions need prompt clinical assessment."]
+      },
+      {
+        id: "m2-impetigo",
+        module: "2",
+        topic: "Infection",
+        front: "Why does impetigo spread easily in daycare or school settings?",
+        back: ["It is a superficial bacterial skin infection that spreads through direct contact and shared items.", "Children often scratch lesions, moving bacteria to nearby skin or other people.", "Hand hygiene, covering lesions, and appropriate treatment reduce transmission."]
+      },
+      {
+        id: "m3-atherosclerosis",
+        module: "3",
+        topic: "Atherosclerosis",
+        front: "What is the basic pathophysiology of atherosclerotic plaque formation?",
+        back: ["Endothelial injury or dysfunction allows lipid entry and inflammation in the arterial wall.", "Macrophages ingest oxidized LDL and become foam cells.", "Smooth muscle migration, fibrosis, and lipid accumulation form plaques that can narrow or rupture."]
+      },
+      {
+        id: "m3-heart-failure",
+        module: "3",
+        topic: "Heart Failure",
+        front: "Why does heart failure trigger RAAS and sympathetic activation?",
+        back: ["Reduced cardiac output lowers effective arterial perfusion.", "The body compensates with vasoconstriction, sodium/water retention, and increased heart rate.", "These responses help short term but worsen preload, afterload, congestion, and remodeling long term."]
+      },
+      {
+        id: "m3-hypertension",
+        module: "3",
+        topic: "Hypertension",
+        front: "How does chronic hypertension damage target organs?",
+        back: ["Persistent high pressure injures vascular endothelium and accelerates atherosclerosis.", "The heart faces increased afterload, promoting left ventricular hypertrophy and failure.", "Kidneys, brain, retina, and vessels are vulnerable to ischemic and pressure-related injury."]
+      },
+      {
+        id: "m4-asthma-copd",
+        module: "4",
+        topic: "Obstructive Lung Disease",
+        front: "What is the key pathophysiologic difference between asthma and COPD?",
+        back: ["Asthma is usually variable and reversible airway inflammation with bronchoconstriction.", "COPD involves persistent airflow limitation from small airway disease and/or alveolar destruction.", "Both can cause wheeze and dyspnea, but their triggers, reversibility, and progression differ."]
+      },
+      {
+        id: "m4-pneumonia",
+        module: "4",
+        topic: "Pneumonia",
+        front: "How does pneumonia impair gas exchange?",
+        back: ["Infection and inflammation fill alveoli with fluid, cells, and exudate.", "Affected alveoli are poorly ventilated but may still be perfused, creating V/Q mismatch.", "Clinical effects include cough, fever, crackles, dyspnea, and possible hypoxemia."]
+      },
+      {
+        id: "m4-tb-granuloma",
+        module: "4",
+        topic: "Tuberculosis",
+        front: "Why do granulomas form in tuberculosis?",
+        back: ["Macrophages ingest Mycobacterium tuberculosis but may not fully eradicate it.", "T-cell mediated immunity walls off infected cells to contain spread.", "Granulomas can maintain latent infection or break down with reactivation."]
+      },
+      {
+        id: "m5-gerd",
+        module: "5",
+        topic: "GERD",
+        front: "What is the main mechanism behind GERD symptoms?",
+        back: ["Reflux of gastric contents into the esophagus overwhelms mucosal defenses.", "Lower esophageal sphincter dysfunction, hiatal hernia, delayed gastric emptying, or increased abdominal pressure can contribute.", "Acid exposure causes heartburn, regurgitation, esophagitis, and possible complications."]
+      },
+      {
+        id: "m5-pud",
+        module: "5",
+        topic: "Peptic Ulcer Disease",
+        front: "How do NSAIDs increase peptic ulcer risk?",
+        back: ["NSAIDs inhibit COX enzymes and reduce protective prostaglandins.", "Lower prostaglandins reduce mucus, bicarbonate, and mucosal blood flow.", "The stomach or duodenum becomes more vulnerable to acid injury and bleeding."]
+      },
+      {
+        id: "m5-ibd-ibs",
+        module: "5",
+        topic: "GI Disorders",
+        front: "How do IBD and IBS differ at the pathophysiology level?",
+        back: ["IBD is inflammatory bowel disease with immune-mediated tissue inflammation and possible structural damage.", "IBS is a functional bowel disorder involving altered motility and visceral sensitivity without destructive inflammation.", "Red flags such as bleeding, weight loss, fever, or anemia point away from uncomplicated IBS."]
+      },
+      {
+        id: "m6-aki-ckd",
+        module: "6",
+        topic: "Kidney Injury",
+        front: "How do AKI and CKD differ?",
+        back: ["AKI is an abrupt decline in kidney function over hours to days and may be reversible.", "CKD is persistent kidney damage or reduced function over months with progressive nephron loss.", "Both can disturb fluid balance, electrolytes, acid-base status, and waste clearance."]
+      },
+      {
+        id: "m6-nephritic-nephrotic",
+        module: "6",
+        topic: "Glomerular Disease",
+        front: "What is the simplest contrast between nephritic and nephrotic syndromes?",
+        back: ["Nephritic syndrome is inflammatory glomerular injury, often with hematuria, hypertension, and reduced GFR.", "Nephrotic syndrome is heavy protein loss from filtration barrier damage, often with edema, hypoalbuminemia, and hyperlipidemia.", "Both reflect glomerular pathology but point to different dominant mechanisms."]
+      },
+      {
+        id: "m6-pyelonephritis",
+        module: "6",
+        topic: "Urinary Infection",
+        front: "What makes pyelonephritis more serious than cystitis?",
+        back: ["Cystitis is lower urinary tract infection centered in the bladder.", "Pyelonephritis involves kidney infection and inflammation.", "Fever, flank pain, systemic symptoms, and risk of sepsis make it higher acuity."]
+      },
+      {
+        id: "m7-di-siadh",
+        module: "7",
+        topic: "Pituitary",
+        front: "What is the fastest contrast between diabetes insipidus and SIADH?",
+        back: ["Diabetes insipidus is too little ADH effect, causing free water loss, polyuria, dilute urine, and hypernatremia risk.", "SIADH is too much ADH effect, causing free water retention, concentrated urine, and hyponatremia risk.", "The key contrast is water loss versus water retention."]
+      },
+      {
+        id: "m7-acromegaly",
+        module: "7",
+        topic: "Pituitary",
+        front: "What causes acromegaly and what clinical pattern does it create?",
+        back: ["It is usually caused by a growth hormone secreting pituitary adenoma after epiphyseal closure.", "Growth hormone increases IGF-1, causing soft tissue, bone, cartilage, and organ growth.", "Findings include enlarged hands/feet, coarse facial features, jaw growth, sweating, arthralgia, insulin resistance, hypertension, and sleep apnea."]
+      },
+      {
+        id: "m7-graves",
+        module: "7",
+        topic: "Thyroid",
+        front: "What is the pathophysiology of Graves disease?",
+        back: ["Autoantibodies stimulate the TSH receptor.", "The thyroid produces excess T3/T4 and often enlarges.", "Clinical effects include weight loss, heat intolerance, tremor, tachycardia, anxiety, diarrhea, goiter, and possible ophthalmopathy."]
+      },
+      {
+        id: "m7-hashimoto",
+        module: "7",
+        topic: "Thyroid",
+        front: "How does Hashimoto disease cause hypothyroidism?",
+        back: ["Hashimoto disease is autoimmune thyroiditis.", "Immune-mediated thyroid destruction gradually reduces thyroid hormone production.", "Manifestations include fatigue, cold intolerance, weight gain, constipation, dry skin, bradycardia, slowed cognition, and possible painless goiter."]
+      },
+      {
+        id: "m7-parathyroid",
+        module: "7",
+        topic: "Parathyroid",
+        front: "How do hyperparathyroidism and hypoparathyroidism differ?",
+        back: ["Hyperparathyroidism causes excess PTH and usually hypercalcemia, with stones, bone pain, fractures, constipation, weakness, and neuropsychiatric symptoms.", "Hypoparathyroidism causes deficient PTH and hypocalcemia, with paresthesias, muscle cramps, tetany, seizures, and prolonged QT risk.", "High calcium tends to depress neuromuscular activity; low calcium makes nerves and muscles irritable."]
+      },
+      {
+        id: "m7-dm-types",
+        module: "7",
+        topic: "Diabetes",
+        front: "What is the core pathophysiology difference between type 1, type 2, and gestational diabetes?",
+        back: ["Type 1 diabetes is autoimmune beta-cell destruction causing absolute insulin deficiency.", "Type 2 diabetes is insulin resistance plus progressive beta-cell dysfunction causing relative insulin deficiency.", "Gestational diabetes occurs when pregnancy-related insulin resistance exceeds pancreatic compensation."]
+      },
+      {
+        id: "m7-dka-hhs",
+        module: "7",
+        topic: "Diabetes Complications",
+        front: "Why is DKA ketotic while HHS/HHNKS is usually not?",
+        back: ["DKA has severe insulin deficiency, so lipolysis and ketone production cause metabolic acidosis.", "HHS has enough insulin effect to limit major ketogenesis but not enough to prevent severe hyperglycemia.", "Both cause osmotic diuresis and dehydration, but acidosis is the major DKA distinction."]
+      },
+      {
+        id: "m7-cushing-addison",
+        module: "7",
+        topic: "Adrenal Cortex",
+        front: "What is the key difference between Cushing disease, Cushing syndrome, and Addison disease?",
+        back: ["Cushing disease is pituitary ACTH excess causing adrenal cortisol excess.", "Cushing syndrome is cortisol excess from any cause, including exogenous steroids, adrenal tumors, pituitary ACTH, or ectopic ACTH.", "Addison disease is primary adrenal insufficiency with low cortisol and low aldosterone, causing weakness, weight loss, hypotension, hyponatremia, hyperkalemia, and hyperpigmentation."]
+      },
+      {
+        id: "m7-metformin",
+        module: "7",
+        topic: "Type 2 Diabetes",
+        front: "What metformin mechanism was emphasized in the Module 7 tutorial slides?",
+        back: ["Metformin lowers high blood glucose primarily by suppressing hepatic gluconeogenesis.", "This reduces excessive hepatic glucose output, a major contributor to fasting hyperglycemia in type 2 diabetes.", "The slides also note likely effects on gluconeogenic enzymes and liver lipid metabolism."]
+      },
+      {
+        id: "m7-chronic-hyperglycemia",
+        module: "7",
+        topic: "Diabetes Complications",
+        front: "How does chronic hyperglycemia damage vessels, nerves, retina, and kidneys?",
+        back: ["Hyperglycemia increases oxidative stress and reactive oxygen species.", "Glycation creates advanced glycation end-products that alter proteins/lipids and promote inflammation.", "The polyol pathway increases sorbitol and oxidative injury in insulin-independent tissues such as nerves, retina, kidney, blood vessels, RBCs, and lens."]
+      },
+      {
+        id: "m7-exercise",
+        module: "7",
+        topic: "Type 2 Diabetes",
+        front: "Why do aerobic and resistance exercise help glucose control in type 2 diabetes?",
+        back: ["Aerobic exercise increases muscle glucose uptake through GLUT4 and can improve insulin sensitivity for hours afterward.", "Training improves hepatic glucose output regulation, lipid profile, blood pressure, and adipokine activity.", "Resistance exercise increases muscle mass and improves fasting blood glucose and insulin action."]
+      },
+      {
+        id: "m7-adh-trigger",
+        module: "7",
+        topic: "Pituitary",
+        front: "What normally triggers ADH release, and what does ADH do in the kidney?",
+        back: ["Increased plasma osmolarity is the key normal trigger; low blood pressure or volume can also stimulate release.", "ADH inserts aquaporin-2 channels in the collecting duct/distal tubular membrane.", "This increases water reabsorption and concentrates urine."]
+      },
+      {
+        id: "m7-pth-calcitonin",
+        module: "7",
+        topic: "Parathyroid",
+        front: "How do PTH and calcitonin oppose each other?",
+        back: ["Low ionized calcium stimulates PTH release from parathyroid chief cells.", "PTH raises calcium through bone resorption, renal calcium reabsorption, vitamin D activation, and intestinal absorption.", "Calcitonin from thyroid C cells lowers calcium by inhibiting osteoclast bone resorption."]
+      },
+      {
+        id: "m7-hashimoto-monitoring",
+        module: "7",
+        topic: "Thyroid",
+        front: "What monitoring and teaching points matter for levothyroxine in Hashimoto disease?",
+        back: ["TSH is checked 6-8 weeks after starting or changing dose, then every 6-12 months once stable.", "Separate levothyroxine from iron, calcium, antacids, PPIs, soy, and similar interfering products.", "Warn about over-replacement symptoms such as palpitations, chest pain, tremor, and unexplained weight loss."]
+      },
+      {
+        id: "m7-addison-crisis",
+        module: "7",
+        topic: "Adrenal Cortex",
+        front: "What transcript details explain Addison disease and adrenal crisis?",
+        back: ["Autoimmune Addison disease can target 21-hydroxylase and may not manifest until most adrenal cortex cells are damaged.", "Aldosterone loss causes hyponatremia, hyperkalemia, salt craving, dehydration, and hypotension.", "Cortisol loss raises ACTH, contributes to hyperpigmentation, impairs glucose/vascular stress response, and can lead to adrenal crisis."]
+      },
+      {
+        id: "m8-stress-response",
+        module: "8",
+        topic: "Stress Response",
+        front: "What are the two major physiologic arms of the stress response?",
+        back: ["The sympathetic nervous system/adrenal medulla response provides rapid catecholamine-driven fight-or-flight effects.", "The HPA axis provides CRH to ACTH to cortisol signaling for longer energy mobilization and stress adaptation.", "Chronic activation can dysregulate sleep, immune signaling, mood, cognition, reward, and threat systems."]
+      },
+      {
+        id: "m8-schizophrenia-symptoms",
+        module: "8",
+        topic: "Schizophrenia",
+        front: "How do positive, negative, and cognitive schizophrenia symptoms differ?",
+        back: ["Positive symptoms are added experiences such as hallucinations, delusions, and disorganized speech.", "Negative symptoms are reductions in normal function such as flat affect, avolition, alogia, anhedonia, and social withdrawal.", "Cognitive symptoms include impaired attention, working memory, executive function, processing speed, and social cognition."]
+      },
+      {
+        id: "m8-mood-disorders",
+        module: "8",
+        topic: "Mood Disorders",
+        front: "What separates major depression from bipolar disorder?",
+        back: ["Major depression involves depressive episodes without a history of mania or hypomania.", "Bipolar disorder includes mania or hypomania, often with depressive episodes over the illness course.", "The distinction matters because antidepressant-only approaches can worsen cycling or precipitate mania in bipolar disorder."]
+      },
+      {
+        id: "m8-substance-use",
+        module: "8",
+        topic: "Substance Use",
+        front: "What is the core reward-pathway issue in substance use disorders?",
+        back: ["Substances strongly activate reward and dopamine learning pathways.", "Repeated exposure produces neuroadaptation, cue reactivity, craving, impaired control, tolerance, and withdrawal.", "Stress systems and negative affect become linked to relapse risk."]
+      },
+      {
+        id: "m8-eating-disorders",
+        module: "8",
+        topic: "Eating Disorders",
+        front: "What is the fastest contrast between anorexia nervosa, bulimia nervosa, and binge eating disorder?",
+        back: ["Anorexia nervosa centers on restriction and significantly low body weight.", "Bulimia nervosa involves binge eating plus compensatory behaviors such as vomiting, laxatives, fasting, or excessive exercise.", "Binge eating disorder involves recurrent binge eating without regular compensatory behaviors."]
+      },
+      {
+        id: "m8-anxiety-ptsd-ocd",
+        module: "8",
+        topic: "Anxiety, PTSD, OCD",
+        front: "How do panic disorder, GAD, PTSD, and OCD differ mechanistically?",
+        back: ["Panic disorder centers on recurrent autonomic fear surges and fear of future attacks.", "GAD centers on chronic broad worry and threat anticipation.", "PTSD is trauma-linked fear conditioning with intrusion, avoidance, negative mood/cognition changes, and hyperarousal.", "OCD centers on obsessions and compulsions reinforced by temporary anxiety relief."]
+      },
+      {
+        id: "m9-focal-diffuse-tbi",
+        module: "9",
+        topic: "Traumatic Brain Injury",
+        front: "How do focal and diffuse traumatic brain injuries differ?",
+        back: ["Focal injuries are localized contusions, lacerations, or hematomas.", "Diffuse axonal injury reflects widespread shear strain from acceleration, deceleration, or rotation.", "Both can trigger secondary excitotoxic, inflammatory, ischemic, and edematous injury."]
+      },
+      {
+        id: "m9-tbi-severity",
+        module: "9",
+        topic: "Traumatic Brain Injury",
+        front: "What GCS ranges are commonly used for mild, moderate, and severe TBI?",
+        back: ["Mild: GCS 13-15.", "Moderate: GCS 9-12.", "Severe: GCS 3-8.", "Interpret GCS alongside loss of consciousness, amnesia, imaging, and neurologic findings."]
+      },
+      {
+        id: "m9-stroke-types",
+        module: "9",
+        topic: "Cerebrovascular Disorders",
+        front: "How do thrombotic, embolic, and lacunar ischemic strokes differ?",
+        back: ["Thrombotic stroke forms locally on a diseased cerebral artery.", "Embolic stroke travels from another site and often causes sudden maximal deficit.", "Lacunar stroke involves small penetrating vessels in deep brain structures."]
+      },
+      {
+        id: "m9-tia-infarct",
+        module: "9",
+        topic: "Cerebrovascular Disorders",
+        front: "What separates a TIA from cerebral infarction?",
+        back: ["TIA causes transient focal neurologic dysfunction without established acute infarction.", "Cerebral infarction is irreversible tissue death from sustained ischemia.", "A TIA is a warning of unstable vascular disease and future stroke risk."]
+      },
+      {
+        id: "m9-meningitis-encephalitis",
+        module: "9",
+        topic: "CNS Infection",
+        front: "What is the core difference between meningitis and encephalitis?",
+        back: ["Meningitis primarily inflames the meninges and CSF spaces.", "Encephalitis primarily injures brain parenchyma.", "Prominent altered behavior, cognition, consciousness, focal deficits, or seizures suggests encephalitis."]
+      },
+      {
+        id: "m9-neuro-localization",
+        module: "9",
+        topic: "Movement and Demyelination",
+        front: "Where do MS, ALS, Parkinson disease, and myasthenia gravis localize?",
+        back: ["MS: CNS myelin.", "ALS: upper and lower motor neurons.", "Parkinson disease: substantia nigra and basal-ganglia dopamine circuits.", "Myasthenia gravis: postsynaptic neuromuscular junction."]
+      },
+      {
+        id: "m9-delirium-alzheimer",
+        module: "9",
+        topic: "Cognition",
+        front: "How does delirium differ from Alzheimer disease?",
+        back: ["Delirium is acute, fluctuating, and marked by impaired attention and awareness.", "Alzheimer disease is insidious and progressively impairs memory, cognition, and function.", "Delirium often improves when the precipitating cause is treated."]
+      },
+      {
+        id: "m9-headache-contrast",
+        module: "9",
+        topic: "Headache Syndromes",
+        front: "What is the fastest contrast among migraine, cluster, and tension-type headache?",
+        back: ["Migraine: often unilateral and pulsating with nausea and sensory sensitivity.", "Cluster: excruciating unilateral orbital pain with ipsilateral autonomic signs.", "Tension-type: bilateral pressing or tightening pain without prominent nausea."]
+      },
+      {
+        id: "m9-mg-mechanism",
+        module: "9",
+        topic: "Myasthenia Gravis",
+        front: "Why does myasthenia gravis cause fatigable weakness without sensory loss?",
+        back: ["IgG autoantibodies impair postsynaptic neuromuscular-junction signaling, often by targeting nicotinic ACh receptors or MuSK.", "Repeated activation exhausts the reduced transmission safety margin.", "Sensory pathways are not targeted."]
+      },
+      {
+        id: "m9-mg-treatment-logic",
+        module: "9",
+        topic: "Myasthenia Gravis",
+        front: "How do major myasthenia gravis treatments interrupt the disease process?",
+        back: ["Pyridostigmine increases available acetylcholine.", "Immunosuppressants reduce antibody production; IVIG or plasma exchange acts rapidly during major worsening.", "FcRn inhibitors remove IgG, complement inhibitors protect the postsynaptic membrane, and thymectomy is required for thymoma."]
+      },
+      {
+        id: "m9-pd-essential-tremor",
+        module: "9",
+        topic: "Parkinson Disease",
+        front: "What features separate Parkinson tremor from essential tremor?",
+        back: ["Parkinson tremor is typically asymmetric at onset, occurs at rest, and accompanies bradykinesia or rigidity.", "Essential tremor is usually bilateral, appears with posture or action, and commonly affects the head or voice.", "Parkinson disease may cause micrographia; essential tremor causes tremulous but usually normal-sized writing."]
+      },
+      {
+        id: "m10-injury-types",
+        module: "10",
+        topic: "Musculoskeletal Injuries",
+        front: "What tissues distinguish strains, sprains, dislocations, and subluxations?",
+        back: ["Strain: muscle or tendon.", "Sprain: ligament.", "Dislocation: complete loss of joint contact.", "Subluxation: partial loss of joint congruence."]
+      },
+      {
+        id: "m10-sensitization",
+        module: "10",
+        topic: "Pain",
+        front: "How do peripheral and central sensitization differ?",
+        back: ["Peripheral sensitization lowers nociceptor thresholds at injured tissue.", "Central sensitization amplifies CNS responsiveness and can broaden or sustain pain beyond expected tissue healing."]
+      },
+      {
+        id: "m10-bone-disorders",
+        module: "10",
+        topic: "Metabolic Bone",
+        front: "How does osteoporosis differ from osteomalacia?",
+        back: ["Osteoporosis is reduced quantity and microarchitectural strength of normally mineralized bone.", "Osteomalacia is defective mineralization of osteoid, often related to vitamin D, calcium, or phosphate problems."]
+      },
+      {
+        id: "m10-vitamin-d",
+        module: "10",
+        topic: "Vitamin D",
+        front: "How does vitamin D deficiency weaken bone?",
+        back: ["Reduced intestinal calcium absorption triggers secondary hyperparathyroidism.", "PTH increases resorption and phosphate loss.", "Limited calcium and phosphate impair mineralization, contributing to osteomalacia or rickets."]
+      },
+      {
+        id: "m10-osteomyelitis",
+        module: "10",
+        topic: "Osteomyelitis",
+        front: "What is the osteomyelitis mechanism sequence?",
+        back: ["Organisms reach bone hematogenously, contiguously, or by direct inoculation.", "Inflammation and pressure impair perfusion, causing necrosis.", "Chronic disease can form a sequestrum, involucrum, sinus tract, or hardware biofilm."]
+      },
+      {
+        id: "m10-oa-ra",
+        module: "10",
+        topic: "OA vs RA",
+        front: "What bedside pattern separates OA from RA?",
+        back: ["OA is often asymmetric with activity pain, brief stiffness, hard bony change, and possible DIP involvement.", "RA is usually symmetric with prolonged stiffness, warm boggy MCP/PIP/wrist synovitis, systemic symptoms, and DIP sparing."]
+      },
+      {
+        id: "m10-opioid-terms",
+        module: "10",
+        topic: "Pain and Opioids",
+        front: "How do opioid tolerance, dependence, and OUD differ?",
+        back: ["Tolerance is reduced effect at the same dose.", "Physical dependence is withdrawal after abrupt cessation or antagonism.", "OUD involves impaired control, craving, risky use, and continued use despite harm."]
+      },
+      {
+        id: "m10-gout",
+        module: "10",
+        topic: "Gout",
+        front: "How do urate crystals cause an acute gout flare?",
+        back: ["Monosodium urate crystals activate the NLRP3 inflammasome.", "IL-1 beta recruits neutrophils, producing abrupt severe pain, warmth, swelling, and erythema.", "Needle-shaped negatively birefringent crystals confirm the diagnosis."]
+      },
+      {
+        id: "m11-anemia-size",
+        module: "11",
+        topic: "Anemia",
+        front: "What are the high-yield causes of macrocytic, microcytic, and normocytic anemia?",
+        back: ["Macrocytic: B12/folate deficiency and other DNA-synthesis or nonmegaloblastic causes.", "Microcytic: iron deficiency, inflammation, thalassemia, sideroblastic anemia.", "Normocytic: blood loss, hemolysis, renal/inflammatory disease, or marrow failure."]
+      },
+      {
+        id: "m11-b12-folate",
+        module: "11",
+        topic: "Megaloblastic Anemia",
+        front: "How does vitamin B12 deficiency differ from folate deficiency?",
+        back: ["Both impair DNA synthesis and cause megaloblastic blood findings.", "B12 deficiency can cause neurologic injury and raises methylmalonic acid.", "Folate deficiency does not cause the characteristic B12 neurologic syndrome."]
+      },
+      {
+        id: "m11-iron-inflammation",
+        module: "11",
+        topic: "Microcytic Anemia",
+        front: "How do iron deficiency and anemia of inflammation differ on iron studies?",
+        back: ["Iron deficiency: low ferritin, low saturation, high TIBC.", "Inflammation: low iron and saturation, low TIBC, normal or high ferritin due to hepcidin-mediated iron trapping."]
+      },
+      {
+        id: "m11-hit-itp-ttp",
+        module: "11",
+        topic: "Platelet Disorders",
+        front: "What is the fastest contrast among HIT, ITP, and TTP?",
+        back: ["HIT: heparin-PF4 immune platelet activation with thrombosis.", "ITP: isolated immune thrombocytopenia with mucocutaneous bleeding.", "TTP: ADAMTS13 deficiency causing thrombocytopenia, microangiopathic hemolysis, and organ ischemia."]
+      },
+      {
+        id: "m11-vitamin-k-liver",
+        module: "11",
+        topic: "Coagulation",
+        front: "How do vitamin K deficiency and liver disease impair hemostasis?",
+        back: ["Vitamin K deficiency prevents gamma-carboxylation of factors II, VII, IX, X and proteins C/S.", "Liver disease reduces pro- and anticoagulant proteins and also alters platelets and fibrinolysis, creating fragile rebalanced hemostasis."]
+      },
+      {
+        id: "m11-hodgkin-nhl",
+        module: "11",
+        topic: "Lymphoma",
+        front: "How does Hodgkin lymphoma differ from non-Hodgkin lymphoma?",
+        back: ["Hodgkin lymphoma features Reed-Sternberg cells and often orderly contiguous nodal spread.", "NHL includes diverse B-, T-, or NK-cell neoplasms and more often spreads noncontiguously or extranodally."]
+      },
+      {
+        id: "m11-leukemias",
+        module: "11",
+        topic: "Leukemia",
+        front: "What are the four leukemia anchors?",
+        back: ["ALL: acute lymphoid, common in children.", "AML: acute myeloid, Auer rods may be present.", "CML: BCR-ABL1 t(9;22).", "CLL: mature clonal B-cell disease of older adults."]
+      },
+      {
+        id: "m11-ufh-lmwh",
+        module: "11",
+        topic: "Heparin",
+        front: "How do UFH and LMWH differ?",
+        back: ["Both enhance antithrombin and inhibit factor Xa.", "UFH chains also bridge antithrombin to thrombin, require more monitoring, carry higher HIT risk, and are more completely reversed by protamine.", "LMWH is more predictable, primarily anti-Xa, and more dependent on renal clearance."]
+      }
+    ];
+
+    const storageKey = "pathophysAnkiStudyProgress";
+    const intervals = { again: 0, hard: 1, good: 3, easy: 7 };
+    const labels = { again: "Again", hard: "Hard", good: "Good", easy: "Easy" };
+    let currentCard = null;
+
+    function loadProgress() {
+      try {
+        return JSON.parse(localStorage.getItem(storageKey)) || {};
+      } catch (error) {
+        return {};
+      }
+    }
+
+    function saveProgress(progress) {
+      localStorage.setItem(storageKey, JSON.stringify(progress));
+    }
+
+    function todayKey() {
+      return new Date().toISOString().slice(0, 10);
+    }
+
+    function addDays(days) {
+      const date = new Date();
+      date.setDate(date.getDate() + days);
+      return date.toISOString().slice(0, 10);
+    }
+
+    function filteredCards() {
+      const selected = document.getElementById("studyModule").value;
+      return studyCards.filter(card => selected === "all" || card.module === selected);
+    }
+
+    function dueCards(cards, progress) {
+      const today = todayKey();
+      return cards.filter(card => !progress[card.id] || progress[card.id].due <= today);
+    }
+
+    function chooseCard() {
+      const progress = loadProgress();
+      const cards = filteredCards();
+      const due = dueCards(cards, progress);
+      currentCard = due[0] || null;
+      renderStats(cards, due, progress);
+      renderCard(currentCard, progress);
+    }
+
+    function renderStats(cards, due, progress) {
+      const newCards = cards.filter(card => !progress[card.id]).length;
+      const reviewed = cards.filter(card => progress[card.id]).length;
+      document.getElementById("dueCount").textContent = `Due: ${due.length}`;
+      document.getElementById("newCount").textContent = `New: ${newCards}`;
+      document.getElementById("reviewedCount").textContent = `Reviewed: ${reviewed}`;
+    }
+
+    function renderCard(card, progress) {
+      const mount = document.getElementById("flashcardMount");
+      if (!card) {
+        mount.className = "empty-card";
+        mount.innerHTML = "<strong>No cards due right now.</strong><p>Change the module filter, reset progress, or come back when reviews are due.</p>";
+        return;
+      }
+
+      const cardProgress = progress[card.id];
+      mount.className = "flashcard";
+      mount.innerHTML = `
+        <div>
+          <div class="flashcard-meta">Module ${card.module} / ${card.topic}${cardProgress ? ` / last: ${cardProgress.lastRating}` : ""}</div>
+          <h3>${card.front}</h3>
+          <div class="answer" id="cardAnswer">
+            <strong>Answer</strong>
+            <ul>${card.back.map(point => `<li>${point}</li>`).join("")}</ul>
+          </div>
+        </div>
+        <div>
+          <button class="button" id="showAnswer" type="button">Show Answer</button>
+          <div class="rating-row" id="ratingRow" hidden>
+            ${Object.keys(labels).map(key => `<button class="button ${key}" type="button" data-rating="${key}">${labels[key]}</button>`).join("")}
+          </div>
+        </div>
+      `;
+
+      document.getElementById("showAnswer").addEventListener("click", () => {
+        document.getElementById("cardAnswer").classList.add("visible");
+        document.getElementById("ratingRow").hidden = false;
+        document.getElementById("showAnswer").hidden = true;
+      });
+
+      document.getElementById("ratingRow").addEventListener("click", event => {
+        const rating = event.target.getAttribute("data-rating");
+        if (!rating) return;
+        rateCard(rating);
+      });
+    }
+
+    function rateCard(rating) {
+      if (!currentCard) return;
+      const progress = loadProgress();
+      const previous = progress[currentCard.id] || { reviews: 0 };
+      progress[currentCard.id] = {
+        reviews: previous.reviews + 1,
+        lastRating: labels[rating],
+        due: addDays(intervals[rating])
+      };
+      saveProgress(progress);
+      chooseCard();
+    }
+
+    document.getElementById("studyModule").addEventListener("change", chooseCard);
+    document.getElementById("resetStudy").addEventListener("click", () => {
+      localStorage.removeItem(storageKey);
+      chooseCard();
+    });
+    chooseCard();
+  </script>
+</body>
+</html>

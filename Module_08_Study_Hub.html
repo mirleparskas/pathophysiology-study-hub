@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 8 Study Hub | Mental Health</title>
+  <style>
+    :root {
+      --ink: #17212a;
+      --muted: #5c6871;
+      --bg: #f5f7f8;
+      --paper: #fffefd;
+      --line: #d9e0e4;
+      --blue: #2f6f9f;
+      --teal: #1c7f7a;
+      --green: #2f7d59;
+      --gold: #b98521;
+      --red: #b84a42;
+      --purple: #70549a;
+      --shadow: 0 10px 25px rgba(20, 35, 42, .08);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
+    header { background: linear-gradient(135deg, #70549a, #1c7f7a); color: white; padding: 42px 0 34px; }
+    .wrap { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 700; opacity: .9; }
+    h1 { margin: 8px 0 10px; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.05; letter-spacing: 0; }
+    h2 { margin: 0 0 18px; font-size: 1.65rem; letter-spacing: 0; }
+    h3 { margin: 20px 0 10px; font-size: 1.05rem; letter-spacing: 0; }
+    p { margin: 0 0 12px; }
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(255, 254, 253, .96); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    nav .wrap { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0; }
+    nav a, .button { color: var(--ink); text-decoration: none; border: 1px solid var(--line); background: white; padding: 8px 11px; border-radius: 8px; white-space: nowrap; font-size: .9rem; font-weight: 700; }
+    nav a:hover, .button:hover { border-color: var(--blue); color: var(--blue); }
+    main { padding: 24px 0 60px; }
+    section { width: min(1160px, calc(100% - 32px)); margin: 0 auto 22px; }
+    .pad { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; box-shadow: var(--shadow); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .card h3 { margin-top: 0; }
+    ul, ol { margin: 8px 0 0 21px; padding: 0; }
+    li { margin: 5px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0; background: white; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: table; }
+    th, td { padding: 10px 11px; border: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { background: #f0f2f7; color: #203843; }
+    .objective { display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: start; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: white; margin-bottom: 9px; }
+    .check { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #e8e2f2; color: var(--purple); font-weight: 800; }
+    .source { color: var(--muted); font-size: .86rem; white-space: nowrap; }
+    .callout { border-left: 5px solid var(--purple); background: #f4effb; padding: 13px 14px; border-radius: 8px; margin: 14px 0; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .callout.gold { border-color: var(--gold); background: #fff6df; }
+    .callout.teal { border-color: var(--teal); background: #edf9f8; }
+    .map { display: flex; align-items: stretch; gap: 9px; overflow-x: auto; padding: 10px 0; margin: 8px 0 16px; }
+    .node { min-width: 185px; flex: 1; background: white; border: 1px solid var(--line); border-top: 5px solid var(--teal); border-radius: 8px; padding: 11px; }
+    .node b { display: block; margin-bottom: 4px; }
+    .arrow { display: grid; place-items: center; color: var(--muted); font-weight: 800; min-width: 22px; }
+    .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    button { border: 1px solid var(--line); background: white; color: var(--ink); padding: 8px 11px; border-radius: 8px; font-weight: 700; cursor: pointer; }
+    details.qa { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 11px 13px; margin: 9px 0; }
+    details.qa summary { cursor: pointer; font-weight: 700; }
+    .answer { margin-top: 9px; color: #31414a; }
+    a { color: var(--blue); }
+    @media (max-width: 900px) { .grid, .grid.three { grid-template-columns: 1fr; } .objective { grid-template-columns: 28px 1fr; } .source { grid-column: 2; white-space: normal; } .pad { padding: 17px; } table { display: block; overflow-x: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Pathophysiology Study Hub</p>
+      <h1>Module 8: Mental Health</h1>
+      <p>Stress biology, schizophrenia spectrum disorders, mood disorders, substance use disorders, eating disorders, anxiety disorders, PTSD, and OCD. This page connects each condition to the underlying pathophysiology, shared circuits, neurotransmitters, and stress-system changes.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Module navigation">
+    <div class="wrap">
+      <a href="index.html">Hub</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#readings">Readings</a>
+      <a href="#diagnosis">DSM Framing</a>
+      <a href="#stress">Stress</a>
+      <a href="#schizophrenia">Schizophrenia</a>
+      <a href="#mood">Mood</a>
+      <a href="#substance">Substance Use</a>
+      <a href="#eating">Eating Disorders</a>
+      <a href="#anxiety">Anxiety/PTSD/OCD</a>
+      <a href="#linked-patho">Linked Patho</a>
+      <a href="#clinical">Clinical Consults</a>
+      <a href="#practice">Practice</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="objectives">
+      <div class="pad">
+        <h2>Learning Outcome Coverage</h2>
+        <div class="callout gold"><strong>Build status</strong>This Module 8 build is structured around the official 8.3 learning outcomes, saved Unit 8 Mental Health handout, assigned readings, clinical consult presentations, and the Module 8 course practice quiz. A Mental Health lecture transcript can be added later for instructor-specific detail.</div>
+        <div class="objective"><span class="check">OK</span><div>Describe the contribution of the sympathetic nervous system and hypothalamic-pituitary-adrenal axis to the stress response.</div><span class="source">McCance 9th pp. 310-328</span></div>
+        <div class="objective"><span class="check">OK</span><div>Explain how chronic activation of the stress response can facilitate development of mental illness.</div><span class="source">McCance 9th pp. 310-328</span></div>
+        <div class="objective"><span class="check">OK</span><div>Discuss positive, negative, and cognitive symptoms of schizophrenia.</div><span class="source">McCance 9th pp. 618-623</span></div>
+        <div class="objective"><span class="check">OK</span><div>Describe how neurotransmitter signaling and neuroanatomy contribute to schizophrenia pathophysiology.</div><span class="source">McCance 9th pp. 618-623</span></div>
+        <div class="objective"><span class="check">OK</span><div>Compare and contrast pathophysiological mechanisms and clinical manifestations of major depression and bipolar disorder.</div><span class="source">McCance 9th pp. 623-630</span></div>
+        <div class="objective"><span class="check">OK</span><div>Identify risk factors for substance use disorders.</div><span class="source">Volkow & Blanco; Thomasius et al.</span></div>
+        <div class="objective"><span class="check">OK</span><div>Describe the epidemiology and pathophysiology of substance use disorders.</div><span class="source">Volkow & Blanco; Thomasius et al.</span></div>
+        <div class="objective"><span class="check">OK</span><div>Discuss the clinical manifestations associated with substance use disorders.</div><span class="source">Volkow & Blanco; Thomasius et al.</span></div>
+        <div class="objective"><span class="check">OK</span><div>Compare and contrast risk factors, pathophysiological mechanisms, and clinical manifestations of anorexia nervosa, bulimia nervosa, and binge eating disorder.</div><span class="source">McCance 9th pp. 730-731</span></div>
+        <div class="objective"><span class="check">OK</span><div>Compare and contrast pathophysiology and clinical manifestations of panic disorder, generalized anxiety disorder, PTSD, and OCD.</div><span class="source">McCance 9th pp. 630-636</span></div>
+      </div>
+    </section>
+
+    <section id="readings">
+      <div class="pad">
+        <h2>Assigned Reading Map</h2>
+        <table>
+          <tr><th>Topic</th><th>McCance 8th ed.</th><th>McCance 9th ed.</th><th>Core focus</th></tr>
+          <tr><td>Stress and disease</td><td>pp. 323-340</td><td>pp. 310-328</td><td>SNS activation, HPA axis, cortisol, allostatic load, immune/metabolic/cardiovascular effects, links to mental illness.</td></tr>
+          <tr><td>Schizophrenia</td><td>pp. 600-605</td><td>pp. 618-623</td><td>Positive, negative, and cognitive symptoms; dopamine, glutamate, GABA, neurodevelopment, brain structure/function.</td></tr>
+          <tr><td>Depression and bipolar disorder</td><td>pp. 605-611</td><td>pp. 623-630</td><td>Mood circuitry, monoamines, stress/inflammation, neuroplasticity, manic versus depressive manifestations.</td></tr>
+          <tr><td>Substance use disorders</td><td>Not covered</td><td>Not covered</td><td>Recent literature required: classification, epidemiology, neurobiology, adolescent risk, clinical manifestations, treatment and prevention context.</td></tr>
+          <tr><td>Eating disorders</td><td>pp. 719-720</td><td>pp. 730-731</td><td>Anorexia nervosa, bulimia nervosa, binge eating disorder, biopsychosocial risk, starvation/purge physiology, complications.</td></tr>
+          <tr><td>Anxiety, PTSD, OCD</td><td>pp. 611-615</td><td>pp. 630-636</td><td>Panic disorder, GAD, PTSD, OCD; threat circuitry, fear conditioning, intrusive thoughts, compulsions, arousal and avoidance.</td></tr>
+        </table>
+        <div class="callout teal"><strong>DSM-5 placement note</strong>PTSD and OCD are no longer classified as anxiety disorders in DSM-5. Bipolar and related disorders are also separated from depressive disorders and placed between schizophrenia spectrum and depressive disorders because of shared symptom, family-history, and genetic links.</div>
+      </div>
+    </section>
+
+    <section id="diagnosis">
+      <div class="pad">
+        <h2>Diagnostic Framing</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Why Diagnostic Systems Matter</h3>
+            <ul>
+              <li>DSM and ICD systems create shared language for clinicians, researchers, patients, families, services, statistics, and treatment planning.</li>
+              <li>Rule-based criteria improve diagnostic agreement, but categories are still clinical constructs rather than perfectly bounded biological entities.</li>
+              <li>Pathophysiology matters because mental illnesses are syndromes with overlapping symptoms, genetic risk, neurobiology, and environmental triggers.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>How to Study This Module</h3>
+            <ul>
+              <li>Do not memorize diagnoses as isolated labels. Connect symptoms to stress systems, neurotransmitters, brain circuits, reward learning, and threat processing.</li>
+              <li>For each disorder, ask: What is the dominant circuit? What neurotransmitters are implicated? What clinical manifestations follow?</li>
+              <li>Separate pathophysiology from diagnostic criteria. The exam objective is mechanism plus manifestations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stress">
+      <div class="pad">
+        <h2>1. Stress Response</h2>
+        <div class="map">
+          <div class="node"><b>Stress perception</b>Threat, uncertainty, trauma, pain, illness, or psychosocial strain activates central stress appraisal.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>SNS/SAM system</b>Sympathetic activation and adrenal medulla catecholamines increase heart rate, blood pressure, bronchodilation, glucose availability, and vigilance.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>HPA axis</b>Hypothalamic CRH stimulates pituitary ACTH, which stimulates adrenal cortisol release.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Allostatic load</b>Repeated or prolonged activation can dysregulate immune, metabolic, sleep, mood, and cognitive systems.</div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>Acute Stress: Adaptive</h3>
+            <ul>
+              <li>SNS activation mobilizes rapid fight-or-flight physiology through norepinephrine and epinephrine.</li>
+              <li>Cortisol supports glucose availability, vascular responsiveness, attention, and energy mobilization.</li>
+              <li>Negative feedback normally reduces CRH and ACTH after the stressor resolves.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Chronic Stress: Pathologic</h3>
+            <ul>
+              <li>Chronic stress can keep cortisol and catecholamine signaling activated or dysregulated.</li>
+              <li>Persistent activation can alter sleep, reward, attention, fear conditioning, inflammation, autonomic tone, and neuroplasticity.</li>
+              <li>Stress biology can increase vulnerability to depression, anxiety, PTSD, substance use relapse, psychosis vulnerability, and disordered eating patterns.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schizophrenia">
+      <div class="pad">
+        <h2>2. Schizophrenia Spectrum</h2>
+        <table>
+          <tr><th>Symptom group</th><th>Clinical manifestations</th><th>Study cue</th></tr>
+          <tr><td>Positive symptoms</td><td>Hallucinations, delusions, disorganized speech, disorganized behavior, agitation, suspiciousness.</td><td>Added experiences or distortions of reality.</td></tr>
+          <tr><td>Negative symptoms</td><td>Flat affect, alogia, avolition, anhedonia, asociality, reduced motivation, social withdrawal.</td><td>Loss or reduction of normal emotional, social, or goal-directed function.</td></tr>
+          <tr><td>Cognitive symptoms</td><td>Impaired attention, working memory, executive function, processing speed, learning, and social cognition.</td><td>Often drives functional impairment even when positive symptoms improve.</td></tr>
+        </table>
+        <div class="grid">
+          <div class="card">
+            <h3>Neurotransmitter Signaling</h3>
+            <ul>
+              <li>Dopamine dysregulation is central: increased mesolimbic dopamine is linked with positive symptoms.</li>
+              <li>Reduced mesocortical dopamine signaling is linked with negative and cognitive symptoms.</li>
+              <li>Glutamate/NMDA receptor hypofunction and GABA interneuron dysfunction may disrupt cortical coordination and cognition.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Brain Circuit Changes</h3>
+            <ul>
+              <li>Schizophrenia is often framed as a neurodevelopmental disorder with genetic vulnerability plus environmental risk.</li>
+              <li>Findings may involve prefrontal cortex, hippocampus, temporal regions, thalamic filtering, and connectivity networks.</li>
+              <li>Clinical pattern reflects disrupted salience, perception, working memory, motivation, and reality testing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mood">
+      <div class="pad">
+        <h2>3. Bipolar and Depressive Disorders</h2>
+        <table>
+          <tr><th>Feature</th><th>Major depression</th><th>Bipolar disorder</th></tr>
+          <tr><td>Dominant mood pattern</td><td>Depressed mood and/or anhedonia with neurovegetative and cognitive symptoms.</td><td>Episodes of mania or hypomania, usually with depressive episodes over the illness course.</td></tr>
+          <tr><td>Neurobiology</td><td>Monoamine signaling changes, HPA-axis dysregulation, inflammation, altered neuroplasticity, reward circuit hypoactivity, sleep/circadian changes.</td><td>Mood regulation network instability, circadian rhythm disruption, dopamine/glutamate/GABA changes, genetic loading, stress sensitivity.</td></tr>
+          <tr><td>Clinical manifestations</td><td>Low mood, loss of interest, guilt/worthlessness, sleep/appetite change, low energy, poor concentration, psychomotor change, suicidal thoughts.</td><td>Mania: elevated or irritable mood, decreased need for sleep, increased energy, pressured speech, racing thoughts, impulsivity, grandiosity, risky behavior.</td></tr>
+          <tr><td>High-yield distinction</td><td>No history of mania or hypomania.</td><td>Mania or hypomania changes diagnosis and treatment risk because antidepressant-only approaches can worsen cycling or precipitate mania.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="substance">
+      <div class="pad">
+        <h2>4. Substance Use Disorders</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Risk Factors</h3>
+            <ul>
+              <li>Genetic vulnerability, early substance exposure, trauma, chronic stress, psychiatric comorbidity, impulsivity, peer use, family history, social adversity, and high availability increase risk.</li>
+              <li>Adolescents are vulnerable because reward and learning systems mature earlier than executive control systems.</li>
+              <li>Protective factors include stable support, delayed exposure, mental health treatment, low availability, and skills for coping with stress and peer pressure.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Neurobiology</h3>
+            <ul>
+              <li>Addictive substances strongly activate mesolimbic reward pathways and dopamine signaling, reinforcing use.</li>
+              <li>Repeated use shifts behavior from reward-driven use toward habit, craving, withdrawal avoidance, and impaired control.</li>
+              <li>Stress systems and negative affect become linked to relapse as tolerance, withdrawal, cue reactivity, and compulsive seeking develop.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Clinical domain</th><th>Manifestations</th><th>Pathophysiology link</th></tr>
+          <tr><td>Impaired control</td><td>Using more than intended, unsuccessful cut-down attempts, craving, time spent obtaining/using/recovering.</td><td>Reward learning, cue reactivity, executive control impairment.</td></tr>
+          <tr><td>Social impairment</td><td>Role failure, interpersonal conflict, reduced activities.</td><td>Substance priority increases while alternative rewards lose salience.</td></tr>
+          <tr><td>Risky use</td><td>Use in hazardous situations or despite physical/psychological harm.</td><td>Threat appraisal and impulse control are outweighed by reward/withdrawal circuits.</td></tr>
+          <tr><td>Pharmacologic adaptation</td><td>Tolerance and withdrawal.</td><td>Neuroadaptation maintains homeostasis in the presence of repeated exposure.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="eating">
+      <div class="pad">
+        <h2>5. Eating Disorders</h2>
+        <table>
+          <tr><th>Disorder</th><th>Core pattern</th><th>Pathophysiology and risk</th><th>Clinical manifestations</th></tr>
+          <tr><td>Anorexia nervosa</td><td>Restriction of intake with significantly low body weight and intense fear of weight gain or disturbance in body image.</td><td>Genetic vulnerability, anxiety/perfectionism traits, reward and satiety changes, cultural pressure, stress, and starvation-driven neuroendocrine adaptation.</td><td>Low weight, bradycardia, hypotension, cold intolerance, amenorrhea/menstrual disruption, lanugo, constipation, electrolyte risk, osteoporosis risk.</td></tr>
+          <tr><td>Bulimia nervosa</td><td>Recurrent binge eating with compensatory behaviors such as vomiting, laxatives, fasting, or excessive exercise.</td><td>Reward dysregulation, impulsivity, body dissatisfaction, mood/anxiety comorbidity, and repeated purge physiology.</td><td>Weight may be normal; dental enamel erosion, parotid enlargement, sore throat, reflux, hypokalemia, metabolic alkalosis, arrhythmia risk.</td></tr>
+          <tr><td>Binge eating disorder</td><td>Recurrent binge eating without regular compensatory behaviors.</td><td>Reward sensitivity, emotion regulation difficulties, weight stigma, trauma/stress, mood/anxiety comorbidity, and metabolic risk.</td><td>Distress about binge eating, shame, eating rapidly or when not hungry, obesity risk, metabolic syndrome risk, depression/anxiety comorbidity.</td></tr>
+        </table>
+        <div class="callout"><strong>Clinical consult add-in</strong>The Eating Disorders presentation reinforces that binge eating is not the same as overeating and adds prevalence, sex/gender minority risk, visible clinical clues, and treatment options.</div>
+        <div class="grid">
+          <div class="card">
+            <h3>Eating Disorder Risk Factors</h3>
+            <ul>
+              <li>Risk factors include genetics, personality traits, parental teasing about weight, neglect, abuse, trauma, sociocultural ideals, media pressure, and mental health comorbidity.</li>
+              <li>Perfectionism and obsession were linked with anorexia nervosa restricting type; impulsiveness was linked with anorexia binge/purge type, bulimia nervosa, and binge eating disorder.</li>
+              <li>Sexual and gender minority people have increased eating disorder risk, framed through minority stress: stigma, bullying, discrimination, low support, mental health comorbidity, and lack of inclusive health care.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Clinical Clues and Treatment</h3>
+            <ul>
+              <li>Russell's sign refers to calluses or injury on the knuckles or back of the hand from self-induced vomiting.</li>
+              <li>Parotid gland enlargement can appear in anorexia binge/purge type or bulimia nervosa because of recurrent purging.</li>
+              <li>Wearing loose clothing or multiple layers to hide body shape can be seen with anorexia nervosa and other body-image driven eating disorders.</li>
+              <li>Treatment options from the presentation include family-based treatment, CBT, guided self-help, focal psychodynamic therapy, fluoxetine for bulimia or binge eating disorder, olanzapine for anorexia nervosa, and lisdexamfetamine for binge eating disorder.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="anxiety">
+      <div class="pad">
+        <h2>6. Anxiety, PTSD, and OCD</h2>
+        <table>
+          <tr><th>Disorder</th><th>Dominant pathophysiology</th><th>Clinical manifestations</th><th>Key distinction</th></tr>
+          <tr><td>Panic disorder</td><td>Heightened fear circuitry and misinterpretation of bodily sensations; autonomic surges become feared and recurrent.</td><td>Recurrent panic attacks with palpitations, dyspnea, chest tightness, dizziness, trembling, sweating, fear of dying or losing control.</td><td>Sudden attacks plus persistent concern or behavior change related to attacks.</td></tr>
+          <tr><td>Generalized anxiety disorder</td><td>Chronic threat anticipation, intolerance of uncertainty, autonomic arousal, and altered prefrontal-amygdala regulation.</td><td>Excessive worry, restlessness, fatigue, irritability, muscle tension, sleep disturbance, poor concentration.</td><td>Persistent broad worry rather than discrete panic or trauma-triggered symptoms.</td></tr>
+          <tr><td>PTSD</td><td>Trauma-related fear conditioning, impaired extinction, hyperactive threat detection, memory network changes, HPA/autonomic dysregulation.</td><td>Intrusion symptoms, avoidance, negative mood/cognition changes, hyperarousal, sleep disturbance, exaggerated startle, irritability.</td><td>Requires trauma exposure and symptom clusters linked to trauma reminders.</td></tr>
+          <tr><td>OCD</td><td>Cortico-striato-thalamo-cortical circuit dysregulation with intrusive threat/error signals and compulsive relief behaviors.</td><td>Obsessions, compulsions, checking, washing, ordering, reassurance seeking, distress, time consumption, functional impairment.</td><td>Obsessions create distress; compulsions temporarily reduce distress but reinforce the cycle.</td></tr>
+        </table>
+        <div class="callout"><strong>PTSD clinical consult add-in</strong>The PTSD presentation adds pandemic-related at-risk groups, dissociative specifiers, corticolimbic dysfunction, HPA-axis dysregulation, inflammation, neurotransmitter imbalance, and treatment planning.</div>
+        <div class="grid">
+          <div class="card">
+            <h3>PTSD Risk and Diagnosis Details</h3>
+            <ul>
+              <li>Risk can be pretraumatic, peritraumatic, or posttraumatic: prior mental health conditions, childhood adversity, low socioeconomic status or support, genetic/epigenetic vulnerability, trauma intensity, perceived threat, physical injury, dissociation, ongoing stressors, discrimination, and poor coping.</li>
+              <li>DSM-5 symptom clusters include intrusion, avoidance, negative alterations in cognition and mood, and marked alterations in arousal and reactivity.</li>
+              <li>Specify dissociative symptoms when depersonalization or derealization is present; delayed onset means symptoms fully emerge at least 6 months after trauma.</li>
+              <li>Children age 6 or younger may show trauma-related play, distressing dreams without clear content, and less detailed trauma recall.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>PTSD Mechanism to Manifestations</h3>
+            <ul>
+              <li>Reduced hippocampal function impairs fear extinction and makes it harder to distinguish past trauma from present safety.</li>
+              <li>Decreased medial prefrontal cortex and anterior cingulate activity reduce top-down control over limbic regions.</li>
+              <li>Amygdala hyperreactivity increases threat perception, sustained fear, and stress responses.</li>
+              <li>Often reduced cortisol output despite ongoing stress activation can weaken anti-inflammatory control, while chronic sympathetic activation raises inflammatory cytokines such as IL-6, IL-1, and TNF-alpha.</li>
+              <li>Noradrenergic and orexin activity contribute to hyperarousal, hypervigilance, and sleep disturbance; glutamate-GABA imbalance can strengthen fear circuits and intrusive memories.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="linked-patho">
+      <div class="pad">
+        <h2>Linking Pathophysiology Across Conditions</h2>
+        <div class="callout teal"><strong>Study strategy</strong>Use this section to connect conditions instead of memorizing them separately. Many mental health disorders share stress-system dysregulation, altered neurotransmitter signaling, circuit-level changes, inflammation, sleep disruption, and reward/threat learning.</div>
+        <table>
+          <tr><th>Shared pathophysiology</th><th>Conditions linked</th><th>How it shows up clinically</th></tr>
+          <tr><td>HPA-axis and cortisol dysregulation</td><td>Chronic stress, depression, PTSD, anxiety, substance use relapse, eating disorders.</td><td>Sleep disruption, hyperarousal or fatigue, mood symptoms, impaired coping, inflammatory changes, altered appetite and energy regulation.</td></tr>
+          <tr><td>Sympathetic/noradrenergic activation</td><td>Acute stress, panic disorder, GAD, PTSD, withdrawal states.</td><td>Palpitations, tremor, sweating, hypervigilance, insomnia, exaggerated startle, panic attacks, physical anxiety symptoms.</td></tr>
+          <tr><td>Reward pathway dopamine signaling</td><td>Substance use disorders, binge eating disorder, mania, schizophrenia.</td><td>Craving, compulsive use, reinforcement learning, risky behavior, salience changes, psychosis vulnerability.</td></tr>
+          <tr><td>Prefrontal control over limbic threat/reward circuits</td><td>PTSD, anxiety disorders, OCD, substance use disorders, mood disorders, schizophrenia.</td><td>Poor inhibition of fear, intrusive thoughts, compulsions, impulsive use, impaired executive function, emotional dysregulation.</td></tr>
+          <tr><td>Amygdala hyperreactivity and threat learning</td><td>PTSD, panic disorder, GAD, depression, trauma-linked substance use.</td><td>Fear conditioning, avoidance, hyperarousal, intrusive memories, anticipatory worry, heightened perception of danger.</td></tr>
+          <tr><td>Hippocampal memory/context disruption</td><td>PTSD, depression, chronic stress, schizophrenia.</td><td>Poor contextual safety learning, intrusive trauma memories, impaired concentration, memory problems, difficulty separating past threat from present safety.</td></tr>
+          <tr><td>Serotonin, norepinephrine, dopamine, glutamate, and GABA imbalance</td><td>Depression, bipolar disorder, anxiety, PTSD, OCD, schizophrenia, substance use disorders.</td><td>Mood changes, psychosis, arousal changes, sleep disruption, compulsions, cognition changes, reward sensitivity, fear-circuit strengthening.</td></tr>
+          <tr><td>Inflammation and immune signaling</td><td>Chronic stress, depression, PTSD, substance use disorders, eating disorders.</td><td>Fatigue, sickness-behavior overlap, mood vulnerability, pain and somatic symptoms, cardiovascular/metabolic risk.</td></tr>
+          <tr><td>Sleep and circadian disruption</td><td>Bipolar disorder, depression, PTSD, anxiety, substance use disorders, chronic stress.</td><td>Mania risk, worsening mood regulation, impaired cognition, increased craving, reduced resilience, hyperarousal.</td></tr>
+        </table>
+        <div class="grid">
+          <div class="card">
+            <h3>Fast Condition Links</h3>
+            <ul>
+              <li>Stress response is the foundation: SNS gives rapid arousal; HPA axis gives cortisol-mediated adaptation.</li>
+              <li>Depression and PTSD both connect to stress biology, but PTSD centers on trauma-linked fear learning and intrusion/avoidance.</li>
+              <li>Panic disorder and PTSD both involve autonomic arousal, but panic is recurrent fear of bodily surges while PTSD is anchored to trauma exposure and reminders.</li>
+              <li>OCD and anxiety share distress, but OCD is driven by obsessions and compulsions reinforced by temporary relief.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Neurotransmitter Links</h3>
+            <ul>
+              <li>Dopamine: reward learning, mania risk, psychosis/salience, substance reinforcement.</li>
+              <li>Norepinephrine: vigilance, panic symptoms, PTSD hyperarousal, withdrawal arousal.</li>
+              <li>Serotonin: mood, anxiety regulation, obsessive symptoms, appetite/satiety links.</li>
+              <li>Glutamate/GABA: excitation-inhibition balance, fear circuits, cognition, schizophrenia and PTSD mechanisms.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clinical">
+      <div class="pad">
+        <h2>Clinical Consult Add-Ins</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Eating Disorders Consult</h3>
+            <ul>
+              <li>Anorexia nervosa includes restricting type and binge eating/purging type; signs may include low BMI, intense preoccupation with food, weight loss, abdominal pain, dizziness, and parotid gland enlargement.</li>
+              <li>Bulimia nervosa includes recurrent dietary restriction and binge eating with compensatory behaviors such as purging; clues include Russell's sign, dehydration, weight change, and parotid enlargement.</li>
+              <li>Binge eating disorder involves recurring binge eating without regular compensatory behaviors; it is distinct from ordinary overeating and may involve food anxiety, shame, weight change, and body-shape concealment.</li>
+              <li>Prevalence is higher in girls and young women, but eating disorders also occur in boys, men, and sexual/gender minority populations.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>PTSD Consult</h3>
+            <ul>
+              <li>PTSD pathophysiology links trauma exposure to HPA-axis dysregulation, corticolimbic dysfunction, chronic inflammation, and neurotransmitter imbalance.</li>
+              <li>Brain pattern: reduced hippocampal function, decreased medial prefrontal/anterior cingulate control, and increased amygdala reactivity.</li>
+              <li>Clinical symptom clusters are intrusion, avoidance, negative mood/cognition alterations, and arousal/reactivity changes, with dissociation in some patients.</li>
+              <li>Care planning should be collaborative, recovery-goal focused, trauma-informed, and attentive to social determinants of health.</li>
+              <li>Treatment options noted include trauma-informed psychotherapy, CBT, DBT, prolonged exposure, cognitive processing therapy, EMDR, SSRIs/SNRIs, prazosin for nightmares with blood pressure monitoring, and psychiatry referral for complexity or treatment resistance.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="pad">
+        <h2>Practice and Active Recall</h2>
+        <div class="toolbar">
+          <button type="button" onclick="toggleAnswers(true)">Show answers</button>
+          <button type="button" onclick="toggleAnswers(false)">Hide answers</button>
+        </div>
+        <details class="qa"><summary>1. What are the two major physiologic arms of the stress response?</summary><div class="answer">The sympathetic nervous system/adrenal medulla response provides rapid catecholamine-driven fight-or-flight effects. The HPA axis provides CRH to ACTH to cortisol signaling for longer energy mobilization and stress adaptation.</div></details>
+        <details class="qa"><summary>2. How can chronic stress contribute to mental illness?</summary><div class="answer">Chronic stress can dysregulate cortisol, autonomic tone, sleep, immune signaling, reward pathways, fear conditioning, and neuroplasticity, increasing vulnerability to depression, anxiety, PTSD, substance use relapse, and other psychiatric symptoms.</div></details>
+        <details class="qa"><summary>3. What is the difference between positive and negative schizophrenia symptoms?</summary><div class="answer">Positive symptoms are added experiences such as hallucinations, delusions, and disorganized speech. Negative symptoms are reductions in normal function such as flat affect, avolition, alogia, anhedonia, and social withdrawal.</div></details>
+        <details class="qa"><summary>4. Which schizophrenia symptoms often drive functional impairment?</summary><div class="answer">Cognitive symptoms such as impaired attention, working memory, executive function, processing speed, and social cognition often drive long-term functional impairment.</div></details>
+        <details class="qa"><summary>5. What dopamine pattern is high-yield for schizophrenia?</summary><div class="answer">Increased mesolimbic dopamine is linked with positive symptoms, while reduced mesocortical dopamine signaling is linked with negative and cognitive symptoms.</div></details>
+        <details class="qa"><summary>6. What separates major depression from bipolar disorder?</summary><div class="answer">Bipolar disorder includes mania or hypomania. Major depression does not include a history of mania or hypomania.</div></details>
+        <details class="qa"><summary>7. What clinical manifestations suggest mania?</summary><div class="answer">Elevated or irritable mood, increased energy, decreased need for sleep, pressured speech, racing thoughts, impulsivity, grandiosity, distractibility, and risky behavior.</div></details>
+        <details class="qa"><summary>8. What is the core reward pathway issue in substance use disorders?</summary><div class="answer">Substances strongly activate reward and dopamine learning pathways, then repeated exposure produces neuroadaptation, craving, impaired control, tolerance, withdrawal, and relapse vulnerability.</div></details>
+        <details class="qa"><summary>9. Why are adolescents at particular risk for substance use disorders?</summary><div class="answer">Reward and learning systems are highly responsive while executive control systems are still maturing, making early exposure, peer influence, stress, and impulsivity more impactful.</div></details>
+        <details class="qa"><summary>10. What distinguishes anorexia nervosa, bulimia nervosa, and binge eating disorder?</summary><div class="answer">Anorexia centers on restriction and significantly low weight. Bulimia involves binge eating plus compensatory behaviors. Binge eating disorder involves recurrent binge eating without regular compensatory behaviors.</div></details>
+        <details class="qa"><summary>11. What electrolyte risk is high-yield in bulimia with vomiting?</summary><div class="answer">Hypokalemia with metabolic alkalosis is high-yield and can create arrhythmia risk.</div></details>
+        <details class="qa"><summary>12. What separates panic disorder from generalized anxiety disorder?</summary><div class="answer">Panic disorder involves recurrent panic attacks and fear or behavior change around future attacks. GAD involves persistent broad worry and tension across domains.</div></details>
+        <details class="qa"><summary>13. What makes PTSD distinct from anxiety disorders?</summary><div class="answer">PTSD is linked to trauma exposure and includes intrusion, avoidance, negative mood/cognition changes, and hyperarousal tied to trauma reminders.</div></details>
+        <details class="qa"><summary>14. What is the OCD cycle?</summary><div class="answer">Intrusive obsessions create distress or threat/error signals. Compulsions temporarily reduce distress, which reinforces the compulsion and keeps the cycle active.</div></details>
+        <details class="qa"><summary>15. Why does DSM-5 separation of PTSD and OCD matter?</summary><div class="answer">It prevents treating all fear or intrusive-thought disorders as the same process. PTSD emphasizes trauma memory and threat conditioning; OCD emphasizes obsessions, compulsions, and cortico-striatal loop dysregulation.</div></details>
+        <details class="qa"><summary>16. Are binge eating and overeating synonymous?</summary><div class="answer">No. Binge eating involves a discrete episode with loss of control and distress; overeating can occur without the same loss-of-control pattern.</div></details>
+        <details class="qa"><summary>17. What is the key difference between bulimia nervosa and binge eating disorder?</summary><div class="answer">Bulimia nervosa includes compensatory behaviors after binge eating, while binge eating disorder does not include regular compensatory behaviors.</div></details>
+        <details class="qa"><summary>18. According to minority stress framing, what raises eating disorder risk in LGBTQ+ individuals?</summary><div class="answer">Stigma, discrimination, bullying, lack of social support, mental health comorbidity, and lack of inclusive health care can increase risk.</div></details>
+        <details class="qa"><summary>19. What behavior is Russell's sign associated with?</summary><div class="answer">Self-induced vomiting causing calluses or injury on the knuckles or back of the hand.</div></details>
+        <details class="qa"><summary>20. What brain change pattern best describes PTSD-related corticolimbic dysfunction?</summary><div class="answer">Reduced hippocampal function, decreased medial prefrontal cortex/anterior cingulate activity, and increased amygdala reactivity.</div></details>
+        <details class="qa"><summary>21. What neurotransmitter changes contribute to PTSD hyperarousal and sleep disturbance?</summary><div class="answer">Increased norepinephrine and orexin activity, plus excitatory-inhibitory imbalance involving glutamate and GABA, can contribute to hyperarousal, hypervigilance, intrusive memories, and sleep disturbance.</div></details>
+        <details class="qa"><summary>22. How is HPA-axis function often described in PTSD?</summary><div class="answer">PTSD may involve dysregulated feedback with often reduced cortisol output despite ongoing stress activation, weakening anti-inflammatory control while sympathetic activation remains high.</div></details>
+        <details class="qa"><summary>23. What are the DSM-5 PTSD symptom clusters?</summary><div class="answer">Intrusion, avoidance, negative alterations in cognition and mood, and marked alterations in arousal and reactivity.</div></details>
+        <h3>Course Practice Quiz</h3>
+        <div class="callout teal"><strong>Instructor-provided question bank</strong>These 15 questions and keyed answers come from <em>Module8_Patho_Practice_Quiz.docx</em>. Open each item to check the course answer after committing to a choice.</div>
+        <details class="qa"><summary>24. According to the monoamine hypothesis of depression: A) decreased GABA production; B) increased glutamate production causes mania; C) deficient norepinephrine, dopamine, and serotonin; D) none.</summary><div class="answer"><strong>Course key: C.</strong> The monoamine hypothesis links depression with reduced signaling involving norepinephrine, dopamine, and serotonin.</div></details>
+        <details class="qa"><summary>25. Which statement about schizophrenia symptoms is false? A) A delusion is a persistent belief contrary to rational judgment or background; B) Disorganized speech is a negative symptom; C) A hallucination occurs without external sensory stimulation; D) Affective flattening is near-absence of emotional or facial expression.</summary><div class="answer"><strong>Course key: B.</strong> Disorganized speech is categorized as a positive/disorganization symptom, not a negative symptom.</div></details>
+        <details class="qa"><summary>26. Which statement about schizophrenia is correct? A) More common in women; B) Mainly a Western-culture disorder; C) Peak onset age is 45-55; D) Linked to neuroanatomical changes including enlarged ventricles.</summary><div class="answer"><strong>Course key: D.</strong> Ventricular enlargement is one of the neuroanatomical alterations associated with schizophrenia.</div></details>
+        <details class="qa"><summary>27. HPA-axis activation results in secretion of: A) aldosterone; B) norepinephrine; C) cortisol; D) serotonin.</summary><div class="answer"><strong>Course key: C.</strong> CRH stimulates ACTH release, which stimulates adrenal cortisol secretion.</div></details>
+        <details class="qa"><summary>28. Anorexia nervosa is characterized by: A) fear of weight gain despite weight loss; B) altered body-image perception; C) amenorrhea in females; D) all are correct.</summary><div class="answer"><strong>Course key: D.</strong> This reflects the supplied quiz wording. <strong>Diagnostic nuance:</strong> amenorrhea can occur with energy deficiency but is not required for a current DSM-5/DSM-5-TR diagnosis.</div></details>
+        <details class="qa"><summary>29. Schizophrenia is characterized by: A) excessive persistent worry; B) unremitting sadness and despair; C) disorganized thinking; D) fixation on body image.</summary><div class="answer"><strong>Course key: C.</strong> Disorganized thinking is a core feature of schizophrenia-spectrum illness.</div></details>
+        <details class="qa"><summary>30. Which statement about bulimia nervosa is incorrect? A) It causes a drastic reduction in body weight; B) Patients often have body-image preoccupation; C) It is more common in females; D) Purging can damage teeth and the esophagus.</summary><div class="answer"><strong>Course key: A.</strong> People with bulimia nervosa are not necessarily underweight; recurrent purging can cause dental and esophageal injury.</div></details>
+        <details class="qa"><summary>31. Which behavior would you not expect during a manic episode? A) Avolition; B) Poor judgment; C) Delusions; D) Hallucinations.</summary><div class="answer"><strong>Course key: A.</strong> Mania typically increases drive and activity; avolition is a reduction in motivation associated more strongly with negative symptoms of schizophrenia or severe depression.</div></details>
+        <details class="qa"><summary>32. Which OCD statement is incorrect? A) Compulsions may be behaviors or mental acts; B) Average onset is age 40-50; C) Obsessions may be thoughts, images, ideas, or impulses; D) People often recognize the irrational or excessive nature of symptoms.</summary><div class="answer"><strong>Course key: B.</strong> OCD usually begins much earlier than age 40-50, commonly in childhood, adolescence, or early adulthood.</div></details>
+        <details class="qa"><summary>33. Generalized anxiety disorder may cause: A) restlessness; B) difficulty concentrating; C) increased muscle tension; D) all are correct.</summary><div class="answer"><strong>Course key: D.</strong> Restlessness, impaired concentration, and muscle tension are all common manifestations.</div></details>
+        <details class="qa"><summary>34. Which is a positive symptom of schizophrenia? A) Social withdrawal; B) Flat affect; C) Lack of speech; D) Hallucinations.</summary><div class="answer"><strong>Course key: D.</strong> Hallucinations are positive symptoms; withdrawal, flat affect, and reduced speech are negative symptoms.</div></details>
+        <details class="qa"><summary>35. Intrusive flashbacks, sleep difficulty, detachment, and heightened startle most strongly indicate: A) PTSD; B) panic disorder; C) GAD; D) bipolar disorder.</summary><div class="answer"><strong>Course key: A.</strong> The combination reflects PTSD intrusion, negative mood/cognition, and hyperarousal clusters.</div></details>
+        <details class="qa"><summary>36. Hallucinations and paranoia in schizophrenia are associated with excessive activation of which receptor? A) Dopamine D2; B) GABA-B; C) alpha-adrenergic; D) nicotinic acetylcholine.</summary><div class="answer"><strong>Course key: A.</strong> Excessive mesolimbic dopamine D2 signaling is the classic high-yield association with positive symptoms.</div></details>
+        <details class="qa"><summary>37. Tachycardia is a common finding in: A) panic disorder; B) GAD; C) OCD; D) bipolar disorder.</summary><div class="answer"><strong>Course key: A.</strong> Acute sympathetic activation during a panic attack commonly produces tachycardia.</div></details>
+        <details class="qa"><summary>38. Panic disorder is associated in the supplied course quiz with fewer receptors for which neurotransmitter in the hippocampus, insula, and prefrontal cortex? A) norepinephrine; B) acetylcholine; C) dopamine; D) GABA.</summary><div class="answer"><strong>Course key: D.</strong> Reduced inhibitory GABA signaling is the course emphasis for panic-disorder circuitry.</div></details>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="pad">
+        <h2>Sources and Add-In Tracker</h2>
+        <table>
+          <tr><th>Source</th><th>Status</th><th>How it is used here</th></tr>
+          <tr><td>Module 8.3 learning outcomes pasted by user</td><td>Provided by user</td><td>Used to structure sections, objectives, reading map, linked pathophysiology table, comparison tables, and practice questions.</td></tr>
+          <tr><td>8 Mental Health.docx</td><td>Extracted from Downloads</td><td>Added DSM/ICD framing, caution against reifying diagnoses, and biological-basis study framing.</td></tr>
+          <tr><td>McCance 8th ed. pp. 323-340; 9th ed. pp. 310-328</td><td>Mapped from LO list</td><td>Stress response, SNS/SAM system, HPA axis, cortisol, chronic stress and disease.</td></tr>
+          <tr><td>McCance 8th ed. pp. 600-605; 9th ed. pp. 618-623</td><td>Mapped from LO list</td><td>Schizophrenia spectrum symptoms, neurotransmitters, and neuroanatomy.</td></tr>
+          <tr><td>McCance 8th ed. pp. 605-611; 9th ed. pp. 623-630</td><td>Mapped from LO list</td><td>Major depression and bipolar disorder pathophysiology and manifestations.</td></tr>
+          <tr><td>Volkow ND and Blanco C. (2023). Substance use disorders. World Psychiatry, 22:203-229.</td><td>Listed by course</td><td>Used as the required recent literature anchor for substance use disorder classification, neurobiology, clinical aspects, treatment, and prevention.</td></tr>
+          <tr><td>Thomasius R, Paschke K, Arnaud N. (2022). Substance-use disorders in children and adolescents.</td><td>Listed by course</td><td>Used as the required adolescent substance use disorder anchor.</td></tr>
+          <tr><td>McCance 8th ed. pp. 719-720; 9th ed. pp. 730-731</td><td>Mapped from LO list</td><td>Anorexia nervosa, bulimia nervosa, and binge eating disorder comparison.</td></tr>
+          <tr><td>Galmiche et al. (2019). Prevalence of eating disorders over the 2000-2018 period.</td><td>Listed by course</td><td>Reserved for epidemiology details if you want the paper extracted later.</td></tr>
+          <tr><td>McCance 8th ed. pp. 611-615; 9th ed. pp. 630-636</td><td>Mapped from LO list</td><td>Panic disorder, GAD, PTSD, and OCD comparison.</td></tr>
+          <tr><td>Module8_Patho_Practice_Quiz.docx</td><td>Extracted from Downloads</td><td>Added all 15 supplied multiple-choice questions with hidden course-key answers and a current diagnostic clarification for amenorrhea in anorexia nervosa.</td></tr>
+          <tr><td>Lao Brenda Clinical Consult Presentation copy (1).pptx</td><td>Extracted from Downloads</td><td>Added eating disorder subtypes, clinical clues, prevalence framing, LGBTQ+ minority stress risk, treatment options, and practice questions.</td></tr>
+          <tr><td>Wiseman Stephanie - Clinical Consult Presentation - PTSD (1).pptx</td><td>Extracted from Downloads</td><td>Added PTSD risk factors, DSM-5 specifiers, corticolimbic dysfunction, HPA-axis dysregulation, inflammation, neurotransmitter changes, care planning, treatment options, and practice questions.</td></tr>
+          <tr><td>June 23, 2026 Zoom closed-caption transcript</td><td>Reviewed and routed to Module 9</td><td>This is a Neurologic lecture covering neurons/neuroglia and neurologic disorders, so it was intentionally excluded from Module 8.</td></tr>
+          <tr><td>Additional Module 8 Mental Health slides/transcript</td><td>Pending</td><td>Reserved for any future Mental Health lecture slides or transcript you send later.</td></tr>
+        </table>
+      </div>
+    </section>
+    <section id="exam-import"><div class="pad"><h2>Final Exam Import</h2><p>The imported notes emphasize allostatic load, membrane potential and action potentials, glutamate/GABA, limbic and cortical functions, dopamine pathways, schizophrenia symptom domains, and addiction stages.</p><p><a class="button" href="Exam_Notes_and_Practice_Bank.html">Practice imported Module 8 questions</a> <a class="button" href="Anki_Review_Modules_07_to_10.html">Review 117 Anki cards</a></p></div></section>
+  </main>
+
+  <script>
+    function toggleAnswers(show) {
+      document.querySelectorAll('.qa').forEach(function (item) {
+        item.open = show;
+      });
+    }
+  </script>
+</body>
+</html>

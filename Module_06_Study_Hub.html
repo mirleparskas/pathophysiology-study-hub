@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 6 Study Hub | Renal and Urinary System</title>
+  <style>
+    :root {
+      --ink: #17212a;
+      --muted: #5c6871;
+      --bg: #f2f6f7;
+      --paper: #fffefd;
+      --line: #d4dde1;
+      --blue: #2f6f9f;
+      --teal: #1c7f7a;
+      --green: #2f7d59;
+      --gold: #b98521;
+      --red: #b84a42;
+      --purple: #70549a;
+      --shadow: 0 10px 25px rgba(20, 35, 42, .08);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
+    header { background: linear-gradient(135deg, #2f6f9f, #1c7f7a); color: white; padding: 42px 0 34px; }
+    .wrap { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 700; opacity: .9; }
+    h1 { margin: 8px 0 10px; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.05; letter-spacing: 0; }
+    h2 { margin: 0 0 18px; font-size: 1.65rem; letter-spacing: 0; }
+    h3 { margin: 20px 0 10px; font-size: 1.05rem; letter-spacing: 0; }
+    p { margin: 0 0 12px; }
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(255, 254, 253, .96); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    nav .wrap { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0; }
+    nav a, .button { color: var(--ink); text-decoration: none; border: 1px solid var(--line); background: white; padding: 8px 11px; border-radius: 8px; white-space: nowrap; font-size: .9rem; font-weight: 700; }
+    nav a:hover, .button:hover { border-color: var(--blue); color: var(--blue); }
+    main { padding: 24px 0 60px; }
+    section { width: min(1160px, calc(100% - 32px)); margin: 0 auto 22px; }
+    .pad { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; box-shadow: var(--shadow); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .card h3 { margin-top: 0; }
+    ul, ol { margin: 8px 0 0 21px; padding: 0; }
+    li { margin: 5px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0; background: white; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: table; }
+    th, td { padding: 10px 11px; border: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { background: #edf5f7; color: #203843; }
+    .objective { display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: start; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: white; margin-bottom: 9px; }
+    .check { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #dff0e6; color: var(--green); font-weight: 800; }
+    .source { color: var(--muted); font-size: .86rem; white-space: nowrap; }
+    .callout { border-left: 5px solid var(--blue); background: #eef7fb; padding: 13px 14px; border-radius: 8px; margin: 14px 0; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .callout.gold { border-color: var(--gold); background: #fff6df; }
+    .callout.red { border-color: var(--red); background: #fff0ed; }
+    .callout.purple { border-color: var(--purple); background: #f4effb; }
+    .map { display: flex; align-items: stretch; gap: 9px; overflow-x: auto; padding: 10px 0; margin: 8px 0 16px; }
+    .node { min-width: 185px; flex: 1; background: white; border: 1px solid var(--line); border-top: 5px solid var(--teal); border-radius: 8px; padding: 11px; }
+    .node b { display: block; margin-bottom: 4px; }
+    .arrow { display: grid; place-items: center; color: var(--muted); font-weight: 800; min-width: 22px; }
+    .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    button { border: 1px solid var(--line); background: white; color: var(--ink); padding: 8px 11px; border-radius: 8px; font-weight: 700; cursor: pointer; }
+    details.qa { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 11px 13px; margin: 9px 0; }
+    details.qa summary { cursor: pointer; font-weight: 700; }
+    .answer { margin-top: 9px; color: #31414a; }
+    a { color: var(--blue); }
+    @media (max-width: 900px) { .grid, .grid.three { grid-template-columns: 1fr; } .objective { grid-template-columns: 28px 1fr; } .source { grid-column: 2; white-space: normal; } .pad { padding: 17px; } table { display: block; overflow-x: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Pathophysiology Study Hub</p>
+      <h1>Module 6: Renal and Urinary System</h1>
+      <p>Urinary tract obstruction, urinary incontinence, cystitis and pyelonephritis, glomerular disorders, acute kidney injury, chronic kidney disease, and end-stage renal disease.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Module navigation">
+    <div class="wrap">
+      <a href="index.html">Hub</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#readings">Readings</a>
+      <a href="#lecture">Lecture Video</a>
+      <a href="#photo-notes">Photo Notes</a>
+      <a href="#obstruction">Obstruction</a>
+      <a href="#incontinence">Incontinence</a>
+      <a href="#uti">UTI</a>
+      <a href="#glomerular">Glomerular</a>
+      <a href="#aki-ckd">AKI/CKD</a>
+      <a href="#clinical">Clinical</a>
+      <a href="#practice">Practice</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="objectives">
+      <div class="pad">
+        <h2>Learning Outcome Coverage</h2>
+        <div class="objective"><span class="check">✓</span><div>Compare and contrast causes, pathophysiological mechanisms, and clinical manifestations of upper and lower urinary tract obstructions.</div><span class="source">McCance 9th ed. pp. 843-848, 1232-1241, 1281-1282</span></div>
+        <div class="objective"><span class="check">✓</span><div>Describe clinical manifestations of urge, stress, overflow, and functional incontinence.</div><span class="source">McCance 9th ed. pp. 843-848, 1232-1241, 1281-1282; Pizzol et al. 2021</span></div>
+        <div class="objective"><span class="check">✓</span><div>Recognize common microorganisms, pathophysiology, and clinical manifestations of cystitis and pyelonephritis.</div><span class="source">McCance 9th ed. pp. 1242-1245, 1280-1281</span></div>
+        <div class="objective"><span class="check">✓</span><div>Identify risk factors, pathophysiology, and clinical manifestations of acute and chronic glomerulonephritis.</div><span class="source">McCance 9th ed. pp. 1245-1251, 1275-1278</span></div>
+        <div class="objective"><span class="check">✓</span><div>Compare and contrast nephrotic and nephritic syndromes.</div><span class="source">McCance 9th ed. pp. 1245-1251, 1275-1278</span></div>
+        <div class="objective"><span class="check">✓</span><div>Identify causes, mechanisms, and manifestations of acute kidney injury, chronic kidney disease, and end-stage renal disease.</div><span class="source">McCance 9th ed. pp. 1252-1260</span></div>
+      </div>
+    </section>
+
+    <section id="readings">
+      <div class="pad">
+        <h2>Assigned Reading Notes</h2>
+        <div class="callout"><strong>Reading scope</strong>These notes map the Module 6 learning outcomes to the assigned McCance readings and the urinary incontinence quality-of-life paper.</div>
+        <h3>McCance 9th ed. pp. 843-848, 1232-1241, 1281-1282: Obstruction, BPH, Prostatitis, Pediatric Incontinence</h3>
+        <ul>
+          <li>Urinary tract obstruction blocks urine flow anywhere from renal tubules to urethra; location determines whether damage is unilateral/bilateral and upper/lower tract.</li>
+          <li>Upper tract obstruction can cause hydroureter, hydronephrosis, increased tubular pressure, reduced glomerular filtration, ischemia, infection risk, and kidney damage.</li>
+          <li>Lower tract obstruction can produce bladder distention, urinary retention, detrusor hypertrophy, overflow incontinence, recurrent UTI, reflux, hydroureter, and hydronephrosis.</li>
+          <li>BPH narrows the prostatic urethra and increases bladder outlet resistance, producing hesitancy, weak stream, intermittency, straining, incomplete emptying, frequency, nocturia, urgency, retention, and overflow.</li>
+          <li>Prostatitis may cause pelvic/perineal pain, dysuria, frequency, fever or systemic symptoms in acute infection, and chronic pain or recurrent urinary symptoms in chronic forms.</li>
+          <li>Urinary incontinence affects quality of life through embarrassment, activity restriction, sleep disruption, skin irritation, falls risk, caregiver burden, and social isolation.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1242-1245, 1280-1281: UTI Types and Pediatric UTI</h3>
+        <ul>
+          <li>Cystitis is lower urinary tract infection involving the bladder; pyelonephritis is upper tract infection involving renal pelvis and kidney parenchyma.</li>
+          <li>Most uncomplicated UTIs are ascending infections from periurethral flora; Escherichia coli is the most common causative organism.</li>
+          <li>Other organisms can include Klebsiella, Proteus, Enterococcus, Staphylococcus saprophyticus, and health-care associated gram-negative organisms.</li>
+          <li>Risk factors include female anatomy, sexual activity, pregnancy, urinary stasis, obstruction, catheterization, diabetes, older age, vesicoureteral reflux, and immunosuppression.</li>
+          <li>Cystitis commonly causes dysuria, urgency, frequency, suprapubic pain, cloudy or malodorous urine, and sometimes hematuria.</li>
+          <li>Pyelonephritis adds fever, chills, flank pain, costovertebral angle tenderness, nausea/vomiting, malaise, and sepsis risk.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1245-1251, 1275-1278: Glomerulonephritis and Syndromes</h3>
+        <ul>
+          <li>Glomerulonephritis is immune-mediated glomerular inflammation that injures capillary walls, mesangium, podocytes, or basement membrane.</li>
+          <li>Acute risk contexts include postinfectious immune response, IgA nephropathy, lupus nephritis, vasculitis, anti-GBM disease, and infection-associated immune complex disease.</li>
+          <li>Chronic glomerulonephritis can follow persistent or repeated glomerular injury and progresses through sclerosis, nephron loss, and chronic kidney disease.</li>
+          <li>Nephritic syndrome reflects inflammatory glomerular injury: hematuria, red blood cell casts, reduced GFR, oliguria, azotemia, hypertension, and mild to moderate proteinuria.</li>
+          <li>Nephrotic syndrome reflects podocyte/filtration barrier injury: heavy proteinuria, hypoalbuminemia, edema, hyperlipidemia, lipiduria, and thromboembolism/infection risk.</li>
+        </ul>
+
+        <h3>McCance 9th ed. pp. 1252-1260: AKI, CKD, and ESRD</h3>
+        <ul>
+          <li>AKI is abrupt decline in kidney function with rising creatinine, reduced urine output, impaired water/electrolyte/acid-base regulation, and toxin retention.</li>
+          <li>Prerenal AKI is decreased renal perfusion; intrinsic AKI is kidney tissue injury; postrenal AKI is obstruction to urine outflow.</li>
+          <li>CKD is persistent kidney damage or reduced GFR over time, commonly caused by diabetes, hypertension, chronic glomerular disease, polycystic kidney disease, recurrent pyelonephritis, obstruction, or nephrotoxins.</li>
+          <li>CKD progression involves nephron loss, compensatory hyperfiltration in remaining nephrons, glomerular hypertension, sclerosis, fibrosis, and declining renal reserve.</li>
+          <li>ESRD is kidney failure severe enough to require kidney replacement therapy or transplantation for survival.</li>
+          <li>Major manifestations include fluid overload, hypertension, electrolyte abnormalities, metabolic acidosis, uremia, anemia, mineral-bone disorder, pruritus, fatigue, nausea, and neurologic changes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="obstruction">
+      <div class="pad">
+        <h2>1. Urinary Tract Obstruction</h2>
+        <table>
+          <tr><th>Feature</th><th>Upper tract obstruction</th><th>Lower tract obstruction</th></tr>
+          <tr><td>Location</td><td>Renal pelvis or ureter; may be unilateral or bilateral.</td><td>Bladder outlet, prostate, urethra, or functional voiding failure.</td></tr>
+          <tr><td>Common causes</td><td>Stones, tumors, strictures, congenital narrowing, ureteropelvic junction obstruction, pregnancy/external compression, retroperitoneal fibrosis.</td><td>BPH, prostate cancer, urethral stricture, neurogenic bladder, fecal impaction, pelvic organ prolapse, medications, pediatric anatomic/functional disorders.</td></tr>
+          <tr><td>Mechanism</td><td>Back pressure dilates ureter/renal pelvis and raises tubular pressure, reducing filtration and perfusion.</td><td>Bladder outlet resistance causes retention, detrusor hypertrophy, high residual urine, and possible back pressure into ureters/kidneys.</td></tr>
+          <tr><td>Clinical pattern</td><td>Flank pain, renal colic with stones, hydronephrosis, infection, hematuria, reduced renal function if severe/bilateral.</td><td>Hesitancy, weak stream, straining, incomplete emptying, frequency, nocturia, urgency, retention, overflow leakage, recurrent UTI.</td></tr>
+          <tr><td>Major risks</td><td>Hydronephrosis, pyelonephritis, ischemic tubular injury, CKD if prolonged.</td><td>Acute urinary retention, bladder damage, recurrent infection, reflux, hydronephrosis, postrenal AKI.</td></tr>
+        </table>
+        <div class="map">
+          <div class="node"><b>Obstruction</b>Stone, BPH, stricture, tumor, neurogenic bladder, congenital issue.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Urine stasis and pressure</b>Retention, dilation, hydronephrosis, high residual volume.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Kidney and infection effects</b>Reduced GFR, tubular injury, UTI/pyelonephritis risk.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Clinical consequences</b>Pain, LUTS, hematuria, retention, AKI/CKD if severe.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lecture">
+      <div class="pad">
+        <h2>Lecture Video</h2>
+        <div class="callout gold"><strong>Module 6 Urinary & Renal Disorders</strong>The Vimeo review page identifies this as version V1 with a 42:41 runtime. The cleaned lecture transcription is now integrated below, including the lecture and two clinical presentation/transcription add-ins.</div>
+        <table>
+          <tr><th>Video</th><th>Runtime</th><th>Use in this hub</th></tr>
+          <tr><td><a href="https://vimeo.com/reviews/2df02850-2bd5-4497-914b-43fcb1cef3e7/videos/260763688">Module 6 Urinary & Renal Disorders</a></td><td>42:41</td><td>Video sampled for slide content; cleaned transcript integrated from local file.</td></tr>
+        </table>
+        <h3>Lecture and Clinical Presentation Notes</h3>
+        <div class="grid two">
+          <div class="card">
+            <h3>Nephron and Filtration Basics</h3>
+            <ul>
+              <li>Filtration occurs as materials in blood pass through glomerular capillaries into Bowman's capsule.</li>
+              <li>Glomerular capillaries are fenestrated and work with podocytes to regulate filtration.</li>
+              <li>The endothelial cells and basement membrane are negatively charged, helping repel negatively charged plasma proteins.</li>
+              <li>Tubular cells can also secrete materials into filtrate for elimination.</li>
+              <li>Filtrate moves through the collecting duct to renal papillae, then drains into minor calyces, major calyces, renal pelvis, ureter, and bladder.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Renal Function Testing</h3>
+            <ul>
+              <li>Urinalysis evaluates colour, turbidity, protein, pH, specific gravity, sediment, and supernatant.</li>
+              <li>Normal urine is clear and straw-coloured, with slight odour, some crystals, a small number of lining cells, and transparent hyaline casts.</li>
+              <li>Normal urine should not contain sugars, yeast cells, protein, ketones, bacteria, or parasitic organisms.</li>
+              <li>Normal urine pH range highlighted in the lecture: 4.5 to 8.0.</li>
+              <li>Specific gravity reflects solute concentration; lecture range highlighted: 1.0005 to 1.035.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Microscopic Hematuria</h3>
+            <ul>
+              <li>Microscopic hematuria is defined as three or more red blood cells per high-power field on microscopic urinalysis.</li>
+              <li>Dipstick blood is a screening result only; confirmation requires microscopic urinalysis.</li>
+              <li>Hematuria is a sign, not a disease. Causes can include malignancy, renal disease, infection, stones, trauma, instrumentation, exercise, menstruation, medications, or systemic disease.</li>
+              <li>Glomerular hematuria is suggested by dysmorphic RBCs, proteinuria, red blood cell casts, elevated creatinine, or other renal disease signs.</li>
+              <li>Non-glomerular hematuria usually has normally shaped RBCs without proteinuria or cellular casts and can arise anywhere along the urinary tract.</li>
+              <li>High-yield risk categories from the consult: obstruction, infection, genetic renal disease, hematologic disease, metabolic disease, malignancy, trauma, and benign/transient causes.</li>
+              <li>Potential glomerular injury outcomes include hematuria plus proteinuria, edema, hypertension, CKD, and end-stage renal failure.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Diabetes, SGLT2, and Kidney Protection</h3>
+            <ul>
+              <li>CKD requires structural or functional kidney abnormality lasting more than three months.</li>
+              <li>Diabetic kidney disease combines hemodynamic injury and metabolic injury: hyperfiltration, mesangial matrix expansion, podocyte damage/loss, glomerulosclerosis, and tubulointerstitial fibrosis.</li>
+              <li>SGLT2 transporters in the proximal convoluted tubule reabsorb about 90% of filtered glucose with sodium.</li>
+              <li>In diabetes, increased proximal sodium/glucose reabsorption reduces sodium delivery to the macula densa, disrupting tubuloglomerular feedback and promoting hyperfiltration.</li>
+              <li>The macula densa reads low NaCl as a false low-filtration signal, reducing adenosine, dilating the afferent arteriole, increasing angiotensin signaling, and constricting the efferent arteriole.</li>
+              <li>SGLT2 inhibitors block proximal glucose/sodium reabsorption, increase glucosuria and NaCl delivery to the macula densa, restore tubuloglomerular feedback, and reduce glomerular capillary pressure.</li>
+              <li>Metabolic injury pathways highlighted in the consult include advanced glycation end products, toxic non-glycolytic pathways, mitochondrial burnout, altered gene expression, oxidative stress, inflammatory cytokines, and renal fibrosis.</li>
+              <li>Patient teaching: expect glucosuria, genital/urinary symptoms, mild diuretic effect; teach hydration, hygiene, and sick-day holding during dehydration/GI illness risk.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Lecture slide topic</th><th>High-yield point</th><th>Study cue</th></tr>
+          <tr><td>Professor's clinical cues</td><td>Delayed recognition and referral in kidney disease is a key clinical problem.</td><td>Escalate hematuria or renal findings when there is dysmorphic RBCs, proteinuria, cellular casts, renal impairment, hypertension, gross hematuria, or worsening symptoms.</td></tr>
+          <tr><td>NSAIDs and kidney risk</td><td>NSAIDs inhibit COX enzymes and reduce renal prostaglandins, which can lower renal perfusion.</td><td>Higher-risk patients include those with kidney disease, heart failure, hypertension, liver disease, older age, or compromised fluid status.</td></tr>
+          <tr><td>Nephrolithiasis</td><td>Upper urinary tract obstruction can result from masses of crystals, protein, or other substances in kidneys or ureters.</td><td>Know common stone categories: calcium oxalate, calcium phosphate, struvite, and uric acid.</td></tr>
+          <tr><td>Neurogenic lower obstruction</td><td>Neurologic alterations can impair bladder-emptying coordination or bladder contraction.</td><td>C2-S1 lesions can impair coordination between bladder and external urethral sphincter; sacral cord or peripheral nerve lesions can impair bladder contraction when full.</td></tr>
+          <tr><td>Acute pyelonephritis</td><td>Infection/inflammation involves one or both upper urinary tracts, including renal pelvis, calyces, and/or nephrons.</td><td>Often ascends from bladder infection; systemic signs include fever, chills, nausea, vomiting, and back pain.</td></tr>
+          <tr><td>Glomerulonephritis</td><td>Inflammation of the glomerulus follows glomerular injury and is a major cause of CKD and end-stage renal failure.</td><td>Primary causes highlighted: immunologic responses, ischemia, free radicals, medications, toxins, vascular disorders, and infections. Secondary disease can come from systemic illness such as diabetes mellitus.</td></tr>
+          <tr><td>AKI</td><td>AKI is sudden kidney-function decline with decreased GFR and accumulation of nitrogenous wastes.</td><td>Expect increased serum creatinine and BUN; lecture highlighted RIFLE classification: Risk, Injury, Failure, Loss, End-stage disease.</td></tr>
+          <tr><td>CKD</td><td>The intact nephron hypothesis explains compensation: surviving nephrons sustain function after nephron mass loss until progressive damage overwhelms reserve.</td><td>Disease progression factors highlighted: proteinuria drives tubulointerstitial inflammation/fibrosis; angiotensin II promotes glomerular hypertension and tubulointerstitial fibrosis/scarring.</td></tr>
+          <tr><td>Diabetic kidney disease consult</td><td>Chronic hyperglycemia increases filtered glucose, proximal SGLT2 activity, sodium/glucose reabsorption, and maladaptive hyperfiltration.</td><td>Follow the causal chain: low NaCl at macula densa -> impaired tubuloglomerular feedback -> afferent dilation plus efferent constriction -> glomerular hypertension -> albuminuria and nephron loss.</td></tr>
+          <tr><td>Microscopic hematuria consult</td><td>Microscopic hematuria is not confirmed by dipstick; it requires three or more RBCs per high-power field on microscopic urinalysis.</td><td>Glomerular source = dysmorphic RBCs, proteinuria, red cell casts, elevated creatinine; non-glomerular source = normal RBCs without protein/casts.</td></tr>
+          <tr><td>Vesicoureteral reflux</td><td>Reflux combined with lower UTI is an important cause of pyelonephritis in children.</td><td>Think ascending infection, renal scarring risk, and pediatric recurrence patterns.</td></tr>
+        </table>
+        <div class="grid two">
+          <div class="card">
+            <h3>Clinical Workup Pearls</h3>
+            <ul>
+              <li>If dipstick shows blood, confirm with microscopic urinalysis; do not diagnose microscopic hematuria from dipstick alone.</li>
+              <li>First rule out transient causes such as vigorous exercise, menstruation, or infection, then repeat microscopy after the trigger resolves.</li>
+              <li>Initial primary care assessment should include history, physical exam, blood pressure, creatinine, BUN, and calculated GFR.</li>
+              <li>Urology referral was emphasized for symptomatic hematuria, age 35 or older, or younger patients with malignancy risks such as smoking, pelvic radiation, occupational hazard exposure, or carcinogenic alkylating-agent exposure.</li>
+              <li>Urological evaluation may include cystoscopy, upper urinary tract imaging, and urinary cytology when indicated.</li>
+              <li>Nephrology referral is needed when urine suggests glomerular disease: dysmorphic RBCs, proteinuria, cellular casts, or renal impairment.</li>
+              <li>After negative specialty work-up, primary care monitoring includes symptom surveillance and repeat microscopic urinalysis over time.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Exam-Style Distinctions</h3>
+            <ul>
+              <li>UACR is useful as a baseline and monitoring tool in patients at risk for kidney disease.</li>
+              <li>uACR of 30 mg/g or higher is a CKD marker; GFR below 60 mL/min/1.73 m2 for more than three months also meets CKD criteria.</li>
+              <li>Uremic syndrome from toxin accumulation usually needs nephrology consultation.</li>
+              <li>Alkaline urine above pH 7.0 increases calcium phosphate and struvite stone risk; acidic urine below pH 5.0 increases uric acid stone risk.</li>
+              <li>Low-calcium diets can increase calcium oxalate stone risk because less calcium binds oxalate in the gut.</li>
+              <li>Older adults with UTI may present with confusion or vague abdominal discomfort instead of classic urinary symptoms.</li>
+              <li>Flank or groin pain helps distinguish pyelonephritis from lower UTI.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Core Lecture Deck Add-Ins</h3>
+            <ul>
+              <li>Bladder basics: urine storage occurs in the bladder; detrusor muscle contraction causes micturition; internal and external sphincters regulate voiding.</li>
+              <li>Urine sediment: red cell casts suggest bleeding in tubules; white cell casts suggest inflammation; epithelial cell casts suggest degradation or necrosis.</li>
+              <li>Aging kidney: kidney size, renal blood flow, GFR, nephron number, tubular transport, and reabsorption decline with age.</li>
+              <li>Aging bladder/renal changes can contribute to urgency, frequency, and nocturia.</li>
+              <li>Obstruction severity depends on location, one-sided versus bilateral involvement, completeness, duration, and cause.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Obstruction and Failure Deck Cues</h3>
+            <ul>
+              <li>Urinary obstruction increases pressure in Bowman's capsule, decreases renal filtration, promotes urinary stasis, and increases infection risk.</li>
+              <li>Nephrolithiasis formation requires salt supersaturation, precipitation, and growth by crystallization or aggregation; formation is pH- and temperature-dependent.</li>
+              <li>Kidney stone manifestations: renal colic, nausea, vomiting, hematuria, urgency, and frequent voiding.</li>
+              <li>Renal insufficiency means renal function has declined to about 25% of normal; end-stage renal failure means less than 10% remains.</li>
+              <li>CKD clinical manifestations often do not appear until renal function declines to less than 25% of normal.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="photo-notes">
+      <div class="pad">
+        <h2>Photo-Derived Study Notes and Practice Cues</h2>
+        <div class="callout"><strong>From lecture-slide photos and practice questions</strong>This section captures the condensed exam-style notes from the image-based study document. Use it as a fast final review layer.</div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Nephron Must-Knows</h3>
+            <ul>
+              <li>Filtrate flow: glomerulus/Bowman's capsule -> PCT -> loop of Henle -> DCT -> collecting duct -> renal pelvis -> ureter.</li>
+              <li>Four urine-formation processes: filtration, reabsorption, secretion, and excretion.</li>
+              <li>Most nutrient and solute reabsorption occurs in the proximal convoluted tubule.</li>
+              <li>PCT reabsorbs most sodium and water plus glucose, amino acids, bicarbonate, phosphate, and other filtered nutrients.</li>
+              <li>PCT also secretes hydrogen ions, organic anions/cations, drugs, and toxins.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Filtration Barrier</h3>
+            <ul>
+              <li>Filtered: water, electrolytes, glucose, urea, and creatinine.</li>
+              <li>Not normally filtered: red blood cells, platelets, and large proteins.</li>
+              <li>Barrier protection depends on size selectivity and negative charge selectivity.</li>
+              <li>Podocytes maintain filtration slit diaphragms, prevent protein loss, and preserve selective permeability.</li>
+              <li>Podocyte injury causes proteinuria and is central to nephrotic syndrome.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Exam cue</th><th>Best answer</th><th>Why it matters</th></tr>
+          <tr><td>AKI hallmarks</td><td>Increased serum creatinine, decreased GFR, decreased urine output.</td><td>This is the high-yield recognition pattern.</td></tr>
+          <tr><td>Prerenal AKI</td><td>Hypoperfusion from dehydration, hemorrhage, shock, or heart failure.</td><td>Low renal blood flow lowers GFR and increases sodium/water reabsorption.</td></tr>
+          <tr><td>Intrarenal AKI</td><td>Tissue injury from acute tubular necrosis, glomerulonephritis, or nephrotoxins.</td><td>Tubular injury can cause casts, obstruction, backleak, reduced GFR, and oliguria.</td></tr>
+          <tr><td>Postrenal AKI</td><td>Obstruction from stones, enlarged prostate, tumors, or urethral strictures.</td><td>Back pressure raises intratubular pressure and reduces filtration pressure.</td></tr>
+          <tr><td>Azotemia</td><td>Elevated nitrogen-containing wastes such as BUN and creatinine.</td><td>Lab abnormality.</td></tr>
+          <tr><td>Uremia</td><td>Clinical manifestations from toxic waste accumulation.</td><td>Symptomatic kidney failure.</td></tr>
+        </table>
+        <div class="grid two">
+          <div class="card">
+            <h3>Obstruction Practice Case</h3>
+            <ul>
+              <li>Case pattern: 42-year-old male with intermittent lower back pain, difficulty urinating, nausea, and gross hematuria.</li>
+              <li>Likely diagnosis from the photo notes: renal calculi causing urinary obstruction.</li>
+              <li>Differentials to keep in mind: UTI, pyelonephritis, BPH, renal malignancy, and broader urinary obstruction.</li>
+              <li>Age-pattern cues: children often congenital abnormalities; young adults often renal calculi; older adults stones, tumors, strictures, or BPH.</li>
+              <li>Complete obstruction can damage renal tubules within hours; permanent damage may occur within 3 to 4 weeks; recovery after relief may take up to 3 months.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>CKD and Uremic Syndrome</h3>
+            <ul>
+              <li>CKD is progressive, irreversible loss of kidney function.</li>
+              <li>Uremic syndrome is systemic toxicity from severe kidney failure.</li>
+              <li>Neurologic: lethargy, seizures, coma.</li>
+              <li>GI: nausea, vomiting, anorexia.</li>
+              <li>Cardiovascular/respiratory: hypertension, pericarditis, heart failure, dyspnea, pleurisy.</li>
+              <li>Other: anemia, bruising, epistaxis, pruritus, sallow skin, uremic frost, neuropathy, reproductive dysfunction, edema, bone pain, nail changes.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Concept</th><th>Memory cue</th><th>Core findings</th></tr>
+          <tr><td>Diabetic glomerulopathy</td><td>Most common CKD cause.</td><td>Chronic hyperglycemia -> basement membrane thickening -> mesangial expansion -> collagen deposition -> podocyte injury -> albumin leakage -> nephron loss.</td></tr>
+          <tr><td>Mesangial cells</td><td>Clean, support, contract, signal.</td><td>Phagocytose debris, support podocytes, regulate GFR through contractile properties, produce cytokines/growth factors, participate in immune responses.</td></tr>
+          <tr><td>Nephritic syndrome</td><td>Inflamed and bloody.</td><td>Hematuria, reduced GFR, oliguria, hypertension, mild proteinuria.</td></tr>
+          <tr><td>Nephrotic syndrome</td><td>Protein loss.</td><td>Massive proteinuria, hypoalbuminemia, generalized edema, hyperlipidemia, lipiduria.</td></tr>
+          <tr><td>Nephrotic edema flow</td><td>Podocyte injury causes fluid shift.</td><td>Podocyte injury -> permeability -> proteinuria -> hypoalbuminemia -> reduced oncotic pressure -> edema; RAAS activation worsens sodium/water retention.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="incontinence">
+      <div class="pad">
+        <h2>Urinary Incontinence</h2>
+        <div class="callout purple"><strong>Quality-of-life lens</strong>Incontinence is not just leakage. It can affect sleep, mood, sexual health, independence, work, exercise, fall risk, skin integrity, and willingness to participate socially.</div>
+        <table>
+          <tr><th>Type</th><th>Pathophysiology</th><th>Typical manifestations</th><th>Common associations</th></tr>
+          <tr><td>Urge</td><td>Detrusor overactivity or poor suppression of bladder contraction.</td><td>Sudden intense urge followed by leakage; frequency and nocturia are common.</td><td>Overactive bladder, UTI, stroke, Parkinson disease, dementia, bladder irritation.</td></tr>
+          <tr><td>Stress</td><td>Urethral sphincter/pelvic floor support cannot resist increased intra-abdominal pressure.</td><td>Leakage with cough, sneeze, laugh, lifting, exercise; usually small volumes.</td><td>Childbirth, pelvic surgery, aging, estrogen loss, obesity, prostate surgery.</td></tr>
+          <tr><td>Overflow</td><td>Bladder overdistention from retention; detrusor underactivity or outlet obstruction.</td><td>Dribbling, weak stream, hesitancy, incomplete emptying, high post-void residual.</td><td>BPH, diabetes neuropathy, spinal cord disease, anticholinergics, opioids.</td></tr>
+          <tr><td>Functional</td><td>Urinary system may work, but cognition, mobility, environment, or assistance barriers prevent toileting.</td><td>Leakage because the person cannot reach, recognize, or use the toilet in time.</td><td>Dementia, delirium, immobility, restraints, inaccessible bathroom, depression.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="uti">
+      <div class="pad">
+        <h2>2. Urinary Tract Infection</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Cystitis</h3>
+            <ul>
+              <li>Lower UTI of the bladder, usually caused by ascending periurethral organisms.</li>
+              <li>Escherichia coli is most common; Staphylococcus saprophyticus is a classic uncomplicated cystitis cause in young sexually active patients.</li>
+              <li>Symptoms: dysuria, frequency, urgency, suprapubic discomfort, cloudy/malodorous urine, hematuria.</li>
+              <li>Fever, flank pain, systemic illness, or vomiting suggests upper tract disease or complicated infection.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Pyelonephritis</h3>
+            <ul>
+              <li>Upper UTI involving renal pelvis and parenchyma.</li>
+              <li>Often ascends from bladder infection; obstruction, reflux, pregnancy, diabetes, and catheters increase risk.</li>
+              <li>Symptoms: fever, chills, flank pain, CVA tenderness, nausea/vomiting, malaise, urinary symptoms.</li>
+              <li>Complications: bacteremia, sepsis, renal scarring, abscess, AKI, preterm complications in pregnancy.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Organism</th><th>High-yield association</th></tr>
+          <tr><td>Escherichia coli</td><td>Most common cystitis and pyelonephritis pathogen; adheres to uroepithelium with fimbriae.</td></tr>
+          <tr><td>Klebsiella</td><td>Gram-negative UTI pathogen, more common in complicated or health-care associated infection.</td></tr>
+          <tr><td>Proteus</td><td>Urease producer; associated with alkaline urine and struvite stones.</td></tr>
+          <tr><td>Enterococcus</td><td>Can occur in catheter-associated, older adult, or complicated UTI contexts.</td></tr>
+          <tr><td>Staphylococcus saprophyticus</td><td>Uncomplicated cystitis in young sexually active patients.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="glomerular">
+      <div class="pad">
+        <h2>3. Glomerular Disorders</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Acute and Chronic Glomerulonephritis</h3>
+            <ul>
+              <li>Immune complexes, antibodies, complement activation, or inflammatory cells injure glomeruli.</li>
+              <li>Acute forms often follow infection or systemic immune disease and can produce abrupt hematuria, oliguria, edema, and hypertension.</li>
+              <li>Chronic forms involve progressive scarring, nephron loss, proteinuria/hematuria, hypertension, and CKD progression.</li>
+              <li>Risk contexts: streptococcal infection, viral infection, lupus, vasculitis, anti-GBM disease, IgA nephropathy, diabetes, hypertension, and family history.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Glomerular Injury Flow</h3>
+            <div class="map">
+              <div class="node"><b>Immune or metabolic injury</b>Immune complex, antibody, complement, diabetes, hypertension.</div>
+              <div class="arrow">-></div>
+              <div class="node"><b>Filtration barrier damage</b>Endothelium, GBM, podocytes, mesangium.</div>
+              <div class="arrow">-></div>
+              <div class="node"><b>Clinical syndrome</b>Hematuria/proteinuria, edema, hypertension, reduced GFR.</div>
+            </div>
+          </div>
+        </div>
+        <table>
+          <tr><th>Feature</th><th>Nephritic syndrome</th><th>Nephrotic syndrome</th></tr>
+          <tr><td>Core problem</td><td>Inflammatory glomerular injury.</td><td>Podocyte/filtration barrier permeability injury.</td></tr>
+          <tr><td>Urine</td><td>Hematuria, red blood cell casts, mild to moderate proteinuria.</td><td>Heavy proteinuria, lipiduria, fatty casts.</td></tr>
+          <tr><td>GFR/BP</td><td>Reduced GFR, oliguria, azotemia, hypertension.</td><td>GFR may be preserved early; edema prominent from hypoalbuminemia.</td></tr>
+          <tr><td>Blood findings</td><td>Possible elevated creatinine and inflammatory markers depending on cause.</td><td>Hypoalbuminemia, hyperlipidemia, hypercoagulability.</td></tr>
+          <tr><td>Classic cues</td><td>Cola-colored urine, edema, hypertension after infection or immune flare.</td><td>Generalized edema, foamy urine, very high urine protein.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="aki-ckd">
+      <div class="pad">
+        <h2>4. Acute Kidney Injury and Chronic Kidney Disease</h2>
+        <table>
+          <tr><th>AKI category</th><th>Cause pattern</th><th>Mechanism</th><th>Examples</th></tr>
+          <tr><td>Prerenal</td><td>Reduced blood flow to kidneys.</td><td>Low perfusion reduces filtration; prolonged ischemia can become intrinsic injury.</td><td>Dehydration, hemorrhage, shock, heart failure, cirrhosis, renal artery stenosis, NSAIDs/ACEi in susceptible patients.</td></tr>
+          <tr><td>Intrinsic</td><td>Damage inside kidney tissue.</td><td>Tubular, glomerular, interstitial, or vascular injury directly impairs filtration/reabsorption.</td><td>Acute tubular necrosis, glomerulonephritis, pyelonephritis, interstitial nephritis, nephrotoxins, ischemia.</td></tr>
+          <tr><td>Postrenal</td><td>Urine outflow obstruction.</td><td>Back pressure reduces GFR and can cause hydronephrosis.</td><td>BPH, stones, tumors, strictures, neurogenic bladder, catheter blockage.</td></tr>
+        </table>
+        <div class="grid two">
+          <div class="card">
+            <h3>AKI Manifestations</h3>
+            <ul>
+              <li>Oliguria or nonoliguric reduced clearance, rising creatinine/BUN, fluid overload, edema, hypertension.</li>
+              <li>Hyperkalemia, metabolic acidosis, uremic symptoms, nausea, fatigue, confusion, pericarditis in severe uremia.</li>
+              <li>Assessment cue: separate perfusion problem, intrinsic renal injury, and obstruction quickly because management differs.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>CKD and ESRD Manifestations</h3>
+            <ul>
+              <li>Long-term nephron loss causes reduced renal reserve, sodium/water retention, hypertension, and progressive toxin retention.</li>
+              <li>Common causes: diabetes, hypertension, chronic glomerular disease, polycystic kidney disease, recurrent pyelonephritis, obstruction, nephrotoxins.</li>
+              <li>Complications: anemia from low erythropoietin, mineral-bone disorder, metabolic acidosis, hyperkalemia, pruritus, malnutrition, uremia, cardiovascular disease.</li>
+              <li>ESRD requires dialysis or transplant when kidney function cannot maintain fluid, electrolyte, acid-base, and toxin balance.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clinical">
+      <div class="pad">
+        <h2>Clinical Practice Quick Cards</h2>
+        <div class="grid three">
+          <div class="card">
+            <h3>Urinary History</h3>
+            <ul>
+              <li>Dysuria, urgency, frequency, nocturia, hesitancy, weak stream, incomplete emptying, retention.</li>
+              <li>Hematuria, flank pain, suprapubic pain, fever/chills, nausea/vomiting, stone history.</li>
+              <li>Leak timing: urge, cough/sneeze/exertion, dribbling, mobility/cognition barriers.</li>
+              <li>Meds: NSAIDs, ACEi/ARB, diuretics, antibiotics, anticholinergics, opioids, contrast exposure.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Renal Red Flags</h3>
+            <ul>
+              <li>Fever plus flank pain, sepsis signs, pregnancy with UTI symptoms, immunocompromised state.</li>
+              <li>Anuria, acute retention, severe colic, solitary kidney, obstruction with infection.</li>
+              <li>Gross hematuria, new edema/hypertension with cola-colored urine, rapidly rising creatinine.</li>
+              <li>Hyperkalemia symptoms, pulmonary edema, uremic confusion, pericarditis, severe acidosis.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Focused Assessment</h3>
+            <ul>
+              <li>Vitals, volume status, weight change, edema, lung crackles, orthostatic symptoms.</li>
+              <li>Abdominal/suprapubic distention, CVA tenderness, bladder scan/post-void residual when indicated.</li>
+              <li>Urinalysis pattern: leukocytes/nitrites, blood, protein, casts, specific gravity.</li>
+              <li>Labs and imaging based on pattern: creatinine/eGFR, electrolytes, CBC, culture, ultrasound/CT, protein quantification.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="pad">
+        <h2>Practice and Active Recall</h2>
+        <div class="toolbar">
+          <button type="button" onclick="toggleAnswers(true)">Show answers</button>
+          <button type="button" onclick="toggleAnswers(false)">Hide answers</button>
+        </div>
+        <details class="qa"><summary>1. What is the fastest distinction between upper and lower urinary tract obstruction?</summary><div class="answer">Upper obstruction involves the renal pelvis or ureter and often causes flank pain/hydronephrosis; lower obstruction involves bladder outlet or urethra and causes voiding symptoms, retention, overflow, and possible back pressure.</div></details>
+        <details class="qa"><summary>2. Why can BPH lead to hydronephrosis?</summary><div class="answer">BPH increases bladder outlet resistance, causing retention and high bladder pressure that can reflux/back up into ureters and kidneys.</div></details>
+        <details class="qa"><summary>3. How do urge and stress incontinence differ?</summary><div class="answer">Urge incontinence is sudden urge with detrusor overactivity; stress incontinence is leakage during increased intra-abdominal pressure from weak sphincter or pelvic support.</div></details>
+        <details class="qa"><summary>4. What pattern suggests overflow incontinence?</summary><div class="answer">Dribbling, weak stream, hesitancy, incomplete emptying, and high post-void residual suggest retention with overflow.</div></details>
+        <details class="qa"><summary>5. What organism most commonly causes uncomplicated UTI?</summary><div class="answer">Escherichia coli is the most common causative organism.</div></details>
+        <details class="qa"><summary>6. What findings push cystitis toward pyelonephritis?</summary><div class="answer">Fever, chills, flank pain, CVA tenderness, nausea/vomiting, malaise, or sepsis signs suggest upper tract infection.</div></details>
+        <details class="qa"><summary>7. Nephritic vs nephrotic: what is the quickest comparison?</summary><div class="answer">Nephritic is inflammatory with hematuria, RBC casts, reduced GFR, oliguria, and hypertension; nephrotic is heavy protein loss with hypoalbuminemia, edema, hyperlipidemia, and lipiduria.</div></details>
+        <details class="qa"><summary>8. What are the three categories of AKI?</summary><div class="answer">Prerenal from low perfusion, intrinsic from kidney tissue injury, and postrenal from urine outflow obstruction.</div></details>
+        <details class="qa"><summary>9. How does CKD progress after nephron loss?</summary><div class="answer">Remaining nephrons hyperfilter, increasing glomerular pressure and sclerosis, which causes more nephron loss, fibrosis, and declining renal reserve.</div></details>
+        <details class="qa"><summary>10. Why does CKD cause anemia and bone-mineral problems?</summary><div class="answer">Reduced erythropoietin lowers red blood cell production; impaired phosphate excretion and vitamin D activation disrupt calcium/phosphate balance and bone metabolism.</div></details>
+        <details class="qa"><summary>11. What confirms microscopic hematuria?</summary><div class="answer">Microscopic urinalysis showing three or more red blood cells per high-power field. Dipstick blood is only a screen.</div></details>
+        <details class="qa"><summary>12. Which urine findings suggest glomerular hematuria?</summary><div class="answer">Dysmorphic RBCs, red blood cell casts, proteinuria, elevated creatinine, or other renal disease signs.</div></details>
+        <details class="qa"><summary>13. How do SGLT2 inhibitors reduce diabetic hyperfiltration?</summary><div class="answer">They block proximal glucose/sodium reabsorption, increase sodium delivery to the macula densa, restore tubuloglomerular feedback, and reduce glomerular capillary pressure.</div></details>
+        <details class="qa"><summary>14. Why can NSAIDs worsen kidney perfusion?</summary><div class="answer">They reduce prostaglandin production; prostaglandins help dilate afferent arterioles and maintain renal blood flow when perfusion is stressed.</div></details>
+        <details class="qa"><summary>15. Why is vesicoureteral reflux important in children?</summary><div class="answer">Reflux plus lower UTI can carry bacteria upward, causing pyelonephritis and increasing risk for renal scarring.</div></details>
+        <details class="qa"><summary>16. When should hematuria prompt nephrology referral?</summary><div class="answer">When there are signs of glomerular disease such as dysmorphic RBCs, proteinuria, cellular casts, or renal impairment.</div></details>
+        <details class="qa"><summary>17. What urine pH patterns matter for stone risk?</summary><div class="answer">Alkaline urine above pH 7.0 increases calcium phosphate and struvite stone risk; acidic urine below pH 5.0 increases uric acid stone risk.</div></details>
+        <details class="qa"><summary>18. Why can low-calcium diets worsen calcium oxalate stone risk?</summary><div class="answer">Less dietary calcium binds oxalate in the gut, so more oxalate can be absorbed and excreted in urine.</div></details>
+        <details class="qa"><summary>19. How might UTI present differently in older adults?</summary><div class="answer">Older adults may present with confusion or vague abdominal discomfort rather than classic dysuria, urgency, or frequency.</div></details>
+        <details class="qa"><summary>20. What should patients on SGLT2 inhibitors know about sick days?</summary><div class="answer">They may need to temporarily hold the medication during acute GI illness, dehydration risk, or poor intake to reduce AKI and rare DKA risk, following clinician guidance.</div></details>
+        <details class="qa"><summary>21. What is the correct order of major nephron structures for filtrate flow?</summary><div class="answer">Glomerulus/Bowman's capsule -> proximal convoluted tubule -> loop of Henle -> distal convoluted tubule -> collecting duct.</div></details>
+        <details class="qa"><summary>22. What is the high-yield AKI recognition triad from the photo notes?</summary><div class="answer">Increased serum creatinine, decreased GFR, and decreased urine output.</div></details>
+        <details class="qa"><summary>23. What is the difference between azotemia and uremia?</summary><div class="answer">Azotemia is elevated nitrogenous wastes such as BUN/creatinine as a lab abnormality; uremia is symptomatic toxicity from waste accumulation.</div></details>
+        <details class="qa"><summary>24. In the 42-year-old male case with back pain, urinary difficulty, nausea, and gross hematuria, what diagnosis fits best?</summary><div class="answer">Renal calculi causing urinary obstruction.</div></details>
+        <details class="qa"><summary>25. What is the most common cause of CKD in the photo notes?</summary><div class="answer">Diabetes mellitus, through diabetic glomerulopathy.</div></details>
+        <details class="qa"><summary>26. What are mesangial cells responsible for?</summary><div class="answer">They phagocytose debris, support podocytes, regulate GFR through contraction, produce cytokines/growth factors, and participate in immune responses.</div></details>
+        <details class="qa"><summary>27. What is the diabetic kidney disease hemodynamic sequence involving SGLT2?</summary><div class="answer">Chronic hyperglycemia increases filtered glucose and proximal SGLT2 sodium/glucose reabsorption, lowering NaCl delivery to the macula densa. The kidney interprets this as low filtration, causing afferent dilation and efferent constriction, which raises glomerular pressure and drives hyperfiltration injury.</div></details>
+        <details class="qa"><summary>28. Why are SGLT2 inhibitors kidney-protective beyond glucose lowering?</summary><div class="answer">They increase NaCl delivery to the macula densa, restore tubuloglomerular feedback, reduce afferent dilation/efferent constriction signaling, lower glomerular capillary pressure, and reduce hyperfiltration stress.</div></details>
+        <details class="qa"><summary>29. Which metabolic pathways contribute to diabetic kidney damage?</summary><div class="answer">Advanced glycation end products, toxic non-glycolytic pathways such as aldose reductase and hexosamine pathways, mitochondrial burnout, altered gene expression, oxidative stress, inflammatory cytokines, and renal fibrosis all contribute to podocyte injury, mesangial expansion, glomerulosclerosis, and tubulointerstitial fibrosis.</div></details>
+        <details class="qa"><summary>30. What separates glomerular from non-glomerular microscopic hematuria?</summary><div class="answer">Glomerular hematuria shows evidence of filtration-barrier injury such as dysmorphic RBCs, red cell casts, proteinuria, elevated creatinine, or renal disease signs. Non-glomerular hematuria usually has normal RBCs without proteinuria or casts and arises from the urinary tract outside the glomeruli.</div></details>
+        <details class="qa"><summary>31. What should happen after a dipstick shows blood?</summary><div class="answer">Confirm with microscopic urinalysis. Microscopic hematuria is defined as three or more RBCs per high-power field, so dipstick alone is not diagnostic.</div></details>
+        <details class="qa"><summary>32. What findings prompt urology versus nephrology referral in microscopic hematuria?</summary><div class="answer">Urology is emphasized for symptomatic hematuria, age 35 or older, or younger patients with malignancy risks such as smoking, pelvic radiation, occupational hazards, or carcinogenic alkylating-agent exposure. Nephrology is prompted by dysmorphic RBCs, proteinuria, cellular casts, or renal impairment.</div></details>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="pad">
+        <h2>Sources and Add-In Tracker</h2>
+        <table>
+          <tr><th>Source</th><th>Status</th><th>How it is used here</th></tr>
+          <tr><td>Module 6.3 learning outcomes</td><td>Provided by user</td><td>Used to structure objectives, sections, comparison tables, and active recall.</td></tr>
+          <tr><td>McCance 9th ed. pp. 843-848, 1232-1241, 1281-1282</td><td>Mapped from LO list</td><td>BPH, prostatitis, urinary tract obstruction, pediatric urinary incontinence, and incontinence patterns.</td></tr>
+          <tr><td>McCance 9th ed. pp. 1242-1245, 1280-1281</td><td>Mapped from LO list</td><td>Cystitis, pyelonephritis, common microorganisms, pediatric UTI, mechanisms, and manifestations.</td></tr>
+          <tr><td>McCance 9th ed. pp. 1245-1251, 1275-1278</td><td>Mapped from LO list</td><td>Acute/chronic glomerulonephritis, pediatric glomerular disorders, nephritic syndrome, and nephrotic syndrome.</td></tr>
+          <tr><td>McCance 9th ed. pp. 1252-1260</td><td>Mapped from LO list</td><td>AKI, CKD, ESRD causes, pathophysiology, and clinical manifestations.</td></tr>
+          <tr><td><a href="https://doi.org/10.1007/s40520-020-01712-y">Pizzol et al. (2021), Urinary incontinence and quality of life</a></td><td>Added from LO list</td><td>Quality-of-life framing for urinary incontinence.</td></tr>
+          <tr><td><a href="https://vimeo.com/reviews/2df02850-2bd5-4497-914b-43fcb1cef3e7/videos/260763688">Module 6 Urinary & Renal Disorders video</a></td><td>Sampled slide content</td><td>Lecture video title, runtime, and slide content used with the cleaned transcript.</td></tr>
+          <tr><td>cleaned_urinary_tract_lecture_transcription.docx</td><td>Extracted from Downloads</td><td>Cleaned lecture and clinical presentation transcript integrated into nephron anatomy, microscopic hematuria, diabetes/SGLT2 kidney mechanisms, NSAID renal risk, glomerular disorders, AKI/CKD, obstruction, pyelonephritis, and VUR notes.</td></tr>
+          <tr><td>Renal System & Kidney Disorders Study Notes.docx</td><td>Extracted from Downloads</td><td>Photo-derived lecture notes and practice-question cues integrated into nephron flow, filtration barrier, mesangial cells, AKI categories, obstruction case, azotemia/uremia, diabetic glomerulopathy, and nephritic/nephrotic memory cues.</td></tr>
+          <tr><td>Module 6 - Urinary and Renal Disorders.pptx</td><td>Extracted from Downloads</td><td>Core lecture deck added for bladder physiology, urine sediment/casts, aging kidney, obstruction severity, nephrolithiasis risk/formation, glomerulonephritis, AKI categories, CKD thresholds, and urinary incontinence types.</td></tr>
+          <tr><td>Rebellato Kristen Clinical Consult Presentation.pptx</td><td>Extracted from Downloads</td><td>Clinical consult details added for diabetic kidney disease, SGLT2-mediated tubuloglomerular feedback, hyperfiltration, metabolic injury pathways, albuminuria, and patient-teaching tradeoffs.</td></tr>
+          <tr><td>Microscopic Hematuria.pdf</td><td>Extracted from Downloads</td><td>Clinical consult details added for microscopic hematuria definition, risk categories, glomerular versus non-glomerular clues, work-up, referral criteria, and monitoring after negative work-up.</td></tr>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleAnswers(show) {
+      document.querySelectorAll('.qa').forEach(function (item) {
+        item.open = show;
+      });
+    }
+  </script>
+</body>
+</html>

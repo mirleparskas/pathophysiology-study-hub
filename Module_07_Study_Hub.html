@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 7 Study Hub | Endocrine System</title>
+  <style>
+    :root {
+      --ink: #17212a;
+      --muted: #5c6871;
+      --bg: #f4f7f5;
+      --paper: #fffefd;
+      --line: #d7dfda;
+      --blue: #2f6f9f;
+      --teal: #1c7f7a;
+      --green: #2f7d59;
+      --gold: #b98521;
+      --red: #b84a42;
+      --purple: #70549a;
+      --shadow: 0 10px 25px rgba(20, 35, 42, .08);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
+    header { background: linear-gradient(135deg, #2f6f9f, #2f7d59); color: white; padding: 42px 0 34px; }
+    .wrap { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 700; opacity: .9; }
+    h1 { margin: 8px 0 10px; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.05; letter-spacing: 0; }
+    h2 { margin: 0 0 18px; font-size: 1.65rem; letter-spacing: 0; }
+    h3 { margin: 20px 0 10px; font-size: 1.05rem; letter-spacing: 0; }
+    p { margin: 0 0 12px; }
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(255, 254, 253, .96); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    nav .wrap { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0; }
+    nav a, .button { color: var(--ink); text-decoration: none; border: 1px solid var(--line); background: white; padding: 8px 11px; border-radius: 8px; white-space: nowrap; font-size: .9rem; font-weight: 700; }
+    nav a:hover, .button:hover { border-color: var(--blue); color: var(--blue); }
+    main { padding: 24px 0 60px; }
+    section { width: min(1160px, calc(100% - 32px)); margin: 0 auto 22px; }
+    .pad { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; box-shadow: var(--shadow); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .card h3 { margin-top: 0; }
+    ul, ol { margin: 8px 0 0 21px; padding: 0; }
+    li { margin: 5px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0; background: white; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: table; }
+    th, td { padding: 10px 11px; border: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { background: #edf5f0; color: #203843; }
+    .objective { display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: start; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: white; margin-bottom: 9px; }
+    .check { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #dff0e6; color: var(--green); font-weight: 800; }
+    .source { color: var(--muted); font-size: .86rem; white-space: nowrap; }
+    .callout { border-left: 5px solid var(--blue); background: #eef7fb; padding: 13px 14px; border-radius: 8px; margin: 14px 0; }
+    .callout strong { display: block; margin-bottom: 4px; }
+    .callout.gold { border-color: var(--gold); background: #fff6df; }
+    .callout.red { border-color: var(--red); background: #fff0ed; }
+    .callout.purple { border-color: var(--purple); background: #f4effb; }
+    .map { display: flex; align-items: stretch; gap: 9px; overflow-x: auto; padding: 10px 0; margin: 8px 0 16px; }
+    .node { min-width: 185px; flex: 1; background: white; border: 1px solid var(--line); border-top: 5px solid var(--teal); border-radius: 8px; padding: 11px; }
+    .node b { display: block; margin-bottom: 4px; }
+    .arrow { display: grid; place-items: center; color: var(--muted); font-weight: 800; min-width: 22px; }
+    .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    button { border: 1px solid var(--line); background: white; color: var(--ink); padding: 8px 11px; border-radius: 8px; font-weight: 700; cursor: pointer; }
+    details.qa { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 11px 13px; margin: 9px 0; }
+    details.qa summary { cursor: pointer; font-weight: 700; }
+    .answer { margin-top: 9px; color: #31414a; }
+    a { color: var(--blue); }
+    @media (max-width: 900px) { .grid, .grid.three { grid-template-columns: 1fr; } .objective { grid-template-columns: 28px 1fr; } .source { grid-column: 2; white-space: normal; } .pad { padding: 17px; } table { display: block; overflow-x: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Pathophysiology Study Hub</p>
+      <h1>Module 7: Endocrine System</h1>
+      <p>Pituitary, thyroid, parathyroid, diabetes mellitus, diabetic complications, and adrenal cortex disorders. This module is post-midterm content and is not included in the midterm review page.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Module navigation">
+    <div class="wrap">
+      <a href="index.html">Hub</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#readings">Readings</a>
+      <a href="#lecture-slides">Lecture Slides</a>
+      <a href="#class-transcript">Class Transcript</a>
+      <a href="#pituitary">Pituitary</a>
+      <a href="#thyroid">Thyroid</a>
+      <a href="#parathyroid">Parathyroid</a>
+      <a href="#diabetes">Diabetes</a>
+      <a href="#complications">DM Complications</a>
+      <a href="#adrenal">Adrenal Cortex</a>
+      <a href="#tutorial">Tutorial</a>
+      <a href="#clinical">Clinical</a>
+      <a href="#practice">Practice</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="objectives">
+      <div class="pad">
+        <h2>Learning Outcome Coverage</h2>
+        <div class="callout gold"><strong>Exam placement</strong>Module 7 is built as a study module only. It is not added to the Modules 1-6 midterm review.</div>
+        <div class="objective"><span class="check">OK</span><div>Describe primary pituitary adenoma, acromegaly, diabetes insipidus, and SIADH mechanisms and manifestations.</div><span class="source">McCance 9th pp. 688-693</span></div>
+        <div class="objective"><span class="check">OK</span><div>Describe hyperthyroid conditions, Graves disease, thyrotoxic crisis, iodine deficiency hypothyroidism, and Hashimoto disease.</div><span class="source">McCance 9th pp. 694-699</span></div>
+        <div class="objective"><span class="check">OK</span><div>Compare hyperparathyroidism and hypoparathyroidism mechanisms and manifestations.</div><span class="source">McCance 9th pp. 700-701</span></div>
+        <div class="objective"><span class="check">OK</span><div>Compare type 1, type 2, and gestational diabetes by epidemiology, risk factors, mechanisms, and manifestations.</div><span class="source">McCance 9th pp. 702-708</span></div>
+        <div class="objective"><span class="check">OK</span><div>Describe the relationship between metabolic syndrome and type 2 diabetes mellitus.</div><span class="source">McCance 9th pp. 702-708</span></div>
+        <div class="objective"><span class="check">OK</span><div>Explain acute and chronic diabetic complications: hypoglycemia, DKA, HHNKS/HHS, microvascular disease, macrovascular disease, and infection risk.</div><span class="source">McCance 9th pp. 709-714</span></div>
+        <div class="objective"><span class="check">OK</span><div>Describe Cushing disease, Cushing syndrome, and Addison disease mechanisms and manifestations.</div><span class="source">McCance 9th pp. 715-718</span></div>
+      </div>
+    </section>
+
+    <section id="readings">
+      <div class="pad">
+        <h2>Assigned Reading Notes</h2>
+        <div class="callout"><strong>Reading scope</strong>These notes map the Module 7 learning outcomes to the assigned McCance endocrine readings. Use them as a structured guide alongside the textbook pages.</div>
+        <table>
+          <tr><th>Topic</th><th>McCance 8th ed.</th><th>McCance 9th ed.</th><th>Core focus</th></tr>
+          <tr><td>Pituitary gland</td><td>pp. 669-676</td><td>pp. 688-693</td><td>Hormonal alteration mechanisms, hypothalamic-pituitary system, adenomas, acromegaly, DI, SIADH.</td></tr>
+          <tr><td>Thyroid gland</td><td>pp. 676-682</td><td>pp. 694-699</td><td>Hyperthyroidism, Graves disease, thyrotoxic crisis, iodine deficiency, Hashimoto thyroiditis.</td></tr>
+          <tr><td>Parathyroid glands</td><td>pp. 682-684</td><td>pp. 700-701</td><td>PTH, calcium/phosphate balance, hyperparathyroidism, hypoparathyroidism.</td></tr>
+          <tr><td>Diabetes mellitus</td><td>pp. 684-692</td><td>pp. 702-708</td><td>Type 1, type 2, gestational diabetes, metabolic syndrome.</td></tr>
+          <tr><td>Diabetes complications</td><td>pp. 692-699</td><td>pp. 709-714</td><td>Hypoglycemia, DKA, HHS/HHNKS, vascular complications, infection risk.</td></tr>
+          <tr><td>Adrenal cortex</td><td>pp. 699-705</td><td>pp. 715-718</td><td>Cortisol excess/deficiency, Cushing disease, Cushing syndrome, Addison disease.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="lecture-slides">
+      <div class="pad">
+        <h2>Lecture Slide Add-In</h2>
+        <div class="callout"><strong>Added source</strong>module 7_endocrine disorders_lecture slides_20240311.pptx.pdf. The slide deck reinforces the module outline, endocrine feedback logic, pituitary/thyroid/adrenal mechanisms, diabetes diagnosis, diabetic complications, and exercise physiology.</div>
+        <div class="grid">
+          <div class="card">
+            <h3>Endocrine Disorder Framework</h3>
+            <ul>
+              <li>Endocrine tissues release hormones into blood, where they bind receptors on distant target cells.</li>
+              <li>Disorders are categorized by affected organ, direction of change, and mechanism.</li>
+              <li>Direction: hyperfunction versus hypofunction.</li>
+              <li>Mechanism: primary disease directly affects the endocrine gland; secondary disease changes upstream hypothalamic or pituitary signaling.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Hormone Feedback Loops</h3>
+            <ul>
+              <li>Hypothalamic releasing hormones stimulate anterior pituitary hormones, which stimulate target endocrine glands.</li>
+              <li>Target gland hormones usually provide negative feedback to the pituitary and hypothalamus.</li>
+              <li>High target hormone with low pituitary signal often suggests primary hyperfunction.</li>
+              <li>Low target hormone with high pituitary signal often suggests primary hypofunction.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Lecture point</th><th>Added detail</th><th>Clinical use</th></tr>
+          <tr><td>SIADH</td><td>Excess ADH increases water reabsorption in collecting ducts/distal tubules, lowering extracellular fluid osmolarity and diluting sodium.</td><td>Think thirst, low appetite, fatigue, impaired senses, confusion, lethargy, and convulsions as hyponatremia worsens.</td></tr>
+          <tr><td>Diabetes insipidus</td><td>Impaired ADH production or impaired renal response increases renal water excretion and creates hyperosmotic extracellular fluid.</td><td>Polyuria, polydipsia, hypotonic urine, dehydration, and hypernatremia risk.</td></tr>
+          <tr><td>Pituitary adenoma</td><td>Slow-growing anterior pituitary tumors secrete hormone from their cell type, often growth hormone or prolactin; large tumors can suppress nearby pituitary cells.</td><td>Excess hormone plus possible hyposecretion of LH/FSH and mass-effect symptoms.</td></tr>
+          <tr><td>Toxic multinodular goiter</td><td>Thyroid nodules enlarge and produce T3/T4 without normal TSH dependence, often developing over years in older adults.</td><td>Hyperthyroid manifestations with nodular gland enlargement.</td></tr>
+          <tr><td>Primary adrenal Cushing syndrome</td><td>Adrenal cortical tumors produce cortisol independent of ACTH, so ACTH is low from negative feedback.</td><td>Differentiate from ACTH-driven Cushing disease.</td></tr>
+          <tr><td>Secondary Cushing syndrome</td><td>ACTH or CRH may be produced by pituitary tumors or ectopic tumors; pituitary ACTH excess is Cushing disease.</td><td>High ACTH with cortisol excess points away from autonomous adrenal cortisol production.</td></tr>
+        </table>
+        <div class="grid">
+          <div class="card">
+            <h3>Diabetes Diagnosis Criteria From Slides</h3>
+            <ul>
+              <li>Fasting plasma glucose 7.0 mmol/L or higher.</li>
+              <li>A1C 6.5% or higher in adults when assay conditions are valid and type 1 diabetes is not suspected.</li>
+              <li>2-hour plasma glucose 11.1 mmol/L or higher after 75 g OGTT.</li>
+              <li>Random plasma glucose 11.1 mmol/L or higher in the right clinical context.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Exercise Physiology and Type 2 DM</h3>
+            <ul>
+              <li>Aerobic exercise increases glucose uptake through GLUT4, initially in an insulin-independent way.</li>
+              <li>Insulin sensitivity can remain increased for 2 to 72 hours after aerobic exercise.</li>
+              <li>Aerobic training improves hepatic glucose output regulation, lipid profile, adipokine activity, blood pressure, and mood.</li>
+              <li>Resistance training increases muscle mass and improves fasting glucose and insulin action.</li>
+              <li>Combined aerobic and resistance exercise is most effective for glucose control and weight management.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="class-transcript">
+      <div class="pad">
+        <h2>Class Transcript Add-In</h2>
+        <div class="callout"><strong>Added source</strong>Module 7 Class Transcript.pdf. These notes capture the instructor's live explanations, class questions, and the transcript portions on Hashimoto thyroiditis and Addison disease.</div>
+        <div class="grid">
+          <div class="card">
+            <h3>Endocrine Control Questions</h3>
+            <ul>
+              <li>The pituitary is traditionally called the master endocrine gland, while the hypothalamus controls it through releasing and inhibiting hormones.</li>
+              <li>Hormone release can be triggered by humoral stimuli, hormonal stimuli, or neural stimuli.</li>
+              <li>Anterior pituitary synthesizes and secretes ACTH, TSH, FSH, LH, growth hormone, and prolactin.</li>
+              <li>Posterior pituitary stores and releases ADH and oxytocin that are synthesized in hypothalamic neurons.</li>
+              <li>Endocrine disease can reflect hormone excess, hormone deficiency, abnormal receptors, altered intracellular response, feedback failure, or ectopic hormone production.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Feedback Loop Language</h3>
+            <ul>
+              <li>Ultra-short feedback: hormone acts back on the secreting cell or target organ itself.</li>
+              <li>Short feedback: pituitary tropic hormones feed back to the hypothalamus or pituitary level.</li>
+              <li>Long feedback: target gland hormones travel back to inhibit hypothalamus and pituitary signaling.</li>
+              <li>When reviewing endocrine pathology, ask whether the feedback loop is intact or disrupted because this determines labs, manifestations, and treatment logic.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Transcript point</th><th>High-yield detail</th><th>Clinical/lab cue</th></tr>
+          <tr><td>ADH release</td><td>Increased plasma osmolarity is the key normal trigger. Low blood pressure or low volume can also stimulate ADH.</td><td>Urine osmolarity is a downstream effect, not the trigger for ADH release.</td></tr>
+          <tr><td>ADH kidney action</td><td>ADH inserts aquaporin-2 water channels in collecting duct/distal tubular luminal membranes.</td><td>Water reabsorption increases, urine becomes more concentrated, and serum osmolarity falls.</td></tr>
+          <tr><td>SIADH</td><td>Enhanced free water retention produces dilutional hyponatremia, low serum osmolarity, concentrated urine, high urine sodium, and usually no edema or clinical volume depletion.</td><td>Causes include neurologic disease, pulmonary disease, malignancy, medications, pain/stress, anesthesia, and postoperative ADH release for 5-7 days.</td></tr>
+          <tr><td>DI</td><td>Impaired ADH production or response causes excess urine output, thirst, high serum osmolarity, dilute urine, and hypernatremia risk.</td><td>DI is unrelated to diabetes mellitus despite the name.</td></tr>
+          <tr><td>Urine concentration tests</td><td>Specific gravity is a routine concentration estimate; osmolality is more precise.</td><td>Class note gave urine specific gravity reference range around 1.005-1.030.</td></tr>
+          <tr><td>Pituitary NETs</td><td>Most are benign, slow-growing anterior pituitary tumors; many are microscopic, incidental, and hormonally silent.</td><td>Functioning tumors most often increase prolactin or growth hormone; large tumors can suppress TSH, ACTH, FSH, and LH by compression.</td></tr>
+          <tr><td>ACTH deficiency</td><td>Loss of ACTH can be life-threatening because it causes secondary adrenal insufficiency with cortisol deficiency.</td><td>Watch for hypoglycemia, hypotension, and adrenal crisis physiology.</td></tr>
+          <tr><td>Acromegaly</td><td>Growth hormone excess causes insulin resistance, hyperglycemia, hypertension, heart failure risk, oily skin, hyperhidrosis, enlarged tongue, interstitial edema, and enlarged hands/feet/face/head.</td><td>Enhanced renal calcium uptake is not expected; transcript noted hypercalciuria instead.</td></tr>
+          <tr><td>PTH trigger</td><td>Low ionized calcium stimulates chief cells to release PTH.</td><td>PTH restores calcium through bone, kidney, vitamin D, and intestinal pathways.</td></tr>
+          <tr><td>Calcitonin</td><td>Calcitonin is released from thyroid C cells to lower serum calcium by inhibiting osteoclast bone resorption.</td><td>Calcitriol and vitamin D raise calcium; calcitonin lowers calcium.</td></tr>
+          <tr><td>Hypoparathyroidism</td><td>Most commonly follows thyroid surgery because of parathyroid proximity; hypomagnesemia can also suppress PTH.</td><td>Hypomagnesemia may relate to chronic alcohol use, malnutrition, malabsorption, renal magnesium loss, or iatrogenic causes.</td></tr>
+          <tr><td>Pseudohypoparathyroidism</td><td>Target tissues are resistant to PTH.</td><td>Hypocalcemia occurs despite normal or elevated PTH.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="pituitary">
+      <div class="pad">
+        <h2>1. Disorders of the Pituitary Gland</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Primary Pituitary Adenoma</h3>
+            <ul>
+              <li>Usually benign monoclonal tumors of anterior pituitary cells.</li>
+              <li>Can be functioning, secreting excess hormone, or nonfunctioning, causing mass effect.</li>
+              <li>Mass effect can compress the optic chiasm, causing bitemporal visual field loss, headache, and hypopituitarism.</li>
+              <li>Clinical findings depend on hormone type: prolactin, growth hormone, ACTH, TSH, or gonadotropin effects.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Acromegaly</h3>
+            <ul>
+              <li>Most often caused by a growth hormone secreting pituitary adenoma after epiphyseal closure.</li>
+              <li>Growth hormone stimulates hepatic IGF-1, driving soft tissue, cartilage, bone, and organ growth.</li>
+              <li>Manifestations: enlarged hands/feet, coarse facial features, jaw enlargement, spacing of teeth, thickened skin, sweating, arthralgia, headaches, visual defects.</li>
+              <li>Metabolic effects include insulin resistance, hypertension, cardiomyopathy, sleep apnea, and increased cardiovascular risk.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Disorder</th><th>Core mechanism</th><th>Key manifestations</th><th>High-yield contrast</th></tr>
+          <tr><td>Diabetes insipidus</td><td>ADH deficiency or renal resistance to ADH causes inability to concentrate urine.</td><td>Polyuria, very dilute urine, polydipsia, dehydration, hypernatremia risk.</td><td>Too little ADH effect means too much free water loss.</td></tr>
+          <tr><td>SIADH</td><td>Excess ADH causes inappropriate water retention despite low serum osmolality.</td><td>Low serum sodium, low serum osmolality, concentrated urine, headache, confusion, seizures if severe.</td><td>Too much ADH effect means too much free water retention.</td></tr>
+        </table>
+        <div class="map">
+          <div class="node"><b>Pituitary adenoma</b>Hormone secretion or mass effect.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>End-organ signal changes</b>GH/IGF-1, ACTH/cortisol, prolactin, TSH, or suppressed normal pituitary output.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Clinical pattern</b>Metabolic changes, tissue growth, reproductive symptoms, visual defects, headache.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="thyroid">
+      <div class="pad">
+        <h2>2. Disorders of the Thyroid Gland</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Hyperthyroidism and Graves Disease</h3>
+            <ul>
+              <li>Hyperthyroidism is excess thyroid hormone effect, increasing basal metabolic rate and sympathetic responsiveness.</li>
+              <li>Graves disease is autoimmune hyperthyroidism caused by thyroid-stimulating immunoglobulins activating the TSH receptor.</li>
+              <li>Common manifestations: weight loss despite appetite, heat intolerance, sweating, tremor, anxiety, palpitations, tachycardia, diarrhea, menstrual changes, goiter.</li>
+              <li>Graves-specific clues can include ophthalmopathy, lid lag, exophthalmos, and pretibial myxedema.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Thyrotoxic Crisis</h3>
+            <ul>
+              <li>Severe, life-threatening exaggeration of thyrotoxicosis, often triggered by infection, trauma, surgery, childbirth, MI, or stopping antithyroid therapy.</li>
+              <li>Manifestations: high fever, severe tachycardia, arrhythmia, heart failure, agitation, delirium, vomiting, diarrhea, dehydration, and shock risk.</li>
+              <li>Clinical priority is recognizing endocrine emergency physiology: extreme metabolic demand plus cardiovascular strain.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Hypothyroid condition</th><th>Mechanism</th><th>Clinical manifestations</th></tr>
+          <tr><td>Iodine deficiency primary hypothyroidism</td><td>Low iodine limits T3/T4 synthesis. Low thyroid hormone removes negative feedback, increasing TSH and causing thyroid enlargement/goiter.</td><td>Fatigue, cold intolerance, weight gain, constipation, dry skin, bradycardia, slowed cognition, menstrual changes, goiter.</td></tr>
+          <tr><td>Hashimoto disease</td><td>Autoimmune thyroiditis with T-cell mediated destruction and thyroid autoantibodies, causing gradual loss of thyroid hormone production.</td><td>Painless goiter, hypothyroid symptoms, elevated TSH with low free T4 as failure progresses, possible transient early hyperthyroid leakage phase.</td></tr>
+        </table>
+        <div class="map">
+          <div class="node"><b>TSH receptor stimulation</b>Graves antibodies mimic TSH.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Excess T3/T4</b>High metabolic rate and adrenergic sensitivity.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>System effects</b>Heat, weight loss, tachycardia, tremor, anxiety, diarrhea, crisis risk.</div>
+        </div>
+        <div class="callout purple"><strong>Transcript thyroid lab logic</strong>Primary hypothyroidism usually shows high TSH with low T3/T4. Primary hyperthyroidism usually shows low TSH with high T3/T4. Graves disease is driven by thyroid-stimulating immunoglobulins that activate the TSH receptor, overriding otherwise intact negative feedback.</div>
+      </div>
+    </section>
+
+    <section id="parathyroid">
+      <div class="pad">
+        <h2>3. Disorders of the Parathyroid Glands</h2>
+        <table>
+          <tr><th>Feature</th><th>Hyperparathyroidism</th><th>Hypoparathyroidism</th></tr>
+          <tr><td>Core mechanism</td><td>Excess PTH, often primary parathyroid adenoma or secondary response to chronic hypocalcemia/CKD.</td><td>Deficient PTH, often after thyroid/parathyroid surgery, autoimmune destruction, or congenital causes.</td></tr>
+          <tr><td>Calcium effect</td><td>Hypercalcemia in primary disease; bone resorption, renal calcium retention, and vitamin D activation increase serum calcium.</td><td>Hypocalcemia because bone, kidney, and vitamin D-mediated intestinal calcium support are reduced.</td></tr>
+          <tr><td>Phosphate effect</td><td>Often low phosphate in primary disease from renal phosphate wasting; phosphate may be high in CKD-related secondary disease.</td><td>Hyperphosphatemia because PTH normally promotes phosphate excretion.</td></tr>
+          <tr><td>Clinical manifestations</td><td>Kidney stones, bone pain, fractures, abdominal pain, constipation, nausea, weakness, depression, confusion, polyuria.</td><td>Paresthesias, muscle cramps, tetany, hyperreflexia, seizures, laryngospasm, prolonged QT, Chvostek/Trousseau signs.</td></tr>
+          <tr><td>Memory cue</td><td>High calcium: stones, bones, abdominal groans, psychic overtones.</td><td>Low calcium: irritable nerves and muscles.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="diabetes">
+      <div class="pad">
+        <h2>4. Diabetes Mellitus</h2>
+        <table>
+          <tr><th>Feature</th><th>Type 1 DM</th><th>Type 2 DM</th><th>Gestational DM</th></tr>
+          <tr><td>Epidemiology</td><td>Often begins in childhood, adolescence, or young adulthood, but can occur at any age.</td><td>Most common form; risk increases with age, adiposity, family history, and sedentary lifestyle, but also occurs in younger people.</td><td>Glucose intolerance first recognized during pregnancy.</td></tr>
+          <tr><td>Risk factors</td><td>Genetic susceptibility plus autoimmune trigger; other autoimmune disease history may coexist.</td><td>Central obesity, insulin resistance, family history, metabolic syndrome, certain ethnic backgrounds, inactivity, prior gestational DM.</td><td>Older maternal age, overweight/obesity, family history, prior gestational DM, previous large-for-gestational-age infant, PCOS, high-risk ethnicity.</td></tr>
+          <tr><td>Mechanism</td><td>Autoimmune beta-cell destruction causes absolute insulin deficiency.</td><td>Insulin resistance plus progressive beta-cell dysfunction causes relative insulin deficiency.</td><td>Placental hormones increase insulin resistance; pancreatic compensation is inadequate.</td></tr>
+          <tr><td>Manifestations</td><td>Polyuria, polydipsia, polyphagia, weight loss, fatigue, blurred vision; DKA risk is high.</td><td>Often gradual or silent; fatigue, polyuria, polydipsia, blurred vision, infections, poor wound healing; HHS risk.</td><td>Often asymptomatic; detected by screening; increases maternal and fetal risk.</td></tr>
+          <tr><td>Treatment logic</td><td>Requires insulin replacement.</td><td>Targets insulin resistance, beta-cell burden, cardiovascular risk, and glucose toxicity.</td><td>Diet/activity, glucose monitoring, insulin or medication when needed, postpartum follow-up.</td></tr>
+        </table>
+        <div class="callout purple"><strong>Metabolic syndrome link</strong>Central adiposity and insulin resistance drive hypertension, dyslipidemia, inflammation, endothelial dysfunction, and elevated glucose. This cluster increases type 2 diabetes risk because beta cells must produce more insulin to overcome resistance until compensation fails.</div>
+        <div class="map">
+          <div class="node"><b>Central adiposity</b>Free fatty acids, inflammatory adipokines, insulin resistance.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Compensatory hyperinsulinemia</b>Beta cells work harder to maintain glucose.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Beta-cell dysfunction</b>Relative insulin deficiency and hyperglycemia.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Type 2 DM</b>Chronic glucose toxicity plus vascular risk.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="complications">
+      <div class="pad">
+        <h2>5. Complications of Diabetes Mellitus</h2>
+        <table>
+          <tr><th>Complication</th><th>Mechanism</th><th>Clinical manifestations</th></tr>
+          <tr><td>Hypoglycemia</td><td>Too much insulin/medication relative to intake, activity, or illness lowers plasma glucose and triggers adrenergic and neuroglycopenic symptoms.</td><td>Sweating, tremor, hunger, palpitations, anxiety, confusion, weakness, seizure, coma if severe.</td></tr>
+          <tr><td>Diabetic ketoacidosis</td><td>Insulin deficiency plus counter-regulatory hormones cause lipolysis, ketogenesis, hyperglycemia, osmotic diuresis, dehydration, and metabolic acidosis.</td><td>Polyuria, polydipsia, dehydration, abdominal pain, nausea/vomiting, Kussmaul respirations, fruity breath, altered mental status.</td></tr>
+          <tr><td>HHNKS/HHS</td><td>Severe hyperglycemia causes profound osmotic diuresis and hyperosmolar dehydration with enough insulin to limit ketosis.</td><td>Extreme hyperglycemia, dehydration, weakness, neurologic changes, seizures/coma risk; often type 2 DM.</td></tr>
+          <tr><td>Microvascular disease</td><td>Chronic hyperglycemia injures small vessels through glycation, oxidative stress, endothelial dysfunction, basement membrane thickening, and inflammation.</td><td>Retinopathy, nephropathy, neuropathy.</td></tr>
+          <tr><td>Macrovascular disease</td><td>Insulin resistance, dyslipidemia, inflammation, hypertension, and endothelial injury accelerate atherosclerosis.</td><td>Coronary artery disease, stroke, peripheral arterial disease.</td></tr>
+          <tr><td>Increased infection risk</td><td>Hyperglycemia impairs neutrophil function, circulation, wound healing, and tissue defense.</td><td>Skin/soft tissue infection, UTI, candidiasis, poor wound healing, diabetic foot infection.</td></tr>
+        </table>
+        <div class="grid three">
+          <div class="card"><h3>Retinopathy</h3><p>Microvascular retinal injury causes leakage, ischemia, neovascularization, hemorrhage, and vision loss risk.</p></div>
+          <div class="card"><h3>Nephropathy</h3><p>Glomerular hyperfiltration, basement membrane thickening, mesangial expansion, albuminuria, and sclerosis progress toward CKD.</p></div>
+          <div class="card"><h3>Neuropathy</h3><p>Metabolic and microvascular nerve injury causes sensory loss, pain, autonomic dysfunction, and foot ulcer risk.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="adrenal">
+      <div class="pad">
+        <h2>6. Disorders of the Adrenal Cortex</h2>
+        <table>
+          <tr><th>Disorder</th><th>Mechanism</th><th>Clinical manifestations</th><th>Key distinction</th></tr>
+          <tr><td>Cushing disease</td><td>Pituitary ACTH-secreting adenoma causes bilateral adrenal cortisol excess.</td><td>Central obesity, moon face, dorsocervical fat pad, thin skin, easy bruising, purple striae, proximal muscle weakness, hypertension, hyperglycemia, infection risk, mood changes, osteoporosis.</td><td>ACTH-dependent pituitary cause.</td></tr>
+          <tr><td>Cushing syndrome</td><td>Any chronic glucocorticoid excess: exogenous steroids, adrenal tumor, pituitary ACTH, or ectopic ACTH.</td><td>Same cortisol excess pattern: protein catabolism, glucose elevation, fat redistribution, immune suppression, bone loss, hypertension.</td><td>Umbrella term for cortisol excess from any cause.</td></tr>
+          <tr><td>Addison disease</td><td>Primary adrenal insufficiency with deficient cortisol and aldosterone, commonly autoimmune adrenal cortex destruction.</td><td>Fatigue, weakness, weight loss, anorexia, nausea, abdominal pain, hypotension, orthostasis, hyponatremia, hyperkalemia, hypoglycemia, hyperpigmentation.</td><td>Primary adrenal failure raises ACTH, causing hyperpigmentation.</td></tr>
+        </table>
+        <div class="map">
+          <div class="node"><b>Cortisol excess</b>Catabolism, gluconeogenesis, vascular reactivity, immune suppression.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Body effects</b>Hyperglycemia, muscle wasting, skin thinning, fat redistribution, infection risk.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Cushing pattern</b>Central weight gain, striae, bruising, weakness, hypertension, mood changes.</div>
+        </div>
+        <div class="map">
+          <div class="node"><b>Adrenal cortex failure</b>Low cortisol and low aldosterone.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Stress and volume failure</b>Hypotension, salt wasting, hypoglycemia, poor stress response.</div>
+          <div class="arrow">-></div>
+          <div class="node"><b>Addison pattern</b>Weakness, weight loss, GI symptoms, hyperpigmentation, hyperkalemia.</div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>Addison Transcript Details</h3>
+            <ul>
+              <li>Addison disease is primary adrenal insufficiency from adrenal cortex damage, most commonly autoimmune autoreactive T-cell destruction.</li>
+              <li>Other causes include tuberculosis, HIV, adrenal hemorrhage, and trauma.</li>
+              <li>Autoimmune Addison disease often targets steroidogenic enzyme 21-hydroxylase; 21-hydroxylase antibodies are a common lab clue.</li>
+              <li>Clinical manifestations may not appear until about 90% of adrenocortical cells are damaged.</li>
+              <li>Adrenal cortex hormone layers: zona glomerulosa makes aldosterone, zona fasciculata makes cortisol, zona reticularis makes adrenal androgens.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Addison Crisis Logic</h3>
+            <ul>
+              <li>Aldosterone loss lowers sodium reabsorption and potassium excretion, causing hyponatremia, hyperkalemia, salt craving, dehydration, and orthostatic hypotension.</li>
+              <li>Cortisol loss removes negative feedback, raising ACTH. ACTH and melanocyte-stimulating hormone share a precursor, which contributes to hyperpigmentation.</li>
+              <li>Low cortisol increases ADH activity and can worsen hyponatremia.</li>
+              <li>Adrenal crisis is often triggered by infection, procedure, trauma, or severe psychological stress.</li>
+              <li>Crisis clues include refractory hypotension, hypoglycemia, hyponatremia, hyperkalemia, GI symptoms, altered level of consciousness, syncope, and shock risk.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tutorial">
+      <div class="pad">
+        <h2>Tutorial Slide Add-In</h2>
+        <div class="callout"><strong>Added source</strong>module 7_endocrine disorders_tutorial slides_learner_20240312.pptx. This deck adds discussion prompts, treatment-context notes, and practice-question targets.</div>
+        <div class="grid">
+          <div class="card">
+            <h3>Tutorial Discussion Targets</h3>
+            <ul>
+              <li>Hyperparathyroidism: connect PTH excess to "moans/groans," GI dysfunction, neuromuscular weakness, kidney stones, increased bone turnover, fracture risk, and osteoporosis.</li>
+              <li>Thyroid disease: compare causes, pathophysiology, clinical manifestations, and lab ordering for hyperthyroidism and hypothyroidism.</li>
+              <li>Adrenal cortex: connect Addison signs and symptoms to loss of cortisol and aldosterone.</li>
+              <li>Type 2 diabetes: explain prediabetes, lifestyle intervention effects, and metformin mechanism.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Prediabetes and Lifestyle</h3>
+            <ul>
+              <li>Prediabetes includes impaired fasting glucose, impaired glucose tolerance, or A1C 6.0% to 6.4% in the Diabetes Canada framing used by the slides.</li>
+              <li>Reducing highly processed foods, refined grains, sugary foods, and sugary drinks helps lower risk.</li>
+              <li>DASH-style or Mediterranean-style eating patterns are highlighted as practical prevention approaches.</li>
+              <li>Interrupting sitting every 20 to 30 minutes and aiming for at least 150 minutes/week of aerobic exercise supports glucose homeostasis.</li>
+              <li>Losing about 5% of initial body weight can delay or prevent type 2 diabetes in people with prediabetes.</li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tr><th>Tutorial topic</th><th>High-yield point</th><th>Why it matters</th></tr>
+          <tr><td>Subclinical hypothyroidism</td><td>The tutorial cites guidance noting no clear patient-oriented benefit from treating many non-pregnant, healthy patients with mildly elevated TSH and normal thyroid hormone levels.</td><td>Do not treat lab values in isolation; clinical context, pregnancy status, age, symptom severity, and TSH level matter.</td></tr>
+          <tr><td>Metformin</td><td>Metformin primarily lowers high glucose by suppressing hepatic gluconeogenesis.</td><td>Targets one major type 2 diabetes abnormality: excessive hepatic glucose output.</td></tr>
+          <tr><td>Metformin mechanisms</td><td>Likely mechanisms include inhibition of gluconeogenic enzymes such as glucose-6-phosphatase and phosphoenolpyruvate carboxykinase, plus reduced liver lipid content through acetyl-CoA carboxylase effects.</td><td>Explains why fasting glucose improves without directly replacing insulin.</td></tr>
+          <tr><td>Thyroid labs</td><td>Primary hyperthyroidism: high T3/T4 with low TSH. Primary hypothyroidism: low T3/T4 with high TSH.</td><td>Feedback logic helps separate primary thyroid disease from pituitary or hypothalamic causes.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="clinical">
+      <div class="pad">
+        <h2>Clinical Practice Quick Cards</h2>
+        <div class="grid three">
+          <div class="card">
+            <h3>Endocrine Pattern Recognition</h3>
+            <ul>
+              <li>Ask whether the disorder is hormone excess, hormone deficiency, receptor stimulation/resistance, or gland destruction.</li>
+              <li>Separate primary gland disease from secondary pituitary/hypothalamic disease using feedback logic.</li>
+              <li>Look for emergency physiology: thyroid storm, adrenal crisis, DKA, HHS, severe hypoglycemia, severe hyponatremia.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Diabetes Red Flags</h3>
+            <ul>
+              <li>Vomiting, abdominal pain, Kussmaul respirations, fruity breath, or altered mental status in hyperglycemia.</li>
+              <li>Severe dehydration, neurologic symptoms, and extreme hyperglycemia in older type 2 diabetes patients.</li>
+              <li>Hypoglycemia with confusion, seizure, or inability to self-treat.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Electrolyte Clues</h3>
+            <ul>
+              <li>DI: water loss, dilute urine, hypernatremia risk.</li>
+              <li>SIADH: water retention, concentrated urine, hyponatremia risk.</li>
+              <li>Addison disease: hyponatremia, hyperkalemia, hypotension.</li>
+              <li>Parathyroid disorders: calcium-driven neuromuscular, renal, bone, and GI patterns.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout"><strong>Transcript-derived Hashimoto consult notes</strong>Hashimoto thyroiditis is the most common hypothyroidism cause in iodine-sufficient regions. It is more common in females, often begins between ages 30-50, clusters in families, and is associated with other autoimmune diseases such as type 1 diabetes and celiac disease.</div>
+        <div class="grid">
+          <div class="card">
+            <h3>Hashimoto Mechanism and Labs</h3>
+            <ul>
+              <li>Risk factors converge on altered thyroid antigen presentation and loss of tolerance to TPO and thyroglobulin.</li>
+              <li>Th1 cells, CD8 cytotoxicity, macrophage inflammation, anti-TPO/anti-TG antibodies, complement, and antibody-dependent cell-mediated cytotoxicity all contribute to follicular injury.</li>
+              <li>Early inflammation plus TSH stimulation can cause goiter; chronic fibrosis can make the gland small and firm.</li>
+              <li>TSH is the best initial screen; free T4 distinguishes overt from subclinical disease when TSH is abnormal.</li>
+              <li>Anti-TPO is the most useful autoimmune marker; anti-TG is supportive but less sensitive.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Levothyroxine Monitoring</h3>
+            <ul>
+              <li>Levothyroxine is preferred because T4 is converted peripherally to T3 and gives stable once-daily replacement.</li>
+              <li>Typical replacement target discussed: about 1.6 mcg/kg/day, with lower starts in older or cardiac patients.</li>
+              <li>Check TSH 6-8 weeks after starting or changing dose, then every 6-12 months once stable.</li>
+              <li>Separate levothyroxine from iron, calcium, antacids, PPIs, soy, and other interfering products; the transcript emphasized about 4 hours separation for interacting medications.</li>
+              <li>Over-replacement warning signs: palpitations, chest pain, tremor, unexplained weight loss; risks include atrial fibrillation, coronary disease, heart failure, osteoporosis, and fractures.</li>
+              <li>Pregnancy usually requires a 20-30% levothyroxine increase when pregnancy is confirmed, closer TSH monitoring, and reduction back toward baseline around 6-8 weeks postpartum.</li>
+              <li>Unregulated high-dose iodine can worsen autoimmune thyroiditis and should not replace levothyroxine.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout"><strong>Clinical consult presentations added</strong>Addison's Disease - CCP (1).pptx and Irving Nicole Hashimoto Hypothyroidism.pptx add presentation-style diagnosis, management, monitoring, and case-question material for Module 7 endocrine disorders.</div>
+        <div class="grid">
+          <div class="card">
+            <h3>Addison Clinical Consult</h3>
+            <ul>
+              <li>Addison disease is chronic primary adrenal insufficiency from adrenal cortex damage or dysfunction, most commonly autoimmune destruction of adrenocortical cells.</li>
+              <li>Core hormone losses are cortisol and aldosterone, with increased ACTH from loss of negative feedback and impaired stress homeostasis.</li>
+              <li>Adrenal cortex memory aid: zona glomerulosa makes aldosterone for salt and water balance; zona fasciculata makes cortisol for sugar, stress, vascular tone, and immune effects; zona reticularis makes adrenal androgen precursors.</li>
+              <li>Common manifestations include fatigue, muscle weakness, weight loss, anorexia, nausea, vomiting, diarrhea, abdominal pain, orthostatic hypotension, hyperpigmentation or vitiligo, decreased libido, and loss of axillary or pubic hair.</li>
+              <li>Adrenal crisis is systemic deterioration with rapid shock risk, often after infection, trauma, procedure, exercise stress, or psychological stress.</li>
+              <li>Crisis cues include severe dehydration, refractory hypotension, altered level of consciousness, syncope, hypoglycemia, hyponatremia, hyperkalemia, abdominal pain, vomiting, diarrhea, and low back pain.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Addison Diagnosis and Management</h3>
+            <ul>
+              <li>Diagnostic workup combines clinical findings with morning serum cortisol, plasma ACTH, 21-hydroxylase antibodies for autoimmune etiology, and ACTH stimulation testing as the diagnostic gold standard.</li>
+              <li>Primary adrenal insufficiency pattern: low cortisol, high ACTH, hyponatremia, hyperkalemia, hypoglycemia, decreased DHEA-S, and sometimes elevated TSH.</li>
+              <li>Treatment includes glucocorticoid replacement such as hydrocortisone or prednisone plus mineralocorticoid replacement with fludrocortisone when aldosterone is deficient.</li>
+              <li>Stress dosing is required during illness or physiologic stress to mimic the normal cortisol stress response.</li>
+              <li>Adrenal crisis treatment should not wait for lab confirmation: give IV hydrocortisone and rapid IV fluid resuscitation.</li>
+              <li>Low-sodium dieting is contraindicated because aldosterone loss already causes renal sodium wasting, hyponatremia, hypovolemia, and hypotension risk.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>Hashimoto Consult Presentation</h3>
+            <ul>
+              <li>Hashimoto thyroiditis is the leading hypothyroidism cause in iodine-sufficient regions such as North America.</li>
+              <li>Risk is higher in females, often peaks around ages 30-50, clusters in families, and is associated with autoimmune diseases such as type 1 diabetes, celiac disease, pernicious anemia, rheumatoid arthritis, and vitiligo.</li>
+              <li>Excess iodine can precipitate or worsen autoimmune thyroiditis, while iodine deficiency impairs thyroid hormone production and changes disease patterns.</li>
+              <li>Typical presentation includes fatigue, weight gain, cold intolerance, constipation, slowed cognition or depression, dry skin, hair loss, brittle nails, myalgias, puffy face, nonpitting edema, bradycardia, delayed reflexes, and painless goiter early.</li>
+              <li>Complications include hyperlipidemia, accelerated atherosclerosis, reduced cardiac output, pericardial effusion, menstrual irregularities, infertility, pregnancy risks, rare myxedema coma, and rare thyroid lymphoma with long-standing disease.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Hashimoto Treatment Safety</h3>
+            <ul>
+              <li>Levothyroxine is first-line for overt hypothyroidism; consider treatment in subclinical disease when symptomatic, pregnant, or high cardiovascular risk.</li>
+              <li>Use a consistent formulation when possible because brand/formulation changes can alter TSH control.</li>
+              <li>Recheck TSH about 4-8 weeks after starting or changing therapy, then continue monitoring until stable.</li>
+              <li>Synthetic T4 is preferred because it has stable bioavailability, a long half-life, peripheral conversion to T3, predictable pharmacodynamics, and fewer peaks or troughs than T3 therapy.</li>
+              <li>Avoid over-the-counter thyroid supplements, high-dose iodine, and routine selenium use unless specifically indicated.</li>
+              <li>New palpitations, chest pain, tremor, or unexplained weight loss on levothyroxine should prompt evaluation for iatrogenic thyrotoxicosis.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="pad">
+        <h2>Practice and Active Recall</h2>
+        <div class="toolbar">
+          <button type="button" onclick="toggleAnswers(true)">Show answers</button>
+          <button type="button" onclick="toggleAnswers(false)">Hide answers</button>
+        </div>
+        <details class="qa"><summary>1. What is the main difference between a functioning and nonfunctioning pituitary adenoma?</summary><div class="answer">A functioning adenoma secretes excess hormone; a nonfunctioning adenoma mainly causes mass effect or hypopituitarism.</div></details>
+        <details class="qa"><summary>2. Why does acromegaly occur after epiphyseal closure?</summary><div class="answer">Growth hormone excess after growth plates close cannot increase height, so it causes soft tissue, bone, cartilage, and organ enlargement.</div></details>
+        <details class="qa"><summary>3. What is the fastest DI versus SIADH contrast?</summary><div class="answer">DI is too little ADH effect causing water loss, dilute urine, polyuria, and hypernatremia risk. SIADH is too much ADH effect causing water retention, concentrated urine, and hyponatremia risk.</div></details>
+        <details class="qa"><summary>4. What drives Graves disease?</summary><div class="answer">Autoantibodies stimulate the TSH receptor, causing excess thyroid hormone production and thyroid growth.</div></details>
+        <details class="qa"><summary>5. Why can iodine deficiency cause goiter?</summary><div class="answer">Low iodine lowers T3/T4 synthesis, increasing TSH through loss of negative feedback. TSH stimulates thyroid growth.</div></details>
+        <details class="qa"><summary>6. What is Hashimoto disease?</summary><div class="answer">Autoimmune thyroiditis that progressively destroys thyroid tissue, causing primary hypothyroidism.</div></details>
+        <details class="qa"><summary>7. Hyperparathyroidism versus hypoparathyroidism: what calcium pattern do you expect?</summary><div class="answer">Hyperparathyroidism usually causes hypercalcemia; hypoparathyroidism causes hypocalcemia.</div></details>
+        <details class="qa"><summary>8. What causes type 1 diabetes?</summary><div class="answer">Autoimmune destruction of pancreatic beta cells, causing absolute insulin deficiency.</div></details>
+        <details class="qa"><summary>9. What causes type 2 diabetes?</summary><div class="answer">Insulin resistance plus progressive beta-cell dysfunction, causing relative insulin deficiency and chronic hyperglycemia.</div></details>
+        <details class="qa"><summary>10. How does metabolic syndrome connect to type 2 diabetes?</summary><div class="answer">Central adiposity and insulin resistance increase beta-cell demand. Over time, beta-cell compensation fails and hyperglycemia develops.</div></details>
+        <details class="qa"><summary>11. Why does DKA produce metabolic acidosis?</summary><div class="answer">Insulin deficiency promotes lipolysis and hepatic ketone production. Ketone accumulation lowers blood pH.</div></details>
+        <details class="qa"><summary>12. Why is HHS usually less ketotic than DKA?</summary><div class="answer">There is usually enough insulin activity to suppress major ketogenesis, but not enough to prevent severe hyperglycemia and dehydration.</div></details>
+        <details class="qa"><summary>13. What are the three major diabetic microvascular complications?</summary><div class="answer">Retinopathy, nephropathy, and neuropathy.</div></details>
+        <details class="qa"><summary>14. Why does diabetes increase infection risk?</summary><div class="answer">Hyperglycemia impairs immune cell function, circulation, wound healing, and tissue defense.</div></details>
+        <details class="qa"><summary>15. What is the difference between Cushing disease and Cushing syndrome?</summary><div class="answer">Cushing disease is pituitary ACTH excess causing cortisol excess. Cushing syndrome is the broader state of cortisol excess from any cause.</div></details>
+        <details class="qa"><summary>16. Why does Addison disease cause hyperpigmentation?</summary><div class="answer">Primary adrenal failure lowers cortisol, raising ACTH. ACTH-related melanocortin activity increases skin pigmentation.</div></details>
+        <details class="qa"><summary>17. What electrolyte pattern is high-yield for Addison disease?</summary><div class="answer">Hyponatremia and hyperkalemia from aldosterone deficiency, often with hypotension and dehydration.</div></details>
+        <details class="qa"><summary>18. What makes thyrotoxic crisis dangerous?</summary><div class="answer">Extreme thyroid hormone effect creates severe metabolic demand and cardiovascular strain, causing fever, tachyarrhythmias, heart failure, delirium, dehydration, and shock risk.</div></details>
+        <details class="qa"><summary>19. What causes myxedema in hypothyroidism?</summary><div class="answer">Proteins and mucopolysaccharides accumulate in the dermis, bind water, and cause nonpitting cutaneous edema such as puffy face, periorbital edema, or pretibial edema.</div></details>
+        <details class="qa"><summary>20. Which tutorial answer best describes SIADH?</summary><div class="answer">SIADH involves increased renal water retention, hypo-osmolality, and hyponatremia from dilution rather than true sodium deficiency.</div></details>
+        <details class="qa"><summary>21. What is the incorrect metabolic syndrome risk factor from the tutorial list?</summary><div class="answer">Low triglyceride level is not a risk factor. Metabolic syndrome includes high triglycerides, low HDL, hypertension, abdominal obesity, insulin resistance, and elevated glucose.</div></details>
+        <details class="qa"><summary>22. What causes diabetic microvascular complications?</summary><div class="answer">Capillary basement membrane thickening, endothelial hyperplasia, thrombosis, glycation, oxidative stress, and hyperglycemia-related tissue injury drive microvascular disease.</div></details>
+        <details class="qa"><summary>23. What is the mechanism of metformin emphasized in the tutorial?</summary><div class="answer">Metformin lowers high blood glucose primarily by suppressing hepatic gluconeogenesis and reducing excessive hepatic glucose output.</div></details>
+        <details class="qa"><summary>24. What lifestyle effect can delay type 2 diabetes in prediabetes?</summary><div class="answer">A nutrition and exercise plan that produces about 5% initial body weight loss can delay or prevent progression to type 2 diabetes.</div></details>
+        <details class="qa"><summary>25. What normally triggers posterior pituitary ADH release?</summary><div class="answer">Increased plasma osmolarity is the key normal trigger; falling blood pressure or volume can also stimulate ADH.</div></details>
+        <details class="qa"><summary>26. What is the key lab contrast between DI and SIADH?</summary><div class="answer">DI tends toward high serum osmolarity, hypernatremia risk, high urine output, and dilute urine. SIADH tends toward low serum sodium/osmolarity with concentrated urine and higher urine sodium.</div></details>
+        <details class="qa"><summary>27. Why can ACTH deficiency be life-threatening?</summary><div class="answer">ACTH deficiency can cause secondary adrenal insufficiency with cortisol deficiency, hypoglycemia, hypotension, and adrenal crisis risk.</div></details>
+        <details class="qa"><summary>28. What stimulates PTH release?</summary><div class="answer">Low ionized calcium decreases calcium-sensing receptor activation on parathyroid chief cells, stimulating PTH release.</div></details>
+        <details class="qa"><summary>29. What is pseudohypoparathyroidism?</summary><div class="answer">It is tissue resistance to PTH, causing hypocalcemia despite normal or elevated PTH levels.</div></details>
+        <details class="qa"><summary>30. Which Hashimoto antibody is most useful clinically?</summary><div class="answer">Anti-TPO antibodies are the most useful marker of autoimmune thyroiditis and help predict progression from subclinical to overt hypothyroidism.</div></details>
+        <details class="qa"><summary>31. Why can Addison disease cause hyperpigmentation?</summary><div class="answer">Low cortisol removes negative feedback, raising ACTH. ACTH and melanocyte-stimulating hormone share a precursor, increasing melanocyte stimulation and melanin production.</div></details>
+        <details class="qa"><summary>32. What are the adrenal cortex layers and hormone groups?</summary><div class="answer">Zona glomerulosa produces aldosterone for salt/water balance, zona fasciculata produces cortisol for stress/glucose/vascular tone, and zona reticularis produces adrenal androgens.</div></details>
+        <details class="qa"><summary>33. A patient with known Addison disease has fever but is stable and tolerating oral intake. What teaching is most important?</summary><div class="answer">Increase glucocorticoid dosing for illness/stress according to the prescribed sick-day plan instead of stopping, reducing, or simply continuing the usual dose without adjustment.</div></details>
+        <details class="qa"><summary>34. Which lab pattern supports primary adrenal insufficiency?</summary><div class="answer">Increased ACTH with decreased cortisol, hyponatremia, and hyperkalemia supports primary adrenal insufficiency.</div></details>
+        <details class="qa"><summary>35. Why should a patient with Addison disease avoid a low-sodium diet?</summary><div class="answer">Aldosterone deficiency causes renal sodium wasting, so sodium restriction can worsen hyponatremia, hypovolemia, and hypotension.</div></details>
+        <details class="qa"><summary>36. What is the first intervention for suspected adrenal crisis with vomiting, hypotension, and altered mental status?</summary><div class="answer">Give IV hydrocortisone and begin rapid IV fluid resuscitation. Do not wait for lab confirmation before treating suspected adrenal crisis.</div></details>
+        <details class="qa"><summary>37. Which immune mechanism best explains Hashimoto thyroid injury?</summary><div class="answer">Th1-mediated cell-mediated cytotoxicity, with CD8 cytotoxic injury, macrophage inflammation, and anti-TPO/anti-thyroglobulin antibodies contributing to follicular damage.</div></details>
+        <details class="qa"><summary>38. Which risk factor is recognized for Hashimoto thyroiditis?</summary><div class="answer">Personal or family history of autoimmune disease is a recognized risk factor, including type 1 diabetes, celiac disease, pernicious anemia, rheumatoid arthritis, and vitiligo.</div></details>
+        <details class="qa"><summary>39. Why is levothyroxine preferred over liothyronine for routine hypothyroidism replacement?</summary><div class="answer">T4 is converted peripherally to T3 and provides steadier once-daily replacement with a longer half-life and fewer peaks or troughs.</div></details>
+        <details class="qa"><summary>40. What symptom pattern should trigger evaluation for levothyroxine over-replacement?</summary><div class="answer">New palpitations, chest pain, tremor, or unexplained weight loss can signal iatrogenic thyrotoxicosis and should be evaluated promptly.</div></details>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="pad">
+        <h2>Sources and Add-In Tracker</h2>
+        <table>
+          <tr><th>Source</th><th>Status</th><th>How it is used here</th></tr>
+          <tr><td>Module 7.3 learning outcomes</td><td>Provided by user</td><td>Used to structure objectives, endocrine sections, comparison tables, clinical quick cards, and active recall.</td></tr>
+          <tr><td>McCance 8th ed. pp. 669-676; 9th ed. pp. 688-693</td><td>Mapped from LO list</td><td>Pituitary adenoma, acromegaly, DI, SIADH, hormonal alteration mechanisms.</td></tr>
+          <tr><td>McCance 8th ed. pp. 676-682; 9th ed. pp. 694-699</td><td>Mapped from LO list</td><td>Hyperthyroid conditions, Graves disease, thyrotoxic crisis, iodine deficiency, Hashimoto disease.</td></tr>
+          <tr><td>McCance 8th ed. pp. 682-684; 9th ed. pp. 700-701</td><td>Mapped from LO list</td><td>Hyperparathyroidism and hypoparathyroidism comparison.</td></tr>
+          <tr><td>McCance 8th ed. pp. 684-692; 9th ed. pp. 702-708</td><td>Mapped from LO list</td><td>Type 1, type 2, gestational diabetes and metabolic syndrome.</td></tr>
+          <tr><td>McCance 8th ed. pp. 692-699; 9th ed. pp. 709-714</td><td>Mapped from LO list</td><td>Acute and chronic diabetes complications.</td></tr>
+          <tr><td>McCance 8th ed. pp. 699-705; 9th ed. pp. 715-718</td><td>Mapped from LO list</td><td>Cushing disease, Cushing syndrome, and Addison disease.</td></tr>
+          <tr><td>module 7_endocrine disorders_lecture slides_20240311.pptx.pdf</td><td>Extracted from Downloads</td><td>Added endocrine disorder classification, feedback-loop logic, SIADH/DI details, toxic multinodular goiter, Cushing primary/secondary distinction, diabetes diagnostic criteria, chronic hyperglycemia mechanisms, and exercise physiology.</td></tr>
+          <tr><td>module 7_endocrine disorders_tutorial slides_learner_20240312.pptx</td><td>Extracted from Downloads</td><td>Added tutorial discussion targets, hyperparathyroidism manifestations, subclinical hypothyroidism notes, prediabetes/lifestyle prevention, metformin mechanism, and practice-question targets.</td></tr>
+          <tr><td>Module 7 Class Transcript.pdf</td><td>Extracted from Documents</td><td>Added live class explanations on endocrine control, feedback loops, ADH/DI/SIADH labs, pituitary tumors, acromegaly, PTH/calcitonin, hyperparathyroidism/hypoparathyroidism, Hashimoto monitoring, levothyroxine teaching, and Addison disease/adrenal crisis.</td></tr>
+          <tr><td>Addison's Disease - CCP (1).pptx</td><td>Extracted from Downloads</td><td>Added Addison disease definition, adrenal cortex hormone review, clinical manifestations, adrenal crisis cues, diagnostic testing, lab patterns, replacement therapy, stress dosing, crisis treatment, and discussion-question targets.</td></tr>
+          <tr><td>Irving Nicole Hashimoto Hypothyroidism.pptx</td><td>Extracted from Downloads</td><td>Added Hashimoto epidemiology, risk factors, immune mechanism, clinical presentation, complications, thyroid testing, levothyroxine rationale, monitoring, pregnancy considerations, supplement warnings, and case-question targets.</td></tr>
+        </table>
+      </div>
+    </section>
+    <section id="exam-import"><div class="pad"><h2>Final Exam Import</h2><p>The final notes and Modules 7–10 seminar reinforce ADH–aquaporin physiology, DI versus SIADH, anterior pituitary excess/deficiency, PTH/calcitonin, thyroid autoimmunity, and diabetes complications.</p><p><a class="button" href="Exam_Notes_and_Practice_Bank.html">Practice imported Module 7 questions</a> <a class="button" href="Anki_Review_Modules_07_to_10.html">Review 112 Anki cards</a></p></div></section>
+  </main>
+
+  <script>
+    function toggleAnswers(show) {
+      document.querySelectorAll('.qa').forEach(function (item) {
+        item.open = show;
+      });
+    }
+  </script>
+</body>
+</html>
